@@ -35,6 +35,9 @@ function toSummary(
     classes: classesOf(row, fares),
     stations: stops.map((s) => (lang === "bn" ? s.stationBn : s.stationEn)),
     districtIds: [...new Set(stops.flatMap((s) => (s.districtId === null ? [] : [s.districtId])))],
+    confidence: row.confidence as Confidence,
+    asOf: row.asOf,
+    sources: row.sources,
   };
 }
 
@@ -136,9 +139,6 @@ export async function getTrain(slug: string, lang: Lang = "bn"): Promise<TrainDe
       fare: f.fare,
     })),
     timetable: row.timetable,
-    confidence: row.confidence as Confidence,
-    asOf: row.asOf,
-    sources: row.sources,
     returnTrain: back ? { slug: back.slug, no: back.no, name: nameIn(lang, back) } : null,
   };
 }

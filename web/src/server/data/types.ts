@@ -185,6 +185,24 @@ export type RouteDetail = RouteSummary & {
   reverseSlug: string | null;
 };
 
+/** A route page for a pair that has no curated guide: an estimated distance and the direct trains. */
+export type ComputedRoute = RouteSummary & {
+  trains: TrainSummary[];
+  trainsBack: TrainSummary[];
+  placesAtDestination: PlaceSummary[];
+  /** Bus time and cheapest fare, known for routes from Dhaka. */
+  busHours: [number, number] | null;
+  busFareFromBdt: number | null;
+  /** True when `roadKm` comes from the straight-line estimate rather than the data. */
+  estimated: boolean;
+};
+
+export type BookingLinks = {
+  train: string;
+  bus: { name: string; url: string };
+  air: { name: string; url: string }[];
+};
+
 export type DhakaRouteSummary = FromDhaka & { district: DistrictRef; divisionRef: DivisionRef };
 
 /* Trains ------------------------------------------------------------------------------------ */
@@ -210,6 +228,9 @@ export type TrainSummary = {
   /** Every station on the way (in `lang`) and their district ids, for filtering. */
   stations: string[];
   districtIds: number[];
+  confidence: Confidence;
+  asOf: string;
+  sources: string[];
 };
 
 export type TrainStop = {
@@ -229,9 +250,6 @@ export type TrainDetail = TrainSummary & {
   stops: TrainStop[];
   fares: TrainFare[];
   timetable: string | null;
-  confidence: Confidence;
-  asOf: string;
-  sources: string[];
   returnTrain: { slug: string; no: number; name: string } | null;
 };
 

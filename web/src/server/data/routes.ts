@@ -1,11 +1,25 @@
 import { aliasedTable, and, asc, eq } from "drizzle-orm";
+import { estimateRoadKm } from "@/lib/geo";
 import { getDb } from "../db/client";
 import type { RouteBus } from "../db/json-types";
-import { districts, divisions, routes, routesFromDhaka } from "../db/schema";
+import { districts, divisions, places, reference, routes, routesFromDhaka } from "../db/schema";
 import type { Lang } from "./lang";
-import { placeSummariesBySlug, toDistrictRef, toDivisionRef } from "./shared";
+import {
+  placeSummariesBySlug,
+  selectPlaces,
+  toDistrictRef,
+  toDivisionRef,
+  toPlaceSummary,
+} from "./shared";
 import { trainSummaries } from "./trains";
-import type { BusInfo, DhakaRouteSummary, RouteDetail, RouteSummary } from "./types";
+import type {
+  BookingLinks,
+  BusInfo,
+  ComputedRoute,
+  DhakaRouteSummary,
+  RouteDetail,
+  RouteSummary,
+} from "./types";
 
 const fromD = aliasedTable(districts, "from_d");
 const toD = aliasedTable(districts, "to_d");
@@ -123,4 +137,83 @@ export async function listRoutesFromDhaka(lang: Lang = "bn"): Promise<DhakaRoute
       routeSlug: routeSlugs.has(slug) ? slug : null,
     };
   });
+}
+
+const DEFAULT_BOOKING: BookingLinks = {
+  train: "https://eticket.railway.gov.bd/",
+  bus: { name: "Shohoz", url: "https://www.shohoz.com/bus-tickets" },
+  air: [],
+};
+
+/** Where to buy tickets: the railway e-ticket site, a bus ticket site and the airlines. */
+export async function getBookingLinks(): Promise<BookingLinks> {
+  const row = getDb().select().from(reference).where(eq(reference.key, "booking_links")).get();
+  const v = (row?.value ?? {}) as Partial<BookingLinks>;
+  return {
+    train: v.train ?? DEFAULT_BOOKING.train,
+    bus: v.bus ?? DEFAULT_BOOKING.bus,
+    air: v.air ?? DEFAULT_BOOKING.air,
+  };
+}
+
+/** Splits `a-to-b` into two different district slugs (slugs contain hyphens, so try each `-to-`). */
+function parsePair(slug: string, known: Set<string>): [string, string] | null {
+  let at = slug.indexOf("-to-");
+  while (at !== -1) {
+    const a = slug.slice(0, at);
+    const b = slug.slice(at + 4);
+    if (a !== b && known.has(a) && known.has(b)) return [a, b];
+    at = slug.indexOf("-to-", at + 1);
+  }
+  return null;
+}
+
+/**
+ * A route page for any two districts that has no curated guide: estimated road distance, direct
+ * trains each way (a train whose stops include both districts in the right order) and places at
+ * the destination. Null when the slug is not `district-to-district`.
+ */
+export async function getComputedRoute(
+  slug: string,
+  lang: Lang = "bn",
+): Promise<ComputedRoute | null> {
+  const db = getDb();
+  const rows = db.select().from(districts).all();
+  const bySlug = new Map(rows.map((d) => [d.slug, d]));
+  const pair = parsePair(slug, new Set(bySlug.keys()));
+  if (!pair) return null;
+  const from = bySlug.get(pair[0])!;
+  const to = bySlug.get(pair[1])!;
+
+  const all = trainSummaries(lang);
+  const direct = (a: number, b: number) =>
+    all.filter((t) => {
+      const i = t.districtIds.indexOf(a);
+      const j = t.districtIds.indexOf(b);
+      return i !== -1 && j !== -1 && i < j;
+    });
+
+  const dhaka =
+    from.slug === "dhaka"
+      ? db.select().from(routesFromDhaka).where(eq(routesFromDhaka.toDistrictId, to.id)).get()
+      : undefined;
+
+  const placeRows = selectPlaces(db)
+    .where(eq(places.districtId, to.id))
+    .orderBy(asc(places.districtPosition), asc(places.id))
+    .limit(6)
+    .all();
+
+  return {
+    slug,
+    from: toDistrictRef(from, lang),
+    to: toDistrictRef(to, lang),
+    roadKm: dhaka?.roadKm ?? estimateRoadKm(from.lat, from.lng, to.lat, to.lng),
+    estimated: !dhaka,
+    busHours: dhaka?.busHours ?? null,
+    busFareFromBdt: dhaka?.busFareFromBdt ?? null,
+    trains: direct(from.id, to.id),
+    trainsBack: direct(to.id, from.id),
+    placesAtDestination: placeRows.map((r) => toPlaceSummary(r, lang)),
+  };
 }

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { AppHeader } from "@/components/ui/AppHeader";
 import { Footer } from "@/components/ui/Footer";
@@ -17,9 +18,6 @@ type LayoutProps = {
   children: ReactNode;
   params: Promise<{ lang: string }>;
 };
-
-// Only the locales in LOCALES exist; anything else is unmatched and gets global-not-found.tsx.
-export const dynamicParams = false;
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -59,10 +57,12 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({ children, params }: LayoutProps) {
-  // dynamicParams = false already 404s unknown locales, so no notFound() here (the root layout
-  // has no not-found boundary above it).
+  // Only the locales in LOCALES exist; anything else gets global-not-found.tsx. (Not
+  // `dynamicParams = false`: that would also stop pages below, such as computed routes, from
+  // rendering params that were not prebuilt.)
   const { lang: param } = await params;
-  const lang = isLocale(param) ? param : DEFAULT_LOCALE;
+  if (!isLocale(param)) notFound();
+  const lang = param;
   const t = getT(lang);
   const divisions = await listDivisions(toLang(lang));
 
