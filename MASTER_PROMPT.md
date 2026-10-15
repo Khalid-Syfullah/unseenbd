@@ -18,9 +18,9 @@ Deliver a production-ready monorepo with: web app, API, database migrations, see
 4. **Trustworthy data.** Every fare, timetable and schedule shows an "as of" date, a confidence level (high/medium/low) and source links. Photos show photographer + licence.
 5. **Bengali first.** Default locale `bn` at `/`, English at `/en/...`. Bengali numerals and month names in `bn`. Interface strings also in zh, fr, de, it, ja (content stays bn/en).
 
-## 2. Suggested stack
+## 2. Stack
 
-React + TypeScript, Vite, file-based routing with per-route code splitting, server-side rendering that **dehydrates the query cache into a `<script type="application/json">` tag** for hydration, TanStack Query, Tailwind CSS, a small SQL database (PostgreSQL or SQLite), a JSON REST API under `/api/*`, Cloudflare (or similar) in front. PWA manifest + service worker (offline-saved district pages). Google Identity Services + email/password auth with session cookie and CSRF token.
+**Next.js (App Router) + TypeScript** in `web/` — server components give server-rendered HTML for every public page, with client islands for interactive parts. **Tailwind CSS v4** mapped to the tokens in `DESIGN.md`. **Drizzle ORM + SQLite** (`better-sqlite3`) for a single server, with a Postgres-compatible schema. JSON API under `/api/*` (route handlers). PWA manifest + service worker (offline-saved district pages). Google Identity Services + email/password auth with a session cookie and CSRF token. Vitest + Testing Library + Playwright. Deployed with pm2 behind nginx on EC2. The numbered build prompts in `prompts/` turn this into concrete phases; run them with the `/build-unseenbd` skill.
 
 ## 3. Information architecture (routes)
 

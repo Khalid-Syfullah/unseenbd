@@ -6,10 +6,41 @@ A teardown of [Unseen Bangladesh / অদেখা বাংলাদেশ](htt
 |---|---|
 | [`FEATURES.md`](FEATURES.md) | Every feature, page by page, as observed in the browser (bn and en) |
 | [`MASTER_PROMPT.md`](MASTER_PROMPT.md) | A single prompt for an AI coding agent to build a site with the same feature set, including data model, planner/cost algorithms, API surface, SEO and acceptance tests |
+| [`DESIGN.md`](DESIGN.md) | The Unseen BD design system: colour, type, spacing and motion tokens, CSS variables, every component, and wireframes of the main screens |
+| [`prompts/`](prompts) | The build split into 18 numbered phases, plus `models.conf` (which model builds each phase) |
+| [`.claude/skills/build-unseenbd/`](.claude/skills/build-unseenbd) | The `/build-unseenbd` skill that runs the phases one by one, checks, commits and pushes, and can redo any phase |
 | [`data/`](data) | Structured data extracted from all 1,294 sitemap pages (bn + en) |
 | [`assets/`](assets) | 1,123 original assets for the **Unseen BD** build: brand and app icons, district/division/world maps, icon sets, illustrations, passport stamps, level badges, card themes and an illustrated cover for each of the 257 places ([index](assets/README.md)) |
 | [`scripts/extract.py`](scripts/extract.py) | Re-runs the extraction from a crawl |
 | [`tools/assets/`](tools/assets) | The generators that build `assets/` |
+
+## Build it
+
+Open the repo in Claude Code and run:
+
+| Command | Does |
+|---|---|
+| `/build-unseenbd` | Runs every unfinished phase in order, one at a time |
+| `/build-unseenbd next` | Runs the next phase, then stops |
+| `/build-unseenbd status` | Shows progress and the model for each phase |
+| `/build-unseenbd 7` | Runs phase 7 now, out of order |
+| `/build-unseenbd redo 7` | Rebuilds phase 7 (also `redo 7 9 12`) |
+| `/build-unseenbd from 7` | Rebuilds phase 7 and everything after it |
+| `/build-unseenbd reset 7` | Marks phase 7 unfinished without running it |
+
+Each phase is built by a fresh subagent on the model in `prompts/models.conf` (Opus for the architecture-heavy phases, Sonnet for the rest). The skill then runs `npm run check` in `web/`, gives the builder up to two rounds to fix failures, commits with the phase's message (`feature(scope): title` + description) and pushes. Progress is kept in `.build/` and also works from a terminal: `bash .claude/skills/build-unseenbd/scripts/phase.sh status`.
+
+| # | Phase | # | Phase |
+|---|---|---|---|
+| 01 | Foundation | 10 | My Bangladesh and My World |
+| 02 | Data, seed, i18n and formatters | 11 | Share-card maker |
+| 03 | Design system components and maps | 12 | Games, quizzes and leaderboards |
+| 04 | Home page | 13 | Accounts, profile and sync |
+| 05 | Explore, lists, search, near me, bucket list | 14 | Photos, posts, suggestions and trending |
+| 06 | Original place and district text | 15 | Directory, owner listings and admin |
+| 07 | Place and district pages | 16 | Real photos, info pages, PWA and SEO |
+| 08 | Routes and trains | 17 | Design and accessibility polish |
+| 09 | Trip planner and trip cost calculator | 18 | Tests, acceptance and release readiness |
 
 ## Data at a glance
 
