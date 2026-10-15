@@ -107,7 +107,9 @@ describe("places", () => {
     expect(place?.nearby.length).toBeGreaterThan(0);
     expect(place?.fromDhaka?.routeSlug).toBe("dhaka-to-bandarban");
     expect(place?.imageCredit?.license).toBe("CC BY-SA 4.0");
-    expect(place?.tips).toEqual([]);
+    expect(place?.description).toMatch(/Nilgiri/);
+    expect(place?.howToGetThere).toMatch(/Bandarban/);
+    expect(place?.tips.length).toBeGreaterThanOrEqual(2);
     expect(await getPlace("no-such-place")).toBeNull();
   });
 
@@ -154,6 +156,8 @@ describe("districts and catalogue", () => {
     expect(sylhet?.divisionRef.slug).toBe("sylhet");
     expect(sylhet?.places.length).toBe(sylhet?.placeCount);
     expect(sylhet?.famousFor.length).toBeGreaterThan(0);
+    expect(sylhet?.intro).toMatch(/[\u0980-\u09FF]/);
+    expect(sylhet?.howToReach).toBeTruthy();
     expect(sylhet?.fromDhaka?.routeSlug).toBe("dhaka-to-sylhet");
     expect(sylhet?.nearbyDistricts).toHaveLength(6);
     expect((await getDistrict("dhaka"))?.fromDhaka).toBeNull();

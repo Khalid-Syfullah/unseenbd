@@ -1,11 +1,12 @@
 /**
- * Builds the content tables from `data/*.json` and `assets/places/index.json`.
+ * Builds the content tables from `data/*.json`, the bilingual prose in `data/content/*.json` and
+ * `assets/places/index.json`.
  *
  * Idempotent: every run replaces the content tables inside one transaction and leaves the user
  * tables alone. Ids come from the data files, so rows that users point at (visited districts,
  * wishlisted places) keep their ids across reseeds.
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { BetterSQLite3Database } from "drizzle-orm/better-sqlite3";
 import type Database from "better-sqlite3";
@@ -136,6 +137,16 @@ type RawDirectoryItem = {
   reviews?: number;
 };
 
+/** Original prose, one entry per place or district (`data/content/*.json`). */
+type ContentEntry<T> = { slug: string; reviewed: boolean; bn: T; en: T };
+type RawPlaceText = {
+  description: string;
+  how_to_get_there: string;
+  tips: string[];
+  warnings: string[];
+};
+type RawDistrictText = { intro: string; how_to_reach: string };
+
 export type SeedCounts = {
   divisions: number;
   districts: number;
@@ -150,12 +161,36 @@ export type SeedCounts = {
   curation: number;
   directory: number;
   reference: number;
+  placeTexts: number;
+  districtTexts: number;
 };
 
 export type SeedOptions = { dataDir?: string; assetsDir?: string };
 
 function readJson<T>(dir: string, file: string): T {
   return JSON.parse(readFileSync(join(dir, file), "utf8")) as T;
+}
+
+/**
+ * Read `data/content/{file}` into a map by slug. A missing file gives an empty map (the prose
+ * columns stay null); an entry for a slug that does not exist is an error.
+ */
+function readContent<T>(
+  dataDir: string,
+  file: string,
+  slugs: ReadonlySet<string>,
+): Map<string, ContentEntry<T>> {
+  const path = join(dataDir, "content", file);
+  if (!existsSync(path)) return new Map();
+  const entries = JSON.parse(readFileSync(path, "utf8")) as ContentEntry<T>[];
+  const bySlug = new Map<string, ContentEntry<T>>();
+  for (const entry of entries) {
+    if (!slugs.has(entry.slug))
+      throw new Error(`seed: content/${file} has unknown slug "${entry.slug}"`);
+    if (bySlug.has(entry.slug)) throw new Error(`seed: content/${file} repeats "${entry.slug}"`);
+    bySlug.set(entry.slug, entry);
+  }
+  return bySlug;
 }
 
 /** Insert in chunks to stay well under SQLite's bound-parameter limit. */
@@ -188,24 +223,41 @@ export function seedDatabase(db: SeedDb, options: SeedOptions = {}): SeedCounts 
   const rawDirectory = readJson<Record<string, unknown>>(dataDir, "directory_snapshot.json");
   const rawReference = readJson<Record<string, unknown>>(dataDir, "reference.json");
   const rawCovers = readJson<RawCover[]>(join(assets, "places"), "index.json");
+  const districtText = readContent<RawDistrictText>(
+    dataDir,
+    "districts.json",
+    new Set(rawDistricts.map((d) => d.slug)),
+  );
+  const placeText = readContent<RawPlaceText>(
+    dataDir,
+    "places.json",
+    new Set(rawPlaces.map((p) => p.slug)),
+  );
 
   /* Divisions, ordered by their lowest district id (Dhaka 1, Chattogram 14, Sylhet 25, …). */
   const divisionRows = [...rawDivisions]
     .sort((a, b) => Math.min(...a.district_ids) - Math.min(...b.district_ids))
     .map((d, i) => ({ slug: d.slug, nameBn: d.name_bn, nameEn: d.name_en, position: i + 1 }));
 
-  const districtRows = rawDistricts.map((d) => ({
-    id: d.id,
-    slug: d.slug,
-    nameBn: d.name_bn,
-    nameEn: d.name_en,
-    division: d.division,
-    lat: d.lat,
-    lng: d.lng,
-    famousForBn: d.famous_for_bn,
-    famousForEn: d.famous_for_en,
-    communityPhotoCount: d.community_photo_count ?? 0,
-  }));
+  const districtRows = rawDistricts.map((d) => {
+    const text = districtText.get(d.slug);
+    return {
+      id: d.id,
+      slug: d.slug,
+      nameBn: d.name_bn,
+      nameEn: d.name_en,
+      division: d.division,
+      lat: d.lat,
+      lng: d.lng,
+      famousForBn: d.famous_for_bn,
+      famousForEn: d.famous_for_en,
+      communityPhotoCount: d.community_photo_count ?? 0,
+      introBn: text?.bn.intro ?? null,
+      introEn: text?.en.intro ?? null,
+      howToReachBn: text?.bn.how_to_reach ?? null,
+      howToReachEn: text?.en.how_to_reach ?? null,
+    };
+  });
   const districtIdBySlug = new Map(rawDistricts.map((d) => [d.slug, d.id]));
   const districtPosition = new Map<string, number>();
   for (const d of rawDistricts) d.places.forEach((slug, i) => districtPosition.set(slug, i + 1));
@@ -222,6 +274,7 @@ export function seedDatabase(db: SeedDb, options: SeedOptions = {}): SeedCounts 
   const coverBySlug = new Map(rawCovers.map((c) => [c.slug, c]));
   const placeRows = rawPlaces.map((p) => {
     const c = coverBySlug.get(p.slug);
+    const text = placeText.get(p.slug);
     return {
       id: p.id,
       slug: p.slug,
@@ -252,6 +305,14 @@ export function seedDatabase(db: SeedDb, options: SeedOptions = {}): SeedCounts 
       photo: null,
       nearby: p.nearby,
       fromDhaka: p.from_dhaka,
+      descriptionBn: text?.bn.description ?? null,
+      descriptionEn: text?.en.description ?? null,
+      howToGetThereBn: text?.bn.how_to_get_there ?? null,
+      howToGetThereEn: text?.en.how_to_get_there ?? null,
+      tipsBn: text?.bn.tips ?? null,
+      tipsEn: text?.en.tips ?? null,
+      warningsBn: text?.bn.warnings ?? null,
+      warningsEn: text?.en.warnings ?? null,
     };
   });
 
@@ -415,5 +476,7 @@ export function seedDatabase(db: SeedDb, options: SeedOptions = {}): SeedCounts 
     curation: curationRows.length,
     directory: directoryRows.length,
     reference: referenceRows.length,
+    placeTexts: placeText.size,
+    districtTexts: districtText.size,
   };
 }

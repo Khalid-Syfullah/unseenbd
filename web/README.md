@@ -127,7 +127,11 @@ Migrations are generated into `drizzle/` with `npm run db:generate`.
   short_links, daily_stats.
 
 `src/server/db/seed.ts` reads `../data/*.json` and `../assets/places/index.json` (cover paths)
-and replaces the content tables in one transaction, keeping ids stable, so reseeding never
+plus the original prose in `../data/content/` (`places.json`: bn/en description, how to get
+there, tips and warnings for every place; `districts.json`: bn/en intro and how to reach for
+every district; each entry has `reviewed: false` until a human has checked it) and fills the
+bilingual columns from it. It replaces the content tables in one transaction, keeping ids
+stable, so reseeding never
 touches user data. It runs in well under a second. If the app opens an empty database it
 migrates and seeds it on the spot; tests use `DATABASE_PATH=:memory:` this way.
 
