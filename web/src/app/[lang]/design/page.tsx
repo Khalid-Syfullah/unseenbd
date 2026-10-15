@@ -302,7 +302,7 @@ export default async function DesignPage({ params }: PageProps) {
                 className="flex flex-col items-center gap-1.5 rounded-md bg-raised px-1 py-3 text-center"
               >
                 <Icon name={name} size={24} />
-                <code className="max-w-full truncate text-[11px] text-muted">{name}</code>
+                <code className="max-w-full truncate text-xs text-muted">{name}</code>
               </li>
             ))}
           </ul>

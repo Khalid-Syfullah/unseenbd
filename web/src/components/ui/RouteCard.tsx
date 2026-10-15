@@ -60,7 +60,7 @@ export function RouteCard({
         </Heading>
         <p className="num text-sm text-muted">{facts.join(" · ")}</p>
         {route.trains ? (
-          <span className="inline-flex h-7 w-fit items-center gap-1 rounded-pill bg-surface-2 px-2.5 text-xs font-semibold text-info">
+          <span className="inline-flex h-7 w-fit items-center gap-1 rounded-pill bg-surface-2 px-2.5 text-xs font-semibold text-info-text">
             <Icon name="train" size={14} />
             {t("ui.trains", { count: route.trains })}
           </span>
@@ -85,11 +85,14 @@ export function TrainRow({
   train,
   href,
   className,
+  headingLevel = 3,
 }: {
   train: TrainRowData;
   href?: string;
   className?: string;
+  headingLevel?: 2 | 3 | 4;
 }) {
+  const Heading = `h${headingLevel}` as const;
   const t = useT();
   const locale = useLocale();
   const lang = contentLocale(locale);
@@ -98,11 +101,11 @@ export function TrainRow({
       className={cn(CARD, CARD_LIFT, "gap-2 p-4 sm:flex-row sm:items-center sm:gap-4", className)}
     >
       <div className="flex min-w-0 flex-1 flex-col gap-0.5">
-        <h3 className="text-base font-semibold">
+        <Heading className="text-base font-semibold">
           <CardLink href={href ?? localePath(locale, `/train/${train.slug}`)}>
             {train.name} <span className="num text-muted">({localizeDigits(train.no, lang)})</span>
           </CardLink>
-        </h3>
+        </Heading>
         <p className="truncate text-sm text-muted">
           {train.from.station} <span aria-hidden>→</span>
           <span className="sr-only">–</span> {train.to.station}

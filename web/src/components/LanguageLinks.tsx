@@ -24,7 +24,7 @@ export function LanguageLinks({ current, label, path = "/" }: Props) {
                 aria-current={active ? "page" : undefined}
                 className={`inline-flex min-h-11 items-center rounded-pill border px-4 text-sm font-semibold transition-colors duration-[var(--dur-1)] ease-standard ${
                   active
-                    ? "border-primary bg-primary-wash text-primary"
+                    ? "border-primary bg-primary-wash text-on-primary-wash"
                     : "border-border bg-raised text-text hover:border-border-strong"
                 }`}
               >

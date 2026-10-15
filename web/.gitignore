@@ -44,3 +44,5 @@ next-env.d.ts
 
 # uploaded community media (MEDIA_DIR)
 /storage/
+/test-results/
+/playwright-report/

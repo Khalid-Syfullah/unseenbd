@@ -71,7 +71,7 @@ export function ListingCard({
         ) : null}
       </div>
       {listing.imageSource ? (
-        <p className="truncate px-4 pt-1.5 text-xs text-subtle">
+        <p className="truncate px-4 pt-1.5 text-xs text-muted">
           {t("ui.photoSource")}: {listing.imageSource}
         </p>
       ) : null}

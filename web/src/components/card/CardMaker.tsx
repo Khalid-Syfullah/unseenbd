@@ -556,7 +556,7 @@ export function CardMaker(props: CardMakerProps) {
               ) : null}
             </div>
           </div>
-          <p className="num text-center text-xs text-subtle">
+          <p className="num text-center text-xs text-muted">
             {sizeLabel[settings.size]} · {localizeDigits(size.ratio, locale)} · {n(size.w)} ×{" "}
             {n(size.h)}
           </p>

@@ -92,20 +92,29 @@ export function GameHub({
               {t(`games.rules.${game}` as MessageKey)}
             </p>
             {own ? <ChallengeBanner challenge={own} /> : null}
-            {game === "memory_match" ? (
-              <MemoryGame date={date} today={today} data={data} labels={labels} challenge={own} />
-            ) : game === "distance_duel" ? (
-              <DistanceDuel date={date} today={today} data={data} labels={labels} challenge={own} />
-            ) : (
-              <ChoiceGame
-                game={game}
-                date={date}
-                today={today}
-                data={data}
-                labels={labels}
-                challenge={own}
-              />
-            )}
+            {/* The round changes every day; visual snapshots hide it (data-visual-hide). */}
+            <div data-visual-hide>
+              {game === "memory_match" ? (
+                <MemoryGame date={date} today={today} data={data} labels={labels} challenge={own} />
+              ) : game === "distance_duel" ? (
+                <DistanceDuel
+                  date={date}
+                  today={today}
+                  data={data}
+                  labels={labels}
+                  challenge={own}
+                />
+              ) : (
+                <ChoiceGame
+                  game={game}
+                  date={date}
+                  today={today}
+                  data={data}
+                  labels={labels}
+                  challenge={own}
+                />
+              )}
+            </div>
             <RecordStrip game={game} className="justify-center" />
             <Leaderboard game={game} entries={boards[game]} today={today} />
           </TabPanel>

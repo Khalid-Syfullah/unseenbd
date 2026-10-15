@@ -315,7 +315,7 @@ function MemoryPins() {
             const c = byKey.get(pin.country);
             return (
               <li key={pin.id} className={cn(CARD, "flex-row items-start gap-3 p-4")}>
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-pill bg-primary-wash text-primary">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-pill bg-primary-wash text-on-primary-wash">
                   <Icon name="pin" size={20} />
                 </span>
                 <div className="flex min-w-0 flex-1 flex-col">

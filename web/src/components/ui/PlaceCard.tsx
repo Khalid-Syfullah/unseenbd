@@ -98,7 +98,7 @@ export function PlaceCard({
           />
         ) : null}
         {place.photo ? (
-          <p className="bg-black/65 text-white absolute inset-x-0 bottom-0 z-10 truncate px-3 py-1 text-xs">
+          <p className="absolute inset-x-0 bottom-0 z-10 truncate bg-[image:var(--scrim)] px-3 pt-6 pb-1.5 text-xs text-on-scrim">
             <a
               href={place.photo.source}
               target="_blank"

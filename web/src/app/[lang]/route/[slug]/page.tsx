@@ -95,7 +95,7 @@ function Block({
       className={`${CARD} scroll-mt-24 gap-4 p-4 md:p-6`}
     >
       <h2 id={`${id}-title`} className="flex items-center gap-2 text-h2">
-        <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-wash text-primary">
+        <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-wash text-on-primary-wash">
           <Icon name={icon} size={20} />
         </span>
         {title}
@@ -396,15 +396,16 @@ function BookingBlock({ links, t }: { links: BookingLinks; t: Tr }) {
       <p className="max-w-[68ch] text-muted">{t("route.bookIntro")}</p>
       <ul className="flex flex-wrap gap-3">
         {items.map((i) => (
-          <li key={i.url}>
+          <li key={i.url} className="max-w-full">
             <ButtonLink
               href={i.url}
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
               icon={i.icon}
+              className="max-w-full"
             >
-              {i.name}
+              <span className="truncate">{i.name}</span>
             </ButtonLink>
           </li>
         ))}

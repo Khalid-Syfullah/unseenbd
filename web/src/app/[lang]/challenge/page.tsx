@@ -86,7 +86,7 @@ export default async function ChallengePage({ params, searchParams }: PageProps)
             legend
             label={t("myBd.sharedMap", { name: name || t("challenge.friend") })}
           />
-          <p className="text-xs text-subtle">{t("map.credit")}</p>
+          <p className="text-xs text-muted">{t("map.credit")}</p>
         </div>
         <div className="flex flex-col gap-4">
           <ProgressCard count={ids.length} levels={levels} label={name || t("challenge.friend")} />

@@ -101,7 +101,7 @@ export function FeatureCard({
   const Heading = `h${headingLevel}` as const;
   return (
     <article className={cn(CARD, CARD_LIFT, "flex-row items-start gap-4 p-5", className)}>
-      <span className="flex size-11 shrink-0 items-center justify-center rounded-pill bg-primary-wash text-primary">
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-pill bg-primary-wash text-on-primary-wash">
         <Icon name={icon} size={22} />
       </span>
       <div className="flex min-w-0 flex-1 flex-col gap-1">

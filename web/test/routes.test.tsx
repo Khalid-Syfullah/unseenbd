@@ -116,13 +116,13 @@ describe("/trains", () => {
   it("lists all 120 trains and filters by station and sorts by departure", async () => {
     const user = userEvent.setup();
     await show(TrainsPage, "en");
-    expect(screen.getAllByRole("heading", { level: 3 })).toHaveLength(120);
+    expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(120);
     await user.type(screen.getByLabelText(en("trains.stationLabel")), "Sylhet");
-    const some = screen.getAllByRole("heading", { level: 3 });
+    const some = screen.getAllByRole("heading", { level: 2 });
     expect(some.length).toBeGreaterThan(0);
     expect(some.length).toBeLessThan(120);
     await user.click(screen.getByRole("radio", { name: en("trains.sortDeparture") }));
-    expect(screen.getAllByRole("heading", { level: 3 })).toHaveLength(some.length);
+    expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(some.length);
   });
 });
 

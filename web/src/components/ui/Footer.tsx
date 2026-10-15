@@ -100,7 +100,7 @@ export function Footer({
             className="size-8"
           />
           <p className="text-sm text-muted">
-            {t("footer.credit")} <span className="text-subtle">{t("footer.boundaries")}</span>
+            {t("footer.credit")} <span className="text-muted">{t("footer.boundaries")}</span>
           </p>
         </div>
       </div>

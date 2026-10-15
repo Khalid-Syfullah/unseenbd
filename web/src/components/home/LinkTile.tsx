@@ -24,7 +24,9 @@ export function LinkTile({
       <span
         className={cn(
           "flex size-11 shrink-0 items-center justify-center rounded-pill",
-          tone === "accent" ? "bg-accent-wash text-on-accent-wash" : "bg-primary-wash text-primary",
+          tone === "accent"
+            ? "bg-accent-wash text-on-accent-wash"
+            : "bg-primary-wash text-on-primary-wash",
         )}
       >
         <Icon name={icon} size={22} />

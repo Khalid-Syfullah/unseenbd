@@ -54,6 +54,8 @@ Semantic tokens — components use only these:
 | `--map-wish` | `#F2A541` | `#F2A541` | Want-to-go country |
 | `--overlay` | `rgba(16,23,46,.48)` | `rgba(0,0,0,.6)` | Behind dialogs and sheets |
 
+Contrast helpers (added in phase 17 so small text passes 4.5:1): `--success-text` (light `#14724C`, dark = `--success`), `--info-text` (light `#1F6A89`, dark = `--info`) and `--on-primary-wash` (light = `--primary`, dark = `--primary-hover`) for text on `--primary-wash`. Use `--text-muted`, not `--text-subtle`, for informative text; `--text-subtle` is for decoration only. Form fields use a `--text-subtle` border so they meet 3:1.
+
 Division colours (map legends, charts, stamps): rangpur `#E3B04B`, rajshahi `#D9824B`, mymensingh `#9A7CC0`, sylhet `#3FA37F`, dhaka `#D2584A`, khulna `#2F8A6A`, barishal `#3E98C0`, chattogram `#5B7DBE`.
 
 Place-type colours (badges, markers): beach `#E9A23B`, island `#22A39A`, hill `#3E8E5E`, waterfall `#2F86B8`, forest `#2F7A3F`, river `#2D74A6`, tea `#5BA34A`, heritage `#B5653C`, spiritual `#8C62B5`, city `#5A6AA8`, village `#C2873A`.

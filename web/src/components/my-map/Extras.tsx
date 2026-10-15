@@ -52,7 +52,7 @@ export function LevelLadder({ count, levels }: { count: number; levels: Level[] 
                 </span>
               </div>
               {done ? (
-                <span className="inline-flex items-center gap-1 text-sm font-semibold text-success">
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-success-text">
                   <Icon name="check" size={18} />
                   {t("myBd.levelReached")}
                 </span>

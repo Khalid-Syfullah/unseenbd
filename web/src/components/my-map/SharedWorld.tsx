@@ -60,7 +60,7 @@ export function SharedWorld({
       />
       <div>{makeOwn}</div>
       <WorldMap value={value} legend label={title} />
-      <p className="text-xs text-subtle">{t("map.worldCredit")}</p>
+      <p className="text-xs text-muted">{t("map.worldCredit")}</p>
       {CONTINENTS.map((key) => {
         const list = COUNTRIES.filter((c) => c.continentKey === key && value[c.key]);
         if (!list.length) return null;

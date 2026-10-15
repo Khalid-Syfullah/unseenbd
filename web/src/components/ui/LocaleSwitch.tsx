@@ -50,7 +50,7 @@ export function LanguageSelect({ className }: { className?: string }) {
   return (
     <label
       className={cn(
-        "tap-target relative inline-flex h-10 shrink-0 items-center gap-1 rounded-md px-2 text-sm font-semibold text-text md:pr-2 md:pl-2.5",
+        "tap-target relative inline-flex h-11 shrink-0 items-center gap-1 rounded-md px-2 text-sm font-semibold text-text md:pr-2 md:pl-2.5",
         "transition-colors duration-[var(--dur-1)] ease-standard hover:bg-surface-2",
         "has-[select:focus-visible]:outline-3 has-[select:focus-visible]:outline-offset-2 has-[select:focus-visible]:outline-focus",
         className,

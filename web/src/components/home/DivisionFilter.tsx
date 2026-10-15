@@ -3,7 +3,9 @@
 import { useState, type ReactNode } from "react";
 import { CardGrid } from "@/components/ui/Card";
 import { ChipRow, FilterChip } from "@/components/ui/Chip";
-import { useT } from "@/i18n/client";
+import { contentLocale } from "@/i18n/locales";
+import { useLocale, useT } from "@/i18n/client";
+import { formatNumber } from "@/lib/format";
 
 export type FilterItem = { id: string; division: string; node: ReactNode };
 export type DivisionOption = { slug: string; name: string };
@@ -24,6 +26,7 @@ export function DivisionFilter({
   emptyText: string;
 }) {
   const t = useT();
+  const lang = contentLocale(useLocale());
   const [division, setDivision] = useState<string | null>(null);
   const shown = division ? items.filter((i) => i.division === division) : items;
   const counts = new Map<string, number>();
@@ -39,7 +42,7 @@ export function DivisionFilter({
           <FilterChip
             key={d.slug}
             selected={division === d.slug}
-            count={counts.get(d.slug) ?? 0}
+            count={formatNumber(counts.get(d.slug) ?? 0, lang)}
             onClick={() => setDivision(d.slug)}
           >
             {d.name}

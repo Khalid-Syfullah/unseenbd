@@ -218,7 +218,7 @@ function PlanForm({
               return (
                 <li
                   key={dest}
-                  className="inline-flex h-9 items-center gap-0.5 rounded-pill border-[1.5px] border-primary bg-primary-wash pl-3 text-sm font-semibold text-primary"
+                  className="inline-flex h-9 items-center gap-0.5 rounded-pill border-[1.5px] border-primary bg-primary-wash pl-3 text-sm font-semibold text-on-primary-wash"
                 >
                   {input.optimize ? null : (
                     <span aria-hidden className="num mr-1 text-xs text-muted">

@@ -214,9 +214,7 @@ export function DistanceDuel({
 
       {!checked ? (
         <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold tracking-wide text-muted uppercase">
-            ↑ {t("games.duel.nearest")}
-          </p>
+          <p className="text-xs font-semibold label-caps text-muted">↑ {t("games.duel.nearest")}</p>
           <ol aria-labelledby={promptId} className="flex flex-col gap-2">
             {list.map((shown, pos) => {
               const name = nameOf(shown);
@@ -274,7 +272,7 @@ export function DistanceDuel({
               );
             })}
           </ol>
-          <p className="text-xs font-semibold tracking-wide text-muted uppercase">
+          <p className="text-xs font-semibold label-caps text-muted">
             ↓ {t("games.duel.farthest")}
           </p>
           <p aria-live="polite" className="sr-only">

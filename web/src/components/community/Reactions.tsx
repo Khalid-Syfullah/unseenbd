@@ -91,7 +91,7 @@ export function LikeButton({
       className={cn(
         PILL,
         on
-          ? "border-sun bg-sun/10 text-sun"
+          ? "border-sun bg-sun/10 text-text"
           : "border-border-strong bg-raised text-text hover:bg-surface-2",
         className,
       )}
@@ -129,7 +129,7 @@ export function VoteButton({
       className={cn(
         PILL,
         on
-          ? "border-primary bg-primary-wash text-primary"
+          ? "border-primary bg-primary-wash text-on-primary-wash"
           : "border-border-strong bg-raised text-text hover:bg-surface-2",
         className,
       )}

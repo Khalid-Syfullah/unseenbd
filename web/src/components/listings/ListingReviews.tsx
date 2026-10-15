@@ -80,7 +80,7 @@ export function ListingReviews({
 
       {canReview ? (
         sent ? (
-          <p role="status" className="rounded-md bg-primary-wash px-4 py-3 text-primary">
+          <p role="status" className="rounded-md bg-primary-wash px-4 py-3 text-on-primary-wash">
             {t("listing.reviewSent")}
           </p>
         ) : (

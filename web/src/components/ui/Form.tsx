@@ -21,7 +21,7 @@ import { Chevron, Icon, type IconName } from "./Icon";
 /* DESIGN.md §4.6 */
 
 const CONTROL =
-  "h-12 w-full rounded-sm border border-border-strong bg-sunken text-base text-text placeholder:text-subtle " +
+  "h-12 w-full rounded-sm border border-subtle bg-sunken text-base text-text placeholder:text-muted " +
   "transition-[border-color,box-shadow] duration-[var(--dur-1)] ease-standard " +
   "hover:border-text/40 focus-visible:border-focus disabled:cursor-not-allowed disabled:opacity-50 " +
   "aria-[invalid=true]:border-danger";
@@ -235,7 +235,7 @@ export function SearchInput({
 }
 
 const SELECT =
-  "h-12 w-full cursor-pointer appearance-none rounded-sm border border-border-strong bg-sunken pr-10 pl-3 text-base text-text " +
+  "h-12 w-full cursor-pointer appearance-none rounded-sm border border-subtle bg-sunken pr-10 pl-3 text-base text-text " +
   "transition-[border-color] duration-[var(--dur-1)] ease-standard hover:border-text/40 focus-visible:border-focus " +
   "disabled:cursor-not-allowed disabled:opacity-50";
 
@@ -503,7 +503,7 @@ export function Checkbox({ label, hint, className, ...rest }: ChoiceProps) {
       <span className="relative inline-flex size-5 shrink-0">
         <input
           type="checkbox"
-          className="peer size-5 cursor-pointer appearance-none rounded-[6px] border-[1.5px] border-border-strong bg-raised transition-colors duration-[var(--dur-1)] ease-standard checked:border-primary checked:bg-primary disabled:cursor-not-allowed"
+          className="peer size-5 cursor-pointer appearance-none rounded-[6px] border-[1.5px] border-subtle bg-raised transition-colors duration-[var(--dur-1)] ease-standard checked:border-primary checked:bg-primary disabled:cursor-not-allowed"
           {...rest}
         />
         <svg
@@ -533,7 +533,7 @@ export function Radio({ label, hint, className, ...rest }: ChoiceProps) {
     <label className={cn(CHOICE_ROW, className)}>
       <input
         type="radio"
-        className="size-5 shrink-0 cursor-pointer appearance-none rounded-pill border-[1.5px] border-border-strong bg-raised transition-[border] duration-[var(--dur-1)] ease-standard checked:border-[6px] checked:border-primary disabled:cursor-not-allowed"
+        className="size-5 shrink-0 cursor-pointer appearance-none rounded-pill border-[1.5px] border-subtle bg-raised transition-[border] duration-[var(--dur-1)] ease-standard checked:border-[6px] checked:border-primary disabled:cursor-not-allowed"
         {...rest}
       />
       <span className="flex flex-col">

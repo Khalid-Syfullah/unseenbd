@@ -141,7 +141,7 @@ function Fact({
 }) {
   return (
     <div className="flex min-w-0 flex-1 basis-40 items-center gap-3 rounded-lg border border-border bg-raised p-3">
-      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-wash text-primary">
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-wash text-on-primary-wash">
         <Icon name={icon} size={20} />
       </span>
       <div className="min-w-0">

@@ -168,7 +168,9 @@ export function CommentThread({
           {status ? (
             <p
               role={status.tone === "error" ? "alert" : "status"}
-              className={status.tone === "error" ? "text-sm text-danger" : "text-sm text-success"}
+              className={
+                status.tone === "error" ? "text-sm text-danger" : "text-sm text-success-text"
+              }
             >
               {status.text}
             </p>

@@ -64,7 +64,7 @@ export function MyBangladesh({
               legend
               label={t("myBd.mapTitle")}
             />
-            <p className="text-xs text-subtle">{t("map.credit")}</p>
+            <p className="text-xs text-muted">{t("map.credit")}</p>
           </div>
           <div className="flex flex-col gap-3">
             <h3 className="text-h3">{t("myBd.visitedTitle")}</h3>

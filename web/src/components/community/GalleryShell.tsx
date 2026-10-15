@@ -62,7 +62,7 @@ export function GalleryShell({
             defaultValue={q}
             placeholder={t("gallery.searchPlaceholder")}
             maxLength={100}
-            className="h-12 w-full rounded-sm border border-border-strong bg-sunken pr-3 pl-10 text-base text-text placeholder:text-subtle focus-visible:border-focus"
+            className="h-12 w-full rounded-sm border border-subtle bg-sunken pr-3 pl-10 text-base text-text placeholder:text-muted focus-visible:border-focus"
           />
         </div>
         <div className="md:w-64">

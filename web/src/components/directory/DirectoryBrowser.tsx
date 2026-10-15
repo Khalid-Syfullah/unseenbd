@@ -35,6 +35,7 @@ export function DirectoryBrowser({ groups }: { groups: DirectoryGroup[] }) {
 
 function Group({ group }: { group: DirectoryGroup }) {
   const t = useT();
+  const lang = contentLocale(useLocale());
   const [chip, setChip] = useState<string | null>(null);
   const [open, setOpen] = useState<DirectoryItem | null>(null);
 
@@ -61,7 +62,7 @@ function Group({ group }: { group: DirectoryGroup }) {
             <FilterChip
               key={c.key}
               selected={chip === c.key}
-              count={c.count}
+              count={formatNumber(c.count, lang)}
               onClick={() => setChip(chip === c.key ? null : c.key)}
             >
               {c.label}

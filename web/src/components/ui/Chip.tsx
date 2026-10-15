@@ -29,7 +29,7 @@ const CHIP =
   "transition-[background-color,border-color,color] duration-[var(--dur-1)] ease-standard " +
   "disabled:pointer-events-none disabled:opacity-50";
 const CHIP_OFF = "border-transparent bg-surface-2 text-text hover:border-border-strong";
-const CHIP_ON = "border-primary bg-primary-wash text-primary";
+const CHIP_ON = "border-primary bg-primary-wash text-on-primary-wash";
 
 type ChipContentProps = { icon?: IconName; count?: ReactNode; children: ReactNode };
 
@@ -152,9 +152,9 @@ export type StatusTone = "sponsored" | "good" | "new" | "info" | "danger" | "neu
 
 const TONES: Record<StatusTone, string> = {
   sponsored: "bg-accent-wash text-on-accent-wash",
-  good: "bg-primary-wash text-primary",
+  good: "bg-primary-wash text-on-primary-wash",
   new: "bg-raised text-text border border-border",
-  info: "bg-surface-2 text-info",
+  info: "bg-surface-2 text-info-text",
   danger: "bg-surface-2 text-danger",
   neutral: "bg-surface-2 text-muted",
 };

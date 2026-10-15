@@ -10,6 +10,7 @@ import { DistrictSelect } from "@/components/ui/Form";
 import { EmptyState } from "@/components/ui/Feedback";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
+import { formatNumber } from "@/lib/format";
 import type { MessageKey } from "@/i18n/translate";
 import { isListingKind, LISTING_KINDS } from "@/lib/listings/rules";
 import { firstParam, pageParam, type SearchParams } from "@/lib/params";
@@ -72,7 +73,12 @@ export default async function ListingsPage({ params, searchParams }: PageProps) 
           {t("common.all")}
         </FilterChip>
         {LISTING_KINDS.map((k) => (
-          <FilterChip key={k} href={link(k)} selected={kind === k} count={counts[k]}>
+          <FilterChip
+            key={k}
+            href={link(k)}
+            selected={kind === k}
+            count={formatNumber(counts[k], lang)}
+          >
             {t(`listings.kind.${k}` as MessageKey)}
           </FilterChip>
         ))}

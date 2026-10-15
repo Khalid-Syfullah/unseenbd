@@ -27,7 +27,7 @@ import { RouteCard } from "@/components/ui/RouteCard";
 import { PARTNER_BANNER } from "@/config/site";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
-import { localizeDigits, monthName } from "@/lib/format";
+import { formatNumber, localizeDigits, monthName } from "@/lib/format";
 import { alternatesFor } from "@/lib/seo";
 import { currentMonth, inSeason } from "@/lib/season";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -220,7 +220,7 @@ export default async function HomePage({ params }: PageProps) {
               {t("home.hero.title")}
             </h1>
             <p className="max-w-[56ch] text-lg">{t("home.hero.pitch")}</p>
-            <p className="inline-flex w-fit items-center gap-2 rounded-pill bg-primary-wash px-3 py-1 text-sm font-semibold text-primary">
+            <p className="inline-flex w-fit items-center gap-2 rounded-pill bg-primary-wash px-3 py-1 text-sm font-semibold text-on-primary-wash">
               {t("common.freeNoTrackers")}
             </p>
             <nav aria-label={t("home.hero.actions")} className="flex flex-wrap gap-3">
@@ -430,8 +430,8 @@ export default async function HomePage({ params }: PageProps) {
         })}
       >
         {topTrending.length ? (
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
-            <div className="flex flex-col gap-2">
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-2 lg:gap-10">
+            <div className="flex min-w-0 flex-col gap-2">
               <h3 className="text-h3">{t("home.trending.top")}</h3>
               <ol className="flex flex-col">
                 {topTrending.map((item, i) => (
@@ -440,7 +440,7 @@ export default async function HomePage({ params }: PageProps) {
               </ol>
             </div>
             {moreTrending.length ? (
-              <div className="flex flex-col gap-2">
+              <div className="flex min-w-0 flex-col gap-2">
                 <h3 className="text-h3">{t("home.trending.more")}</h3>
                 <PagedList
                   pageSize={MORE_TRENDING_PAGE}
@@ -511,7 +511,7 @@ export default async function HomePage({ params }: PageProps) {
               key={k.key}
               href={href(`/kind/${k.key}`)}
               icon={`kinds/${k.key}` as `kinds/beach`}
-              count={k.count}
+              count={formatNumber(k.count, lang)}
             >
               {k.label}
             </FilterChip>
@@ -538,7 +538,7 @@ export default async function HomePage({ params }: PageProps) {
                 key={m.month}
                 href={href(`/month/${m.slug}`)}
                 selected={m.month === month}
-                count={m.count}
+                count={formatNumber(m.count, lang)}
               >
                 {monthName(m.month, lang, { short: true })}
               </FilterChip>

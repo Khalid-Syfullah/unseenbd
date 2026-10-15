@@ -143,7 +143,7 @@ export function UploadForm({
   if (done !== null) {
     return (
       <Card as="section" aria-labelledby="upload-done" className="items-start gap-4 p-6">
-        <span className="flex size-12 items-center justify-center rounded-full bg-primary-wash text-primary">
+        <span className="flex size-12 items-center justify-center rounded-full bg-primary-wash text-on-primary-wash">
           <Icon name="check" size={28} />
         </span>
         <h2 id="upload-done" className="text-h2" tabIndex={-1}>

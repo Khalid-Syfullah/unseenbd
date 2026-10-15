@@ -60,7 +60,7 @@ export function ThemePicker({
               className={cn(
                 "flex min-h-11 flex-col items-center gap-1 rounded-md border p-1.5 text-xs font-semibold transition-colors duration-[var(--dur-1)] ease-standard",
                 selected
-                  ? "border-primary bg-primary-wash text-primary"
+                  ? "border-primary bg-primary-wash text-on-primary-wash"
                   : "border-transparent text-muted hover:bg-surface-2 hover:text-text",
               )}
             >

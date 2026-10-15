@@ -127,7 +127,9 @@ export function MenuButton({ className }: { className?: string }) {
                         className={cn(
                           "flex min-h-11 items-center gap-2 rounded-sm px-2 text-sm font-semibold",
                           "transition-colors duration-[var(--dur-1)] ease-standard",
-                          active ? "bg-primary-wash text-primary" : "text-text hover:bg-surface-2",
+                          active
+                            ? "bg-primary-wash text-on-primary-wash"
+                            : "text-text hover:bg-surface-2",
                         )}
                       >
                         {item.icon ? (

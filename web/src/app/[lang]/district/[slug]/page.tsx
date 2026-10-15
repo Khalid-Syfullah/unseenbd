@@ -82,7 +82,7 @@ function ReachRow({
 }) {
   return (
     <div className="flex items-start gap-3">
-      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-wash text-primary">
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-wash text-on-primary-wash">
         <Icon name={icon} size={20} />
       </span>
       <div className="min-w-0">

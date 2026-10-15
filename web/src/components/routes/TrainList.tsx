@@ -76,7 +76,7 @@ export function TrainList({
         <ul className="grid gap-3 lg:grid-cols-2">
           {shown.map((tr) => (
             <li key={tr.slug} className="flex">
-              <TrainRow train={tr} className="w-full" />
+              <TrainRow train={tr} headingLevel={2} className="w-full" />
             </li>
           ))}
         </ul>

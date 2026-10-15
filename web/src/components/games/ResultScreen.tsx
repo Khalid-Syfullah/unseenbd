@@ -135,7 +135,7 @@ export function ResultScreen({
   return (
     <div className="flex flex-col gap-6" aria-labelledby={headingId} role="group">
       <div className="flex flex-col items-center gap-2 text-center" aria-live="polite">
-        <p id={headingId} className="text-sm font-semibold tracking-wide text-muted uppercase">
+        <p id={headingId} className="text-xs font-semibold label-caps text-muted">
           {t("games.result.title")}
         </p>
         <p className="num font-display text-display leading-none">

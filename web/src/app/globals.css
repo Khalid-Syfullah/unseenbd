@@ -52,6 +52,9 @@
   --color-tab-active: var(--tab-active);
   --color-on-tab-active: var(--on-tab-active);
   --color-success: var(--success);
+  --color-success-text: var(--success-text);
+  --color-info-text: var(--info-text);
+  --color-on-primary-wash: var(--on-primary-wash);
   --color-info: var(--info);
   --color-focus: var(--focus);
   --color-map-land: var(--map-land);
@@ -218,6 +221,7 @@
   --primary-hover: #0b5a41;
   --on-primary: #ffffff;
   --primary-wash: #e3f1ea;
+  --on-primary-wash: var(--primary);
   --accent: #f2a541;
   --on-accent: #2b1d05;
   --accent-wash: #fdf0d9;
@@ -226,7 +230,9 @@
   --danger: #c93a2d;
   --on-danger: #ffffff;
   --success: #1fa06c;
+  --success-text: #14724c;
   --info: #2e86a8;
+  --info-text: #1f6a89;
   --focus: #2e86a8;
   --map-land: #f1e6d0;
   --map-border: #ffffff;
@@ -319,13 +325,16 @@
   --primary-hover: #3cb98a;
   --on-primary: #06140f;
   --primary-wash: #12352b;
+  --on-primary-wash: var(--primary-hover);
   --accent-wash: #3a2a12;
   --on-accent-wash: var(--accent);
   --sun: #ff6f5e;
   --danger: #ff7a6b;
   --on-danger: #1b0806;
   --success: #3cc48a;
+  --success-text: var(--success);
   --info: #5fb3d3;
+  --info-text: var(--info);
   --focus: #8ccbe4;
   --map-land: #1c2747;
   --map-border: #0a1024;
@@ -357,13 +366,16 @@
     --primary-hover: #3cb98a;
     --on-primary: #06140f;
     --primary-wash: #12352b;
+    --on-primary-wash: var(--primary-hover);
     --accent-wash: #3a2a12;
     --on-accent-wash: var(--accent);
     --sun: #ff6f5e;
     --danger: #ff7a6b;
     --on-danger: #1b0806;
     --success: #3cc48a;
+    --success-text: var(--success);
     --info: #5fb3d3;
+    --info-text: var(--info);
     --focus: #8ccbe4;
     --map-land: #1c2747;
     --map-border: #0a1024;
@@ -451,6 +463,16 @@
     #000 calc(100% - 16px),
     transparent
   );
+}
+
+/* All-caps Latin label (DESIGN.md §2.2): xs only, +0.06em; never applied to Bengali. */
+@utility label-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  &:lang(bn) {
+    text-transform: none;
+    letter-spacing: 0;
+  }
 }
 
 /* Skeleton block with a moving highlight (DESIGN.md §4.7). */

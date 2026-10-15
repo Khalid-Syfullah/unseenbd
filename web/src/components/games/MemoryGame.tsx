@@ -234,7 +234,7 @@ export function MemoryGame({
                         : "border-border-strong bg-raised",
                     )}
                   >
-                    <span className="text-[0.6875rem] font-semibold tracking-wide text-muted uppercase">
+                    <span className="text-xs font-semibold label-caps text-muted">
                       {card.kind === "district"
                         ? t("games.memory.district")
                         : t("games.memory.division")}
