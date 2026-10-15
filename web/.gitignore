@@ -37,3 +37,7 @@ npm-debug.log*
 /public/apple-touch-icon.png
 /public/manifest.webmanifest
 next-env.d.ts
+
+# SQLite database built by npm run db:seed
+/data/*.sqlite
+/data/*.sqlite-*

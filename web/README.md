@@ -4,8 +4,8 @@ The Next.js app for Unseen BD, a Bengali-first travel guide to the 64 districts 
 What to build is in [`../MASTER_PROMPT.md`](../MASTER_PROMPT.md), how it looks in
 [`../DESIGN.md`](../DESIGN.md).
 
-Stack: Next.js 15 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS v4 · Vitest +
-Testing Library · ESLint + Prettier.
+Stack: Next.js 15 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS v4 · Drizzle ORM +
+SQLite (better-sqlite3) · Vitest + Testing Library · ESLint + Prettier.
 
 ## Run it
 
@@ -16,7 +16,8 @@ npm run dev        # http://localhost:3000 (Bengali) and http://localhost:3000/e
 ```
 
 `npm run dev` and `npm run build` first copy the shared assets from `../assets` into `public/`
-(see [Assets](#assets)), so run them from a full checkout of the repository.
+(see [Assets](#assets)) and build the database from `../data` (see [Database](#database)), so run
+them from a full checkout of the repository.
 
 Production: `npm run build && npm start`. Set `SITE_URL` (for example `https://unseenbd.com`) so
 canonical and hreflang URLs are absolute.
@@ -25,8 +26,8 @@ canonical and hreflang URLs are absolute.
 
 | Script                | What it does                                                          |
 | --------------------- | --------------------------------------------------------------------- |
-| `npm run dev`         | Sync assets, then start the dev server                                |
-| `npm run build`       | Sync assets, then make a production build                             |
+| `npm run dev`         | Sync assets and seed the database, then start the dev server          |
+| `npm run build`       | Sync assets and seed the database, then make a production build       |
 | `npm start`           | Serve the production build                                            |
 | `npm run lint`        | ESLint (next + typescript, zero warnings) and `prettier --check`      |
 | `npm run typecheck`   | Generate Next route types, then `tsc --noEmit`                        |
@@ -34,6 +35,10 @@ canonical and hreflang URLs are absolute.
 | `npm run check`       | **The quality gate:** `lint && typecheck && test && build`            |
 | `npm run format`      | Format everything with Prettier (and sort Tailwind classes)           |
 | `npm run sync-assets` | Copy `../assets` into `public/` (runs automatically before dev/build) |
+| `npm run db:migrate`  | Apply the migrations in `drizzle/`                                    |
+| `npm run db:seed`     | Migrate, then reload the content tables from `../data` (idempotent)   |
+| `npm run db:reset`    | Delete the database file, migrate and seed                            |
+| `npm run db:generate` | Write a new migration after changing `src/server/db/schema.ts`        |
 
 ## Locales
 
@@ -103,6 +108,59 @@ into `public/`, so `assets/maps/bangladesh.json` is served at `/maps/bangladesh.
 `apple-touch-icon.png` at the site root and writes `/manifest.webmanifest` with its icon paths
 pointing at `/brand/`. All of it is generated and gitignored; change the files in `../assets`.
 
+## Database
+
+Drizzle ORM on SQLite (`better-sqlite3`), file `data/unseenbd.sqlite` (gitignored; override with
+`DATABASE_PATH`). The schema is `src/server/db/schema.ts` and stays Postgres-compatible: only
+integer, real and text columns (booleans as 0/1, JSON as text, ISO timestamps as text).
+Migrations are generated into `drizzle/` with `npm run db:generate`.
+
+- **Content tables** (seeded): `divisions`, `districts`, `kinds`, `months`, `places`, `routes`,
+  `routes_from_dhaka`, `trains`, `train_stops`, `train_fares`, `curation` (popular / unseen /
+  trending lists), `directory`, `reference`. Places carry nullable bn/en text columns
+  (`description`, `how_to_get_there`, `warnings`, `tips`, `accessibility`, `entry_fee`,
+  `opening_hours`; tips and warnings are JSON arrays) plus `cover`, `photo` and `image_credit` JSON.
+  Districts have nullable bn/en `intro` and `how_to_reach`.
+- **User tables** (start empty): users, sessions, visited, wishlist, view_history, trips, photos,
+  photo_comments, posts, post_comments, likes, reports, suggestions, guide_suggestions,
+  trend_votes, trend_comments, listings (+ prices, photos, reviews), leaderboard_entries,
+  short_links, daily_stats.
+
+`src/server/db/seed.ts` reads `../data/*.json` and `../assets/places/index.json` (cover paths)
+and replaces the content tables in one transaction, keeping ids stable, so reseeding never
+touches user data. It runs in well under a second. If the app opens an empty database it
+migrates and seeds it on the spot; tests use `DATABASE_PATH=:memory:` this way.
+
+## Data access and API
+
+`src/server/data/` holds typed, async functions for pages and route handlers: `listPlaces`,
+`getPlace`, `getDistrict`, `listDistrictsByDivision`, `getRoute`, `listRoutesFromDhaka`,
+`listTrains`, `getTrain`, `placesInMonth`, `placesByKind`, `nearby`, plus kinds, months, curated
+lists and map points. Each takes a content language (`toLang(locale)`: `bn` → Bengali, every
+other locale → English) and resolves bilingual fields to it, falling back to English.
+
+Read-only JSON endpoints live in `src/app/api/` (`/api/places`, `/api/places/:slug`,
+`/api/place-list`, `/api/place-points`, `/api/popular`, `/api/unseen`, `/api/trend`,
+`/api/districts/:slug`, `/api/famous`, `/api/routes`, `/api/routes/:slug`, `/api/trains`,
+`/api/trains/:slug`). All accept `?lang=bn|en`, send `Cache-Control` for static data, and answer
+404 / 400 as JSON.
+
+Season logic is `inSeason(from, to, month)` in `src/lib/season.ts`; it wraps across the year
+(11 → 3 is Nov–Mar).
+
+## Interface strings and formatting
+
+Message catalogs are `src/i18n/{bn,en,zh,fr,de,it,ja}.json`, all with the same keys (a test
+checks this). Server code calls `getT(locale)` from `src/i18n/messages.ts`; client components
+call `useT()` from `src/i18n/client.tsx` (the root layout provides the catalog). `t("key", vars)`
+fills `{placeholders}`, formats numbers for the locale and picks plural forms by `count`.
+District, division, kind and month names come from the data layer, never from catalogs.
+
+`src/lib/format.ts` formats numbers (Bengali numerals and ১,০০,০০০ grouping in `bn`), money
+(`৳22,200`), ranges (`৳980–1,050`), 12-hour times (`সকাল ৭:০০` / `7:00 am`), month ranges
+(`Nov – Mar`), dates (`১৪ অক্টোবর, ২০২৬` / `14 October 2026`), durations (`সাড়ে ১০ ঘণ্টা` /
+`10.5 hours`), distances and the ★ score.
+
 ## Layout
 
 ```
@@ -111,9 +169,13 @@ src/
   app/global-not-found.tsx  404 for unmatched URLs
   components/        UI components
   fonts/             font files + next/font setup
-  i18n/              locales, routing rule, interface strings
-  lib/               theme, SEO and site helpers
+  app/api/           read-only JSON route handlers
+  i18n/              locales, routing rule, message catalogs, t()
+  lib/               formatters, season and month helpers, theme, SEO and site helpers
+  server/db/         Drizzle schema, connection, seed
+  server/data/       typed data access for pages and API routes
   middleware.ts      locale rewrites
-scripts/             build-time scripts (asset sync)
+drizzle/             SQL migrations
+scripts/             asset sync and database tasks
 test/                app-level tests (unit tests sit next to their code)
 ```

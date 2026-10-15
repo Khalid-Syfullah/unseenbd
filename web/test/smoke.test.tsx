@@ -2,7 +2,10 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it } from "vitest";
 import HomePage from "@/app/[lang]/page";
-import { FOUNDATION_COPY } from "@/i18n/foundation-copy";
+import { getT } from "@/i18n/messages";
+
+const bn = getT("bn");
+const en = getT("en");
 
 async function renderHome(lang: string) {
   const ui = await HomePage({ params: Promise.resolve({ lang }) });
@@ -18,9 +21,9 @@ describe("home page (smoke)", () => {
 
   it("renders Bengali at bn with links to the other locales", async () => {
     await renderHome("bn");
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(FOUNDATION_COPY.bn.lead);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(bn("home.lead"));
 
-    const nav = screen.getByRole("navigation", { name: FOUNDATION_COPY.bn.languageLabel });
+    const nav = screen.getByRole("navigation", { name: bn("language.label") });
     expect(within(nav).getByRole("link", { name: "বাংলা" })).toHaveAttribute("href", "/");
     expect(within(nav).getByRole("link", { name: "বাংলা" })).toHaveAttribute(
       "aria-current",
@@ -37,7 +40,7 @@ describe("home page (smoke)", () => {
 
   it("renders English at en", async () => {
     await renderHome("en");
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(FOUNDATION_COPY.en.lead);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(en("home.lead"));
     expect(screen.getAllByAltText("Unseen BD")[0]).toHaveAttribute(
       "src",
       "/brand/logo-horizontal-en.svg",

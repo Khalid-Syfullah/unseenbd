@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { fontVariables } from "@/fonts";
-import { FOUNDATION_COPY } from "@/i18n/foundation-copy";
+import { I18nProvider } from "@/i18n/client";
 import { DEFAULT_LOCALE, HTML_LANG, isLocale, LOCALES } from "@/i18n/locales";
+import { getMessages, getT } from "@/i18n/messages";
 import { SITE_NAME, SITE_URL, THEME_COLOR } from "@/lib/site";
 import { THEME_SCRIPT } from "@/lib/theme";
 import "../globals.css";
@@ -23,11 +24,11 @@ export async function generateMetadata({
   params,
 }: Omit<LayoutProps, "children">): Promise<Metadata> {
   const { lang } = await params;
-  const copy = FOUNDATION_COPY[isLocale(lang) ? lang : DEFAULT_LOCALE];
+  const t = getT(isLocale(lang) ? lang : DEFAULT_LOCALE);
   return {
     metadataBase: new URL(SITE_URL),
-    title: { default: copy.title, template: `%s · ${SITE_NAME}` },
-    description: copy.description,
+    title: { default: t("meta.title"), template: `%s · ${SITE_NAME}` },
+    description: t("meta.description"),
     applicationName: SITE_NAME,
     manifest: "/manifest.webmanifest",
     icons: {
@@ -64,7 +65,11 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
-      <body className="bg-bg text-text antialiased">{children}</body>
+      <body className="bg-bg text-text antialiased">
+        <I18nProvider locale={lang} messages={getMessages(lang)}>
+          {children}
+        </I18nProvider>
+      </body>
     </html>
   );
 }
