@@ -9,7 +9,7 @@ import { getT } from "@/i18n/messages";
 import type { SearchParams } from "@/lib/params";
 import { alternatesFor } from "@/lib/seo";
 import { parseDistrictShare } from "@/lib/visited/encode";
-import { getMyBangladeshLevels } from "@/server/data";
+import { getDistrictCovers, getMyBangladeshLevels } from "@/server/data";
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -53,9 +53,10 @@ export default async function MyBangladeshPage({ params, searchParams }: PagePro
   if (!isLocale(param)) notFound();
   const locale = param;
   const t = getT(locale);
-  const [divisions, levels, query] = await Promise.all([
+  const [divisions, levels, covers, query] = await Promise.all([
     myMapDivisions(locale),
     getMyBangladeshLevels(contentLocale(locale)),
+    getDistrictCovers(),
     searchParams,
   ]);
 
@@ -77,7 +78,7 @@ export default async function MyBangladeshPage({ params, searchParams }: PagePro
   return (
     <PageContainer className="gap-8">
       <PageHeader title={t("myBd.title")} intro={t("myBd.intro")} />
-      <MyBangladesh divisions={divisions} levels={levels} />
+      <MyBangladesh divisions={divisions} levels={levels} covers={covers} />
     </PageContainer>
   );
 }

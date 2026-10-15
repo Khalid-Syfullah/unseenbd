@@ -8,3 +8,4 @@
 - 2026-10-15 phase 08 (sonnet) — Routes and trains
 - 2026-10-15 phase 09 (opus) — Trip planner and trip cost calculator
 - 2026-10-15 phase 10 (opus) — My Bangladesh and My World
+- 2026-10-15 phase 11 (opus) — Share-card maker

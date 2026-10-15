@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useMemo, useState, type FormEvent } from "react";
+import { CardMakerLazy } from "@/components/card";
 import { PageSection } from "@/components/discovery/PageHeader";
 import { WorldMap } from "@/components/maps/WorldMap";
 import { Button, IconButton, LinkButton } from "@/components/ui/Button";
@@ -46,7 +47,7 @@ function byName(a: string, b: string): number {
 /**
  * The /world page body (FEATURES.md §5.7): the world map with Visited / Want to go / Clear modes,
  * totals and per-continent counts, country search and the full list with toggle buttons, a share
- * link, travel memory pins and the image-maker slot. Marks and pins live in this browser.
+ * link, travel memory pins and the image maker (the same card engine as My Bangladesh). Marks and pins live in this browser.
  */
 export function MyWorld() {
   const t = useT();
@@ -215,7 +216,9 @@ export function MyWorld() {
 
       <MemoryPins />
 
-      <CardMakerSlot id="image-maker" title={t("world.imageTitle")} body={t("world.imageSoon")} />
+      <CardMakerSlot id="image-maker" title={t("world.imageTitle")}>
+        <CardMakerLazy map="world" />
+      </CardMakerSlot>
     </div>
   );
 }

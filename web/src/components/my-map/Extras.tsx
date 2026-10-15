@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useId } from "react";
+import { useId, type ReactNode } from "react";
 import { PageSection } from "@/components/discovery/PageHeader";
 import { Button } from "@/components/ui/Button";
 import { FeatureCard } from "@/components/ui/Card";
@@ -206,17 +206,17 @@ export function MoreToTry() {
 }
 
 /**
- * Where the share-card maker goes (phase 11). Until then: a note that it is coming. Phase 11
- * replaces the body of this section with `<CardMaker />` and keeps the `#card-maker` anchor.
+ * The share-card maker's section (`#card-maker` on My Bangladesh, `#image-maker` on My World).
+ * The maker itself (`components/card`) is passed as children.
  */
 export function CardMakerSlot({
   id = "card-maker",
   title,
-  body,
+  children,
 }: {
   id?: string;
   title: string;
-  body: string;
+  children: ReactNode;
 }) {
   return (
     <section
@@ -228,13 +228,7 @@ export function CardMakerSlot({
       <h2 id={`${id}-title`} className="text-h2">
         {title}
       </h2>
-      {/* CARD MAKER SLOT (phase 11): mount the card maker here. */}
-      <div className="flex items-center gap-4 rounded-lg border border-dashed border-border-strong bg-raised/60 p-5">
-        <span className="flex size-11 shrink-0 items-center justify-center rounded-pill bg-primary-wash text-primary">
-          <Icon name="camera" size={22} />
-        </span>
-        <p className="text-muted">{body}</p>
-      </div>
+      {children}
     </section>
   );
 }

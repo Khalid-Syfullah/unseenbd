@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo } from "react";
+import { CardMakerLazy } from "@/components/card";
 import { PageSection } from "@/components/discovery/PageHeader";
 import { BangladeshMap } from "@/components/maps/BangladeshMap";
 import { LinkButton } from "@/components/ui/Button";
@@ -16,11 +17,20 @@ import type { MyDivision } from "./types";
 
 /**
  * The /my-bangladesh page body (FEATURES.md §5.1–5.6, DESIGN.md §5.6): progress, the district
- * picker, the map, the visited list, sharing, the card maker slot, levels, passport stamps, the
+ * picker, the map, the visited list, sharing, the card maker, levels, passport stamps, the
  * story and more to try. Everything reads and writes the browser store in `lib/visited`, so the
  * page, the home widget and other tabs stay in step.
  */
-export function MyBangladesh({ divisions, levels }: { divisions: MyDivision[]; levels: Level[] }) {
+export function MyBangladesh({
+  divisions,
+  levels,
+  covers,
+}: {
+  divisions: MyDivision[];
+  levels: Level[];
+  /** Place cover URL by district slug, for the card maker's district photos. */
+  covers: Record<string, string>;
+}) {
   const t = useT();
   const locale = useLocale();
   const ids = useVisitedIds();
@@ -89,7 +99,9 @@ export function MyBangladesh({ divisions, levels }: { divisions: MyDivision[]; l
 
       <SharePanel ids={ids} />
 
-      <CardMakerSlot title={t("myBd.cardTitle")} body={t("myBd.cardSoon")} />
+      <CardMakerSlot title={t("myBd.cardTitle")}>
+        <CardMakerLazy map="bangladesh" divisions={divisions} levels={levels} covers={covers} />
+      </CardMakerSlot>
 
       <LevelLadder count={count} levels={levels} />
 

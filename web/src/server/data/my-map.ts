@@ -1,7 +1,7 @@
-import { eq } from "drizzle-orm";
+import { asc, desc, eq } from "drizzle-orm";
 import { LEVEL_BADGES, type Level } from "@/lib/visited/levels";
 import { getDb } from "../db/client";
-import { reference } from "../db/schema";
+import { districts, places, reference } from "../db/schema";
 import { pick, type Lang } from "./lang";
 
 type LevelRow = { min_districts?: unknown; title_bn?: unknown; title_en?: unknown };
@@ -32,4 +32,23 @@ export async function getMyBangladeshLevels(lang: Lang = "bn"): Promise<Level[]>
       title: pick(lang, text(r.title_bn), text(r.title_en)) ?? "",
       badge: LEVEL_BADGES[Math.min(i, LEVEL_BADGES.length - 1)]!,
     }));
+}
+
+/**
+ * One place cover per district (the most popular, best-rated place there), keyed by district
+ * slug, for the card maker's "district photos". Values are public `w640` WebP URLs.
+ */
+export async function getDistrictCovers(): Promise<Record<string, string>> {
+  const rows = getDb()
+    .select({ district: districts.slug, slug: places.slug, cover: places.cover })
+    .from(places)
+    .innerJoin(districts, eq(districts.id, places.districtId))
+    .orderBy(asc(places.districtId), desc(places.popular), desc(places.stars), asc(places.id))
+    .all();
+  const out: Record<string, string> = {};
+  for (const r of rows) {
+    if (out[r.district]) continue;
+    out[r.district] = r.cover?.w640 ?? `/places/w640/${r.slug}.webp`;
+  }
+  return out;
 }
