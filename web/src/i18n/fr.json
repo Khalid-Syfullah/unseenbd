@@ -763,5 +763,211 @@
     "buffer": "Marge (entrées et divers)",
     "addToPlan": "Ajouter au plan de voyage",
     "note": "Une estimation pour planifier, pas un devis. Vérifiez les tarifs et les prix des chambres avant de partir."
+  },
+  "myBd": {
+    "title": "Mon Bangladesh",
+    "metaDescription": "Cochez les districts du Bangladesh que vous avez visités, voyez votre niveau et vos tampons de passeport, et partagez votre carte.",
+    "intro": "Coloriez les districts où vous êtes allé. Votre carte reste dans ce navigateur, sauf si vous la partagez.",
+    "progressLabel": "Votre progression",
+    "percentSeen": "{percent} vus",
+    "level": "Niveau : {level}",
+    "noLevel": "Pas encore de niveau",
+    "nextGoal": {
+      "one": "Prochain objectif : {count} district",
+      "other": "Prochain objectif : {count} districts"
+    },
+    "toNext": {
+      "one": "Encore {count} pour {level}",
+      "other": "Encore {count} pour {level}"
+    },
+    "allDone": "Les 64 districts sont vus. Vous êtes une légende !",
+    "pickTitle": "Choisissez vos districts",
+    "searchLabel": "Rechercher un district",
+    "searchPlaceholder": "Nom du district, en bengali ou en anglais",
+    "searchEmpty": "Aucun district ne correspond à « {query} ».",
+    "searchResults": "Districts trouvés",
+    "wholeDivision": "Toute la division",
+    "clearDivision": "Vider la division",
+    "mapTitle": "Coloriez les districts que vous avez visités",
+    "mapHint": "Touchez un district pour le cocher ; touchez-le encore pour le décocher.",
+    "visitedTitle": "Les districts que vous avez vus",
+    "visitedEmpty": "Rien de coché pour l'instant. Commencez par le district où vous habitez.",
+    "clearAll": "Tout effacer",
+    "clearConfirm": {
+      "one": "Décocher votre {count} district ?",
+      "other": "Décocher les {count} districts ?"
+    },
+    "shareTitle": "Partagez votre Bangladesh",
+    "nameLabel": "Votre nom (facultatif)",
+    "namePlaceholder": "ex. Rahim",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "shortLink": "Lien court",
+    "shortLinkCopied": "Lien court copié",
+    "shortLinkFailed": "Impossible de créer un lien court. Réessayez.",
+    "shortLinkLimited": "Trop de liens courts depuis cette connexion. Réessayez plus tard.",
+    "shareEmpty": "Cochez d'abord au moins un district.",
+    "privacy": "Un lien ne contient que votre liste de districts et le nom que vous saisissez. Un lien court enregistre seulement ces deux éléments sur notre serveur, rien d'autre sur vous.",
+    "shareText": {
+      "one": "J'ai vu {count} des 64 districts du Bangladesh. Voici ma carte :",
+      "other": "J'ai vu {count} des 64 districts du Bangladesh. Voici ma carte :"
+    },
+    "challengeTitle": "Défiez un ami",
+    "challengeBody": "Envoyez votre score à un ami. Il voit vos districts et coche les siens pour comparer.",
+    "challengeCopy": "Copier le lien du défi",
+    "challengeText": {
+      "one": "J'ai vu {count} district du Bangladesh. Tu peux faire mieux ?",
+      "other": "J'ai vu {count} districts du Bangladesh. Tu peux faire mieux ?"
+    },
+    "cardTitle": "Créez votre carte",
+    "cardSoon": "Bientôt : transformez votre carte, votre niveau ou votre passeport en image à publier, en six thèmes de couleur et quatre formats.",
+    "levelsTitle": "Niveaux",
+    "levelReached": "Atteint",
+    "levelToGo": {
+      "one": "Encore {count}",
+      "other": "Encore {count}"
+    },
+    "passportTitle": "Tampons de passeport",
+    "passportNote": "Un passeport de jeu, pas un document officiel.",
+    "passportCount": "{count} tampons sur {total}",
+    "stampDone": "{name} : tamponné",
+    "stampLocked": "{name} : pas encore",
+    "storyTitle": "Mon histoire du Bangladesh",
+    "storyIntro": "Les districts qui vous ont façonné. Enregistré dans ce navigateur uniquement.",
+    "storyBirth": "District de naissance",
+    "storyUpbringing": "Où j'ai grandi",
+    "storyStudy": "Où j'ai étudié",
+    "storyWork": "Où je travaille",
+    "storyFavourite": "Mon district préféré",
+    "storyChoose": "Choisir un district",
+    "storyAdd": "Cocher ceux-ci sur ma carte",
+    "moreTitle": "À essayer aussi",
+    "moreQuiz": "Quiz des districts",
+    "moreQuizBody": "Dans quelle division se trouve chaque district ? Vingt questions.",
+    "moreBucket": "Liste d'envies",
+    "moreBucketBody": "Tous les lieux, avec « à voir » et « déjà vu ».",
+    "moreWorld": "Mon monde",
+    "moreWorldBody": "Marquez les pays visités et ceux où vous voulez aller.",
+    "morePlan": "Planificateur",
+    "morePlanBody": "Préparez les prochains districts à colorier, avec jours et coûts.",
+    "sharedTitle": "Le Bangladesh de {name}",
+    "sharedTitleAnon": "Le Bangladesh d'un voyageur",
+    "sharedLine": {
+      "one": "{name} a vu {count} district",
+      "other": "{name} a vu {count} districts"
+    },
+    "sharedLineAnon": {
+      "one": "{count} district vu",
+      "other": "{count} districts vus"
+    },
+    "sharedEmpty": "Ce lien ne contient aucun district.",
+    "makeOwn": "Créer la vôtre",
+    "sharedMap": "Carte des districts vus par {name}"
+  },
+  "challenge": {
+    "title": "Défi des districts",
+    "metaDescription": "Un ami a partagé le nombre de districts du Bangladesh qu'il a vus. Et vous, combien ?",
+    "heading": "{name} vous lance un défi",
+    "headingAnon": "Un ami vous lance un défi",
+    "line": {
+      "one": "{name} a vu {count} des 64 districts du Bangladesh.",
+      "other": "{name} a vu {count} des 64 districts du Bangladesh."
+    },
+    "lineAnon": {
+      "one": "Votre ami a vu {count} des 64 districts du Bangladesh.",
+      "other": "Votre ami a vu {count} des 64 districts du Bangladesh."
+    },
+    "question": "Et vous, combien en avez-vous vu ?",
+    "friend": "votre ami",
+    "you": {
+      "one": "Vous avez vu {count} district.",
+      "other": "Vous avez vu {count} districts."
+    },
+    "both": {
+      "one": "Vous avez tous deux vu {count} district.",
+      "other": "Vous avez tous deux vu {count} districts."
+    },
+    "ahead": "Vous êtes devant !",
+    "behind": {
+      "one": "Encore {count} pour rattraper.",
+      "other": "Encore {count} pour rattraper."
+    },
+    "tie": "Égalité !",
+    "cta": "Relever le défi",
+    "ctaStart": "Cochez vos districts",
+    "empty": "Ce lien de défi ne contient aucun district.",
+    "theirDistricts": "Ses districts"
+  },
+  "world": {
+    "title": "Mon monde",
+    "metaDescription": "Marquez les pays visités et ceux que vous voulez voir, épinglez vos souvenirs de voyage et partagez votre carte du monde.",
+    "intro": "Coloriez les pays où vous êtes allé et ceux dont vous rêvez. Enregistré dans ce navigateur, sauf si vous partagez.",
+    "modeLabel": "Effet d'un toucher",
+    "modeVisited": "Visité",
+    "modeWish": "Envie d'y aller",
+    "modeClear": "Effacer",
+    "visitedCount": {
+      "one": "{count} pays visité",
+      "other": "{count} pays visités"
+    },
+    "wishCount": {
+      "one": "{count} sur la liste d'envies",
+      "other": "{count} sur la liste d'envies"
+    },
+    "continentsTitle": "Par continent",
+    "continentLine": "{visited} visités sur {total}",
+    "continentWish": {
+      "one": "{count} envie",
+      "other": "{count} envies"
+    },
+    "africa": "Afrique",
+    "asia": "Asie",
+    "europe": "Europe",
+    "northAmerica": "Amérique du Nord",
+    "southAmerica": "Amérique du Sud",
+    "oceania": "Océanie",
+    "searchLabel": "Rechercher un pays",
+    "searchPlaceholder": "Nom du pays",
+    "searchEmpty": "Aucun pays ne correspond à « {query} ».",
+    "listTitle": "Tous les pays",
+    "listCount": {
+      "one": "{count} pays ou territoire",
+      "other": "{count} pays et territoires"
+    },
+    "clearAll": "Tout effacer",
+    "clearConfirm": "Effacer tous les pays marqués ?",
+    "shareTitle": "Partagez votre monde",
+    "shareText": {
+      "one": "Je suis allé dans {count} pays. Voici ma carte du monde :",
+      "other": "Je suis allé dans {count} pays. Voici ma carte du monde :"
+    },
+    "shareEmpty": "Marquez d'abord au moins un pays.",
+    "privacy": "Le lien ne contient que les codes de vos pays et le nom que vous saisissez.",
+    "pinsTitle": "Souvenirs de voyage",
+    "pinsIntro": "Épinglez un voyage : un pays, une date et une courte note. Enregistré dans ce navigateur uniquement.",
+    "pinCountry": "Pays",
+    "pinDate": "Date",
+    "pinNote": "Note",
+    "pinNotePlaceholder": "Lever de soleil sur les collines",
+    "pinAdd": "Ajouter un souvenir",
+    "pinRemove": "Supprimer le souvenir",
+    "pinsEmpty": "Aucun souvenir pour l'instant.",
+    "pinNeedCountry": "Choisissez d'abord un pays.",
+    "pinsFull": "Ce navigateur garde jusqu'à 100 souvenirs.",
+    "pinAdded": "Souvenir ajouté",
+    "imageTitle": "Créer une image",
+    "imageSoon": "Bientôt : transformez votre carte du monde en image à publier, avec le même créateur de cartes que Mon Bangladesh.",
+    "sharedTitle": "Le monde de {name}",
+    "sharedTitleAnon": "Le monde d'un voyageur",
+    "sharedLine": {
+      "one": "{name} est allé dans {count} pays",
+      "other": "{name} est allé dans {count} pays"
+    },
+    "sharedLineAnon": {
+      "one": "{count} pays visité",
+      "other": "{count} pays visités"
+    },
+    "sharedEmpty": "Ce lien ne contient aucun pays.",
+    "makeOwn": "Créer la vôtre"
   }
 }

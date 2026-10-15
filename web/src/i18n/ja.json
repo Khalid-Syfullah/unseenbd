@@ -750,5 +750,191 @@
     "buffer": "予備費（入場料・雑費）",
     "addToPlan": "旅行プランに追加",
     "note": "計画用の見積もりで、確定料金ではありません。出発前に運賃と宿泊費を確認してください。"
+  },
+  "myBd": {
+    "title": "マイ・バングラデシュ",
+    "metaDescription": "訪れたバングラデシュの県にチェックを入れ、レベルとパスポートスタンプを確認し、地図を友だちとシェアしましょう。",
+    "intro": "行ったことのある県を塗りましょう。シェアしない限り、地図はこのブラウザにだけ保存されます。",
+    "progressLabel": "あなたの進み具合",
+    "percentSeen": "{percent} 達成",
+    "level": "レベル：{level}",
+    "noLevel": "まだレベルはありません",
+    "nextGoal": {
+      "other": "次の目標：{count} 県"
+    },
+    "toNext": {
+      "other": "あと {count} 県で{level}"
+    },
+    "allDone": "64 県すべて制覇。あなたは伝説です！",
+    "pickTitle": "県を選ぶ",
+    "searchLabel": "県を検索",
+    "searchPlaceholder": "ベンガル語または英語の県名",
+    "searchEmpty": "「{query}」に一致する県はありません。",
+    "searchResults": "一致した県",
+    "wholeDivision": "管区全体",
+    "clearDivision": "管区をクリア",
+    "mapTitle": "訪れた県を塗りましょう",
+    "mapHint": "県をタップするとチェック、もう一度タップすると解除します。",
+    "visitedTitle": "訪れた県",
+    "visitedEmpty": "まだチェックがありません。住んでいる県から始めましょう。",
+    "clearAll": "すべてクリア",
+    "clearConfirm": {
+      "other": "{count} 県のチェックをすべて外しますか？"
+    },
+    "shareTitle": "あなたのバングラデシュをシェア",
+    "nameLabel": "名前（任意）",
+    "namePlaceholder": "例：Rahim",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "shortLink": "短縮リンク",
+    "shortLinkCopied": "短縮リンクをコピーしました",
+    "shortLinkFailed": "短縮リンクを作れませんでした。もう一度お試しください。",
+    "shortLinkLimited": "この接続からの短縮リンクが多すぎます。しばらくしてからお試しください。",
+    "shareEmpty": "まず少なくとも 1 県にチェックを入れてください。",
+    "privacy": "リンクに含まれるのは県のリストと入力した名前だけです。短縮リンクもサーバーにこの 2 つだけを保存し、あなたに関するほかの情報は保存しません。",
+    "shareText": {
+      "other": "バングラデシュ 64 県のうち {count} 県を訪れました。私の地図はこちら："
+    },
+    "challengeTitle": "友だちに挑戦",
+    "challengeBody": "友だちに数を送りましょう。相手はあなたの県を見て、自分の県にチェックを入れて比べられます。",
+    "challengeCopy": "チャレンジリンクをコピー",
+    "challengeText": {
+      "other": "バングラデシュの {count} 県を訪れました。私に勝てる？"
+    },
+    "cardTitle": "カードを作る",
+    "cardSoon": "近日公開：地図・レベル・パスポートを投稿用の画像に。6 つのカラーテーマと 4 つのサイズで。",
+    "levelsTitle": "レベル",
+    "levelReached": "達成",
+    "levelToGo": {
+      "other": "あと {count}"
+    },
+    "passportTitle": "パスポートスタンプ",
+    "passportNote": "ゲームのパスポートです。公的な書類ではありません。",
+    "passportCount": "{total} 個中 {count} 個のスタンプ",
+    "stampDone": "{name}：スタンプ済み",
+    "stampLocked": "{name}：まだ",
+    "storyTitle": "わたしのバングラデシュ物語",
+    "storyIntro": "あなたをつくった県。このブラウザにだけ保存されます。",
+    "storyBirth": "生まれた県",
+    "storyUpbringing": "育った場所",
+    "storyStudy": "学んだ場所",
+    "storyWork": "働いている場所",
+    "storyFavourite": "いちばん好きな県",
+    "storyChoose": "県を選ぶ",
+    "storyAdd": "これらを地図にチェック",
+    "moreTitle": "ほかにも",
+    "moreQuiz": "県クイズ",
+    "moreQuizBody": "それぞれの県はどの管区？ 20 問。",
+    "moreBucket": "バケットリスト",
+    "moreBucketBody": "すべての場所に「見たい」「行った」のチェック。",
+    "moreWorld": "マイ・ワールド",
+    "moreWorldBody": "訪れた国と行きたい国に印をつけましょう。",
+    "morePlan": "旅行プランナー",
+    "morePlanBody": "次に塗る県を、日数と費用つきで計画しましょう。",
+    "sharedTitle": "{name}のバングラデシュ",
+    "sharedTitleAnon": "ある旅人のバングラデシュ",
+    "sharedLine": {
+      "other": "{name}は {count} 県を訪れました"
+    },
+    "sharedLineAnon": {
+      "other": "{count} 県を訪問"
+    },
+    "sharedEmpty": "このリンクには県が含まれていません。",
+    "makeOwn": "自分のを作る",
+    "sharedMap": "{name}が訪れた県の地図"
+  },
+  "challenge": {
+    "title": "県チャレンジ",
+    "metaDescription": "友だちがバングラデシュの県をいくつ訪れたかシェアしました。あなたはいくつ？",
+    "heading": "{name}からの挑戦状",
+    "headingAnon": "友だちからの挑戦状",
+    "line": {
+      "other": "{name}はバングラデシュ 64 県のうち {count} 県を訪れました。"
+    },
+    "lineAnon": {
+      "other": "友だちはバングラデシュ 64 県のうち {count} 県を訪れました。"
+    },
+    "question": "あなたはいくつ訪れましたか？",
+    "friend": "友だち",
+    "you": {
+      "other": "あなたは {count} 県を訪れました。"
+    },
+    "both": {
+      "other": "2 人とも訪れた県は {count} 県です。"
+    },
+    "ahead": "あなたがリード！",
+    "behind": {
+      "other": "追いつくまであと {count} 県。"
+    },
+    "tie": "引き分け！",
+    "cta": "挑戦を受ける",
+    "ctaStart": "自分の県にチェック",
+    "empty": "このチャレンジリンクには県が含まれていません。",
+    "theirDistricts": "相手の県"
+  },
+  "world": {
+    "title": "マイ・ワールド",
+    "metaDescription": "訪れた国と行きたい国に印をつけ、旅の思い出をピン留めして、世界地図をシェアしましょう。",
+    "intro": "行った国と夢見る国を塗りましょう。シェアしない限り、このブラウザに保存されます。",
+    "modeLabel": "タップの動作",
+    "modeVisited": "訪問済み",
+    "modeWish": "行きたい",
+    "modeClear": "クリア",
+    "visitedCount": {
+      "other": "{count} か国を訪問"
+    },
+    "wishCount": {
+      "other": "行きたいリストに {count} か国"
+    },
+    "continentsTitle": "大陸別",
+    "continentLine": "{total} か国中 {visited} か国を訪問",
+    "continentWish": {
+      "other": "行きたい {count} か国"
+    },
+    "africa": "アフリカ",
+    "asia": "アジア",
+    "europe": "ヨーロッパ",
+    "northAmerica": "北アメリカ",
+    "southAmerica": "南アメリカ",
+    "oceania": "オセアニア",
+    "searchLabel": "国を検索",
+    "searchPlaceholder": "国名",
+    "searchEmpty": "「{query}」に一致する国はありません。",
+    "listTitle": "すべての国",
+    "listCount": {
+      "other": "{count} の国と地域"
+    },
+    "clearAll": "すべてクリア",
+    "clearConfirm": "印をつけた国をすべてクリアしますか？",
+    "shareTitle": "あなたの世界をシェア",
+    "shareText": {
+      "other": "{count} か国を訪れました。私の世界地図はこちら："
+    },
+    "shareEmpty": "まず少なくとも 1 か国に印をつけてください。",
+    "privacy": "リンクに含まれるのは国コードと入力した名前だけです。",
+    "pinsTitle": "旅の思い出",
+    "pinsIntro": "旅をピン留め：国、日付、短いメモ。このブラウザにだけ保存されます。",
+    "pinCountry": "国",
+    "pinDate": "日付",
+    "pinNote": "メモ",
+    "pinNotePlaceholder": "丘の上の日の出",
+    "pinAdd": "思い出を追加",
+    "pinRemove": "思い出を削除",
+    "pinsEmpty": "まだ思い出はありません。",
+    "pinNeedCountry": "まず国を選んでください。",
+    "pinsFull": "このブラウザに保存できる思い出は 100 件までです。",
+    "pinAdded": "思い出を追加しました",
+    "imageTitle": "画像を作る",
+    "imageSoon": "近日公開：マイ・バングラデシュと同じカードメーカーで、世界地図を投稿用の画像に。",
+    "sharedTitle": "{name}の世界",
+    "sharedTitleAnon": "ある旅人の世界",
+    "sharedLine": {
+      "other": "{name}は {count} か国を訪れました"
+    },
+    "sharedLineAnon": {
+      "other": "{count} か国を訪問"
+    },
+    "sharedEmpty": "このリンクには国が含まれていません。",
+    "makeOwn": "自分のを作る"
   }
 }

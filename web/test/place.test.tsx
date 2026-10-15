@@ -82,6 +82,7 @@ describe("/district/[slug]", () => {
       screen.getByRole("heading", { level: 2, name: en("district.reachTitle") }),
     ).toBeInTheDocument();
     await userEvent.click(screen.getByRole("button", { name: en("district.beenHere") }));
-    expect(JSON.parse(window.localStorage.getItem(VISITED_KEY) ?? "[]")).toEqual(["bandarban"]);
+    // The store keeps district ids (Bandarban is 14).
+    expect(JSON.parse(window.localStorage.getItem(VISITED_KEY) ?? "[]")).toEqual([14]);
   });
 });

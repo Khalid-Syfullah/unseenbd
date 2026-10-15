@@ -66,8 +66,11 @@ export const WORLD_COUNTRIES: readonly WorldCountry[] = (() => {
 export type WorldMapProps = {
   /** Status by country key; countries not listed are unmarked. */
   value?: Record<string, WorldStatus>;
-  /** What a click paints: clicking a country already in this state clears it. */
-  mark?: WorldStatus;
+  /**
+   * What a click paints: clicking a country already in this state clears it. `"clear"` makes
+   * every click clear the country.
+   */
+  mark?: WorldStatus | "clear";
   /** Makes the map interactive. */
   onChange?: (key: string, status: WorldStatus | null) => void;
   legend?: boolean;
@@ -112,7 +115,7 @@ export function WorldMap({
 
   function activate(key: string) {
     const current = value[key];
-    onChange?.(key, current === mark ? null : mark);
+    onChange?.(key, mark === "clear" || current === mark ? null : mark);
   }
 
   function onKeyDown(e: KeyboardEvent<SVGPathElement>, index: number) {
@@ -167,7 +170,7 @@ export function WorldMap({
               role="button"
               tabIndex={i === cursor ? 0 : -1}
               aria-label={`${name}: ${statusLabel(status)}`}
-              aria-pressed={status === mark}
+              aria-pressed={mark === "clear" ? status !== undefined : status === mark}
               onClick={() => activate(c.key)}
               onKeyDown={(e) => onKeyDown(e, i)}
               onFocus={(e) => onFocus(e, i)}

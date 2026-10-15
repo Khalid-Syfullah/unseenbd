@@ -51,6 +51,7 @@ export {
   listRoutesFromDhaka,
 } from "./routes";
 export { getTrain, listTrains } from "./trains";
+export { getMyBangladeshLevels } from "./my-map";
 export {
   getPlannerData,
   type PlannerData,

@@ -750,5 +750,191 @@
     "buffer": "备用金（门票及杂费）",
     "addToPlan": "加入行程规划",
     "note": "规划用的估算，并非报价。出发前请确认票价和房价。"
+  },
+  "myBd": {
+    "title": "我的孟加拉",
+    "metaDescription": "勾选你去过的孟加拉国县区，查看你的等级和护照印章，并与朋友分享你的地图。",
+    "intro": "给你去过的县区涂上颜色。除非你分享，地图只保存在这个浏览器中。",
+    "progressLabel": "你的进度",
+    "percentSeen": "已看 {percent}",
+    "level": "等级：{level}",
+    "noLevel": "暂无等级",
+    "nextGoal": {
+      "other": "下一个目标：{count} 个县区"
+    },
+    "toNext": {
+      "other": "再去 {count} 个即可成为{level}"
+    },
+    "allDone": "64 个县区全部去过。你就是传奇！",
+    "pickTitle": "选择你的县区",
+    "searchLabel": "搜索县区",
+    "searchPlaceholder": "孟加拉语或英语县区名",
+    "searchEmpty": "没有与“{query}”匹配的县区。",
+    "searchResults": "匹配的县区",
+    "wholeDivision": "整个专区",
+    "clearDivision": "清空专区",
+    "mapTitle": "给你去过的县区涂色",
+    "mapHint": "点按县区即可勾选；再点一次取消勾选。",
+    "visitedTitle": "你去过的县区",
+    "visitedEmpty": "还没有勾选。从你居住的县区开始吧。",
+    "clearAll": "全部清除",
+    "clearConfirm": {
+      "other": "取消全部 {count} 个县区的勾选？"
+    },
+    "shareTitle": "分享你的孟加拉",
+    "nameLabel": "你的名字（可选）",
+    "namePlaceholder": "例如：Rahim",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "shortLink": "短链接",
+    "shortLinkCopied": "短链接已复制",
+    "shortLinkFailed": "无法生成短链接，请重试。",
+    "shortLinkLimited": "此连接生成的短链接过多，请稍后再试。",
+    "shareEmpty": "请先至少勾选一个县区。",
+    "privacy": "链接只包含你的县区列表和你输入的名字。短链接在我们的服务器上只保存这两项，不保存你的任何其他信息。",
+    "shareText": {
+      "other": "孟加拉国 64 个县区中我去过 {count} 个。这是我的地图："
+    },
+    "challengeTitle": "挑战朋友",
+    "challengeBody": "把你的数字发给朋友。他们会看到你的县区，并勾选自己的来比较。",
+    "challengeCopy": "复制挑战链接",
+    "challengeText": {
+      "other": "我去过孟加拉国 {count} 个县区。你能超过我吗？"
+    },
+    "cardTitle": "制作你的卡片",
+    "cardSoon": "即将推出：把你的地图、等级或护照做成可发布的图片，提供六种配色主题和四种尺寸。",
+    "levelsTitle": "等级",
+    "levelReached": "已达成",
+    "levelToGo": {
+      "other": "还差 {count} 个"
+    },
+    "passportTitle": "护照印章",
+    "passportNote": "这是游戏护照，不是官方证件。",
+    "passportCount": "{total} 枚印章中已得 {count} 枚",
+    "stampDone": "{name}：已盖章",
+    "stampLocked": "{name}：尚未",
+    "storyTitle": "我的孟加拉故事",
+    "storyIntro": "塑造了你的那些县区。只保存在这个浏览器中。",
+    "storyBirth": "出生地",
+    "storyUpbringing": "成长的地方",
+    "storyStudy": "求学的地方",
+    "storyWork": "工作的地方",
+    "storyFavourite": "最喜欢的县区",
+    "storyChoose": "选择县区",
+    "storyAdd": "在我的地图上勾选这些",
+    "moreTitle": "更多可玩",
+    "moreQuiz": "县区测验",
+    "moreQuizBody": "每个县区属于哪个专区？二十道题。",
+    "moreBucket": "心愿清单",
+    "moreBucketBody": "所有景点，可标记想去和去过。",
+    "moreWorld": "我的世界",
+    "moreWorldBody": "标记你去过和想去的国家。",
+    "morePlan": "行程规划",
+    "morePlanBody": "规划下一批要涂色的县区，含天数和费用。",
+    "sharedTitle": "{name}的孟加拉",
+    "sharedTitleAnon": "一位旅行者的孟加拉",
+    "sharedLine": {
+      "other": "{name}去过 {count} 个县区"
+    },
+    "sharedLineAnon": {
+      "other": "已去过 {count} 个县区"
+    },
+    "sharedEmpty": "此链接中没有县区。",
+    "makeOwn": "制作你自己的",
+    "sharedMap": "{name}去过的县区地图"
+  },
+  "challenge": {
+    "title": "县区挑战",
+    "metaDescription": "一位朋友分享了他去过孟加拉国多少个县区。你去过多少个？",
+    "heading": "{name}向你发起挑战",
+    "headingAnon": "一位朋友向你发起挑战",
+    "line": {
+      "other": "{name}去过孟加拉国 64 个县区中的 {count} 个。"
+    },
+    "lineAnon": {
+      "other": "你的朋友去过孟加拉国 64 个县区中的 {count} 个。"
+    },
+    "question": "你去过多少个？",
+    "friend": "你的朋友",
+    "you": {
+      "other": "你去过 {count} 个县区。"
+    },
+    "both": {
+      "other": "你们都去过 {count} 个县区。"
+    },
+    "ahead": "你领先了！",
+    "behind": {
+      "other": "还差 {count} 个就能追上。"
+    },
+    "tie": "平局！",
+    "cta": "接受挑战",
+    "ctaStart": "勾选你的县区",
+    "empty": "此挑战链接中没有县区。",
+    "theirDistricts": "对方的县区"
+  },
+  "world": {
+    "title": "我的世界",
+    "metaDescription": "标记你去过和想去的国家，钉上旅行回忆，并分享你的世界地图。",
+    "intro": "给你去过和梦想去的国家涂色。除非你分享，只保存在这个浏览器中。",
+    "modeLabel": "点按的作用",
+    "modeVisited": "去过",
+    "modeWish": "想去",
+    "modeClear": "清除",
+    "visitedCount": {
+      "other": "去过 {count} 个国家"
+    },
+    "wishCount": {
+      "other": "心愿清单上有 {count} 个"
+    },
+    "continentsTitle": "按大洲",
+    "continentLine": "{total} 个中去过 {visited} 个",
+    "continentWish": {
+      "other": "想去 {count} 个"
+    },
+    "africa": "非洲",
+    "asia": "亚洲",
+    "europe": "欧洲",
+    "northAmerica": "北美洲",
+    "southAmerica": "南美洲",
+    "oceania": "大洋洲",
+    "searchLabel": "搜索国家",
+    "searchPlaceholder": "国家名称",
+    "searchEmpty": "没有与“{query}”匹配的国家。",
+    "listTitle": "所有国家",
+    "listCount": {
+      "other": "{count} 个国家和地区"
+    },
+    "clearAll": "全部清除",
+    "clearConfirm": "清除你标记的所有国家？",
+    "shareTitle": "分享你的世界",
+    "shareText": {
+      "other": "我去过 {count} 个国家。这是我的世界地图："
+    },
+    "shareEmpty": "请先至少标记一个国家。",
+    "privacy": "链接只包含你的国家代码和你输入的名字。",
+    "pinsTitle": "旅行回忆",
+    "pinsIntro": "钉上一次旅行：国家、日期和一句简短笔记。只保存在这个浏览器中。",
+    "pinCountry": "国家",
+    "pinDate": "日期",
+    "pinNote": "笔记",
+    "pinNotePlaceholder": "山间日出",
+    "pinAdd": "添加回忆",
+    "pinRemove": "删除回忆",
+    "pinsEmpty": "还没有回忆。",
+    "pinNeedCountry": "请先选择一个国家。",
+    "pinsFull": "此浏览器最多保存 100 条回忆。",
+    "pinAdded": "回忆已添加",
+    "imageTitle": "制作图片",
+    "imageSoon": "即将推出：用与“我的孟加拉”相同的卡片工具，把你的世界地图做成可发布的图片。",
+    "sharedTitle": "{name}的世界",
+    "sharedTitleAnon": "一位旅行者的世界",
+    "sharedLine": {
+      "other": "{name}去过 {count} 个国家"
+    },
+    "sharedLineAnon": {
+      "other": "去过 {count} 个国家"
+    },
+    "sharedEmpty": "此链接中没有国家。",
+    "makeOwn": "制作你自己的"
   }
 }
