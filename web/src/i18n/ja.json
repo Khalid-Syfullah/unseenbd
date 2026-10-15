@@ -1664,5 +1664,166 @@
     "emailHint": "非公開。編集部からの返信を希望する場合に入力してください。",
     "send": "編集部に送る",
     "sent": "ありがとうございます。編集部が読みます。"
+  },
+  "directory": {
+    "stay": {
+      "title": "ホテルとリゾート",
+      "intro": "大都市の高評価ホテルと、丘陵・茶畑・海岸沿いのリゾート。"
+    },
+    "restaurants": {
+      "title": "食事ができる場所",
+      "intro": "評価の高いレストランやカフェ、地元の料理人による家庭料理。"
+    },
+    "shopping": {
+      "title": "ショッピング",
+      "intro": "エリア別のショッピングモールと、地元の起業家が作る商品。"
+    },
+    "section": {
+      "hotels": "ホテル",
+      "resorts": "リゾート",
+      "restaurants": "レストランとカフェ",
+      "malls": "ショッピングモール"
+    },
+    "areas": "エリア",
+    "allAreas": "すべてのエリア",
+    "ownersTitle": "オーナーが追加",
+    "ownersEmpty": "オーナーによる掲載はまだありません。",
+    "foodTitle": "家庭料理",
+    "productsTitle": "地元の起業家の商品",
+    "ownerCta": "ここで事業を営んでいますか？無料でディレクトリに追加できます。",
+    "snapshotNote": "評価とレビュー数は公開情報のスナップショットです。訪問前にご確認ください。",
+    "openMaps": "Google マップで開く",
+    "category": "カテゴリ",
+    "area": "エリア",
+    "rating": "評価",
+    "reviews": "レビュー"
+  },
+  "listings": {
+    "title": "地元のお店",
+    "intro": "運営する人たち自身が追加したホテル、レストラン、手作りの食べ物や商品。",
+    "kindLabel": "掲載の種類",
+    "kind": {
+      "business": "ホテル・レストラン・店舗",
+      "food": "手作りの食べ物",
+      "product": "商品"
+    },
+    "category": {
+      "hotel": "ホテル",
+      "resort": "リゾート",
+      "guesthouse": "ゲストハウス",
+      "restaurant": "レストラン",
+      "cafe": "カフェ",
+      "mall": "ショッピングモール",
+      "shop": "お店"
+    },
+    "empty": "まだ何も掲載されていません。",
+    "allDistricts": "すべての県"
+  },
+  "listing": {
+    "call": "電話する",
+    "whatsapp": "WhatsApp",
+    "social": "SNSページ",
+    "contact": "連絡先",
+    "contactPerson": "担当者",
+    "prices": "料金",
+    "reviews": "レビュー",
+    "noReviews": "まだレビューはありません。",
+    "writeReview": "レビューを書く",
+    "reviewName": "お名前",
+    "reviewRating": "評価",
+    "reviewBody": "レビュー内容（任意）",
+    "reviewSubmit": "レビューを送信",
+    "reviewSent": "ありがとうございます。モデレーターの確認後にレビューが表示されます。",
+    "reviewNeedName": "お名前を入力してください。",
+    "ratingOf": "5点中{rating}点",
+    "photos": "写真",
+    "back": "← 地元のお店一覧へ"
+  },
+  "addListing": {
+    "metaTitle": "お店を掲載する",
+    "metaDescription": "ホテル、レストラン、手作りの食べ物や商品を無料で掲載できます。公開前にモデレーターが確認します。",
+    "title": "お店を掲載する",
+    "editTitle": "掲載内容を編集",
+    "intro": "提供内容、料金、連絡方法を旅行者に伝えましょう。無料です。",
+    "kindLabel": "何を掲載しますか？",
+    "tierTitle": "規模",
+    "tierHint": "規模を選んでください。登録できる料金と写真の数が決まります。",
+    "tier": {
+      "small": "小規模",
+      "medium": "中規模",
+      "large": "大規模"
+    },
+    "tierExample": {
+      "small": "ゲストハウス、コテージ、屋台",
+      "medium": "中規模のホテルやレストラン",
+      "large": "大型ホテル、リゾート、レストランチェーン"
+    },
+    "tierLimits": "料金は最大{prices}件・写真{min}〜{max}枚",
+    "basicTitle": "基本情報",
+    "category": "事業の種類",
+    "categoryPlaceholder": "種類を選択",
+    "name": "名称",
+    "district": "県",
+    "area": "エリアまたは住所",
+    "areaHint": "例：Zindabazar, Sylhet",
+    "description": "説明",
+    "pricesTitle": "料金",
+    "pricesHint": "販売する内容と料金をタカで入力してください。最大{max}行。",
+    "priceItem": "品目",
+    "priceAmount": "料金（৳）",
+    "priceUnit": "単位（例：1泊あたり）",
+    "addPrice": "料金を追加",
+    "removePrice": "料金{n}を削除",
+    "contactTitle": "連絡先",
+    "contactName": "担当者名",
+    "phone": "電話番号",
+    "phoneHint": "01XXXXXXXXX の形式の携帯番号",
+    "whatsapp": "WhatsApp番号",
+    "social": "SNSページのリンク",
+    "socialHint": "例：Facebookページ",
+    "photos": "写真",
+    "photosHint": "写真を{min}〜{max}枚追加してください。送信前に端末上で縮小されます。",
+    "keptPhotos": "現在の写真",
+    "removePhoto": "写真{n}を削除",
+    "submit": "審査に送信",
+    "save": "変更を保存",
+    "saved": "保存しました。モデレーターが再度確認します。",
+    "errRequired": "この項目を入力してください。",
+    "errTooLong": "長すぎます。短くしてください。",
+    "errPhone": "01XXXXXXXXX の形式の携帯番号を入力してください。",
+    "errUrl": "https:// で始まるリンクを入力してください。",
+    "errPrices": "各料金には品目とタカでの金額が必要です。",
+    "errPricesMany": "この規模では料金が多すぎます。最大{max}件です。",
+    "errPhotos": "この規模では写真を{min}〜{photos}枚追加してください。",
+    "quotaLeft": {
+      "other": "今日はあと{count}件掲載を送信できます。"
+    },
+    "quotaNone": "本日は{limit}件を送信済みです。明日もう一度お試しください。",
+    "guestNote": "ログインしていません。掲載の送信はできますが、状況の確認や後からの編集はログインしたオーナーのみ可能です。",
+    "reviewNote": "公開前にモデレーターがすべての掲載を確認します。編集後も再確認されます。",
+    "doneTitle": "ありがとうございます。掲載内容はモデレーターに送られました",
+    "doneBody": "確認が終わるとサイトに表示されます。",
+    "doneMine": "自分の掲載を見る",
+    "doneSignIn": "ログインして確認する",
+    "doneAnother": "別の掲載を追加"
+  },
+  "myListings": {
+    "title": "自分の掲載",
+    "intro": "掲載した内容とその状況です。ここで編集・削除できます。",
+    "signIn": "追加した掲載を見るにはログインしてください。",
+    "empty": "まだ何も掲載していません。",
+    "status": {
+      "pending": "審査待ち",
+      "approved": "公開中",
+      "rejected": "承認されませんでした"
+    },
+    "note": {
+      "pending": "まだ確認されていません。あなただけが見られます。",
+      "approved": "この掲載はサイトに表示されています。",
+      "rejected": "この掲載は承認されませんでした。編集すると再度確認されます。"
+    },
+    "deleteTitle": "この掲載を削除しますか？",
+    "deleteBody": "この掲載と写真・レビューは完全に削除されます。",
+    "deleted": "掲載を削除しました。"
   }
 }

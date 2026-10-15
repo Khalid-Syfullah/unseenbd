@@ -1711,5 +1711,167 @@
     "emailHint": "Private. Add it if you are happy for the editors to reply.",
     "send": "Send to the editors",
     "sent": "Thank you! The editors will read it."
+  },
+  "directory": {
+    "stay": {
+      "title": "Hotels and resorts",
+      "intro": "Well-reviewed hotels in the big cities and resorts in the hills, tea gardens and on the coast."
+    },
+    "restaurants": {
+      "title": "Where to eat",
+      "intro": "Restaurants and cafés people rate highly, plus home-cooked food added by local cooks."
+    },
+    "shopping": {
+      "title": "Shopping",
+      "intro": "Shopping malls by area, and products made by local entrepreneurs."
+    },
+    "section": {
+      "hotels": "Hotels",
+      "resorts": "Resorts",
+      "restaurants": "Restaurants and cafés",
+      "malls": "Shopping malls"
+    },
+    "areas": "Areas",
+    "allAreas": "All areas",
+    "ownersTitle": "Added by owners",
+    "ownersEmpty": "Nothing has been added by owners here yet.",
+    "foodTitle": "Home-cooked food",
+    "productsTitle": "Products from local entrepreneurs",
+    "ownerCta": "Run a business here? Add it to the directory for free.",
+    "snapshotNote": "Ratings and review counts are a snapshot of public listings. Check before you go.",
+    "openMaps": "Open in Google Maps",
+    "category": "Category",
+    "area": "Area",
+    "rating": "Rating",
+    "reviews": "Reviews"
+  },
+  "listings": {
+    "title": "Local businesses",
+    "intro": "Hotels, restaurants, home-made food and products added by the people who run them.",
+    "kindLabel": "Type of listing",
+    "kind": {
+      "business": "Hotels, restaurants and shops",
+      "food": "Home-made food",
+      "product": "Products"
+    },
+    "category": {
+      "hotel": "Hotel",
+      "resort": "Resort",
+      "guesthouse": "Guesthouse",
+      "restaurant": "Restaurant",
+      "cafe": "Café",
+      "mall": "Shopping mall",
+      "shop": "Shop"
+    },
+    "empty": "Nothing has been listed here yet.",
+    "allDistricts": "All districts"
+  },
+  "listing": {
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "social": "Social page",
+    "contact": "Contact",
+    "contactPerson": "Contact person",
+    "prices": "Prices",
+    "reviews": "Reviews",
+    "noReviews": "No reviews yet.",
+    "writeReview": "Write a review",
+    "reviewName": "Your name",
+    "reviewRating": "Rating",
+    "reviewBody": "Your review (optional)",
+    "reviewSubmit": "Send review",
+    "reviewSent": "Thanks! Your review will appear after a moderator has checked it.",
+    "reviewNeedName": "Please enter your name.",
+    "ratingOf": "{rating} out of 5",
+    "photos": "Photos",
+    "back": "← All local businesses"
+  },
+  "addListing": {
+    "metaTitle": "List your business",
+    "metaDescription": "Add your hotel, restaurant, home-made food or product for free. A moderator checks every listing before it appears.",
+    "title": "List your business",
+    "editTitle": "Edit your listing",
+    "intro": "Tell visitors what you offer, what it costs and how to reach you. It is free.",
+    "kindLabel": "What are you listing?",
+    "tierTitle": "Size",
+    "tierHint": "Pick the size that fits you. It sets how many prices and photos you can add.",
+    "tier": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    },
+    "tierExample": {
+      "small": "Guesthouse, cottage, food stall",
+      "medium": "Mid-size hotel or restaurant",
+      "large": "Large hotel, resort or restaurant chain"
+    },
+    "tierLimits": "Up to {prices} prices · {min}–{max} photos",
+    "basicTitle": "Basic information",
+    "category": "Type of business",
+    "categoryPlaceholder": "Choose a type",
+    "name": "Name",
+    "district": "District",
+    "area": "Area or address",
+    "areaHint": "For example: Zindabazar, Sylhet",
+    "description": "Description",
+    "pricesTitle": "Prices",
+    "pricesHint": "Add what you sell and what it costs, in taka. Up to {max} rows.",
+    "priceItem": "Item",
+    "priceAmount": "Price (৳)",
+    "priceUnit": "Unit (e.g. per night)",
+    "addPrice": "Add a price",
+    "removePrice": "Remove price {n}",
+    "contactTitle": "Contact",
+    "contactName": "Contact person",
+    "phone": "Phone",
+    "phoneHint": "A mobile number like 01XXXXXXXXX",
+    "whatsapp": "WhatsApp number",
+    "social": "Social page link",
+    "socialHint": "For example your Facebook page",
+    "photos": "Photos",
+    "photosHint": "Add {min} to {max} photos. They are shrunk on your device before they are sent.",
+    "keptPhotos": "Current photos",
+    "removePhoto": "Remove photo {n}",
+    "submit": "Submit for review",
+    "save": "Save changes",
+    "saved": "Saved. A moderator will check it again.",
+    "errRequired": "Please fill in this field.",
+    "errTooLong": "This is too long. Please shorten it.",
+    "errPhone": "Enter a mobile number like 01XXXXXXXXX.",
+    "errUrl": "Enter a link that starts with https://",
+    "errPrices": "Each price needs an item and an amount in taka.",
+    "errPricesMany": "Too many prices for this size. The most is {max}.",
+    "errPhotos": "Add {min} to {photos} photos for this size.",
+    "quotaLeft": {
+      "one": "You can submit {count} more listing today.",
+      "other": "You can submit {count} more listings today."
+    },
+    "quotaNone": "You have sent {limit} listings today. Please try again tomorrow.",
+    "guestNote": "You are not signed in. You can still send a listing, but only signed-in owners can see its status and edit it later.",
+    "reviewNote": "A moderator checks every listing before it appears. Edits are checked again.",
+    "doneTitle": "Thank you! Your listing is with a moderator",
+    "doneBody": "It will show on the site once it has been checked.",
+    "doneMine": "See my listings",
+    "doneSignIn": "Sign in to follow it",
+    "doneAnother": "Add another"
+  },
+  "myListings": {
+    "title": "My listings",
+    "intro": "Everything you have listed, with its status. Edit or delete it here.",
+    "signIn": "Sign in to see the listings you have added.",
+    "empty": "You have not listed anything yet.",
+    "status": {
+      "pending": "Waiting for review",
+      "approved": "Live",
+      "rejected": "Not accepted"
+    },
+    "note": {
+      "pending": "A moderator has not checked this yet. Only you can see it.",
+      "approved": "This listing is on the site.",
+      "rejected": "This listing was not accepted. Edit it and it will be checked again."
+    },
+    "deleteTitle": "Delete this listing?",
+    "deleteBody": "It and its photos and reviews will be removed for good.",
+    "deleted": "Listing deleted."
   }
 }

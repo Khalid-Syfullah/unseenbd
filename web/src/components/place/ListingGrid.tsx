@@ -4,7 +4,8 @@ import { useState } from "react";
 import { CardGrid } from "@/components/ui/Card";
 import { Dialog } from "@/components/ui/Dialog";
 import { ListingCard } from "@/components/ui/ListingCard";
-import { useT } from "@/i18n/client";
+import { useLocale, useT } from "@/i18n/client";
+import { localePath } from "@/i18n/locales";
 import type { CommunityListing } from "@/server/data/types";
 
 /** Owner listings as cards; "View details" opens a dialog with the description and phone. */
@@ -16,6 +17,7 @@ export function ListingGrid({
   headingLevel?: 2 | 3 | 4;
 }) {
   const t = useT();
+  const locale = useLocale();
   const [open, setOpen] = useState<CommunityListing | null>(null);
   return (
     <>
@@ -46,6 +48,16 @@ export function ListingGrid({
             <span className="text-muted">{t("place.listingPhone")}: </span>
             <a href={`tel:${open.phone}`} className="num font-semibold text-primary underline">
               {open.phone}
+            </a>
+          </p>
+        ) : null}
+        {open ? (
+          <p className="mt-3">
+            <a
+              href={localePath(locale, `/listing/${open.id}`)}
+              className="font-semibold text-primary underline"
+            >
+              {t("ui.viewDetails")}
             </a>
           </p>
         ) : null}

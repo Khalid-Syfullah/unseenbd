@@ -41,6 +41,18 @@ import * as suggestionsRoute from "@/app/api/suggestions/route";
 import * as suggestionReact from "@/app/api/suggestions/[id]/react/route";
 import * as trendComments from "@/app/api/trend/comments/route";
 import * as trendVote from "@/app/api/trend/vote/route";
+import * as adminLog from "@/app/api/admin/log/route";
+import * as adminQueue from "@/app/api/admin/[queue]/route";
+import * as adminQueues from "@/app/api/admin/queues/route";
+import * as adminStars from "@/app/api/admin/stars/route";
+import * as adminStats from "@/app/api/admin/stats/route";
+import * as listingsRoute from "@/app/api/listings/route";
+import * as listingById from "@/app/api/listings/[id]/route";
+import * as listingReviews from "@/app/api/listings/[id]/reviews/route";
+import * as listingsQuota from "@/app/api/listings/quota/route";
+import * as myListings from "@/app/api/my/listings/route";
+import * as myListingById from "@/app/api/my/listings/[id]/route";
+import * as visitRoute from "@/app/api/visit/route";
 
 type Handler = (
   req: NextRequest,
@@ -86,6 +98,18 @@ const ROUTES: [RegExp, Module, string[]][] = [
   [/^\/api\/suggestions\/([^/]+)\/react$/, suggestionReact, ["id"]],
   [/^\/api\/trend\/comments$/, trendComments, []],
   [/^\/api\/trend\/vote$/, trendVote, []],
+  [/^\/api\/listings$/, listingsRoute, []],
+  [/^\/api\/listings\/quota$/, listingsQuota, []],
+  [/^\/api\/listings\/([^/]+)$/, listingById, ["id"]],
+  [/^\/api\/listings\/([^/]+)\/reviews$/, listingReviews, ["id"]],
+  [/^\/api\/my\/listings$/, myListings, []],
+  [/^\/api\/my\/listings\/([^/]+)$/, myListingById, ["id"]],
+  [/^\/api\/admin\/log$/, adminLog, []],
+  [/^\/api\/admin\/queues$/, adminQueues, []],
+  [/^\/api\/admin\/stars$/, adminStars, []],
+  [/^\/api\/admin\/stats$/, adminStats, []],
+  [/^\/api\/admin\/([^/]+)$/, adminQueue, ["queue"]],
+  [/^\/api\/visit$/, visitRoute, []],
 ];
 
 /**

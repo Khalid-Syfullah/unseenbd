@@ -1711,5 +1711,167 @@
     "emailHint": "Privata. Aggiungila se vuoi che la redazione ti risponda.",
     "send": "Invia alla redazione",
     "sent": "Grazie! La redazione lo leggerà."
+  },
+  "directory": {
+    "stay": {
+      "title": "Hotel e resort",
+      "intro": "Hotel ben recensiti nelle grandi città e resort in collina, nelle piantagioni di tè e sulla costa."
+    },
+    "restaurants": {
+      "title": "Dove mangiare",
+      "intro": "Ristoranti e caffè molto apprezzati, più cucina casalinga proposta da cuochi locali."
+    },
+    "shopping": {
+      "title": "Shopping",
+      "intro": "Centri commerciali per zona e prodotti realizzati da imprenditori locali."
+    },
+    "section": {
+      "hotels": "Hotel",
+      "resorts": "Resort",
+      "restaurants": "Ristoranti e caffè",
+      "malls": "Centri commerciali"
+    },
+    "areas": "Zone",
+    "allAreas": "Tutte le zone",
+    "ownersTitle": "Aggiunti dai proprietari",
+    "ownersEmpty": "I proprietari non hanno ancora aggiunto nulla qui.",
+    "foodTitle": "Cucina casalinga",
+    "productsTitle": "Prodotti di imprenditori locali",
+    "ownerCta": "Hai un’attività qui? Aggiungila gratis all’elenco.",
+    "snapshotNote": "Valutazioni e numero di recensioni sono un’istantanea di schede pubbliche. Verifica prima di andare.",
+    "openMaps": "Apri in Google Maps",
+    "category": "Categoria",
+    "area": "Zona",
+    "rating": "Valutazione",
+    "reviews": "Recensioni"
+  },
+  "listings": {
+    "title": "Attività locali",
+    "intro": "Hotel, ristoranti, cibo fatto in casa e prodotti aggiunti da chi li gestisce.",
+    "kindLabel": "Tipo di scheda",
+    "kind": {
+      "business": "Hotel, ristoranti e negozi",
+      "food": "Cibo fatto in casa",
+      "product": "Prodotti"
+    },
+    "category": {
+      "hotel": "Hotel",
+      "resort": "Resort",
+      "guesthouse": "Guesthouse",
+      "restaurant": "Ristorante",
+      "cafe": "Caffè",
+      "mall": "Centro commerciale",
+      "shop": "Negozio"
+    },
+    "empty": "Qui non è ancora stato elencato nulla.",
+    "allDistricts": "Tutti i distretti"
+  },
+  "listing": {
+    "call": "Chiama",
+    "whatsapp": "WhatsApp",
+    "social": "Pagina social",
+    "contact": "Contatti",
+    "contactPerson": "Persona di contatto",
+    "prices": "Prezzi",
+    "reviews": "Recensioni",
+    "noReviews": "Ancora nessuna recensione.",
+    "writeReview": "Scrivi una recensione",
+    "reviewName": "Il tuo nome",
+    "reviewRating": "Valutazione",
+    "reviewBody": "La tua recensione (facoltativa)",
+    "reviewSubmit": "Invia recensione",
+    "reviewSent": "Grazie! La tua recensione apparirà dopo il controllo di un moderatore.",
+    "reviewNeedName": "Inserisci il tuo nome.",
+    "ratingOf": "{rating} su 5",
+    "photos": "Foto",
+    "back": "← Tutte le attività locali"
+  },
+  "addListing": {
+    "metaTitle": "Inserisci la tua attività",
+    "metaDescription": "Aggiungi gratis il tuo hotel, ristorante, cibo fatto in casa o prodotto. Un moderatore controlla ogni scheda prima della pubblicazione.",
+    "title": "Inserisci la tua attività",
+    "editTitle": "Modifica la tua scheda",
+    "intro": "Spiega ai visitatori cosa offri, quanto costa e come contattarti. È gratuito.",
+    "kindLabel": "Cosa vuoi inserire?",
+    "tierTitle": "Dimensione",
+    "tierHint": "Scegli la dimensione adatta. Determina quanti prezzi e foto puoi aggiungere.",
+    "tier": {
+      "small": "Piccola",
+      "medium": "Media",
+      "large": "Grande"
+    },
+    "tierExample": {
+      "small": "Guesthouse, cottage, bancarella di cibo",
+      "medium": "Hotel o ristorante di medie dimensioni",
+      "large": "Grande hotel, resort o catena di ristoranti"
+    },
+    "tierLimits": "Fino a {prices} prezzi · {min}–{max} foto",
+    "basicTitle": "Informazioni di base",
+    "category": "Tipo di attività",
+    "categoryPlaceholder": "Scegli un tipo",
+    "name": "Nome",
+    "district": "Distretto",
+    "area": "Zona o indirizzo",
+    "areaHint": "Per esempio: Zindabazar, Sylhet",
+    "description": "Descrizione",
+    "pricesTitle": "Prezzi",
+    "pricesHint": "Indica cosa vendi e quanto costa, in taka. Al massimo {max} righe.",
+    "priceItem": "Articolo",
+    "priceAmount": "Prezzo (৳)",
+    "priceUnit": "Unità (es. a notte)",
+    "addPrice": "Aggiungi un prezzo",
+    "removePrice": "Rimuovi il prezzo {n}",
+    "contactTitle": "Contatti",
+    "contactName": "Persona di contatto",
+    "phone": "Telefono",
+    "phoneHint": "Un numero mobile come 01XXXXXXXXX",
+    "whatsapp": "Numero WhatsApp",
+    "social": "Link alla pagina social",
+    "socialHint": "Per esempio la tua pagina Facebook",
+    "photos": "Foto",
+    "photosHint": "Aggiungi da {min} a {max} foto. Vengono ridotte sul tuo dispositivo prima dell’invio.",
+    "keptPhotos": "Foto attuali",
+    "removePhoto": "Rimuovi la foto {n}",
+    "submit": "Invia per la revisione",
+    "save": "Salva le modifiche",
+    "saved": "Salvato. Un moderatore la ricontrollerà.",
+    "errRequired": "Compila questo campo.",
+    "errTooLong": "È troppo lungo. Accorcialo.",
+    "errPhone": "Inserisci un numero mobile come 01XXXXXXXXX.",
+    "errUrl": "Inserisci un link che inizia con https://",
+    "errPrices": "Ogni prezzo richiede un articolo e un importo in taka.",
+    "errPricesMany": "Troppi prezzi per questa dimensione. Massimo {max}.",
+    "errPhotos": "Aggiungi da {min} a {photos} foto per questa dimensione.",
+    "quotaLeft": {
+      "one": "Oggi puoi inviare ancora {count} scheda.",
+      "other": "Oggi puoi inviare ancora {count} schede."
+    },
+    "quotaNone": "Oggi hai inviato {limit} schede. Riprova domani.",
+    "guestNote": "Non hai effettuato l’accesso. Puoi comunque inviare una scheda, ma solo i proprietari connessi possono vederne lo stato e modificarla.",
+    "reviewNote": "Un moderatore controlla ogni scheda prima della pubblicazione. Anche le modifiche vengono ricontrollate.",
+    "doneTitle": "Grazie! La tua scheda è in mano a un moderatore",
+    "doneBody": "Apparirà sul sito una volta controllata.",
+    "doneMine": "Vedi le mie schede",
+    "doneSignIn": "Accedi per seguirla",
+    "doneAnother": "Aggiungine un’altra"
+  },
+  "myListings": {
+    "title": "Le mie schede",
+    "intro": "Tutto ciò che hai inserito, con lo stato. Modifica o elimina qui.",
+    "signIn": "Accedi per vedere le schede che hai aggiunto.",
+    "empty": "Non hai ancora inserito nulla.",
+    "status": {
+      "pending": "In attesa di revisione",
+      "approved": "Pubblicata",
+      "rejected": "Non accettata"
+    },
+    "note": {
+      "pending": "Un moderatore non l’ha ancora controllata. Solo tu la vedi.",
+      "approved": "Questa scheda è sul sito.",
+      "rejected": "Questa scheda non è stata accettata. Modificala e verrà ricontrollata."
+    },
+    "deleteTitle": "Eliminare questa scheda?",
+    "deleteBody": "Verrà rimossa definitivamente insieme a foto e recensioni.",
+    "deleted": "Scheda eliminata."
   }
 }

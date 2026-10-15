@@ -442,6 +442,13 @@ export function seedDatabase(db: SeedDb, options: SeedOptions = {}): SeedCounts 
       insertAll(tx, schema.kinds, kindRows);
       insertAll(tx, schema.months, monthRows);
       insertAll(tx, schema.places, placeRows);
+      // Editorial star overrides set in the admin survive a re-seed.
+      sqlite
+        .prepare(
+          `UPDATE places SET stars = (SELECT stars FROM place_stars ps WHERE ps.place_id = places.id)
+           WHERE id IN (SELECT place_id FROM place_stars)`,
+        )
+        .run();
       insertAll(tx, schema.routes, routeRows);
       insertAll(tx, schema.routesFromDhaka, dhakaRows);
       insertAll(tx, schema.trains, trainRows);

@@ -1711,5 +1711,167 @@
     "emailHint": "Privat. Gib sie an, wenn die Redaktion dir antworten darf.",
     "send": "An die Redaktion senden",
     "sent": "Danke! Die Redaktion wird es lesen."
+  },
+  "directory": {
+    "stay": {
+      "title": "Hotels und Resorts",
+      "intro": "Gut bewertete Hotels in den großen Städten und Resorts in den Bergen, in den Teegärten und an der Küste."
+    },
+    "restaurants": {
+      "title": "Wo man essen kann",
+      "intro": "Hoch bewertete Restaurants und Cafés sowie hausgemachtes Essen von lokalen Köchen."
+    },
+    "shopping": {
+      "title": "Einkaufen",
+      "intro": "Einkaufszentren nach Gegend und Produkte lokaler Unternehmer."
+    },
+    "section": {
+      "hotels": "Hotels",
+      "resorts": "Resorts",
+      "restaurants": "Restaurants und Cafés",
+      "malls": "Einkaufszentren"
+    },
+    "areas": "Gegenden",
+    "allAreas": "Alle Gegenden",
+    "ownersTitle": "Von Inhabern eingetragen",
+    "ownersEmpty": "Hier haben Inhaber noch nichts eingetragen.",
+    "foodTitle": "Hausgemachtes Essen",
+    "productsTitle": "Produkte lokaler Unternehmer",
+    "ownerCta": "Sie betreiben hier ein Geschäft? Tragen Sie es kostenlos ein.",
+    "snapshotNote": "Bewertungen und Anzahl der Rezensionen sind eine Momentaufnahme öffentlicher Einträge. Bitte vorher prüfen.",
+    "openMaps": "In Google Maps öffnen",
+    "category": "Kategorie",
+    "area": "Gegend",
+    "rating": "Bewertung",
+    "reviews": "Rezensionen"
+  },
+  "listings": {
+    "title": "Lokale Betriebe",
+    "intro": "Hotels, Restaurants, hausgemachtes Essen und Produkte, eingetragen von den Betreibern selbst.",
+    "kindLabel": "Art des Eintrags",
+    "kind": {
+      "business": "Hotels, Restaurants und Läden",
+      "food": "Hausgemachtes Essen",
+      "product": "Produkte"
+    },
+    "category": {
+      "hotel": "Hotel",
+      "resort": "Resort",
+      "guesthouse": "Pension",
+      "restaurant": "Restaurant",
+      "cafe": "Café",
+      "mall": "Einkaufszentrum",
+      "shop": "Laden"
+    },
+    "empty": "Hier wurde noch nichts eingetragen.",
+    "allDistricts": "Alle Distrikte"
+  },
+  "listing": {
+    "call": "Anrufen",
+    "whatsapp": "WhatsApp",
+    "social": "Social-Media-Seite",
+    "contact": "Kontakt",
+    "contactPerson": "Ansprechperson",
+    "prices": "Preise",
+    "reviews": "Rezensionen",
+    "noReviews": "Noch keine Rezensionen.",
+    "writeReview": "Rezension schreiben",
+    "reviewName": "Ihr Name",
+    "reviewRating": "Bewertung",
+    "reviewBody": "Ihre Rezension (optional)",
+    "reviewSubmit": "Rezension senden",
+    "reviewSent": "Danke! Ihre Rezension erscheint, sobald ein Moderator sie geprüft hat.",
+    "reviewNeedName": "Bitte geben Sie Ihren Namen ein.",
+    "ratingOf": "{rating} von 5",
+    "photos": "Fotos",
+    "back": "← Alle lokalen Betriebe"
+  },
+  "addListing": {
+    "metaTitle": "Betrieb eintragen",
+    "metaDescription": "Tragen Sie Ihr Hotel, Restaurant, hausgemachtes Essen oder Produkt kostenlos ein. Jeder Eintrag wird vor der Veröffentlichung geprüft.",
+    "title": "Betrieb eintragen",
+    "editTitle": "Eintrag bearbeiten",
+    "intro": "Sagen Sie den Besuchern, was Sie anbieten, was es kostet und wie man Sie erreicht. Kostenlos.",
+    "kindLabel": "Was möchten Sie eintragen?",
+    "tierTitle": "Größe",
+    "tierHint": "Wählen Sie die passende Größe. Sie bestimmt, wie viele Preise und Fotos möglich sind.",
+    "tier": {
+      "small": "Klein",
+      "medium": "Mittel",
+      "large": "Groß"
+    },
+    "tierExample": {
+      "small": "Pension, Cottage, Imbissstand",
+      "medium": "Mittelgroßes Hotel oder Restaurant",
+      "large": "Großes Hotel, Resort oder Restaurantkette"
+    },
+    "tierLimits": "Bis zu {prices} Preise · {min}–{max} Fotos",
+    "basicTitle": "Grunddaten",
+    "category": "Art des Betriebs",
+    "categoryPlaceholder": "Art wählen",
+    "name": "Name",
+    "district": "Distrikt",
+    "area": "Gegend oder Adresse",
+    "areaHint": "Zum Beispiel: Zindabazar, Sylhet",
+    "description": "Beschreibung",
+    "pricesTitle": "Preise",
+    "pricesHint": "Tragen Sie ein, was Sie verkaufen und was es kostet, in Taka. Höchstens {max} Zeilen.",
+    "priceItem": "Artikel",
+    "priceAmount": "Preis (৳)",
+    "priceUnit": "Einheit (z. B. pro Nacht)",
+    "addPrice": "Preis hinzufügen",
+    "removePrice": "Preis {n} entfernen",
+    "contactTitle": "Kontakt",
+    "contactName": "Ansprechperson",
+    "phone": "Telefon",
+    "phoneHint": "Eine Handynummer wie 01XXXXXXXXX",
+    "whatsapp": "WhatsApp-Nummer",
+    "social": "Link zur Social-Media-Seite",
+    "socialHint": "Zum Beispiel Ihre Facebook-Seite",
+    "photos": "Fotos",
+    "photosHint": "Fügen Sie {min} bis {max} Fotos hinzu. Sie werden vor dem Senden auf Ihrem Gerät verkleinert.",
+    "keptPhotos": "Aktuelle Fotos",
+    "removePhoto": "Foto {n} entfernen",
+    "submit": "Zur Prüfung einreichen",
+    "save": "Änderungen speichern",
+    "saved": "Gespeichert. Ein Moderator prüft den Eintrag erneut.",
+    "errRequired": "Bitte füllen Sie dieses Feld aus.",
+    "errTooLong": "Das ist zu lang. Bitte kürzen.",
+    "errPhone": "Geben Sie eine Handynummer wie 01XXXXXXXXX ein.",
+    "errUrl": "Geben Sie einen Link ein, der mit https:// beginnt.",
+    "errPrices": "Jeder Preis braucht einen Artikel und einen Betrag in Taka.",
+    "errPricesMany": "Zu viele Preise für diese Größe. Höchstens {max}.",
+    "errPhotos": "Fügen Sie für diese Größe {min} bis {photos} Fotos hinzu.",
+    "quotaLeft": {
+      "one": "Heute können Sie noch {count} Eintrag einreichen.",
+      "other": "Heute können Sie noch {count} Einträge einreichen."
+    },
+    "quotaNone": "Sie haben heute {limit} Einträge eingereicht. Bitte versuchen Sie es morgen erneut.",
+    "guestNote": "Sie sind nicht angemeldet. Sie können trotzdem einen Eintrag senden, aber nur angemeldete Inhaber sehen den Status und können ihn später bearbeiten.",
+    "reviewNote": "Ein Moderator prüft jeden Eintrag vor der Veröffentlichung. Änderungen werden erneut geprüft.",
+    "doneTitle": "Danke! Ihr Eintrag liegt bei einem Moderator",
+    "doneBody": "Sie erscheint auf der Website, sobald sie geprüft wurde.",
+    "doneMine": "Meine Einträge ansehen",
+    "doneSignIn": "Zum Verfolgen anmelden",
+    "doneAnother": "Weiteren eintragen"
+  },
+  "myListings": {
+    "title": "Meine Einträge",
+    "intro": "Alles, was Sie eingetragen haben, mit Status. Hier bearbeiten oder löschen.",
+    "signIn": "Melden Sie sich an, um Ihre Einträge zu sehen.",
+    "empty": "Sie haben noch nichts eingetragen.",
+    "status": {
+      "pending": "Wartet auf Prüfung",
+      "approved": "Veröffentlicht",
+      "rejected": "Nicht angenommen"
+    },
+    "note": {
+      "pending": "Ein Moderator hat das noch nicht geprüft. Nur Sie sehen es.",
+      "approved": "Dieser Eintrag ist auf der Website.",
+      "rejected": "Dieser Eintrag wurde nicht angenommen. Bearbeiten Sie ihn, dann wird er erneut geprüft."
+    },
+    "deleteTitle": "Diesen Eintrag löschen?",
+    "deleteBody": "Er wird mit Fotos und Rezensionen endgültig entfernt.",
+    "deleted": "Eintrag gelöscht."
   }
 }

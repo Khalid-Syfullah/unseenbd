@@ -1664,5 +1664,166 @@
     "emailHint": "保密。如果希望编辑回复，可以填写。",
     "send": "发送给编辑",
     "sent": "谢谢！编辑会阅读。"
+  },
+  "directory": {
+    "stay": {
+      "title": "酒店与度假村",
+      "intro": "大城市口碑良好的酒店，以及山区、茶园和海边的度假村。"
+    },
+    "restaurants": {
+      "title": "去哪儿吃",
+      "intro": "口碑很好的餐厅和咖啡馆，以及当地厨师提供的家常菜。"
+    },
+    "shopping": {
+      "title": "购物",
+      "intro": "按区域划分的购物中心，以及当地创业者制作的商品。"
+    },
+    "section": {
+      "hotels": "酒店",
+      "resorts": "度假村",
+      "restaurants": "餐厅和咖啡馆",
+      "malls": "购物中心"
+    },
+    "areas": "区域",
+    "allAreas": "所有区域",
+    "ownersTitle": "店主提交的信息",
+    "ownersEmpty": "店主还没有在这里添加任何内容。",
+    "foodTitle": "家常菜",
+    "productsTitle": "当地创业者的商品",
+    "ownerCta": "在这里经营业务？免费添加到目录中。",
+    "snapshotNote": "评分和评价数量为公开信息的快照，出行前请再次核实。",
+    "openMaps": "在 Google 地图中打开",
+    "category": "类别",
+    "area": "区域",
+    "rating": "评分",
+    "reviews": "评价"
+  },
+  "listings": {
+    "title": "本地商家",
+    "intro": "由经营者自己添加的酒店、餐厅、家常菜和商品。",
+    "kindLabel": "列表类型",
+    "kind": {
+      "business": "酒店、餐厅和商店",
+      "food": "家常菜",
+      "product": "商品"
+    },
+    "category": {
+      "hotel": "酒店",
+      "resort": "度假村",
+      "guesthouse": "民宿",
+      "restaurant": "餐厅",
+      "cafe": "咖啡馆",
+      "mall": "购物中心",
+      "shop": "商店"
+    },
+    "empty": "这里还没有任何列表。",
+    "allDistricts": "所有县"
+  },
+  "listing": {
+    "call": "拨打电话",
+    "whatsapp": "WhatsApp",
+    "social": "社交主页",
+    "contact": "联系方式",
+    "contactPerson": "联系人",
+    "prices": "价格",
+    "reviews": "评价",
+    "noReviews": "暂无评价。",
+    "writeReview": "撰写评价",
+    "reviewName": "您的姓名",
+    "reviewRating": "评分",
+    "reviewBody": "您的评价（可选）",
+    "reviewSubmit": "提交评价",
+    "reviewSent": "谢谢！您的评价经版主审核后将会显示。",
+    "reviewNeedName": "请输入您的姓名。",
+    "ratingOf": "{rating} 分（满分 5 分）",
+    "photos": "照片",
+    "back": "← 所有本地商家"
+  },
+  "addListing": {
+    "metaTitle": "登记您的店铺",
+    "metaDescription": "免费添加您的酒店、餐厅、家常菜或商品。每条信息显示前都会由版主审核。",
+    "title": "登记您的店铺",
+    "editTitle": "编辑您的列表",
+    "intro": "告诉游客您提供什么、价格多少以及如何联系您。完全免费。",
+    "kindLabel": "您要登记什么？",
+    "tierTitle": "规模",
+    "tierHint": "选择适合您的规模，它决定了可添加的价格和照片数量。",
+    "tier": {
+      "small": "小型",
+      "medium": "中型",
+      "large": "大型"
+    },
+    "tierExample": {
+      "small": "民宿、小屋、小吃摊",
+      "medium": "中等规模的酒店或餐厅",
+      "large": "大型酒店、度假村或连锁餐厅"
+    },
+    "tierLimits": "最多 {prices} 个价格 · {min}–{max} 张照片",
+    "basicTitle": "基本信息",
+    "category": "商家类型",
+    "categoryPlaceholder": "请选择类型",
+    "name": "名称",
+    "district": "县",
+    "area": "区域或地址",
+    "areaHint": "例如：Zindabazar, Sylhet",
+    "description": "介绍",
+    "pricesTitle": "价格",
+    "pricesHint": "填写您出售的内容及价格（孟加拉塔卡），最多 {max} 行。",
+    "priceItem": "项目",
+    "priceAmount": "价格（৳）",
+    "priceUnit": "单位（如每晚）",
+    "addPrice": "添加价格",
+    "removePrice": "删除第 {n} 个价格",
+    "contactTitle": "联系方式",
+    "contactName": "联系人",
+    "phone": "电话",
+    "phoneHint": "手机号码，格式如 01XXXXXXXXX",
+    "whatsapp": "WhatsApp 号码",
+    "social": "社交主页链接",
+    "socialHint": "例如您的 Facebook 主页",
+    "photos": "照片",
+    "photosHint": "请添加 {min} 至 {max} 张照片，发送前会在您的设备上压缩。",
+    "keptPhotos": "当前照片",
+    "removePhoto": "删除第 {n} 张照片",
+    "submit": "提交审核",
+    "save": "保存更改",
+    "saved": "已保存，版主将再次审核。",
+    "errRequired": "请填写此项。",
+    "errTooLong": "内容过长，请缩短。",
+    "errPhone": "请输入 01XXXXXXXXX 格式的手机号码。",
+    "errUrl": "请输入以 https:// 开头的链接。",
+    "errPrices": "每个价格都需要填写项目和孟加拉塔卡金额。",
+    "errPricesMany": "该规模的价格数量过多，最多 {max} 个。",
+    "errPhotos": "该规模需要 {min} 至 {photos} 张照片。",
+    "quotaLeft": {
+      "other": "今天还可以提交 {count} 条列表。"
+    },
+    "quotaNone": "今天您已提交 {limit} 条列表，请明天再试。",
+    "guestNote": "您尚未登录。仍可提交列表，但只有登录的店主才能查看状态并在之后编辑。",
+    "reviewNote": "每条列表显示前都会由版主审核，编辑后会再次审核。",
+    "doneTitle": "谢谢！您的列表已交给版主审核",
+    "doneBody": "审核通过后将显示在网站上。",
+    "doneMine": "查看我的列表",
+    "doneSignIn": "登录以跟进",
+    "doneAnother": "再添加一个"
+  },
+  "myListings": {
+    "title": "我的列表",
+    "intro": "您提交的全部内容及其状态，可在此编辑或删除。",
+    "signIn": "请登录以查看您添加的列表。",
+    "empty": "您还没有添加任何列表。",
+    "status": {
+      "pending": "等待审核",
+      "approved": "已上线",
+      "rejected": "未通过"
+    },
+    "note": {
+      "pending": "版主尚未审核，目前只有您能看到。",
+      "approved": "此列表已显示在网站上。",
+      "rejected": "此列表未通过审核，编辑后将再次审核。"
+    },
+    "deleteTitle": "删除此列表？",
+    "deleteBody": "它及其照片和评价将被永久删除。",
+    "deleted": "列表已删除。"
   }
 }

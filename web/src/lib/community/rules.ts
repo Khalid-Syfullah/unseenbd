@@ -51,6 +51,8 @@ export const DAILY = {
   comments: 30,
   /** Reports per visitor. */
   reports: 20,
+  /** Owner listings per IP address (or signed-in owner). */
+  listings: 3,
 } as const;
 
 export type QuotaScope = keyof typeof DAILY;

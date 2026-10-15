@@ -123,6 +123,8 @@ describe("db:reset (migrate + seed)", () => {
       "leaderboard_entries",
       "short_links",
       "daily_stats",
+      "place_stars",
+      "admin_log",
     ];
     for (const t of userTables) expect(countRows(fresh, t), t).toBe(0);
     fresh.$client.close();

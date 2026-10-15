@@ -1711,5 +1711,167 @@
     "emailHint": "Privé. Indiquez-le si vous acceptez une réponse de la rédaction.",
     "send": "Envoyer à la rédaction",
     "sent": "Merci ! La rédaction le lira."
+  },
+  "directory": {
+    "stay": {
+      "title": "Hôtels et resorts",
+      "intro": "Des hôtels bien notés dans les grandes villes et des resorts en montagne, dans les plantations de thé et sur la côte."
+    },
+    "restaurants": {
+      "title": "Où manger",
+      "intro": "Des restaurants et cafés très bien notés, ainsi que de la cuisine maison proposée par des cuisiniers locaux."
+    },
+    "shopping": {
+      "title": "Shopping",
+      "intro": "Centres commerciaux par quartier et produits fabriqués par des entrepreneurs locaux."
+    },
+    "section": {
+      "hotels": "Hôtels",
+      "resorts": "Resorts",
+      "restaurants": "Restaurants et cafés",
+      "malls": "Centres commerciaux"
+    },
+    "areas": "Zones",
+    "allAreas": "Toutes les zones",
+    "ownersTitle": "Ajoutés par les propriétaires",
+    "ownersEmpty": "Les propriétaires n’ont encore rien ajouté ici.",
+    "foodTitle": "Cuisine maison",
+    "productsTitle": "Produits d’entrepreneurs locaux",
+    "ownerCta": "Vous tenez une entreprise ici ? Ajoutez-la gratuitement à l’annuaire.",
+    "snapshotNote": "Les notes et le nombre d’avis sont un instantané de fiches publiques. Vérifiez avant d’y aller.",
+    "openMaps": "Ouvrir dans Google Maps",
+    "category": "Catégorie",
+    "area": "Zone",
+    "rating": "Note",
+    "reviews": "Avis"
+  },
+  "listings": {
+    "title": "Commerces locaux",
+    "intro": "Hôtels, restaurants, plats faits maison et produits ajoutés par ceux qui les tiennent.",
+    "kindLabel": "Type de fiche",
+    "kind": {
+      "business": "Hôtels, restaurants et boutiques",
+      "food": "Cuisine maison",
+      "product": "Produits"
+    },
+    "category": {
+      "hotel": "Hôtel",
+      "resort": "Resort",
+      "guesthouse": "Maison d’hôtes",
+      "restaurant": "Restaurant",
+      "cafe": "Café",
+      "mall": "Centre commercial",
+      "shop": "Boutique"
+    },
+    "empty": "Rien n’a encore été listé ici.",
+    "allDistricts": "Tous les districts"
+  },
+  "listing": {
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "social": "Page sociale",
+    "contact": "Contact",
+    "contactPerson": "Personne à contacter",
+    "prices": "Prix",
+    "reviews": "Avis",
+    "noReviews": "Pas encore d’avis.",
+    "writeReview": "Écrire un avis",
+    "reviewName": "Votre nom",
+    "reviewRating": "Note",
+    "reviewBody": "Votre avis (facultatif)",
+    "reviewSubmit": "Envoyer l’avis",
+    "reviewSent": "Merci ! Votre avis apparaîtra après vérification par un modérateur.",
+    "reviewNeedName": "Veuillez saisir votre nom.",
+    "ratingOf": "{rating} sur 5",
+    "photos": "Photos",
+    "back": "← Tous les commerces locaux"
+  },
+  "addListing": {
+    "metaTitle": "Référencer votre commerce",
+    "metaDescription": "Ajoutez gratuitement votre hôtel, restaurant, plat maison ou produit. Un modérateur vérifie chaque fiche avant sa publication.",
+    "title": "Référencer votre commerce",
+    "editTitle": "Modifier votre fiche",
+    "intro": "Dites aux visiteurs ce que vous proposez, à quel prix et comment vous joindre. C’est gratuit.",
+    "kindLabel": "Que souhaitez-vous référencer ?",
+    "tierTitle": "Taille",
+    "tierHint": "Choisissez la taille qui vous convient. Elle fixe le nombre de prix et de photos.",
+    "tier": {
+      "small": "Petit",
+      "medium": "Moyen",
+      "large": "Grand"
+    },
+    "tierExample": {
+      "small": "Maison d’hôtes, cottage, stand de nourriture",
+      "medium": "Hôtel ou restaurant de taille moyenne",
+      "large": "Grand hôtel, resort ou chaîne de restaurants"
+    },
+    "tierLimits": "Jusqu’à {prices} prix · {min} à {max} photos",
+    "basicTitle": "Informations de base",
+    "category": "Type d’établissement",
+    "categoryPlaceholder": "Choisir un type",
+    "name": "Nom",
+    "district": "District",
+    "area": "Quartier ou adresse",
+    "areaHint": "Par exemple : Zindabazar, Sylhet",
+    "description": "Description",
+    "pricesTitle": "Prix",
+    "pricesHint": "Indiquez ce que vous vendez et son prix, en taka. {max} lignes au maximum.",
+    "priceItem": "Article",
+    "priceAmount": "Prix (৳)",
+    "priceUnit": "Unité (p. ex. par nuit)",
+    "addPrice": "Ajouter un prix",
+    "removePrice": "Supprimer le prix {n}",
+    "contactTitle": "Contact",
+    "contactName": "Personne à contacter",
+    "phone": "Téléphone",
+    "phoneHint": "Un numéro mobile du type 01XXXXXXXXX",
+    "whatsapp": "Numéro WhatsApp",
+    "social": "Lien de page sociale",
+    "socialHint": "Par exemple votre page Facebook",
+    "photos": "Photos",
+    "photosHint": "Ajoutez de {min} à {max} photos. Elles sont réduites sur votre appareil avant l’envoi.",
+    "keptPhotos": "Photos actuelles",
+    "removePhoto": "Supprimer la photo {n}",
+    "submit": "Envoyer pour vérification",
+    "save": "Enregistrer les modifications",
+    "saved": "Enregistré. Un modérateur la vérifiera de nouveau.",
+    "errRequired": "Veuillez remplir ce champ.",
+    "errTooLong": "C’est trop long. Raccourcissez-le.",
+    "errPhone": "Saisissez un numéro mobile du type 01XXXXXXXXX.",
+    "errUrl": "Saisissez un lien commençant par https://",
+    "errPrices": "Chaque prix doit avoir un article et un montant en taka.",
+    "errPricesMany": "Trop de prix pour cette taille. Maximum : {max}.",
+    "errPhotos": "Ajoutez de {min} à {photos} photos pour cette taille.",
+    "quotaLeft": {
+      "one": "Vous pouvez envoyer encore {count} fiche aujourd’hui.",
+      "other": "Vous pouvez envoyer encore {count} fiches aujourd’hui."
+    },
+    "quotaNone": "Vous avez envoyé {limit} fiches aujourd’hui. Réessayez demain.",
+    "guestNote": "Vous n’êtes pas connecté. Vous pouvez quand même envoyer une fiche, mais seuls les propriétaires connectés peuvent suivre son statut et la modifier.",
+    "reviewNote": "Un modérateur vérifie chaque fiche avant sa publication. Les modifications sont revérifiées.",
+    "doneTitle": "Merci ! Votre fiche est chez un modérateur",
+    "doneBody": "Elle apparaîtra sur le site une fois vérifiée.",
+    "doneMine": "Voir mes fiches",
+    "doneSignIn": "Connectez-vous pour la suivre",
+    "doneAnother": "En ajouter une autre"
+  },
+  "myListings": {
+    "title": "Mes fiches",
+    "intro": "Tout ce que vous avez référencé, avec son statut. Modifiez ou supprimez ici.",
+    "signIn": "Connectez-vous pour voir les fiches que vous avez ajoutées.",
+    "empty": "Vous n’avez encore rien référencé.",
+    "status": {
+      "pending": "En attente de vérification",
+      "approved": "En ligne",
+      "rejected": "Non acceptée"
+    },
+    "note": {
+      "pending": "Un modérateur ne l’a pas encore vérifiée. Vous seul la voyez.",
+      "approved": "Cette fiche est sur le site.",
+      "rejected": "Cette fiche n’a pas été acceptée. Modifiez-la et elle sera revérifiée."
+    },
+    "deleteTitle": "Supprimer cette fiche ?",
+    "deleteBody": "Elle sera supprimée définitivement, avec ses photos et ses avis.",
+    "deleted": "Fiche supprimée."
   }
 }

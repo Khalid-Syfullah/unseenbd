@@ -685,6 +685,8 @@ export const listingPhotos = sqliteTable(
       .references(() => listings.id, { onDelete: "cascade" }),
     position: integer("position").notNull(),
     src: text("src").notNull(),
+    /** Small copy for cards (≤ 640 px), made in the browser next to the full image. */
+    thumb: text("thumb"),
     width: integer("width"),
     height: integer("height"),
   },
@@ -759,6 +761,39 @@ export const dailyStats = sqliteTable(
     value: integer("value").notNull().default(0),
   },
   (t) => [primaryKey({ columns: [t.day, t.metric] })],
+);
+
+/**
+ * Editorial star overrides set in the admin. The `places` table is rewritten by every seed, so an
+ * override lives here and the seed re-applies it. `original` is the seeded score to go back to.
+ */
+export const placeStars = sqliteTable("place_stars", {
+  placeId: integer("place_id").primaryKey(),
+  /** Editorial score 0–1000 (see `places.stars`). */
+  stars: integer("stars").notNull(),
+  original: integer("original").notNull(),
+  updatedBy: integer("updated_by").references(() => users.id, { onDelete: "set null" }),
+  updatedAt: text("updated_at")
+    .notNull()
+    .default(sql`CURRENT_TIMESTAMP`),
+});
+
+/** Every action an admin takes in the moderation screens. */
+export const adminLog = sqliteTable(
+  "admin_log",
+  {
+    id: integer("id").primaryKey(),
+    adminId: integer("admin_id").references(() => users.id, { onDelete: "set null" }),
+    /** What was done, e.g. `approve`, `reject`, `delete`, `stars`. */
+    action: text("action").notNull(),
+    /** The queue or area, e.g. `photos`, `listings`, `stars`. */
+    target: text("target").notNull(),
+    /** Ids acted on (JSON array of strings) and a short free-text note. */
+    ids: json<string[]>("ids").notNull(),
+    detail: text("detail"),
+    createdAt: createdAt(),
+  },
+  (t) => [index("admin_log_created_idx").on(t.createdAt)],
 );
 
 /** Content tables written by the seed, in insert order (parents first). */
