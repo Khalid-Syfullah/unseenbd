@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { AccountProvider } from "@/components/account/AccountProvider";
 import { AppHeader } from "@/components/ui/AppHeader";
 import { Footer } from "@/components/ui/Footer";
 import { TabBar } from "@/components/ui/TabBar";
@@ -75,6 +76,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       <body className="bg-bg text-text antialiased">
         <I18nProvider locale={lang} messages={getMessages(lang)}>
           <ToastProvider>
+            <AccountProvider />
             <a
               href="#main"
               className="fixed top-2 left-2 z-[90] -translate-y-[200%] rounded-md bg-raised px-4 py-3 font-semibold text-primary shadow-3 transition-transform duration-[var(--dur-2)] ease-standard focus-visible:translate-y-0 print:hidden"

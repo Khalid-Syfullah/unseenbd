@@ -316,7 +316,7 @@ export default async function DesignPage({ params }: PageProps) {
           wide
         >
           <div className="overflow-hidden rounded-lg border border-border">
-            <AppHeader lang={locale} sticky={false} />
+            <AppHeader lang={locale} user={null} sticky={false} />
           </div>
           <div className="overflow-hidden rounded-lg border border-border">
             <AppHeader lang={locale} user={{ name: bn ? "করিম" : "Karim" }} sticky={false} />

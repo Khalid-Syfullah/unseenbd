@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AccountSlot } from "@/components/account/AccountSlot";
 import { localePath, type Locale } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
 import { FACEBOOK_URL } from "@/lib/site";
@@ -15,11 +16,12 @@ export type HeaderUser = { name: string };
  * App header (DESIGN.md §4.1):
  * `[logo] ……… [Facebook] [theme] [language ▾] [Log in | avatar] [☰]`.
  * Sticky, 56 px (64 px from 1024 px), translucent raised background with blur. Below 360 px only
- * the mark shows. `user` fills the login/avatar slot.
+ * the mark shows. Without a `user` prop the login/avatar slot follows the visitor's session
+ * (`<AccountSlot>`); `user` (or `null`) fixes it, for previews.
  */
 export function AppHeader({
   lang,
-  user = null,
+  user,
   sticky = true,
   className,
 }: {
@@ -76,7 +78,9 @@ export function AppHeader({
         <ThemeSwitch />
         <LanguageSelect />
         <div className="mx-0.5 flex shrink-0 items-center sm:mx-1">
-          {user ? (
+          {user === undefined ? (
+            <AccountSlot />
+          ) : user ? (
             <Link
               href={localePath(lang, "/profile")}
               className={cn(

@@ -39,17 +39,16 @@ const globalForDb = globalThis as unknown as { __unseenbdDb?: Db };
 /**
  * The shared database connection used by the data layer and API routes.
  *
- * `npm run db:seed` (also run before `dev` and `build`) normally prepares the file. As a
- * fallback, an empty or missing database is migrated and seeded on first use, so tests
+ * `npm run db:seed` (also run before `dev` and `build`) normally prepares the file. Pending
+ * migrations are applied on first use, and an empty or missing database is seeded, so tests
  * (`DATABASE_PATH=:memory:`) and fresh checkouts work without a separate step.
  */
 export function getDb(): Db {
   if (globalForDb.__unseenbdDb) return globalForDb.__unseenbdDb;
   const db = openDatabase();
-  if (!isSeeded(db)) {
-    migrateDatabase(db);
-    seedDatabase(db);
-  }
+  // Cheap when up to date; picks up migrations added since the file was last seeded.
+  migrateDatabase(db);
+  if (!isSeeded(db)) seedDatabase(db);
   globalForDb.__unseenbdDb = db;
   return db;
 }

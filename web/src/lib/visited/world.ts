@@ -3,21 +3,18 @@
  * code (or the map's slug for the few shapes without one), plus travel memory pins. Both live in
  * the visitor's own browser and stay in step across tabs, like the districts store.
  */
+import { unionWorld } from "@/lib/account/merge";
+import { cleanWorld, isCountryKey, type WorldMark } from "@/lib/account/shapes";
 import { createLocalStore, safeJson } from "./store";
 import { adapterSlot, type SyncAdapter } from "./sync";
 
 export const WORLD_KEY = "unseenbd.world";
 export const WORLD_PINS_KEY = "unseenbd.world.pins";
 
-export type WorldMark = "visited" | "wish";
+export { isCountryKey, type WorldMark } from "@/lib/account/shapes";
 export type WorldMarks = Readonly<Record<string, WorldMark>>;
 
 const EMPTY_MARKS: WorldMarks = Object.freeze({});
-
-/** An ISO2 code (`BD`) or a map slug (`n-cyprus`). */
-export function isCountryKey(value: unknown): value is string {
-  return typeof value === "string" && /^(?:[A-Z]{2}|[a-z0-9]+(?:-[a-z0-9]+)*)$/.test(value);
-}
 
 export function isIso2(value: unknown): value is string {
   return typeof value === "string" && /^[A-Z]{2}$/.test(value);
@@ -25,14 +22,7 @@ export function isIso2(value: unknown): value is string {
 
 /** Parses the stored marks; anything malformed is dropped. */
 export function parseWorld(raw: string | null | undefined): Record<string, WorldMark> {
-  if (!raw) return {};
-  const value = safeJson(raw);
-  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
-  const out: Record<string, WorldMark> = {};
-  for (const [key, mark] of Object.entries(value)) {
-    if (isCountryKey(key) && (mark === "visited" || mark === "wish")) out[key] = mark;
-  }
-  return out;
+  return raw ? cleanWorld(safeJson(raw)) : {};
 }
 
 const marksStore = createLocalStore<WorldMarks>({
@@ -51,12 +41,13 @@ export type WorldSyncAdapter = SyncAdapter<WorldDelta, WorldMarks>;
 
 const sync = adapterSlot<WorldDelta, WorldMarks>({
   get: () => marksStore.get(),
-  // Local marks win; the account only fills in countries this browser has not marked.
+  // A union: where both sides mark a country, "visited" beats "wish" (as on the server).
   merge: (remote) =>
-    writeMarks({ ...parseWorld(JSON.stringify(remote)), ...marksStore.get() }, false),
+    writeMarks(unionWorld(marksStore.get(), parseWorld(JSON.stringify(remote))), false),
+  replace: (remote) => writeMarks(parseWorld(JSON.stringify(remote)), false),
 });
 
-/** Installs the account adapter (phase 13); the default does nothing. */
+/** Installs the account adapter (on sign-in); the default does nothing. */
 export function setWorldSyncAdapter(adapter: WorldSyncAdapter) {
   sync.install(adapter);
 }
@@ -79,6 +70,16 @@ export function setCountryMark(key: string, mark: WorldMark | null) {
   if (mark) next[key] = mark;
   else delete next[key];
   writeMarks(next, true);
+}
+
+/** Forgets the local marks without telling the account (on sign-out). */
+export function clearWorldLocal() {
+  writeMarks({}, false);
+}
+
+/** Takes the account's marks as the local value, without pushing them back (after sign-in). */
+export function adoptWorld(marks: Readonly<Record<string, WorldMark>>) {
+  writeMarks(parseWorld(JSON.stringify(marks)), false);
 }
 
 /** Clears every mark. */

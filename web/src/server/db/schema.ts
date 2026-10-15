@@ -306,7 +306,15 @@ export const users = sqliteTable(
     role: text("role").$type<"user" | "admin">().notNull().default("user"),
     /** District of birth, upbringing, study, work and favourite ("My Bangladesh story"). */
     story: json<Record<string, number | null>>("story"),
+    /** When each story field last changed (ms since epoch), for last-write-wins sync. */
+    storyTimes: json<Record<string, number>>("story_times"),
+    /** Preferred interface language (a locale) and theme (`light` | `dark` | `system`). */
+    locale: text("locale"),
+    theme: text("theme"),
+    /** Show the visited-districts map on the public profile (`/u/:handle`). */
+    publicMap: bool("public_map").notNull().default(false),
     createdAt: createdAt(),
+    updatedAt: text("updated_at"),
     deletedAt: text("deleted_at"),
   },
   (t) => [
@@ -359,6 +367,21 @@ export const wishlist = sqliteTable(
     createdAt: createdAt(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.placeId] })],
+);
+
+/** "My World" marks: a country the user has been to or wants to visit. */
+export const worldMarks = sqliteTable(
+  "world_marks",
+  {
+    userId: integer("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    /** ISO 3166-1 alpha-2 code, or the map's slug for shapes without one. */
+    country: text("country").notNull(),
+    mark: text("mark").$type<"visited" | "wish">().notNull(),
+    createdAt: createdAt(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.country] })],
 );
 
 export const viewHistory = sqliteTable(

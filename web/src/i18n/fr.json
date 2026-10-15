@@ -431,7 +431,7 @@
   },
   "bucket": {
     "title": "Envies de voyage",
-    "intro": "Marquez chaque lieu « À voir » ou « J’y suis allé ». Votre liste reste enregistrée dans ce navigateur uniquement.",
+    "intro": "Marquez chaque lieu « À voir » ou « J’y suis allé ». Votre liste est enregistrée dans ce navigateur, et dans votre compte si vous êtes connecté.",
     "metaDescription": "Tous les lieux du Bangladesh par type, avec les marques « À voir » et « J’y suis allé » pour votre propre liste.",
     "want": "À voir",
     "been": "J’y suis allé",
@@ -742,7 +742,8 @@
     "food": "Repas",
     "local": "Transport local",
     "misc": "Entrées et divers",
-    "note": "Ce sont des estimations pour planifier, pas des devis. Tarifs, prix des chambres et temps de trajet changent : vérifiez avant de partir."
+    "note": "Ce sont des estimations pour planifier, pas des devis. Tarifs, prix des chambres et temps de trajet changent : vérifiez avant de partir.",
+    "openSaved": "Voir le voyage enregistré"
   },
   "tripCost": {
     "title": "Calculateur de coût de voyage",
@@ -767,7 +768,7 @@
   "myBd": {
     "title": "Mon Bangladesh",
     "metaDescription": "Cochez les districts du Bangladesh que vous avez visités, voyez votre niveau et vos tampons de passeport, et partagez votre carte.",
-    "intro": "Coloriez les districts où vous êtes allé. Votre carte reste dans ce navigateur, sauf si vous la partagez.",
+    "intro": "Coloriez les districts où vous êtes allé. Votre carte reste dans ce navigateur, et dans votre compte si vous êtes connecté.",
     "progressLabel": "Votre progression",
     "percentSeen": "{percent} vus",
     "level": "Niveau : {level}",
@@ -832,7 +833,7 @@
     "stampDone": "{name} : tamponné",
     "stampLocked": "{name} : pas encore",
     "storyTitle": "Mon histoire du Bangladesh",
-    "storyIntro": "Les districts qui vous ont façonné. Enregistré dans ce navigateur uniquement.",
+    "storyIntro": "Les districts qui vous ont façonné. Enregistré dans ce navigateur, et dans votre compte si vous êtes connecté.",
     "storyBirth": "District de naissance",
     "storyUpbringing": "Où j'ai grandi",
     "storyStudy": "Où j'ai étudié",
@@ -900,7 +901,7 @@
   "world": {
     "title": "Mon monde",
     "metaDescription": "Marquez les pays visités et ceux que vous voulez voir, épinglez vos souvenirs de voyage et partagez votre carte du monde.",
-    "intro": "Coloriez les pays où vous êtes allé et ceux dont vous rêvez. Enregistré dans ce navigateur, sauf si vous partagez.",
+    "intro": "Coloriez les pays où vous êtes allé et ceux dont vous rêvez. Enregistré dans ce navigateur, et dans votre compte si vous êtes connecté.",
     "modeLabel": "Effet d'un toucher",
     "modeVisited": "Visité",
     "modeWish": "Envie d'y aller",
@@ -1292,5 +1293,174 @@
         "countryside": "Vous prenez votre temps : traversées de rivières, eaux des haors et vie de village loin du trafic."
       }
     }
+  },
+  "account": {
+    "login": {
+      "title": "Se connecter",
+      "metaDescription": "Connectez-vous à Unseen BD pour retrouver votre carte, votre liste d’envies et vos voyages sur tous vos appareils.",
+      "intro": "Retrouvez votre carte, votre liste d’envies et vos voyages sur tous vos appareils."
+    },
+    "register": {
+      "title": "Créer un compte",
+      "metaDescription": "Créez un compte Unseen BD gratuit pour enregistrer vos voyages et synchroniser votre carte.",
+      "intro": "Gratuit, sans publicité. Enregistrez vos voyages et gardez la même carte sur tous vos appareils."
+    },
+    "logout": {
+      "title": "Se déconnecter",
+      "intro": "La déconnexion retire votre carte, votre liste d’envies et votre histoire de cet appareil. Elles restent en sécurité dans votre compte.",
+      "button": "Se déconnecter",
+      "done": "Vous êtes déconnecté.",
+      "notSignedIn": "Vous n’êtes pas connecté."
+    },
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "passwordHint": "Au moins {min} caractères.",
+    "name": "Nom",
+    "submitLogin": "Se connecter",
+    "submitRegister": "Créer le compte",
+    "or": "ou",
+    "googleUnavailable": "La connexion Google n’a pas pu se charger. Utilisez votre e-mail.",
+    "noAccount": "Nouveau ici ?",
+    "registerLink": "Créer un compte",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "loginLink": "Se connecter",
+    "signedInAs": "Vous êtes connecté en tant que {name}.",
+    "goProfile": "Aller à votre profil",
+    "keepsLocal": "Les districts, lieux et pays marqués sur cet appareil sans être connecté sont ajoutés à votre compte.",
+    "privacy": "Avec un compte, nous conservons votre nom, votre e-mail, un mot de passe haché, votre carte, votre liste d’envies, vos voyages, votre historique et vos photos. Vous pouvez tout supprimer depuis votre profil.",
+    "errors": {
+      "invalid_credentials": "E-mail ou mot de passe incorrect.",
+      "invalid_email": "Saisissez une adresse e-mail valide.",
+      "invalid_password": "Utilisez un mot de passe de 8 à 128 caractères.",
+      "invalid_name": "Saisissez votre nom.",
+      "email_taken": "Un compte existe déjà avec cet e-mail. Connectez-vous.",
+      "rate_limited": "Trop de tentatives. Attendez quelques minutes et réessayez.",
+      "invalid_credential": "La connexion Google a échoué. Réessayez.",
+      "csrf": "Cette page est ouverte depuis longtemps. Rechargez-la et réessayez.",
+      "network": "Vous semblez hors ligne. Réessayez.",
+      "error": "Un problème est survenu. Réessayez."
+    }
+  },
+  "profile": {
+    "title": "Votre profil",
+    "metaDescription": "Vos districts visités, voyages enregistrés, historique et réglages.",
+    "memberSince": "Membre depuis le {date}",
+    "createPost": "Publier",
+    "myListings": "Mes annonces",
+    "tabs": {
+      "label": "Sections du profil",
+      "summary": "Résumé",
+      "history": "Historique",
+      "trips": "Voyages",
+      "photos": "Photos",
+      "posts": "Mes publications",
+      "want": "À visiter",
+      "settings": "Réglages"
+    },
+    "summary": {
+      "visited": "Districts visités",
+      "outOf": "sur {total}",
+      "trips": "Voyages enregistrés",
+      "photos": "Photos",
+      "spend": "Total des voyages",
+      "mapTitle": "Votre carte",
+      "mapLabel": "Carte des districts que vous avez visités",
+      "editMap": "Modifier ma carte",
+      "planNext": "Préparez votre prochain voyage",
+      "planNextBody": "Choisissez les districts que vous n’avez pas encore vus et obtenez un programme jour par jour avec les coûts.",
+      "planNextAction": "Ouvrir le planificateur"
+    },
+    "history": {
+      "title": "Vus récemment",
+      "empty": "Les lieux et districts que vous ouvrez apparaîtront ici.",
+      "clear": "Supprimer mon historique",
+      "confirm": "Supprimer tout votre historique ? C’est irréversible.",
+      "cleared": "Historique supprimé.",
+      "district": "District"
+    },
+    "trips": {
+      "empty": "Les voyages enregistrés dans le planificateur apparaîtront ici.",
+      "open": "Ouvrir",
+      "share": "Lien de partage",
+      "shared": "Lien copié. Toute personne qui l’a peut voir ce voyage.",
+      "stopSharing": "Arrêter le partage",
+      "stopped": "Ce voyage est de nouveau privé.",
+      "public": "Partagé",
+      "private": "Privé",
+      "confirmDelete": "Supprimer « {title} » ?",
+      "confirmBody": "Le voyage et son lien de partage disparaîtront définitivement.",
+      "deleted": "Voyage supprimé.",
+      "untitled": "Voyage sans titre",
+      "savedOn": "Enregistré le {date}",
+      "days": {
+        "one": "{count} jour",
+        "other": "{count} jours"
+      }
+    },
+    "photos": {
+      "empty": "Les photos que vous ajoutez apparaîtront ici avec leur statut de vérification.",
+      "add": "Ajouter une photo",
+      "deleteAll": "Supprimer mes photos",
+      "confirm": "Supprimer toutes vos photos ? C’est irréversible.",
+      "deleted": "Photos supprimées.",
+      "status": {
+        "pending": "En attente de vérification",
+        "approved": "Publiée",
+        "rejected": "Non publiée"
+      }
+    },
+    "posts": {
+      "empty": "Vos publications apparaîtront ici.",
+      "composerSoon": "La publication ouvrira avec les pages de la communauté. Vos publications apparaîtront ici."
+    },
+    "want": {
+      "places": "Lieux à voir",
+      "countries": "Pays à visiter",
+      "empty": "Marquez des lieux « À voir » pour les retrouver ici.",
+      "noCountries": "Marquez des pays « À visiter » dans Mon monde.",
+      "openBucket": "Ouvrir la liste d’envies"
+    },
+    "settings": {
+      "title": "Profil",
+      "handle": "Identifiant",
+      "handleHint": "3 à 20 lettres minuscules, chiffres ou _. Utilisé pour votre page publique.",
+      "themeSystem": "Comme l’appareil",
+      "publicMap": "Afficher ma carte sur ma page publique",
+      "save": "Enregistrer",
+      "saved": "Enregistré.",
+      "errors": {
+        "invalid_name": "Saisissez un nom.",
+        "invalid_handle": "Utilisez 3 à 20 lettres minuscules, chiffres ou _.",
+        "handle_taken": "Cet identifiant est pris. Essayez-en un autre."
+      },
+      "data": "Vos données",
+      "dataBody": "Supprimez une partie de ce que nous conservons, ou tout.",
+      "deleteAccount": "Supprimer mon compte",
+      "deleteAccountBody": "Votre compte sera supprimé avec votre carte, votre liste d’envies, vos voyages, votre historique, vos photos et vos publications. C’est irréversible.",
+      "deleteConfirmLabel": "Tapez {handle} pour confirmer",
+      "deleteConfirmButton": "Tout supprimer",
+      "deleted": "Votre compte a été supprimé.",
+      "viewPublic": "Voir votre page publique"
+    }
+  },
+  "publicProfile": {
+    "metaDescription": "La page de voyage de {name} sur Unseen BD.",
+    "empty": "Rien n’est encore partagé ici.",
+    "map": "Districts visités",
+    "mapLabel": "Districts visités par {name}",
+    "visitedCount": "{count} sur {total}",
+    "trips": "Voyages partagés",
+    "photos": "Photos",
+    "posts": "Publications"
+  },
+  "trip": {
+    "title": "Voyage enregistré",
+    "metaDescription": "Un voyage préparé avec le planificateur Unseen BD : jours, trajets et coûts.",
+    "by": "Préparé par",
+    "savedOn": "enregistré le {date}",
+    "shareOn": "Toute personne ayant le lien peut voir ce voyage.",
+    "private": "Vous seul pouvez voir ce voyage.",
+    "manage": "Gérer le partage",
+    "openInPlanner": "Ouvrir dans le planificateur"
   }
 }

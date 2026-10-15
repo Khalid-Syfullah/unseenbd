@@ -431,7 +431,7 @@
   },
   "bucket": {
     "title": "Bucket list",
-    "intro": "Mark each place “Want to see” or “Been there”. Your list is saved in this browser only.",
+    "intro": "Mark each place “Want to see” or “Been there”. Your list is saved in this browser, and in your account when you sign in.",
     "metaDescription": "Every place in Bangladesh by type, with Want to see and Been there marks for your own list.",
     "want": "Want to see",
     "been": "Been there",
@@ -742,7 +742,8 @@
     "food": "Food",
     "local": "Local transport",
     "misc": "Entry fees & misc",
-    "note": "These are estimates for planning, not quotes. Fares, room rates and travel times change, so check before you go."
+    "note": "These are estimates for planning, not quotes. Fares, room rates and travel times change, so check before you go.",
+    "openSaved": "See your saved trip"
   },
   "tripCost": {
     "title": "Trip cost calculator",
@@ -767,7 +768,7 @@
   "myBd": {
     "title": "My Bangladesh",
     "metaDescription": "Tick the districts of Bangladesh you have visited, see your level and passport stamps, and share your map with friends.",
-    "intro": "Colour in the districts you have been to. Your map stays in this browser unless you share it.",
+    "intro": "Colour in the districts you have been to. Your map stays in this browser, and in your account when you sign in.",
     "progressLabel": "Your progress",
     "percentSeen": "{percent} seen",
     "level": "Level: {level}",
@@ -832,7 +833,7 @@
     "stampDone": "{name}: stamped",
     "stampLocked": "{name}: not yet",
     "storyTitle": "My Bangladesh story",
-    "storyIntro": "The districts that shaped you. Saved in this browser only.",
+    "storyIntro": "The districts that shaped you. Saved in this browser, and in your account when you sign in.",
     "storyBirth": "District of birth",
     "storyUpbringing": "Where I grew up",
     "storyStudy": "Where I studied",
@@ -900,7 +901,7 @@
   "world": {
     "title": "My World",
     "metaDescription": "Mark the countries you have visited and the ones you want to see, pin travel memories and share your world map.",
-    "intro": "Colour the countries you have been to and the ones you dream of. Saved in this browser unless you share it.",
+    "intro": "Colour the countries you have been to and the ones you dream of. Saved in this browser, and in your account when you sign in.",
     "modeLabel": "What a tap does",
     "modeVisited": "Visited",
     "modeWish": "Want to go",
@@ -1292,5 +1293,174 @@
         "countryside": "You slow down: river crossings, haor waters and village life far from the traffic."
       }
     }
+  },
+  "account": {
+    "login": {
+      "title": "Sign in",
+      "metaDescription": "Sign in to Unseen BD to keep your map, bucket list and trips on every device.",
+      "intro": "Keep your map, bucket list and saved trips on every device."
+    },
+    "register": {
+      "title": "Create an account",
+      "metaDescription": "Make a free Unseen BD account to save trips and sync your map between devices.",
+      "intro": "Free, no ads. Save trips and keep your map in step on all your devices."
+    },
+    "logout": {
+      "title": "Sign out",
+      "intro": "Signing out removes your map, bucket list and story from this device. They stay safe in your account.",
+      "button": "Sign out",
+      "done": "You're signed out.",
+      "notSignedIn": "You're not signed in."
+    },
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least {min} characters.",
+    "name": "Name",
+    "submitLogin": "Sign in",
+    "submitRegister": "Create account",
+    "or": "or",
+    "googleUnavailable": "Google sign-in could not load. Use your email instead.",
+    "noAccount": "New here?",
+    "registerLink": "Create an account",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Sign in",
+    "signedInAs": "You're signed in as {name}.",
+    "goProfile": "Go to your profile",
+    "keepsLocal": "Districts, places and countries you marked on this device while signed out are added to your account.",
+    "privacy": "With an account we keep your name, email, a hashed password, your map, bucket list, trips, viewing history and photos. You can delete any of it from your profile.",
+    "errors": {
+      "invalid_credentials": "Wrong email or password.",
+      "invalid_email": "Enter a valid email address.",
+      "invalid_password": "Use a password of 8 to 128 characters.",
+      "invalid_name": "Enter your name.",
+      "email_taken": "An account with this email already exists. Sign in instead.",
+      "rate_limited": "Too many tries. Wait a few minutes and try again.",
+      "invalid_credential": "Google sign-in did not work. Try again.",
+      "csrf": "This page was open for a long time. Reload it and try again.",
+      "network": "You seem to be offline. Try again.",
+      "error": "Something went wrong. Try again."
+    }
+  },
+  "profile": {
+    "title": "Your profile",
+    "metaDescription": "Your visited districts, saved trips, history and settings.",
+    "memberSince": "Joined {date}",
+    "createPost": "Create post",
+    "myListings": "My listings",
+    "tabs": {
+      "label": "Profile sections",
+      "summary": "Summary",
+      "history": "History",
+      "trips": "Trips",
+      "photos": "Photos",
+      "posts": "My posts",
+      "want": "Want to go",
+      "settings": "Settings"
+    },
+    "summary": {
+      "visited": "Districts visited",
+      "outOf": "out of {total}",
+      "trips": "Saved trips",
+      "photos": "Photos",
+      "spend": "Total across trips",
+      "mapTitle": "Your map",
+      "mapLabel": "Map of the districts you have visited",
+      "editMap": "Edit my map",
+      "planNext": "Plan your next trip",
+      "planNextBody": "Pick the districts you have not seen yet and get a day-by-day plan with costs.",
+      "planNextAction": "Open the planner"
+    },
+    "history": {
+      "title": "Recently viewed",
+      "empty": "Places and districts you open will show up here.",
+      "clear": "Delete my history",
+      "confirm": "Delete your whole viewing history? This cannot be undone.",
+      "cleared": "History deleted.",
+      "district": "District"
+    },
+    "trips": {
+      "empty": "Trips you save in the planner will show up here.",
+      "open": "Open",
+      "share": "Share link",
+      "shared": "Link copied. Anyone with it can see this trip.",
+      "stopSharing": "Stop sharing",
+      "stopped": "This trip is private again.",
+      "public": "Shared",
+      "private": "Private",
+      "confirmDelete": "Delete “{title}”?",
+      "confirmBody": "The trip and its share link will be gone for good.",
+      "deleted": "Trip deleted.",
+      "untitled": "Untitled trip",
+      "savedOn": "Saved {date}",
+      "days": {
+        "one": "{count} day",
+        "other": "{count} days"
+      }
+    },
+    "photos": {
+      "empty": "Photos you add will show up here with their review status.",
+      "add": "Add a photo",
+      "deleteAll": "Delete my photos",
+      "confirm": "Delete all your photos? This cannot be undone.",
+      "deleted": "Photos deleted.",
+      "status": {
+        "pending": "Waiting for review",
+        "approved": "Published",
+        "rejected": "Not published"
+      }
+    },
+    "posts": {
+      "empty": "Posts you write will show up here.",
+      "composerSoon": "Writing posts opens with the community pages. Your posts will show up here."
+    },
+    "want": {
+      "places": "Places to see",
+      "countries": "Countries to visit",
+      "empty": "Mark places “Want to see” to collect them here.",
+      "noCountries": "Mark countries “Want to go” on My World.",
+      "openBucket": "Open the bucket list"
+    },
+    "settings": {
+      "title": "Profile",
+      "handle": "Handle",
+      "handleHint": "3–20 lower-case letters, digits or _. Your public page uses it.",
+      "themeSystem": "Same as device",
+      "publicMap": "Show my map on my public page",
+      "save": "Save changes",
+      "saved": "Saved.",
+      "errors": {
+        "invalid_name": "Enter a name.",
+        "invalid_handle": "Use 3–20 lower-case letters, digits or _.",
+        "handle_taken": "That handle is taken. Try another."
+      },
+      "data": "Your data",
+      "dataBody": "Delete parts of what we keep, or everything.",
+      "deleteAccount": "Delete my account",
+      "deleteAccountBody": "This deletes your account with your map, bucket list, trips, history, photos and posts. It cannot be undone.",
+      "deleteConfirmLabel": "Type {handle} to confirm",
+      "deleteConfirmButton": "Delete everything",
+      "deleted": "Your account has been deleted.",
+      "viewPublic": "See your public page"
+    }
+  },
+  "publicProfile": {
+    "metaDescription": "{name}'s travel page on Unseen BD.",
+    "empty": "Nothing shared here yet.",
+    "map": "Districts visited",
+    "mapLabel": "Districts {name} has visited",
+    "visitedCount": "{count} of {total}",
+    "trips": "Shared trips",
+    "photos": "Photos",
+    "posts": "Posts"
+  },
+  "trip": {
+    "title": "Saved trip",
+    "metaDescription": "A trip plan made with the Unseen BD planner: days, routes and costs.",
+    "by": "Planned by",
+    "savedOn": "saved {date}",
+    "shareOn": "Anyone with the link can see this trip.",
+    "private": "Only you can see this trip.",
+    "manage": "Manage sharing",
+    "openInPlanner": "Open in the planner"
   }
 }

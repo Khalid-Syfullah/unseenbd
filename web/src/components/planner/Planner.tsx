@@ -18,6 +18,7 @@ import { MAX_DESTINATIONS, MAX_PEOPLE, MIN_PEOPLE } from "@/lib/planner/constant
 import type { Plan, PlanDay, PlanInput, PlanItem } from "@/lib/planner/types";
 import { districtResolver, parsePlanQuery, planQuery } from "@/lib/planner/url";
 import { shareOrCopy } from "@/lib/share";
+import { useAccount } from "@/lib/account/client";
 import { saveTrip, tripPayload } from "@/lib/trips";
 import type { PlannerDistrictInfo, PlannerDivision, PlannerPlaceInfo } from "@/server/data/planner";
 import { RouteMap } from "./RouteMap";
@@ -355,36 +356,48 @@ function PlacePicker({
 
 /* Results ------------------------------------------------------------------------------------- */
 
-function PlanResults({
+/**
+ * The plan: summary tiles, actions, route map, day cards and costs. `readOnly` (the shared
+ * `/trip/:id` page) drops the save button and the sign-in note and takes a fixed `title`.
+ */
+export function PlanResults({
   plan,
   districts,
   places,
+  readOnly = false,
+  title: fixedTitle,
 }: {
   plan: Plan;
   districts: PlannerDistrictInfo[];
   places: PlannerPlaceInfo[];
+  readOnly?: boolean;
+  title?: string;
 }) {
   const t = useT();
   const locale = useLocale();
   const lang = useNumberLang();
   const toast = useToast();
+  const account = useAccount();
   const [saving, setSaving] = useState(false);
+  const [savedId, setSavedId] = useState<number | null>(null);
   const byId = useMemo(() => new Map(districts.map((d) => [d.id, d])), [districts]);
   const placeById = useMemo(() => new Map(places.map((p) => [p.id, p])), [places]);
   const name = (id: number) => byId.get(id)?.name ?? String(id);
   const start = byId.get(plan.input.start)!;
   const stops = [start, ...plan.order.map((id) => byId.get(id)!)];
-  const title = [...stops, ...(plan.input.returnToStart ? [start] : [])]
-    .map((d) => d.name)
-    .join(" → ");
+  const title =
+    fixedTitle ||
+    [...stops, ...(plan.input.returnToStart ? [start] : [])].map((d) => d.name).join(" → ");
   const { costs } = plan;
 
   async function onSave() {
     setSaving(true);
     const result = await saveTrip(tripPayload(plan, title));
     setSaving(false);
-    if (result.ok) toast.show(t("plan.saved"), { tone: "success" });
-    else if (result.reason === "auth") toast.show(t("plan.signInToSave"));
+    if (result.ok) {
+      setSavedId(result.id);
+      toast.show(t("plan.saved"), { tone: "success" });
+    } else if (result.reason === "auth") toast.show(t("plan.signInToSave"));
     else toast.show(t("plan.saveFailed"), { tone: "error" });
   }
 
@@ -406,9 +419,11 @@ function PlanResults({
           <StatTile label={t("plan.perPerson")} value={formatMoney(costs.perPerson, lang)} money />
         </div>
         <div className="flex flex-wrap items-center gap-2 print:hidden">
-          <Button icon="bookmark" loading={saving} onClick={onSave}>
-            {t("plan.save")}
-          </Button>
+          {readOnly ? null : (
+            <Button icon="bookmark" loading={saving} onClick={onSave}>
+              {t("plan.save")}
+            </Button>
+          )}
           <Button variant="secondary" icon="printer" onClick={() => window.print()}>
             {t("plan.print")}
           </Button>
@@ -416,7 +431,27 @@ function PlanResults({
             {t("common.share")}
           </Button>
         </div>
-        <p className="text-sm text-muted print:hidden">{t("plan.signInToSave")}</p>
+        {readOnly ? null : savedId !== null ? (
+          <p className="text-sm print:hidden" role="status">
+            <Link
+              href={localePath(locale, `/trip/${savedId}`)}
+              className="font-semibold text-primary underline-offset-4 hover:underline"
+            >
+              {t("plan.openSaved")}
+            </Link>
+          </p>
+        ) : account.status !== "user" ? (
+          <p className="text-sm text-muted print:hidden">
+            <Link
+              href={`${localePath(locale, "/login")}?next=${encodeURIComponent(
+                `${localePath(locale, "/plan")}?${planQuery(plan.input)}`,
+              )}`}
+              className="underline-offset-4 hover:text-primary hover:underline"
+            >
+              {t("plan.signInToSave")}
+            </Link>
+          </p>
+        ) : null}
       </section>
 
       <div className="grid gap-6 xl:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] xl:items-start">

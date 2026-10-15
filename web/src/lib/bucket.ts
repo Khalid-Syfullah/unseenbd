@@ -1,32 +1,24 @@
 /**
  * The bucket list: for each place, whether a visitor wants to see it or has been there. It lives
- * in their own browser (localStorage) for now, as a JSON object `{ [placeSlug]: "want" | "been" }`.
- * Signed-in sync arrives with accounts; everything goes through this module so that change stays
- * in one place.
+ * in their own browser (localStorage) as a JSON object `{ [placeSlug]: "want" | "been" }`, stays
+ * in step across tabs, and, once they sign in, is mirrored to their account through a sync
+ * adapter (like the visited districts).
  */
-import { useSyncExternalStore } from "react";
+import { diffMap, unionBucket, type MapDelta } from "@/lib/account/merge";
+import { cleanBucket, type BucketStatus } from "@/lib/account/shapes";
+import { createLocalStore, safeJson } from "@/lib/visited/store";
+import { adapterSlot, type SyncAdapter } from "@/lib/visited/sync";
 
 export const BUCKET_KEY = "unseenbd.bucket";
 
-export type BucketStatus = "want" | "been";
+export { isPlaceSlug, type BucketStatus } from "@/lib/account/shapes";
 export type Bucket = Readonly<Record<string, BucketStatus>>;
 
 const EMPTY: Bucket = Object.freeze({});
 
 /** Parse the stored value into a clean map; anything malformed is an empty list. */
 export function parseBucket(raw: string | null | undefined): Record<string, BucketStatus> {
-  if (!raw) return {};
-  try {
-    const value: unknown = JSON.parse(raw);
-    if (!value || typeof value !== "object" || Array.isArray(value)) return {};
-    const out: Record<string, BucketStatus> = {};
-    for (const [slug, status] of Object.entries(value)) {
-      if (status === "want" || status === "been") out[slug] = status;
-    }
-    return out;
-  } catch {
-    return {};
-  }
+  return raw ? cleanBucket(safeJson(raw)) : {};
 }
 
 /** The bucket after toggling `status` on `slug`: choosing the current status clears it. */
@@ -48,67 +40,59 @@ export function bucketCounts(bucket: Bucket): { been: number; want: number } {
   return { been, want };
 }
 
-function readRaw(): string | null {
-  try {
-    return window.localStorage.getItem(BUCKET_KEY);
-  } catch {
-    return null; // private window, blocked storage
-  }
+const store = createLocalStore<Bucket>({
+  key: BUCKET_KEY,
+  empty: EMPTY,
+  parse: (raw) => {
+    const bucket = parseBucket(raw);
+    return Object.keys(bucket).length ? Object.freeze(bucket) : EMPTY;
+  },
+  serialize: (bucket) => (Object.keys(bucket).length ? JSON.stringify(bucket) : null),
+});
+
+/** Places newly marked (with their status) and places cleared. */
+export type BucketDelta = MapDelta<BucketStatus>;
+export type BucketSyncAdapter = SyncAdapter<BucketDelta, Bucket>;
+
+const sync = adapterSlot<BucketDelta, Bucket>({
+  get: () => store.get(),
+  merge: (remote) => write(unionBucket(store.get(), parseBucket(JSON.stringify(remote))), false),
+  replace: (remote) => write(parseBucket(JSON.stringify(remote)), false),
+});
+
+/** Installs the account adapter (on sign-in); the default does nothing. */
+export function setBucketSyncAdapter(adapter: BucketSyncAdapter) {
+  sync.install(adapter);
 }
 
-function writeRaw(bucket: Bucket) {
-  try {
-    if (Object.keys(bucket).length) window.localStorage.setItem(BUCKET_KEY, JSON.stringify(bucket));
-    else window.localStorage.removeItem(BUCKET_KEY);
-  } catch {
-    // storage is blocked; the change lives only until the page closes
-  }
-}
-
-let cachedRaw: string | null | undefined;
-let cached: Bucket = EMPTY;
-/** Used while storage cannot be written, so the page still reacts to clicks. */
-let memory: Bucket | null = null;
-
-const listeners = new Set<() => void>();
-
-function getSnapshot(): Bucket {
-  if (memory) return memory;
-  const raw = readRaw();
-  if (raw !== cachedRaw) {
-    cachedRaw = raw;
-    const parsed = parseBucket(raw);
-    cached = Object.keys(parsed).length ? parsed : EMPTY;
-  }
-  return cached;
-}
-
-function getServerSnapshot(): Bucket {
-  return EMPTY;
-}
-
-function subscribe(onChange: () => void): () => void {
-  listeners.add(onChange);
-  const onStorage = (e: StorageEvent) => {
-    if (e.key === null || e.key === BUCKET_KEY) onChange();
-  };
-  window.addEventListener("storage", onStorage);
-  return () => {
-    listeners.delete(onChange);
-    window.removeEventListener("storage", onStorage);
-  };
+function write(next: Record<string, BucketStatus>, push: boolean) {
+  const delta = diffMap(store.get(), next);
+  if (!Object.keys(delta.set).length && !delta.clear.length) return;
+  store.set(Object.keys(next).length ? Object.freeze(next) : EMPTY);
+  if (push) sync.push(delta);
 }
 
 /** Marks (or clears) a place. */
 export function setBucketStatus(slug: string, status: BucketStatus) {
-  const next = toggled(getSnapshot(), slug, status);
-  writeRaw(next);
-  // If the write did not stick, keep the change in memory.
-  memory = readRaw() === (Object.keys(next).length ? JSON.stringify(next) : null) ? null : next;
-  for (const listener of listeners) listener();
+  write({ ...toggled(store.get(), slug, status) }, true);
+}
+
+/** The bucket list right now (empty on the server). */
+export function getBucket(): Bucket {
+  return store.get();
+}
+
+/** Forgets the local copy without telling the account (on sign-out). */
+export function clearBucketLocal() {
+  write({}, false);
+}
+
+/** Takes the account's bucket list as the local value, without pushing it back (after sign-in). */
+export function adoptBucket(bucket: Bucket) {
+  write(parseBucket(JSON.stringify(bucket)), false);
 }
 
 /** The bucket list. Empty on the server and during hydration, then the saved one. */
 export function useBucket(): Bucket {
-  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  return store.use();
 }

@@ -2,7 +2,7 @@
  * The districts a visitor has ticked: a set of district ids (1–64) kept in their own browser as a
  * JSON array under `unseenbd.visited`, synced across tabs. Earlier versions stored slugs; those
  * are read too and rewritten as ids on the next change. Nothing leaves the browser unless the
- * visitor shares a link, or (from phase 13) an account adapter is installed.
+ * visitor shares a link, or signs in (then an account adapter mirrors it to their account).
  */
 import { cleanDistrictIds, districtIdOf, districtSlugOf } from "./districts";
 import { safeJson, createLocalStore } from "./store";
@@ -39,9 +39,10 @@ export type VisitedSyncAdapter = SyncAdapter<VisitedDelta, readonly number[]>;
 const sync = adapterSlot<VisitedDelta, readonly number[]>({
   get: () => store.get(),
   merge: (remote) => write(cleanDistrictIds([...store.get(), ...remote]), false),
+  replace: (remote) => write(cleanDistrictIds(remote), false),
 });
 
-/** Installs the account adapter (phase 13); the default does nothing. */
+/** Installs the account adapter (on sign-in); the default does nothing. */
 export function setVisitedSyncAdapter(adapter: VisitedSyncAdapter) {
   sync.install(adapter);
 }
@@ -85,6 +86,16 @@ export function setDistrictsVisited(ids: Iterable<number>, visited: boolean) {
     ? cleanDistrictIds([...current, ...change])
     : current.filter((id) => !change.includes(id));
   write(next, true);
+}
+
+/** Forgets the local copy without telling the account (on sign-out). */
+export function clearVisitedLocal() {
+  write([], false);
+}
+
+/** Takes the account's ids as the local value, without pushing them back (after sign-in). */
+export function adoptVisited(ids: Iterable<number>) {
+  write(cleanDistrictIds(ids), false);
 }
 
 /** Replaces the whole set (e.g. "clear all"). */

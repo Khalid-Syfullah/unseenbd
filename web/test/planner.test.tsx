@@ -4,6 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import PlanPage from "@/app/[lang]/plan/page";
 import TripCostPage from "@/app/[lang]/trip-cost/page";
 import { PLAN_DRAFT_KEY } from "@/components/planner/Planner";
+import { resetAccountForTests, setGuest, setSignedIn } from "@/lib/account/client";
 import type { Locale } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
 import { renderWithI18n } from "./i18n";
@@ -36,7 +37,10 @@ beforeEach(() => {
   window.localStorage.clear();
   window.history.replaceState(null, "", "/en/plan");
 });
-afterEach(() => vi.restoreAllMocks());
+afterEach(() => {
+  vi.restoreAllMocks();
+  resetAccountForTests();
+});
 
 describe("/plan", () => {
   it("renders the sample plan's figures in English", async () => {
@@ -147,19 +151,56 @@ describe("/plan", () => {
 
   it("asks the visitor to sign in when saving without an account", async () => {
     const user = userEvent.setup();
-    const fetchMock = vi
-      .spyOn(globalThis, "fetch")
-      .mockResolvedValue(new Response(JSON.stringify({ error: "unauthorized" }), { status: 401 }));
+    setGuest();
+    const fetchMock = vi.spyOn(globalThis, "fetch");
     await show(PlanPage, "en", sampleQuery());
     await user.click(screen.getByRole("button", { name: en("plan.save") }));
-    expect(fetchMock).toHaveBeenCalledWith(
-      "/api/trips",
-      expect.objectContaining({ method: "POST" }),
+    // Logged out, nothing is sent; the toast and the note both ask to sign in.
+    await waitFor(() => expect(screen.getAllByText(en("plan.signInToSave"))).toHaveLength(2));
+    expect(fetchMock).not.toHaveBeenCalledWith("/api/trips", expect.anything());
+    const link = screen.getByRole("link", { name: en("plan.signInToSave") });
+    expect(link.getAttribute("href")).toMatch(/^\/en\/login\?next=%2Fen%2Fplan%3Ffrom%3D1/);
+  });
+
+  it("saves the plan to the account with the CSRF token when signed in", async () => {
+    const user = userEvent.setup();
+    setSignedIn(
+      {
+        id: 7,
+        name: "Karim",
+        handle: "karim",
+        email: "k@example.com",
+        locale: null,
+        theme: null,
+        publicMap: false,
+        hasPassword: true,
+        google: false,
+        role: "user",
+        createdAt: "2026-10-01 10:00:00",
+      },
+      "csrf-token-123",
     );
-    const body = JSON.parse(String(fetchMock.mock.calls[0]![1]!.body));
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockResolvedValue(
+        new Response(JSON.stringify({ id: 42, path: "/trip/42" }), { status: 201 }),
+      );
+    await show(PlanPage, "en", sampleQuery());
+    expect(screen.queryByText(en("plan.signInToSave"))).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: en("plan.save") }));
+    await waitFor(() =>
+      expect(fetchMock).toHaveBeenCalledWith(
+        "/api/trips",
+        expect.objectContaining({ method: "POST" }),
+      ),
+    );
+    const init = fetchMock.mock.calls[0]![1]!;
+    expect(new Headers(init.headers).get("X-CSRF-Token")).toBe("csrf-token-123");
+    const body = JSON.parse(String(init.body));
     expect(body.totalCost).toBe(22200);
     expect(body.input).toMatchObject({ start: 1, destinations: [19], people: 2, level: "mid" });
-    await waitFor(() => expect(screen.getAllByText(en("plan.signInToSave"))).toHaveLength(2));
+    const link = await screen.findByRole("link", { name: en("plan.openSaved") });
+    expect(link).toHaveAttribute("href", "/en/trip/42");
   });
 });
 

@@ -431,7 +431,7 @@
   },
   "bucket": {
     "title": "Lista dei desideri",
-    "intro": "Segna ogni luogo come “Da vedere” o “Ci sono stato”. La lista resta salvata solo in questo browser.",
+    "intro": "Segna ogni luogo come “Da vedere” o “Ci sono stato”. La lista resta in questo browser e, se hai effettuato l’accesso, anche nel tuo account.",
     "metaDescription": "Tutti i luoghi del Bangladesh per tipo, con i segni “Da vedere” e “Ci sono stato” per la tua lista.",
     "want": "Da vedere",
     "been": "Ci sono stato",
@@ -742,7 +742,8 @@
     "food": "Pasti",
     "local": "Trasporti locali",
     "misc": "Ingressi e varie",
-    "note": "Sono stime per pianificare, non preventivi. Tariffe, prezzi delle camere e tempi di viaggio cambiano: verifica prima di partire."
+    "note": "Sono stime per pianificare, non preventivi. Tariffe, prezzi delle camere e tempi di viaggio cambiano: verifica prima di partire.",
+    "openSaved": "Vedi il viaggio salvato"
   },
   "tripCost": {
     "title": "Calcolatore del costo del viaggio",
@@ -767,7 +768,7 @@
   "myBd": {
     "title": "Il mio Bangladesh",
     "metaDescription": "Spunta i distretti del Bangladesh che hai visitato, guarda il tuo livello e i timbri del passaporto e condividi la tua mappa.",
-    "intro": "Colora i distretti in cui sei stato. La tua mappa resta in questo browser, a meno che tu non la condivida.",
+    "intro": "Colora i distretti in cui sei stato. La tua mappa resta in questo browser e, se hai effettuato l’accesso, anche nel tuo account.",
     "progressLabel": "I tuoi progressi",
     "percentSeen": "{percent} visti",
     "level": "Livello: {level}",
@@ -832,7 +833,7 @@
     "stampDone": "{name}: timbrato",
     "stampLocked": "{name}: non ancora",
     "storyTitle": "La mia storia del Bangladesh",
-    "storyIntro": "I distretti che ti hanno formato. Salvato solo in questo browser.",
+    "storyIntro": "I distretti che ti hanno formato. Salvato in questo browser e, se hai effettuato l’accesso, anche nel tuo account.",
     "storyBirth": "Distretto di nascita",
     "storyUpbringing": "Dove sono cresciuto",
     "storyStudy": "Dove ho studiato",
@@ -900,7 +901,7 @@
   "world": {
     "title": "Il mio mondo",
     "metaDescription": "Segna i paesi visitati e quelli che vuoi vedere, aggiungi ricordi di viaggio e condividi la tua mappa del mondo.",
-    "intro": "Colora i paesi in cui sei stato e quelli che sogni. Salvato in questo browser, a meno che tu non lo condivida.",
+    "intro": "Colora i paesi in cui sei stato e quelli che sogni. Salvato in questo browser e, se hai effettuato l’accesso, anche nel tuo account.",
     "modeLabel": "Cosa fa un tocco",
     "modeVisited": "Visitato",
     "modeWish": "Voglio andarci",
@@ -1292,5 +1293,174 @@
         "countryside": "Rallenti: traversate sui fiumi, le acque degli haor e la vita di villaggio lontano dal traffico."
       }
     }
+  },
+  "account": {
+    "login": {
+      "title": "Accedi",
+      "metaDescription": "Accedi a Unseen BD per avere mappa, lista dei desideri e viaggi su ogni dispositivo.",
+      "intro": "La tua mappa, la lista dei desideri e i viaggi salvati su ogni dispositivo."
+    },
+    "register": {
+      "title": "Crea un account",
+      "metaDescription": "Crea un account Unseen BD gratuito per salvare i viaggi e sincronizzare la mappa.",
+      "intro": "Gratis, senza pubblicità. Salva i viaggi e mantieni la stessa mappa su tutti i dispositivi."
+    },
+    "logout": {
+      "title": "Esci",
+      "intro": "Uscendo, mappa, lista dei desideri e storia vengono rimosse da questo dispositivo. Restano al sicuro nel tuo account.",
+      "button": "Esci",
+      "done": "Sei uscito.",
+      "notSignedIn": "Non hai effettuato l’accesso."
+    },
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "Almeno {min} caratteri.",
+    "name": "Nome",
+    "submitLogin": "Accedi",
+    "submitRegister": "Crea account",
+    "or": "oppure",
+    "googleUnavailable": "Impossibile caricare l’accesso con Google. Usa la tua email.",
+    "noAccount": "Sei nuovo?",
+    "registerLink": "Crea un account",
+    "haveAccount": "Hai già un account?",
+    "loginLink": "Accedi",
+    "signedInAs": "Hai effettuato l’accesso come {name}.",
+    "goProfile": "Vai al profilo",
+    "keepsLocal": "Distretti, luoghi e paesi segnati su questo dispositivo senza accesso vengono aggiunti al tuo account.",
+    "privacy": "Con un account conserviamo nome, email, una password cifrata con hash, mappa, lista dei desideri, viaggi, cronologia e foto. Puoi eliminare tutto dal profilo.",
+    "errors": {
+      "invalid_credentials": "Email o password errate.",
+      "invalid_email": "Inserisci un indirizzo email valido.",
+      "invalid_password": "Usa una password da 8 a 128 caratteri.",
+      "invalid_name": "Inserisci il tuo nome.",
+      "email_taken": "Esiste già un account con questa email. Accedi.",
+      "rate_limited": "Troppi tentativi. Attendi qualche minuto e riprova.",
+      "invalid_credential": "L’accesso con Google non è riuscito. Riprova.",
+      "csrf": "Questa pagina è aperta da molto tempo. Ricaricala e riprova.",
+      "network": "Sembri offline. Riprova.",
+      "error": "Qualcosa è andato storto. Riprova."
+    }
+  },
+  "profile": {
+    "title": "Il tuo profilo",
+    "metaDescription": "I distretti visitati, i viaggi salvati, la cronologia e le impostazioni.",
+    "memberSince": "Iscritto dal {date}",
+    "createPost": "Scrivi un post",
+    "myListings": "Le mie inserzioni",
+    "tabs": {
+      "label": "Sezioni del profilo",
+      "summary": "Riepilogo",
+      "history": "Cronologia",
+      "trips": "Viaggi",
+      "photos": "Foto",
+      "posts": "I miei post",
+      "want": "Voglio andarci",
+      "settings": "Impostazioni"
+    },
+    "summary": {
+      "visited": "Distretti visitati",
+      "outOf": "su {total}",
+      "trips": "Viaggi salvati",
+      "photos": "Foto",
+      "spend": "Totale dei viaggi",
+      "mapTitle": "La tua mappa",
+      "mapLabel": "Mappa dei distretti che hai visitato",
+      "editMap": "Modifica la mappa",
+      "planNext": "Pianifica il prossimo viaggio",
+      "planNextBody": "Scegli i distretti che non hai ancora visto e ottieni un programma giorno per giorno con i costi.",
+      "planNextAction": "Apri il pianificatore"
+    },
+    "history": {
+      "title": "Visti di recente",
+      "empty": "I luoghi e i distretti che apri compariranno qui.",
+      "clear": "Elimina la cronologia",
+      "confirm": "Eliminare tutta la cronologia? L’operazione è irreversibile.",
+      "cleared": "Cronologia eliminata.",
+      "district": "Distretto"
+    },
+    "trips": {
+      "empty": "I viaggi salvati nel pianificatore compariranno qui.",
+      "open": "Apri",
+      "share": "Link di condivisione",
+      "shared": "Link copiato. Chiunque lo abbia può vedere questo viaggio.",
+      "stopSharing": "Smetti di condividere",
+      "stopped": "Questo viaggio è di nuovo privato.",
+      "public": "Condiviso",
+      "private": "Privato",
+      "confirmDelete": "Eliminare “{title}”?",
+      "confirmBody": "Il viaggio e il suo link spariranno per sempre.",
+      "deleted": "Viaggio eliminato.",
+      "untitled": "Viaggio senza titolo",
+      "savedOn": "Salvato il {date}",
+      "days": {
+        "one": "{count} giorno",
+        "other": "{count} giorni"
+      }
+    },
+    "photos": {
+      "empty": "Le foto che aggiungi compariranno qui con lo stato della revisione.",
+      "add": "Aggiungi una foto",
+      "deleteAll": "Elimina le mie foto",
+      "confirm": "Eliminare tutte le tue foto? L’operazione è irreversibile.",
+      "deleted": "Foto eliminate.",
+      "status": {
+        "pending": "In attesa di revisione",
+        "approved": "Pubblicata",
+        "rejected": "Non pubblicata"
+      }
+    },
+    "posts": {
+      "empty": "I post che scrivi compariranno qui.",
+      "composerSoon": "La scrittura dei post arriverà con le pagine della community. I tuoi post compariranno qui."
+    },
+    "want": {
+      "places": "Luoghi da vedere",
+      "countries": "Paesi da visitare",
+      "empty": "Segna i luoghi come “Da vedere” per raccoglierli qui.",
+      "noCountries": "Segna i paesi come “Voglio andarci” in Il mio mondo.",
+      "openBucket": "Apri la lista dei desideri"
+    },
+    "settings": {
+      "title": "Profilo",
+      "handle": "Nome utente",
+      "handleHint": "3–20 lettere minuscole, cifre o _. Lo usa la tua pagina pubblica.",
+      "themeSystem": "Come il dispositivo",
+      "publicMap": "Mostra la mia mappa sulla pagina pubblica",
+      "save": "Salva le modifiche",
+      "saved": "Salvato.",
+      "errors": {
+        "invalid_name": "Inserisci un nome.",
+        "invalid_handle": "Usa 3–20 lettere minuscole, cifre o _.",
+        "handle_taken": "Questo nome utente è già preso. Provane un altro."
+      },
+      "data": "I tuoi dati",
+      "dataBody": "Elimina una parte di ciò che conserviamo, o tutto.",
+      "deleteAccount": "Elimina il mio account",
+      "deleteAccountBody": "Verranno eliminati il tuo account e mappa, lista dei desideri, viaggi, cronologia, foto e post. L’operazione è irreversibile.",
+      "deleteConfirmLabel": "Digita {handle} per confermare",
+      "deleteConfirmButton": "Elimina tutto",
+      "deleted": "Il tuo account è stato eliminato.",
+      "viewPublic": "Vedi la tua pagina pubblica"
+    }
+  },
+  "publicProfile": {
+    "metaDescription": "La pagina di viaggio di {name} su Unseen BD.",
+    "empty": "Qui non c’è ancora niente di condiviso.",
+    "map": "Distretti visitati",
+    "mapLabel": "Distretti visitati da {name}",
+    "visitedCount": "{count} su {total}",
+    "trips": "Viaggi condivisi",
+    "photos": "Foto",
+    "posts": "Post"
+  },
+  "trip": {
+    "title": "Viaggio salvato",
+    "metaDescription": "Un viaggio creato con il pianificatore di Unseen BD: giorni, percorsi e costi.",
+    "by": "Pianificato da",
+    "savedOn": "salvato il {date}",
+    "shareOn": "Chiunque abbia il link può vedere questo viaggio.",
+    "private": "Solo tu puoi vedere questo viaggio.",
+    "manage": "Gestisci la condivisione",
+    "openInPlanner": "Apri nel pianificatore"
   }
 }

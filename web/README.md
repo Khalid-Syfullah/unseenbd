@@ -121,7 +121,7 @@ Migrations are generated into `drizzle/` with `npm run db:generate`.
   (`description`, `how_to_get_there`, `warnings`, `tips`, `accessibility`, `entry_fee`,
   `opening_hours`; tips and warnings are JSON arrays) plus `cover`, `photo` and `image_credit` JSON.
   Districts have nullable bn/en `intro` and `how_to_reach`.
-- **User tables** (start empty): users, sessions, visited, wishlist, view_history, trips, photos,
+- **User tables** (start empty): users, sessions, visited, wishlist, world_marks, view_history, trips, photos,
   photo_comments, posts, post_comments, likes, reports, suggestions, guide_suggestions,
   trend_votes, trend_comments, listings (+ prices, photos, reviews), leaderboard_entries,
   short_links, daily_stats.
@@ -151,6 +151,48 @@ Read-only JSON endpoints live in `src/app/api/` (`/api/places`, `/api/places/:sl
 
 Season logic is `inSeason(from, to, month)` in `src/lib/season.ts`; it wraps across the year
 (11 → 3 is Nov–Mar).
+
+## Accounts and sync
+
+Everything works logged out; an account adds saved trips, view history, a profile and syncing
+between devices. Environment variables are documented in [`.env.example`](.env.example)
+(`SESSION_SECRET` is required in production; `GOOGLE_CLIENT_ID` turns on "Sign in with Google").
+
+- **Sign-in** (`src/server/auth/`): email + password (argon2id via `@node-rs/argon2`, OWASP
+  parameters) and Google Identity Services (the ID token is verified against Google's keys,
+  issuer, audience and expiry in `google.ts`; the GIS script loads on `/login` and `/register`
+  only). Pages: `/login`, `/register`, `/logout`.
+- **Sessions:** a random token in the httpOnly, SameSite=Lax `ubd_session` cookie (`Secure` in
+  production); the `sessions` table stores only its HMAC (keyed with `SESSION_SECRET`), the user,
+  a CSRF token and the expiry (30 days, extended when used in the second half). A readable
+  `ubd_signed_in=1` hint tells the browser to ask `/api/me`, so logged-out visitors cost no request.
+- **CSRF:** every mutating request sends `X-CSRF-Token`: the session's token when signed in,
+  otherwise a double-submit token from `GET /api/auth/csrf` (httpOnly `ubd_csrf` cookie).
+  Cross-site requests (`Sec-Fetch-Site`, foreign `Origin`) are refused too. `authed()` in
+  `src/server/auth/http.ts` wraps every signed-in endpoint (401 / 403 / rate limit).
+- **Rate limits** (`src/server/auth/limits.ts`, in memory): login 10 per 15 min per IP and per
+  email, register 5 per hour per IP, Google 20 per 15 min per IP, signed-in API 600 per minute.
+- **Sync** (`src/lib/account/`): on sign-in the browser posts its logged-out visited districts,
+  bucket list, world marks and story to `POST /api/me/sync`; the account keeps the union of the
+  sets (the further state wins: "been" over "want", "visited" over "wish") and the newest story
+  answer per field (each answer carries a change time), and the browser adopts the result. Then
+  `createAccountAdapter` (`adapter.ts`) is installed into each store: changes are debounced
+  (~400 ms) and posted (`/api/me/visited {add, remove}`, `/api/me/wishlist` and `/api/me/world`
+  `{set, clear}`, `/api/me/story {values, times}`), retried with exponential backoff, flushed
+  with `keepalive` on `pagehide` / hidden tabs, and re-read on focus, when the tab is shown and
+  every 30 s, so two devices stay in step. Signing out flushes, ends the session and clears the
+  local copies (they stay in the account).
+- **Saved trips:** `/api/trips` (GET, POST) and `/api/trips/:id` (GET, PATCH `{title, isPublic}`,
+  DELETE). "Save plan" in the planner posts the plan; `/trip/:id` shows it read-only to its owner,
+  and to anyone once it is shared.
+- **History:** place and district pages call `recordView` (signed in only; repeat views within
+  30 minutes count once, newest 1,000 kept); `GET /api/me/history?page=` pages it 20 at a time.
+- **Profile:** `/profile?tab=summary|history|trips|photos|posts|want|settings`; settings change
+  name, @handle, language, theme and whether the visited map shows on the public page
+  (`/u/:handle`, which shows only shared trips, approved public photos and approved posts), and
+  delete history, photos or the whole account (`DELETE /api/me {confirm: handle}`).
+- Other endpoints: `GET/PATCH/DELETE /api/me`, `/api/me/summary`, `/api/me/photos` (GET,
+  DELETE), `/api/posts/mine`, `/api/users/:handle`.
 
 ## Interface strings and formatting
 

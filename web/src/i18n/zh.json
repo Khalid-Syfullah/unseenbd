@@ -423,7 +423,7 @@
   },
   "bucket": {
     "title": "心愿清单",
-    "intro": "给每个景点标记“想去”或“去过”。清单只保存在此浏览器中。",
+    "intro": "给每个景点标记“想去”或“去过”。清单保存在此浏览器中，登录后也会保存到你的账户。",
     "metaDescription": "按类型列出孟加拉国所有景点，可标记“想去”和“去过”，建立你自己的清单。",
     "want": "想去",
     "been": "去过",
@@ -729,7 +729,8 @@
     "food": "餐饮",
     "local": "当地交通",
     "misc": "门票及杂费",
-    "note": "以上为规划用的估算，并非报价。票价、房价和路上时间会变化，出发前请再确认。"
+    "note": "以上为规划用的估算，并非报价。票价、房价和路上时间会变化，出发前请再确认。",
+    "openSaved": "查看已保存的行程"
   },
   "tripCost": {
     "title": "旅行费用计算器",
@@ -754,7 +755,7 @@
   "myBd": {
     "title": "我的孟加拉",
     "metaDescription": "勾选你去过的孟加拉国县区，查看你的等级和护照印章，并与朋友分享你的地图。",
-    "intro": "给你去过的县区涂上颜色。除非你分享，地图只保存在这个浏览器中。",
+    "intro": "给你去过的县区涂上颜色。地图保存在这个浏览器中，登录后也会保存到你的账户。",
     "progressLabel": "你的进度",
     "percentSeen": "已看 {percent}",
     "level": "等级：{level}",
@@ -813,7 +814,7 @@
     "stampDone": "{name}：已盖章",
     "stampLocked": "{name}：尚未",
     "storyTitle": "我的孟加拉故事",
-    "storyIntro": "塑造了你的那些县区。只保存在这个浏览器中。",
+    "storyIntro": "塑造了你的那些县区。保存在这个浏览器中，登录后也会保存到你的账户。",
     "storyBirth": "出生地",
     "storyUpbringing": "成长的地方",
     "storyStudy": "求学的地方",
@@ -874,7 +875,7 @@
   "world": {
     "title": "我的世界",
     "metaDescription": "标记你去过和想去的国家，钉上旅行回忆，并分享你的世界地图。",
-    "intro": "给你去过和梦想去的国家涂色。除非你分享，只保存在这个浏览器中。",
+    "intro": "给你去过和梦想去的国家涂色。保存在这个浏览器中，登录后也会保存到你的账户。",
     "modeLabel": "点按的作用",
     "modeVisited": "去过",
     "modeWish": "想去",
@@ -1251,5 +1252,173 @@
         "countryside": "你喜欢慢下来：乘船过河、湿地湖泊，以及远离喧嚣的乡村生活。"
       }
     }
+  },
+  "account": {
+    "login": {
+      "title": "登录",
+      "metaDescription": "登录 Unseen BD，在所有设备上保留你的地图、心愿清单和行程。",
+      "intro": "在所有设备上保留你的地图、心愿清单和已保存的行程。"
+    },
+    "register": {
+      "title": "创建账户",
+      "metaDescription": "免费创建 Unseen BD 账户，保存行程并在设备间同步地图。",
+      "intro": "免费，无广告。保存行程，让所有设备上的地图保持一致。"
+    },
+    "logout": {
+      "title": "退出登录",
+      "intro": "退出登录会从此设备上移除你的地图、心愿清单和故事。它们会安全地保存在你的账户中。",
+      "button": "退出登录",
+      "done": "你已退出登录。",
+      "notSignedIn": "你尚未登录。"
+    },
+    "email": "邮箱",
+    "password": "密码",
+    "passwordHint": "至少 {min} 个字符。",
+    "name": "名字",
+    "submitLogin": "登录",
+    "submitRegister": "创建账户",
+    "or": "或",
+    "googleUnavailable": "无法加载 Google 登录，请使用邮箱登录。",
+    "noAccount": "第一次来？",
+    "registerLink": "创建账户",
+    "haveAccount": "已有账户？",
+    "loginLink": "登录",
+    "signedInAs": "你已以 {name} 的身份登录。",
+    "goProfile": "前往个人主页",
+    "keepsLocal": "未登录时在此设备上标记的县区、景点和国家会加入你的账户。",
+    "privacy": "有账户时，我们会保存你的名字、邮箱、哈希后的密码、地图、心愿清单、行程、浏览记录和照片。你可以在个人主页中删除其中任何内容。",
+    "errors": {
+      "invalid_credentials": "邮箱或密码错误。",
+      "invalid_email": "请输入有效的邮箱地址。",
+      "invalid_password": "请使用 8 到 128 个字符的密码。",
+      "invalid_name": "请输入你的名字。",
+      "email_taken": "该邮箱已有账户，请直接登录。",
+      "rate_limited": "尝试次数过多，请几分钟后再试。",
+      "invalid_credential": "Google 登录未成功，请重试。",
+      "csrf": "此页面打开太久了，请刷新后重试。",
+      "network": "你似乎处于离线状态，请重试。",
+      "error": "出了点问题，请重试。"
+    }
+  },
+  "profile": {
+    "title": "个人主页",
+    "metaDescription": "你去过的县区、保存的行程、浏览记录和设置。",
+    "memberSince": "加入于 {date}",
+    "createPost": "发帖",
+    "myListings": "我的商家信息",
+    "tabs": {
+      "label": "个人主页栏目",
+      "summary": "概览",
+      "history": "浏览记录",
+      "trips": "行程",
+      "photos": "照片",
+      "posts": "我的帖子",
+      "want": "想去",
+      "settings": "设置"
+    },
+    "summary": {
+      "visited": "去过的县区",
+      "outOf": "共 {total} 个",
+      "trips": "已保存的行程",
+      "photos": "照片",
+      "spend": "所有行程合计",
+      "mapTitle": "你的地图",
+      "mapLabel": "你去过的县区地图",
+      "editMap": "编辑我的地图",
+      "planNext": "规划下一次旅行",
+      "planNextBody": "选出还没去过的县区，获取逐日行程和费用。",
+      "planNextAction": "打开行程规划"
+    },
+    "history": {
+      "title": "最近浏览",
+      "empty": "你打开的景点和县区页面会显示在这里。",
+      "clear": "删除我的浏览记录",
+      "confirm": "删除全部浏览记录？此操作无法撤销。",
+      "cleared": "浏览记录已删除。",
+      "district": "县区"
+    },
+    "trips": {
+      "empty": "你在行程规划中保存的行程会显示在这里。",
+      "open": "打开",
+      "share": "分享链接",
+      "shared": "链接已复制。拥有链接的任何人都能查看此行程。",
+      "stopSharing": "停止分享",
+      "stopped": "此行程已恢复为私密。",
+      "public": "已分享",
+      "private": "私密",
+      "confirmDelete": "删除“{title}”？",
+      "confirmBody": "行程及其分享链接将被永久删除。",
+      "deleted": "行程已删除。",
+      "untitled": "未命名行程",
+      "savedOn": "保存于 {date}",
+      "days": {
+        "other": "{count} 天"
+      }
+    },
+    "photos": {
+      "empty": "你添加的照片会连同审核状态显示在这里。",
+      "add": "添加照片",
+      "deleteAll": "删除我的照片",
+      "confirm": "删除你所有的照片？此操作无法撤销。",
+      "deleted": "照片已删除。",
+      "status": {
+        "pending": "等待审核",
+        "approved": "已发布",
+        "rejected": "未发布"
+      }
+    },
+    "posts": {
+      "empty": "你写的帖子会显示在这里。",
+      "composerSoon": "社区页面上线后即可发帖，你的帖子会显示在这里。"
+    },
+    "want": {
+      "places": "想看的景点",
+      "countries": "想去的国家",
+      "empty": "给景点标记“想去”，它们会汇集在这里。",
+      "noCountries": "在“我的世界”中给国家标记“想去”。",
+      "openBucket": "打开心愿清单"
+    },
+    "settings": {
+      "title": "个人资料",
+      "handle": "用户名",
+      "handleHint": "3–20 个小写英文字母、数字或 _，用于你的公开主页。",
+      "themeSystem": "跟随设备",
+      "publicMap": "在公开主页显示我的地图",
+      "save": "保存更改",
+      "saved": "已保存。",
+      "errors": {
+        "invalid_name": "请输入名字。",
+        "invalid_handle": "请使用 3–20 个小写英文字母、数字或 _。",
+        "handle_taken": "该用户名已被占用，换一个试试。"
+      },
+      "data": "你的数据",
+      "dataBody": "删除我们保存的部分或全部内容。",
+      "deleteAccount": "删除我的账户",
+      "deleteAccountBody": "这将删除你的账户以及地图、心愿清单、行程、浏览记录、照片和帖子。此操作无法撤销。",
+      "deleteConfirmLabel": "输入 {handle} 以确认",
+      "deleteConfirmButton": "全部删除",
+      "deleted": "你的账户已删除。",
+      "viewPublic": "查看你的公开主页"
+    }
+  },
+  "publicProfile": {
+    "metaDescription": "{name} 在 Unseen BD 上的旅行主页。",
+    "empty": "这里还没有分享任何内容。",
+    "map": "去过的县区",
+    "mapLabel": "{name} 去过的县区",
+    "visitedCount": "{count} / {total}",
+    "trips": "分享的行程",
+    "photos": "照片",
+    "posts": "帖子"
+  },
+  "trip": {
+    "title": "已保存的行程",
+    "metaDescription": "用 Unseen BD 行程规划制作的旅行计划：日程、路线和费用。",
+    "by": "规划者",
+    "savedOn": "保存于 {date}",
+    "shareOn": "拥有链接的任何人都能查看此行程。",
+    "private": "只有你能看到此行程。",
+    "manage": "管理分享",
+    "openInPlanner": "在行程规划中打开"
   }
 }
