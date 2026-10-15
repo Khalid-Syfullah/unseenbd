@@ -374,6 +374,10 @@
     "kindIntro": "本指南中这一类型的所有景点，最佳的排在前面。",
     "kindMeta": "孟加拉国的 {count} 个景点：{name}。去哪里、何时去、怎么去。",
     "monthTitle": "{month}的旅游景点（{count}）",
+    "monthMetaTitle": {
+      "one": "{month}孟加拉国旅游景点：{count} 个正值旺季的地方",
+      "other": "{month}孟加拉国旅游景点：{count} 个正值旺季的地方"
+    },
     "monthIntro": "最佳季节包含{month}的景点。跨年的季节（如 11 月到 3 月）也已计入。",
     "monthMeta": "{month}是孟加拉国 {count} 个景点的最佳游览时间。",
     "kindsLabel": "景点类型",
@@ -648,6 +652,7 @@
   },
   "train": {
     "title": "{name}（{no}）",
+    "metaTitle": "{name}（{no}）时刻表、停靠站和票价",
     "metaDescription": "{name}，{from}到{to}：{dep}发车，{arr}到达。每个停靠站、各席别票价和返程列车。",
     "returnLink": "返程列车：{name}",
     "eticket": "在电子票网站购票",

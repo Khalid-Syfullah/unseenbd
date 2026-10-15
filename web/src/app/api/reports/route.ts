@@ -1,4 +1,4 @@
-import { REPORT_NOTE_MAX, REPORT_REASONS, type ReportReason } from "@/lib/community/rules";
+import { DAILY, REPORT_NOTE_MAX, REPORT_REASONS, type ReportReason } from "@/lib/community/rules";
 import { checkText } from "@/lib/community/text";
 import { fail, idParam, ok, readJson } from "@/server/auth/http";
 import {
@@ -6,6 +6,7 @@ import {
   deviceActor,
   invalid,
   quotaExceeded,
+  quotaKey,
   rememberDevice,
 } from "@/server/community/http";
 import { consumeQuota, quotaStatus } from "@/server/community/quota";
@@ -31,8 +32,11 @@ export const POST = community(async (visitor, request) => {
   if (!REPORT_REASONS.includes(reason)) return invalid("reason");
   const note = checkText(read.body.note, REPORT_NOTE_MAX, { multiline: true });
   if (!note.ok) return invalid("note", note.reason);
-  const { actor, newDevice } = deviceActor(visitor);
-  if (!consumeQuota("reports", actor)) return quotaExceeded(quotaStatus("reports", actor).limit);
+  const key = quotaKey(visitor);
+  if (!consumeQuota("reports", key)) return quotaExceeded(quotaStatus("reports", key).limit);
+  const device = deviceActor(visitor);
+  if (!device) return quotaExceeded(DAILY.devices);
+  const { actor, newDevice } = device;
   const reportId = createReport({
     targetType: type,
     targetId: id,

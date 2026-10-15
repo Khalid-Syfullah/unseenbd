@@ -26,8 +26,11 @@ const DEV_SECRET = "unseenbd-development-session-secret-do-not-use-in-production
 export function sessionSecret(): string {
   const secret = process.env.SESSION_SECRET;
   if (secret && secret.length >= 32) return secret;
-  if (process.env.NODE_ENV === "production") {
-    throw new Error("SESSION_SECRET must be set (at least 32 characters) in production.");
+  // The public fallback only for local development and tests, so a staging or production box
+  // with a missing secret fails loudly instead of accepting forgeable sessions.
+  const env = process.env.NODE_ENV;
+  if (env !== "development" && env !== "test") {
+    throw new Error("SESSION_SECRET must be set (at least 32 characters).");
   }
   return DEV_SECRET;
 }

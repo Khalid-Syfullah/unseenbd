@@ -41,7 +41,7 @@ export default async function MyListingsPage({ params }: PageProps) {
           illustration={null}
           body={t("myListings.signIn")}
           action={
-            <ButtonLink href={localePath(param, "/login")} icon="user">
+            <ButtonLink href={localePath(param, "/login")} icon="user" reloadDocument>
               {t("account.submitLogin")}
             </ButtonLink>
           }

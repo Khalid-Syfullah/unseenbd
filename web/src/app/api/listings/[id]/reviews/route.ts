@@ -2,7 +2,7 @@ import { checkText } from "@/lib/community/text";
 import { NAME_MAX } from "@/lib/community/rules";
 import { REVIEW_BODY_MAX } from "@/lib/listings/rules";
 import { fail, idParam, ok, readJson } from "@/server/auth/http";
-import { community, invalid, quotaExceeded } from "@/server/community/http";
+import { community, invalid, quotaExceeded, quotaKey } from "@/server/community/http";
 import { consumeQuota, quotaStatus } from "@/server/community/quota";
 import { addListingReview, isApprovedListing } from "@/server/listings/write";
 
@@ -23,7 +23,7 @@ export const POST = community<Ctx>(async (visitor, request, { params }) => {
   if (!body.ok) return invalid("body", body.reason);
   const rating = Number(read.body.rating);
   if (!Number.isInteger(rating) || rating < 1 || rating > 5) return invalid("rating");
-  const key = visitor.actor ?? visitor.ipHash;
+  const key = quotaKey(visitor);
   if (!consumeQuota("comments", key)) return quotaExceeded(quotaStatus("comments", key).limit);
   const reviewId = addListingReview({
     listingId: id,

@@ -15,3 +15,4 @@
 - 2026-10-15 phase 15 (sonnet) — Directory, owner listings and admin
 - 2026-10-15 phase 16 (sonnet) — Real photos, info pages, PWA and SEO
 - 2026-10-15 phase 17 (sonnet) — Design and accessibility polish
+- 2026-10-15 phase 18 (opus) — Tests, acceptance and release readiness

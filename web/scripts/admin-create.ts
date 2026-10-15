@@ -8,6 +8,7 @@
  * account with that email becomes an admin and keeps its password unless `--reset-password` is
  * given.
  */
+import "./load-env";
 import { createInterface } from "node:readline";
 import { eq } from "drizzle-orm";
 import { isValidPassword, normalizeEmail } from "@/lib/account/rules";

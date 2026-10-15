@@ -20,25 +20,32 @@ npm run dev        # http://localhost:3000 (Bengali) and http://localhost:3000/e
 them from a full checkout of the repository.
 
 Production: `npm run build && npm start`. Set `SITE_URL` (for example `https://unseenbd.com`) so
-canonical and hreflang URLs are absolute.
+canonical and hreflang URLs are absolute. `npm start` runs [`server.mjs`](server.mjs): Next.js on
+`PORT`, JSON logs, graceful shutdown and `GET /api/health`. Every environment variable is in
+[`.env.example`](.env.example). How to run it on EC2 behind nginx with pm2 is in
+[`DEPLOY.md`](DEPLOY.md), and the release checklist in [`ACCEPTANCE.md`](ACCEPTANCE.md).
 
 ## Scripts
 
-| Script                | What it does                                                          |
-| --------------------- | --------------------------------------------------------------------- |
-| `npm run dev`         | Sync assets and seed the database, then start the dev server          |
-| `npm run build`       | Sync assets and seed the database, then make a production build       |
-| `npm start`           | Serve the production build                                            |
-| `npm run lint`        | ESLint (next + typescript, zero warnings) and `prettier --check`      |
-| `npm run typecheck`   | Generate Next route types, then `tsc --noEmit`                        |
-| `npm test`            | `vitest run` (jsdom + Testing Library)                                |
-| `npm run check`       | **The quality gate:** `lint && typecheck && test && build`            |
-| `npm run format`      | Format everything with Prettier (and sort Tailwind classes)           |
-| `npm run sync-assets` | Copy `../assets` into `public/` (runs automatically before dev/build) |
-| `npm run db:migrate`  | Apply the migrations in `drizzle/`                                    |
-| `npm run db:seed`     | Migrate, then reload the content tables from `../data` (idempotent)   |
-| `npm run db:reset`    | Delete the database file, migrate and seed                            |
-| `npm run db:generate` | Write a new migration after changing `src/server/db/schema.ts`        |
+| Script                 | What it does                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| `npm run dev`          | Sync assets and seed the database, then start the dev server                    |
+| `npm run build`        | Sync assets and seed the database, then make a production build                 |
+| `npm start`            | Serve the production build (`server.mjs`: `PORT`, JSON logs, graceful shutdown) |
+| `npm run lint`         | ESLint (next + typescript, zero warnings) and `prettier --check`                |
+| `npm run typecheck`    | Generate Next route types, then `tsc --noEmit`                                  |
+| `npm test`             | `vitest run` (jsdom + Testing Library)                                          |
+| `npm run check`        | **The quality gate:** `lint && typecheck && test && build`                      |
+| `npx playwright test`  | End-to-end journeys and visual snapshots against the production build           |
+| `npm run test:e2e`     | Only the end-to-end journeys (`e2e/journeys/`)                                  |
+| `npm run test:visual`  | Only the visual snapshots (`e2e/visual.spec.ts`)                                |
+| `npm run format`       | Format everything with Prettier (and sort Tailwind classes)                     |
+| `npm run sync-assets`  | Copy `../assets` into `public/` (runs automatically before dev/build)           |
+| `npm run db:migrate`   | Apply the migrations in `drizzle/`                                              |
+| `npm run db:seed`      | Migrate, then reload the content tables from `../data` (idempotent)             |
+| `npm run db:reset`     | Delete the database file, migrate and seed                                      |
+| `npm run db:generate`  | Write a new migration after changing `src/server/db/schema.ts`                  |
+| `npm run admin:create` | Create the first admin (or promote an account)                                  |
 
 ## Locales
 
@@ -156,7 +163,7 @@ Season logic is `inSeason(from, to, month)` in `src/lib/season.ts`; it wraps acr
 
 Everything works logged out; an account adds saved trips, view history, a profile and syncing
 between devices. Environment variables are documented in [`.env.example`](.env.example)
-(`SESSION_SECRET` is required in production; `GOOGLE_CLIENT_ID` turns on "Sign in with Google").
+(`SESSION_SECRET` is required everywhere except `next dev` and the tests; `GOOGLE_CLIENT_ID` turns on "Sign in with Google").
 
 - **Sign-in** (`src/server/auth/`): email + password (argon2id via `@node-rs/argon2`, OWASP
   parameters) and Google Identity Services (the ID token is verified against Google's keys,
@@ -227,7 +234,8 @@ on the way out, and nothing is rendered as HTML. Limits and daily quotas live in
   the home page (`GET /api/community/approved?page=`) with ♥, ▲ and ★
   (`POST /api/suggestions/:id/react`).
 - **Likes, votes, ratings:** one per visitor per item (`likes` table): the account (`u:<id>`)
-  or, logged out, a random device id in the httpOnly `ubd_device` cookie, stored only as an HMAC.
+  or, logged out, a signed random device id in the httpOnly `ubd_device` cookie (new ids are
+  rationed per IP and day), stored only as an HMAC.
   Cached pages read the visitor's own reactions in one batched `GET /api/reactions`.
 - **Trending** (`src/lib/community/season.ts`): one vote per visitor per place per season
   (winter Nov–Feb, summer Mar–May, monsoon Jun–Aug, autumn Sep–Oct; `trend_votes`), via the
@@ -295,8 +303,35 @@ src/
   lib/               formatters, season and month helpers, theme, SEO and site helpers
   server/db/         Drizzle schema, connection, seed
   server/data/       typed data access for pages and API routes
-  middleware.ts      locale rewrites
+  middleware.ts      locale rewrites and the global rate limit
+  instrumentation.ts structured logging of request errors
 drizzle/             SQL migrations
 scripts/             asset sync and database tasks
+e2e/                 Playwright journeys (journeys/), visual snapshots, fixtures
+server.mjs           production server (npm start)
 test/                app-level tests (unit tests sit next to their code)
 ```
+
+## Tests
+
+- **Unit and integration** (`npm test`, Vitest): next to the code (`src/**/*.test.ts`) and in
+  `test/`, against an in-memory SQLite database seeded from `../data`.
+- **End to end** (`npx playwright test`, Playwright): `e2e/journeys/` drives a real browser
+  through the main journeys: explore filters and map, place actions, planner and trip-cost
+  figures, My Bangladesh share and short links, a game round, a photo upload with an EXIF/GPS
+  fixture through moderation, sign up and sync, language and theme, offline. It also covers
+  routes, metadata, privacy and security headers. `e2e/visual.spec.ts` holds the screenshots. The
+  server runs on port 3100 with a fresh database and media folder in `.e2e/` and one admin
+  (`e2e/constants.ts`). Build first (`npm run build`, or `npm run check`).
+
+## Security and operations
+
+- **Headers:** `src/server/security-headers.ts`, wired up in `next.config.ts`. The CSP allows
+  only this origin, plus Google Identity on `/login` and `/register`. Also HSTS,
+  `frame-ancestors 'none'`, a referrer policy and `Permissions-Policy` with `geolocation=(self)`.
+- **Rate limit:** `src/middleware.ts` allows 3,000 requests a minute per IP, on top of the
+  per-endpoint limits. The client IP is nginx's `X-Real-IP` (`src/server/rate-limit.ts`).
+- **Logs:** `src/server/log.ts` (app) and `server.mjs` (requests) write JSON lines. `LOG_LEVEL`
+  sets the level.
+- **Health:** `GET /api/health` (`src/server/health.ts`).
+- See [`ACCEPTANCE.md`](ACCEPTANCE.md#security-review) for the full review.

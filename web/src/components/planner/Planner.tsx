@@ -442,14 +442,14 @@ export function PlanResults({
           </p>
         ) : account.status !== "user" ? (
           <p className="text-sm text-muted print:hidden">
-            <Link
+            <a
               href={`${localePath(locale, "/login")}?next=${encodeURIComponent(
                 `${localePath(locale, "/plan")}?${planQuery(plan.input)}`,
               )}`}
               className="underline-offset-4 hover:text-primary hover:underline"
             >
               {t("plan.signInToSave")}
-            </Link>
+            </a>
           </p>
         ) : null}
       </section>

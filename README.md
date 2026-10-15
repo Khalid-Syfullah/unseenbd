@@ -42,6 +42,26 @@ Each phase is built by a fresh subagent on the model in `prompts/models.conf` (O
 | 08 | Routes and trains | 17 | Design and accessibility polish |
 | 09 | Trip planner and trip cost calculator | 18 | Tests, acceptance and release readiness |
 
+## Build status
+
+**All 18 phases are built.** The app in [`web/`](web) is ready to release.
+
+| Gate | Result |
+| --- | --- |
+| `npm run check` (lint, typecheck, 558 unit and integration tests, production build) | passing |
+| `npx playwright test` (22 end-to-end journeys and 20 visual snapshots at 360 and 1280 px) | passing |
+| [`MASTER_PROMPT.md` §10](MASTER_PROMPT.md#10-definition-of-done) definition of done | all 6 items verified; see [`web/ACCEPTANCE.md`](web/ACCEPTANCE.md) |
+| Security review (CSP, HSTS, framing, referrer and permissions policies, rate limits, input validation, secrets) | done; findings and fixes are in [`web/ACCEPTANCE.md`](web/ACCEPTANCE.md#security-review) |
+| Deployment | not deployed. [`web/DEPLOY.md`](web/DEPLOY.md) covers one Ubuntu arm64 EC2 instance with nginx, pm2 and Let's Encrypt |
+
+Still open:
+
+- Lighthouse has to be run against the deployed site.
+- Run `npm run photos` on the server to fetch the Commons place photos.
+- The place and district text is marked `reviewed: false` until a person has checked it.
+
+Progress per phase is kept in `.build/`. Run `bash .claude/skills/build-unseenbd/scripts/phase.sh status` to see it.
+
 ## Data at a glance
 
 | Dataset | Records | Notes |

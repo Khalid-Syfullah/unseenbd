@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Pick<PageProps, "params">): P
   if (!month) return {};
   const t = getT(lang);
   return {
-    title: t("lists.monthTitle", { month: month.name, count: month.count }),
+    title: t("lists.monthMetaTitle", { month: month.name, count: month.count }),
     description: t("lists.monthMeta", { month: month.name, count: month.count }),
     alternates: alternatesFor(lang, `/month/${month.slug}`),
   };

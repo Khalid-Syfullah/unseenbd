@@ -16,7 +16,7 @@ import {
 function post(body: unknown, { ip = "203.0.113.7", type = "application/json" } = {}) {
   return new NextRequest(new URL("/api/share", "http://localhost"), {
     method: "POST",
-    headers: { "content-type": type, "x-forwarded-for": `${ip}, 10.0.0.1` },
+    headers: { "content-type": type, "x-forwarded-for": `198.18.0.9, ${ip}` },
     body: typeof body === "string" ? body : JSON.stringify(body),
   });
 }
@@ -109,8 +109,12 @@ describe("rate limiter", () => {
   });
 
   it("reads the client IP from proxy headers", () => {
-    expect(clientIp(new Headers({ "x-forwarded-for": " 1.2.3.4 , 5.6.7.8" }))).toBe("1.2.3.4");
+    // The proxy appends the address it saw; earlier hops are whatever the client sent.
+    expect(clientIp(new Headers({ "x-forwarded-for": " 1.2.3.4 , 5.6.7.8" }))).toBe("5.6.7.8");
     expect(clientIp(new Headers({ "x-real-ip": "9.9.9.9" }))).toBe("9.9.9.9");
+    expect(
+      clientIp(new Headers({ "x-real-ip": "9.9.9.9", "x-forwarded-for": "1.2.3.4, 9.9.9.9" })),
+    ).toBe("9.9.9.9");
     expect(clientIp(new Headers())).toBe("unknown");
   });
 });

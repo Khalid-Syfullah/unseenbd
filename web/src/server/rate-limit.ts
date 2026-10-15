@@ -49,13 +49,15 @@ export function createRateLimiter({
 }
 
 /**
- * The client's IP: the first `X-Forwarded-For` hop (set by the reverse proxy), then `X-Real-IP`,
- * else "unknown" (all such clients share one bucket).
+ * The client's IP as the reverse proxy saw it: `X-Real-IP` (nginx sets it to `$remote_addr`),
+ * else the last `X-Forwarded-For` hop (the one the proxy appended; earlier hops come from the
+ * client and can be forged), else "unknown" (all such clients share one bucket). Only correct
+ * when the app is reachable through nginx alone (`LISTEN_HOST=127.0.0.1`, see DEPLOY.md).
  */
 export function clientIp(headers: Headers): string {
-  const forwarded = headers.get("x-forwarded-for");
-  const first = forwarded?.split(",")[0]?.trim();
-  if (first) return first.slice(0, 64);
   const real = headers.get("x-real-ip")?.trim();
-  return real ? real.slice(0, 64) : "unknown";
+  if (real) return real.slice(0, 64);
+  const hops = headers.get("x-forwarded-for")?.split(",") ?? [];
+  const last = hops[hops.length - 1]?.trim();
+  return last ? last.slice(0, 64) : "unknown";
 }

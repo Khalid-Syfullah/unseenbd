@@ -129,7 +129,13 @@ export function Button({
 
 export type ButtonLinkProps = ComponentProps<typeof Link> &
   ButtonStyleProps &
-  Omit<ContentProps, "size" | "loading">;
+  Omit<ContentProps, "size" | "loading"> & {
+    /**
+     * Load the target as a new document instead of a client-side navigation. Needed for the
+     * sign-in pages, whose Content-Security-Policy (Google Identity) only applies to a full load.
+     */
+    reloadDocument?: boolean;
+  };
 
 /** A link that looks like a button (navigation, not an action). */
 export function ButtonLink({
@@ -141,8 +147,26 @@ export function ButtonLink({
   trailingIcon,
   className,
   children,
+  reloadDocument,
   ...rest
 }: ButtonLinkProps) {
+  if (reloadDocument) {
+    const { href, prefetch: _prefetch, replace: _replace, scroll: _scroll, ...anchor } = rest;
+    void _prefetch;
+    void _replace;
+    void _scroll;
+    return (
+      <a
+        href={typeof href === "string" ? href : String(href.pathname ?? "/")}
+        className={buttonClasses({ variant, size, fullWidth, pill, className })}
+        {...(anchor as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        <ButtonContent icon={icon} trailingIcon={trailingIcon} size={size}>
+          {children}
+        </ButtonContent>
+      </a>
+    );
+  }
   return (
     <Link className={buttonClasses({ variant, size, fullWidth, pill, className })} {...rest}>
       <ButtonContent icon={icon} trailingIcon={trailingIcon} size={size}>

@@ -13,6 +13,7 @@ import { hashToken, randomToken } from "../auth/crypto";
 import { checkLimits, csrfFailed, csrfOk, fail, NO_STORE, readSession } from "../auth/http";
 import { setSessionCookies, type AuthContext } from "../auth/session";
 import { clientIp, createRateLimiter } from "../rate-limit";
+import { consumeQuota } from "./quota";
 
 export const DEVICE_COOKIE = "ubd_device";
 /** Readable hint that a device id exists, so pages only ask for "my reactions" when useful. */
@@ -73,7 +74,7 @@ export function community<C = unknown>(handler: Handler<C>, { auth = false } = {
       ipHash: hashIp(ip),
       actor: session
         ? `u:${session.user.id}`
-        : device && /^[\w-]{20,64}$/.test(device)
+        : device && validDeviceToken(device)
           ? `d:${hashToken(`device:${device}`).slice(0, 32)}`
           : null,
     };
@@ -87,10 +88,36 @@ export function community<C = unknown>(handler: Handler<C>, { auth = false } = {
  * The visitor's actor key, creating a device id for a logged-out visitor who has none. Call
  * `rememberDevice(response, token)` with the returned token so the browser keeps it.
  */
-export function deviceActor(visitor: Visitor): { actor: string; newDevice: string | null } {
+export function deviceActor(visitor: Visitor): { actor: string; newDevice: string | null } | null {
   if (visitor.actor) return { actor: visitor.actor, newDevice: null };
-  const token = randomToken(24);
+  // Dropping the cookie would otherwise give a fresh vote each time: new device ids are rationed
+  // per IP address and day.
+  if (!consumeQuota("devices", visitor.ipHash)) return null;
+  const token = newDeviceToken();
   return { actor: `d:${hashToken(`device:${token}`).slice(0, 32)}`, newDevice: token };
+}
+
+/** The key for a visitor's daily quotas: the account when signed in, else the hashed IP. */
+export function quotaKey(visitor: Visitor): string {
+  return visitor.userId !== null ? `u:${visitor.userId}` : visitor.ipHash;
+}
+
+/**
+ * Device ids are signed (`<random>.<hmac>`), so a client cannot invent a new one per request to
+ * count again; only ids this server issued are accepted.
+ */
+function deviceSignature(random: string): string {
+  return hashToken(`device-id:${random}`).slice(0, 16);
+}
+
+export function newDeviceToken(): string {
+  const random = randomToken(24);
+  return `${random}.${deviceSignature(random)}`;
+}
+
+export function validDeviceToken(token: string): boolean {
+  const m = /^([\w-]{20,64})\.([0-9a-f]{16})$/.exec(token);
+  return Boolean(m) && deviceSignature(m![1]!) === m![2];
 }
 
 export function rememberDevice(response: NextResponse, token: string | null): NextResponse {
@@ -128,7 +155,8 @@ export function quotaExceeded(limit: number): NextResponse {
 
 /**
  * Reads a multipart form of at most `maxBytes` (checked against `Content-Length` before the
- * body is read), or the error response to send.
+ * body is read; Node stops reading at that length, and a form without one is refused), or the
+ * error response to send.
  */
 export async function readForm(
   request: NextRequest,
@@ -141,7 +169,12 @@ export async function readForm(
       response: fail(415, "unsupported_media_type", "Send multipart/form-data."),
     };
   }
-  const length = Number(request.headers.get("content-length") ?? "0");
+  // Browsers always send a length with a form; without one the body could be any size.
+  const declared = request.headers.get("content-length");
+  if (declared === null || !/^\d+$/.test(declared)) {
+    return { ok: false, response: fail(411, "length_required", "Send a Content-Length.") };
+  }
+  const length = Number(declared);
   if (length > maxBytes) {
     return { ok: false, response: fail(413, "too_large", "The upload is too large.") };
   }

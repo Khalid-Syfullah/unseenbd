@@ -217,6 +217,20 @@ declare global {
 
 export const GSI_SRC = "https://accounts.google.com/gsi/client";
 
+const GSI_RELOAD_KEY = "unseenbd.gsiReload";
+
+/** Reloads the page once per tab session; false when it already did (the script really failed). */
+function reloadForGoogle(): boolean {
+  try {
+    if (sessionStorage.getItem(GSI_RELOAD_KEY) === window.location.pathname) return false;
+    sessionStorage.setItem(GSI_RELOAD_KEY, window.location.pathname);
+  } catch {
+    return false;
+  }
+  window.location.reload();
+  return true;
+}
+
 /** The official "Sign in with Google" button, rendered by Google Identity Services. */
 function GoogleButton({
   clientId,
@@ -262,8 +276,21 @@ function GoogleButton({
       <Script
         src={GSI_SRC}
         strategy="afterInteractive"
-        onReady={() => setReady(true)}
-        onError={() => setFailed(true)}
+        onReady={() => {
+          try {
+            sessionStorage.removeItem(GSI_RELOAD_KEY);
+          } catch {
+            // nothing to forget
+          }
+          setReady(true);
+        }}
+        onError={() => {
+          // Google is allowed by this page's own Content-Security-Policy, which only applies when
+          // the page is loaded as a document. Reached by a client-side navigation, the script is
+          // blocked: load the page once more for real.
+          if (reloadForGoogle()) return;
+          setFailed(true);
+        }}
       />
       <div ref={ref} className="flex w-full justify-center" />
       {failed ? <p className="text-sm text-muted">{t("account.googleUnavailable")}</p> : null}

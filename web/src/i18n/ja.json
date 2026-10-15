@@ -374,6 +374,10 @@
     "kindIntro": "このガイドにある同じ種類のスポットを、おすすめ順に並べています。",
     "kindMeta": "バングラデシュの{count}か所：{name}。行き先、時期、行き方を紹介します。",
     "monthTitle": "{month}におすすめのスポット（{count}）",
+    "monthMetaTitle": {
+      "one": "{month}のバングラデシュの観光地：見頃の場所 {count} か所",
+      "other": "{month}のバングラデシュの観光地：見頃の場所 {count} か所"
+    },
     "monthIntro": "{month}がベストシーズンに含まれるスポットです。11月から3月のような年をまたぐ時期も含みます。",
     "monthMeta": "バングラデシュで{month}が見頃の{count}か所。",
     "kindsLabel": "スポットの種類",
@@ -648,6 +652,7 @@
   },
   "train": {
     "title": "{name}（{no}）",
+    "metaTitle": "{name}（{no}）の時刻表・停車駅・運賃",
     "metaDescription": "{name}、{from}から{to}：{dep}発、{arr}着。全停車駅、等級ごとの運賃、折り返し列車。",
     "returnLink": "折り返し列車：{name}",
     "eticket": "eチケットサイトで購入",

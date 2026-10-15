@@ -5,6 +5,7 @@
  *   npm run db:seed      migrate, then (re)load the content tables from ../data
  *   npm run db:reset     delete the database file, migrate and seed
  */
+import "./load-env";
 import { existsSync, rmSync } from "node:fs";
 import { relative } from "node:path";
 import { migrateDatabase, openDatabase } from "@/server/db/client";

@@ -36,7 +36,7 @@ export function LogoutPanel() {
           <ButtonLink href={localePath(locale, "/")} icon="home">
             {t("nav.home")}
           </ButtonLink>
-          <ButtonLink href={localePath(locale, "/login")} variant="secondary">
+          <ButtonLink href={localePath(locale, "/login")} variant="secondary" reloadDocument>
             {t("nav.login")}
           </ButtonLink>
         </div>

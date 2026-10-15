@@ -8,6 +8,7 @@
  * submit, from `GET /api/auth/csrf`). Requests the browser marks as cross-site, or whose `Origin`
  * is another host, are refused as well. Session cookies are SameSite=Lax on top of that.
  */
+import { readTextCapped } from "../body";
 import { NextResponse, type NextRequest } from "next/server";
 import { clientIp, createRateLimiter, type RateLimiter } from "../rate-limit";
 import { CSRF_HEADER, PRE_CSRF_COOKIE, SESSION_COOKIE } from "./config";
@@ -95,8 +96,8 @@ export async function readJson(
   if (!type.toLowerCase().startsWith("application/json")) {
     return { ok: false, response: fail(415, "unsupported_media_type", "Send JSON.") };
   }
-  const text = await request.text();
-  if (text.length > maxBytes) {
+  const text = await readTextCapped(request, maxBytes);
+  if (text === null) {
     return { ok: false, response: fail(413, "too_large", "The body is too large.") };
   }
   try {

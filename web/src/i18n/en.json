@@ -382,6 +382,10 @@
     "kindIntro": "Every place of this type in the guide, best first.",
     "kindMeta": "{count} places in Bangladesh: {name}. Where to go, when to go and how to get there.",
     "monthTitle": "Places to visit in {month} ({count})",
+    "monthMetaTitle": {
+      "one": "Places to visit in Bangladesh in {month}: {count} place in season",
+      "other": "Places to visit in Bangladesh in {month}: {count} places in season"
+    },
     "monthIntro": "Places whose best season includes {month}. Seasons that cross New Year, such as November to March, are counted.",
     "monthMeta": "{count} places in Bangladesh that are at their best in {month}.",
     "kindsLabel": "Type of place",
@@ -661,6 +665,7 @@
   },
   "train": {
     "title": "{name} ({no})",
+    "metaTitle": "{name} ({no}) timetable, stops and fares",
     "metaDescription": "{name}, {from} to {to}: departs {dep}, arrives {arr}. Every stop, the fare for each class and the return train.",
     "returnLink": "Return train: {name}",
     "eticket": "Buy tickets on the e-ticket site",

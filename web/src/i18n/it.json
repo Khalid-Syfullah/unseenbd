@@ -382,6 +382,10 @@
     "kindIntro": "Tutti i luoghi di questo tipo nella guida, i migliori per primi.",
     "kindMeta": "{count} luoghi in Bangladesh: {name}. Dove andare, quando andare e come arrivare.",
     "monthTitle": "Luoghi da visitare a {month} ({count})",
+    "monthMetaTitle": {
+      "one": "Cosa visitare in Bangladesh a {month}: {count} luogo di stagione",
+      "other": "Cosa visitare in Bangladesh a {month}: {count} luoghi di stagione"
+    },
     "monthIntro": "Luoghi la cui stagione migliore comprende {month}. Sono incluse le stagioni a cavallo del nuovo anno, come novembre–marzo.",
     "monthMeta": "{count} luoghi del Bangladesh al loro meglio a {month}.",
     "kindsLabel": "Tipo di luogo",
@@ -661,6 +665,7 @@
   },
   "train": {
     "title": "{name} ({no})",
+    "metaTitle": "{name} ({no}): orario, fermate e tariffe",
     "metaDescription": "{name}, da {from} a {to}: partenza {dep}, arrivo {arr}. Tutte le fermate, la tariffa per ogni classe e il treno di ritorno.",
     "returnLink": "Treno di ritorno: {name}",
     "eticket": "Compra i biglietti sul sito degli e-ticket",

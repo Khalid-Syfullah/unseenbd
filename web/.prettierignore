@@ -10,3 +10,6 @@ src/fonts/*.txt
 /drizzle/meta
 /data
 src/components/ui/icons.generated.ts
+/.e2e
+/test-results
+/playwright-report

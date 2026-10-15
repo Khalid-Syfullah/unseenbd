@@ -91,7 +91,13 @@ export function AppHeader({
               <span className="sr-only">{t("header.account", { name: user.name })}</span>
             </Link>
           ) : (
-            <ButtonLink href={localePath(lang, "/login")} variant="secondary" size="sm" pill>
+            <ButtonLink
+              href={localePath(lang, "/login")}
+              variant="secondary"
+              size="sm"
+              pill
+              reloadDocument
+            >
               {t("nav.login")}
             </ButtonLink>
           )}

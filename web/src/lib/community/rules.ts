@@ -53,6 +53,8 @@ export const DAILY = {
   reports: 20,
   /** Owner listings per IP address (or signed-in owner). */
   listings: 3,
+  /** New anonymous device ids (likes, votes, reports without an account) per IP address. */
+  devices: 200,
 } as const;
 
 export type QuotaScope = keyof typeof DAILY;

@@ -382,6 +382,10 @@
     "kindIntro": "Alle Orte dieser Art im Führer, die besten zuerst.",
     "kindMeta": "{count} Orte in Bangladesch: {name}. Wohin, wann und wie Sie hinkommen.",
     "monthTitle": "Reiseziele im {month} ({count})",
+    "monthMetaTitle": {
+      "one": "Reiseziele in Bangladesch im {month}: {count} Ort in der Saison",
+      "other": "Reiseziele in Bangladesch im {month}: {count} Orte in der Saison"
+    },
     "monthIntro": "Orte, deren beste Reisezeit den {month} einschließt. Zeiträume über den Jahreswechsel, etwa November bis März, sind eingerechnet.",
     "monthMeta": "{count} Orte in Bangladesch, die im {month} am schönsten sind.",
     "kindsLabel": "Art des Ortes",
@@ -661,6 +665,7 @@
   },
   "train": {
     "title": "{name} ({no})",
+    "metaTitle": "{name} ({no}): Fahrplan, Halte und Preise",
     "metaDescription": "{name}, {from} nach {to}: Abfahrt {dep}, Ankunft {arr}. Alle Halte, der Preis je Klasse und der Gegenzug.",
     "returnLink": "Gegenzug: {name}",
     "eticket": "Tickets auf der E-Ticket-Seite kaufen",

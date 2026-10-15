@@ -27,7 +27,13 @@ export function AccountSlot() {
     );
   }
   return (
-    <ButtonLink href={localePath(locale, "/login")} variant="secondary" size="sm" pill>
+    <ButtonLink
+      href={localePath(locale, "/login")}
+      variant="secondary"
+      size="sm"
+      pill
+      reloadDocument
+    >
       {t("nav.login")}
     </ButtonLink>
   );

@@ -7,6 +7,8 @@ import {
   topEntries,
   type Submission,
 } from "@/server/leaderboard";
+import { sameOrigin } from "@/server/auth/http";
+import { readTextCapped } from "@/server/body";
 import { clientIp } from "@/server/rate-limit";
 
 const MAX_BODY = 8 * 1024;
@@ -43,6 +45,7 @@ export async function GET(request: NextRequest) {
  * day per visitor (409); rate-limited per IP (429).
  */
 export async function POST(request: NextRequest) {
+  if (!sameOrigin(request)) return fail(403, "csrf", "Cross-site request refused.");
   const ip = clientIp(request.headers);
   const limited = leaderboardLimiter.hit(ip);
   if (!limited.ok) {
@@ -54,8 +57,8 @@ export async function POST(request: NextRequest) {
   if (!type.toLowerCase().startsWith("application/json")) {
     return fail(415, "unsupported_media_type", "Send JSON.");
   }
-  const text = await request.text();
-  if (text.length > MAX_BODY) return fail(413, "too_large", "The body is too large.");
+  const text = await readTextCapped(request, MAX_BODY);
+  if (text === null) return fail(413, "too_large", "The body is too large.");
   let body: unknown;
   try {
     body = JSON.parse(text);

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import { Skeleton } from "@/components/ui/Feedback";
@@ -129,14 +128,14 @@ export function CommentThread({
       {signedOut ? (
         account.status === "unknown" ? null : (
           <p className="text-sm">
-            <Link
+            <a
               href={`${localePath(locale, "/login")}?next=${encodeURIComponent(
                 typeof window === "undefined" ? localePath(locale, "/") : window.location.pathname,
               )}`}
               className="font-semibold text-primary underline-offset-4 hover:underline"
             >
               {labels.signIn ?? t("community.errorSignIn")}
-            </Link>
+            </a>
           </p>
         )
       ) : (

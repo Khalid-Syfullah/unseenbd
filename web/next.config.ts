@@ -1,6 +1,7 @@
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { NextConfig } from "next";
+import { securityHeaderRules } from "./src/server/security-headers";
 
 const webRoot = dirname(fileURLToPath(import.meta.url));
 
@@ -27,6 +28,8 @@ const nextConfig: NextConfig = {
   eslint: { ignoreDuringBuilds: true },
   async headers() {
     return [
+      // CSP, HSTS, frame-ancestors, referrer and permissions policies (src/server/security-headers.ts).
+      ...securityHeaderRules(process.env.NODE_ENV !== "production"),
       ...STATIC_DIRS.map((dir) => ({
         source: `/${dir}/:path*`,
         headers: [{ key: "Cache-Control", value: STATIC_CACHE }],

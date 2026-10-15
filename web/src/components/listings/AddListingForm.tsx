@@ -255,7 +255,7 @@ export function AddListingForm({
               {t("addListing.doneMine")}
             </ButtonLink>
           ) : (
-            <ButtonLink href={localePath(locale, "/login")} icon="user">
+            <ButtonLink href={localePath(locale, "/login")} icon="user" reloadDocument>
               {t("addListing.doneSignIn")}
             </ButtonLink>
           )}

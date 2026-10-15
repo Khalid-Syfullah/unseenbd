@@ -1,6 +1,13 @@
 import { seasonOf } from "@/lib/community/season";
 import { fail, ok, readJson } from "@/server/auth/http";
-import { community, deviceActor, invalid, rememberDevice } from "@/server/community/http";
+import { DAILY } from "@/lib/community/rules";
+import {
+  community,
+  deviceActor,
+  invalid,
+  quotaExceeded,
+  rememberDevice,
+} from "@/server/community/http";
 import { placeOf } from "@/server/community/submissions";
 import { hasVoted, setVote } from "@/server/community/trend";
 import { getTrendVotes } from "@/server/data/catalog";
@@ -29,7 +36,9 @@ export const POST = community(async (visitor, request) => {
   const place = placeOf(slug);
   if (!place) return invalid("place");
   const on = read.body.on === undefined ? true : read.body.on === true;
-  const { actor, newDevice } = deviceActor(visitor);
+  const device = deviceActor(visitor);
+  if (!device) return quotaExceeded(DAILY.devices);
+  const { actor, newDevice } = device;
   const season = seasonOf();
   setVote(place.id, actor, on, season);
   return rememberDevice(

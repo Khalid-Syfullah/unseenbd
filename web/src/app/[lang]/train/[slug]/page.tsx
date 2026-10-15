@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const train = await getTrain(slug, contentLocale(lang));
   if (!train) return {};
   const t = getT(lang);
-  const title = t("train.title", { name: train.name, no: localizeDigits(train.no, lang) });
+  const title = t("train.metaTitle", { name: train.name, no: localizeDigits(train.no, lang) });
   const description = t("train.metaDescription", {
     name: train.name,
     from: train.from.station,

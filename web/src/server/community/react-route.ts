@@ -1,6 +1,7 @@
 import type { NextRequest, NextResponse } from "next/server";
 import { fail, ok, readJson } from "../auth/http";
-import { deviceActor, rememberDevice, type Visitor } from "./http";
+import { DAILY } from "@/lib/community/rules";
+import { deviceActor, quotaExceeded, rememberDevice, type Visitor } from "./http";
 import { react, type ReactionKind, type TargetType } from "./reactions";
 
 const KINDS = new Set<ReactionKind>(["like", "vote", "star"]);
@@ -23,7 +24,9 @@ export async function handleReact(
   if (!KINDS.has(kind)) return fail(400, "invalid", "kind");
   const on = read.body.on === undefined ? true : read.body.on === true;
   const value = read.body.value === null ? null : Number(read.body.value);
-  const { actor, newDevice } = deviceActor(visitor);
+  const device = deviceActor(visitor);
+  if (!device) return quotaExceeded(DAILY.devices);
+  const { actor, newDevice } = device;
   const result = react(type, id, actor, kind, { on, value: kind === "star" ? value : null });
   if (!result.ok) {
     return result.reason === "not_found"
