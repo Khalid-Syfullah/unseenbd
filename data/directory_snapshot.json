@@ -1,0 +1,35 @@
+{
+ "note": "Captured in the browser on 2026-10-15 from /en/stay, /en/restaurants and /en/shopping (these lists render client-side). Ratings and review counts are the site's snapshot of public business listings; the site says to verify before visiting.",
+ "hotels": [
+  {"name": "InterContinental Dhaka by IHG", "category_bn": "৫-তারকা হোটেল", "area_bn": "ঢাকা", "rating": 4.7, "reviews": 13876},
+  {"name": "Radisson Blu Hotel, Chattogram Bay View", "category_bn": "৫-তারকা হোটেল", "area_bn": "চট্টগ্রাম", "rating": 4.6, "reviews": 8172},
+  {"name": "Jatra Flagship Khulna City Centre", "category_bn": "সার্ভিসড আবাসন", "area_bn": "খুলনা", "rating": 4.7, "reviews": 396},
+  {"name": "Pan Pacific Sonargaon Dhaka", "category_bn": "হোটেল", "area_bn": "ঢাকা", "rating": 4.5, "reviews": 21973},
+  {"name": "Le Méridien Dhaka", "category_bn": "হোটেল", "area_bn": "ঢাকা", "rating": 4.5, "reviews": 17632},
+  {"name": "The Westin Dhaka", "category_bn": "হোটেল", "area_bn": "ঢাকা", "rating": 4.5, "reviews": 17135}
+ ],
+ "resorts": [
+  {"name": "Ecosense Resort, Nilachal", "category_bn": "রিসোর্ট", "area_bn": "বান্দরবান", "rating": 4.8, "reviews": 664},
+  {"name": "Baywatch", "category_bn": "রিসোর্ট", "area_bn": "ইনানী, কক্সবাজার", "rating": 4.6, "reviews": 2308},
+  {"name": "Grand Sultan Tea Resort & Golf", "category_bn": "রিসোর্ট", "area_bn": "শ্রীমঙ্গল", "rating": 4.5, "reviews": 10572},
+  {"name": "LuiPaz Resort Saintmartin", "category_bn": "রিসোর্ট", "area_bn": "সেন্ট মার্টিন", "rating": 4.8, "reviews": 189},
+  {"name": "Sayeman Heritage", "category_bn": "রিসোর্ট", "area_bn": "কক্সবাজার", "rating": 4.5, "reviews": 1142},
+  {"name": "Megh Roddur Hill Resort", "category_bn": "রিসোর্ট", "area_bn": "সাজেক", "rating": 4.8, "reviews": 134}
+ ],
+ "restaurants": [
+  {"name": "PizzaBurg Narayanganj", "category_bn": "রেস্তোরাঁ", "area_bn": "নারায়ণগঞ্জ", "rating": 4.9, "reviews": 8865},
+  {"name": "Meat Theory", "category_bn": "রেস্তোরাঁ", "area_bn": "গুলশান, ঢাকা", "rating": 4.8, "reviews": 5802},
+  {"name": "AVANO - Asian Fusion Restaurant", "category_bn": "এশিয়ান ফিউশন", "area_bn": "মিরপুর, ঢাকা", "rating": 4.8, "reviews": 3106},
+  {"name": "Woodhouse Grill Gulshan", "category_bn": "গ্রিল রেস্তোরাঁ", "area_bn": "মহাখালী, ঢাকা", "rating": 4.8, "reviews": 1156},
+  {"name": "OLIO STEAK", "category_bn": "স্টেকহাউস", "area_bn": "গুলশান, ঢাকা", "rating": 4.8, "reviews": 450},
+  {"name": "NORTH END coffee roasters Dhanmondi", "category_bn": "কফিশপ", "area_bn": "ধানমন্ডি, ঢাকা", "rating": 4.6, "reviews": 7042}
+ ],
+ "shopping": [
+  {"name": "Jamuna Future Park", "category_bn": "শপিং মল", "area_bn": "বসুন্ধরা, ঢাকা", "rating": 4.4, "reviews": 83122},
+  {"name": "CSD Baridhara Super Shop", "category_bn": "শপিং মল", "area_bn": "বারিধারা, ঢাকা", "rating": 4.3, "reviews": 231},
+  {"name": "Rupayan Shopping Square", "category_bn": "শপিং মল", "area_bn": "বসুন্ধরা, ঢাকা", "rating": 4.2, "reviews": 1629},
+  {"name": "WHOLESALE CLUB", "category_bn": "শপিং মল", "area_bn": "বসুন্ধরা, ঢাকা", "rating": 4.2, "reviews": 3594},
+  {"name": "Rajuk Trade Center", "category_bn": "শপিং মল", "area_bn": "বসুন্ধরা, ঢাকা", "rating": 3.9, "reviews": 9327}
+ ],
+ "detail_dialog_fields": ["name", "category", "area", "rating", "review count", "photo source credit", "Open in Google Maps button"]
+}

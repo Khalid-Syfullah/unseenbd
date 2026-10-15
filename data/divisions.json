@@ -1,0 +1,122 @@
+[
+ {
+  "slug": "rangpur",
+  "name_bn": "রংপুর",
+  "name_en": "Rangpur",
+  "district_ids": [
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60
+  ]
+ },
+ {
+  "slug": "rajshahi",
+  "name_bn": "রাজশাহী",
+  "name_en": "Rajshahi",
+  "district_ids": [
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52
+  ]
+ },
+ {
+  "slug": "mymensingh",
+  "name_bn": "ময়মনসিংহ",
+  "name_en": "Mymensingh",
+  "district_ids": [
+   61,
+   62,
+   63,
+   64
+  ]
+ },
+ {
+  "slug": "sylhet",
+  "name_bn": "সিলেট",
+  "name_en": "Sylhet",
+  "district_ids": [
+   25,
+   26,
+   27,
+   28
+  ]
+ },
+ {
+  "slug": "dhaka",
+  "name_bn": "ঢাকা",
+  "name_en": "Dhaka",
+  "district_ids": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ },
+ {
+  "slug": "khulna",
+  "name_bn": "খুলনা",
+  "name_en": "Khulna",
+  "district_ids": [
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ]
+ },
+ {
+  "slug": "barishal",
+  "name_bn": "বরিশাল",
+  "name_en": "Barishal",
+  "district_ids": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ]
+ },
+ {
+  "slug": "chattogram",
+  "name_bn": "চট্টগ্রাম",
+  "name_en": "Chattogram",
+  "district_ids": [
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24
+  ]
+ }
+]

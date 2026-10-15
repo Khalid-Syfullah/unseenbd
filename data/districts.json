@@ -1,0 +1,2388 @@
+[
+ {
+  "id": 1,
+  "slug": "dhaka",
+  "name_en": "Dhaka",
+  "name_bn": "ঢাকা",
+  "division": "dhaka",
+  "lat": 23.7869,
+  "lng": 90.2508,
+  "famous_for_bn": [
+   "বাকরখানি",
+   "কাচ্চি বিরিয়ানি",
+   "বোরহানি",
+   "শাঁখারীবাজারের শাঁখা"
+  ],
+  "famous_for_en": [
+   "Bakarkhani bread",
+   "Kacchi biryani",
+   "Borhani (spiced yoghurt drink)",
+   "Conch-shell bangles of Shankhari Bazar"
+  ],
+  "places": [
+   "lalbagh-fort",
+   "ahsan-manzil",
+   "jatiya-smriti-soudho-savar",
+   "armenian-church-armanitola",
+   "sadullapur-golap-gram",
+   "baitul-mukarram-national-mosque",
+   "bangladesh-national-museum",
+   "central-shaheed-minar",
+   "dhakeshwari-temple",
+   "national-parliament-house"
+  ],
+  "place_count": 10,
+  "community_photo_count": 8,
+  "from_dhaka": null,
+  "url": "https://unseenbd.com/district/dhaka"
+ },
+ {
+  "id": 2,
+  "slug": "faridpur",
+  "name_en": "Faridpur",
+  "name_bn": "ফরিদপুর",
+  "division": "dhaka",
+  "lat": 23.4789,
+  "lng": 89.8388,
+  "famous_for_bn": [
+   "খেজুরের গুড়",
+   "সোনালি আঁশ পাট",
+   "বাগাটের দই"
+  ],
+  "famous_for_en": [
+   "Date-palm jaggery",
+   "Jute, the golden fibre",
+   "Yoghurt of Bagat"
+  ],
+  "places": [
+   "jasimuddin-bari-ambikapur",
+   "mathurapur-deul",
+   "pathrail-mosque-bhanga"
+  ],
+  "place_count": 3,
+  "community_photo_count": 4,
+  "from_dhaka": {
+   "road_km": 107,
+   "bus_hours": [
+    2,
+    3
+   ],
+   "bus_fare_from_bdt": 317,
+   "direct_trains": 5
+  },
+  "url": "https://unseenbd.com/district/faridpur"
+ },
+ {
+  "id": 3,
+  "slug": "gazipur",
+  "name_en": "Gazipur",
+  "name_bn": "গাজীপুর",
+  "division": "dhaka",
+  "lat": 24.0984,
+  "lng": 90.4449,
+  "famous_for_bn": [
+   "শ্রীপুরের কাঁঠাল",
+   "তৈরি পোশাক",
+   "কাপাসিয়ার কার্পাস তুলা (মসলিন যুগের ইতিহাস)"
+  ],
+  "famous_for_en": [
+   "Jackfruit of Sreepur",
+   "Ready-made garments",
+   "Kapasia's cotton (muslin-era history)"
+  ],
+  "places": [
+   "bhawal-national-park",
+   "bhawal-rajbari",
+   "belai-beel"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 37.9,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 112,
+   "direct_trains": 15
+  },
+  "url": "https://unseenbd.com/district/gazipur"
+ },
+ {
+  "id": 4,
+  "slug": "gopalganj",
+  "name_en": "Gopalganj",
+  "name_bn": "গোপালগঞ্জ",
+  "division": "dhaka",
+  "lat": 23.1055,
+  "lng": 89.8995,
+  "famous_for_bn": [
+   "রসগোল্লা",
+   "জলিরপাড়ের ব্রোঞ্জের গহনা",
+   "বিলের দেশি মাছ"
+  ],
+  "famous_for_en": [
+   "Rosogolla",
+   "Bronze jewellery of Jalirpar",
+   "Local fish from the beels"
+  ],
+  "places": [
+   "bangabandhu-mausoleum-tungipara",
+   "orakandi-thakur-bari",
+   "ulpur-zamindar-bari"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 130.8,
+   "bus_hours": [
+    3,
+    4
+   ],
+   "bus_fare_from_bdt": 411,
+   "direct_trains": 2
+  },
+  "url": "https://unseenbd.com/district/gopalganj"
+ },
+ {
+  "id": 5,
+  "slug": "kishoreganj",
+  "name_en": "Kishoreganj",
+  "name_bn": "কিশোরগঞ্জ",
+  "division": "dhaka",
+  "lat": 24.3762,
+  "lng": 90.9423,
+  "famous_for_bn": [
+   "অষ্টগ্রামের পনির",
+   "হাওরের মিঠাপানির মাছ",
+   "চ্যাপা শুঁটকি"
+  ],
+  "famous_for_en": [
+   "Austagram cheese",
+   "Freshwater fish from the haors",
+   "Chepa shutki (fermented dried fish)"
+  ],
+  "places": [
+   "nikli-haor",
+   "itna-mithamain-austagram-haor-road",
+   "sholakia-eidgah",
+   "jangalbari-fort",
+   "chandrabati-shiva-temple"
+  ],
+  "place_count": 5,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 108.2,
+   "bus_hours": [
+    3,
+    4
+   ],
+   "bus_fare_from_bdt": 314,
+   "direct_trains": 10
+  },
+  "url": "https://unseenbd.com/district/kishoreganj"
+ },
+ {
+  "id": 6,
+  "slug": "madaripur",
+  "name_en": "Madaripur",
+  "name_bn": "মাদারীপুর",
+  "division": "dhaka",
+  "lat": 23.2182,
+  "lng": 90.1651,
+  "famous_for_bn": [
+   "খেজুরের গুড়",
+   "রসগোল্লা",
+   "পাট"
+  ],
+  "famous_for_en": [
+   "Date-palm jaggery",
+   "Rosogolla",
+   "Jute"
+  ],
+  "places": [
+   "shakuni-lake",
+   "khalia-rajaram-temple",
+   "auliapur-neelkuthi"
+  ],
+  "place_count": 3,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 94.4,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 341,
+   "direct_trains": 1
+  },
+  "url": "https://unseenbd.com/district/madaripur"
+ },
+ {
+  "id": 7,
+  "slug": "manikganj",
+  "name_en": "Manikganj",
+  "name_bn": "মানিকগঞ্জ",
+  "division": "dhaka",
+  "lat": 23.844,
+  "lng": 89.9496,
+  "famous_for_bn": [
+   "ঝিটকার হাজারী গুড়",
+   "সিংগাইরের গাজর",
+   "সরিষা ফুলের মধু"
+  ],
+  "famous_for_en": [
+   "Hazari jaggery of Jhitka",
+   "Carrots of Singair",
+   "Mustard-flower honey"
+  ],
+  "places": [
+   "baliati-zamindar-bari",
+   "teota-zamindar-bari",
+   "jhitka-sorisha-khet"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 52.5,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 142,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/manikganj"
+ },
+ {
+  "id": 8,
+  "slug": "munshiganj",
+  "name_en": "Munshiganj",
+  "name_bn": "মুন্সীগঞ্জ",
+  "division": "dhaka",
+  "lat": 23.5258,
+  "lng": 90.4173,
+  "famous_for_bn": [
+   "সিরাজদিখানের পাতক্ষীর",
+   "ভাগ্যকুলের মিষ্টি",
+   "আলু",
+   "পদ্মার ইলিশ"
+  ],
+  "famous_for_en": [
+   "Patkhir of Sirajdikhan",
+   "Sweets of Bhagyakul",
+   "Potatoes",
+   "Padma hilsa"
+  ],
+  "places": [
+   "idrakpur-fort",
+   "mawa-ghat-padma",
+   "sonarang-jora-math",
+   "baba-adam-mosque",
+   "arial-beel"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 27.4,
+   "bus_hours": [
+    1,
+    2
+   ],
+   "bus_fare_from_bdt": 70,
+   "direct_trains": 1
+  },
+  "url": "https://unseenbd.com/district/munshiganj"
+ },
+ {
+  "id": 9,
+  "slug": "narayanganj",
+  "name_en": "Narayanganj",
+  "name_bn": "নারায়ণগঞ্জ",
+  "division": "dhaka",
+  "lat": 23.7232,
+  "lng": 90.5781,
+  "famous_for_bn": [
+   "জামদানি শাড়ি",
+   "হোসিয়ারি ও নিট পোশাক",
+   "পাটজাত পণ্য",
+   "সোনারগাঁওয়ের কারুপণ্য"
+  ],
+  "famous_for_en": [
+   "Jamdani saris",
+   "Hosiery and knitwear",
+   "Jute goods",
+   "Handicrafts of Sonargaon"
+  ],
+  "places": [
+   "sonargaon-folk-art-museum",
+   "panam-nagar",
+   "hajiganj-fort",
+   "noapara-jamdani-palli",
+   "goaldi-mosque"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 15,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 44,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/narayanganj"
+ },
+ {
+  "id": 10,
+  "slug": "narsingdi",
+  "name_en": "Narsingdi",
+  "name_bn": "নরসিংদী",
+  "division": "dhaka",
+  "lat": 24.0024,
+  "lng": 90.7732,
+  "famous_for_bn": [
+   "লটকন",
+   "অমৃতসাগর কলা",
+   "বাবুরহাটের তাঁতের কাপড়"
+  ],
+  "famous_for_en": [
+   "Lotkon (Burmese grape)",
+   "Amritsagar bananas",
+   "Handloom cloth of Baburhat"
+  ],
+  "places": [
+   "wari-bateshwar",
+   "lakshman-saha-zamindar-bari",
+   "girish-chandra-sen-house"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 45.5,
+   "bus_hours": [
+    1,
+    1.5
+   ],
+   "bus_fare_from_bdt": 144,
+   "direct_trains": 8
+  },
+  "url": "https://unseenbd.com/district/narsingdi"
+ },
+ {
+  "id": 11,
+  "slug": "rajbari",
+  "name_en": "Rajbari",
+  "name_bn": "রাজবাড়ী",
+  "division": "dhaka",
+  "lat": 23.7276,
+  "lng": 89.5615,
+  "famous_for_bn": [
+   "রাজবাড়ীর চমচম",
+   "পদ্মার ইলিশ",
+   "পেঁয়াজ"
+  ],
+  "famous_for_en": [
+   "Rajbari chomchom",
+   "Padma hilsa",
+   "Onions"
+  ],
+  "places": [
+   "mir-mosharraf-hossain-memorial",
+   "godar-bazar-padma-riverside",
+   "nalia-jor-bangla-temple"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 108.8,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 330,
+   "direct_trains": 3
+  },
+  "url": "https://unseenbd.com/district/rajbari"
+ },
+ {
+  "id": 12,
+  "slug": "shariatpur",
+  "name_en": "Shariatpur",
+  "name_bn": "শরীয়তপুর",
+  "division": "dhaka",
+  "lat": 23.2477,
+  "lng": 90.4074,
+  "famous_for_bn": [
+   "পদ্মার ইলিশ",
+   "কাঁসা-পিতলের তৈজসপত্র",
+   "বিবিখানা পিঠা"
+  ],
+  "famous_for_en": [
+   "Padma hilsa",
+   "Brass and bell-metal ware",
+   "Bibikhana pitha (baked rice cake)"
+  ],
+  "places": [
+   "sureshwar-darbar-sharif",
+   "rudrakar-math",
+   "dhanuka-manasa-bari"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 72.4,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 245,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/shariatpur"
+ },
+ {
+  "id": 13,
+  "slug": "tangail",
+  "name_en": "Tangail",
+  "name_bn": "টাঙ্গাইল",
+  "division": "dhaka",
+  "lat": 24.3563,
+  "lng": 89.9986,
+  "famous_for_bn": [
+   "পোড়াবাড়ির চমচম",
+   "টাঙ্গাইল তাঁতের শাড়ি",
+   "মধুপুরের আনারস"
+  ],
+  "famous_for_en": [
+   "Porabari chomchom",
+   "Tangail handloom saris",
+   "Pineapples of Madhupur"
+  ],
+  "places": [
+   "mohera-zamindar-bari",
+   "atia-mosque",
+   "madhupur-national-park",
+   "pathrail-tant-palli",
+   "bashulia-basail"
+  ],
+  "place_count": 5,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 94.3,
+   "bus_hours": [
+    2,
+    4
+   ],
+   "bus_fare_from_bdt": 150,
+   "direct_trains": 11
+  },
+  "url": "https://unseenbd.com/district/tangail"
+ },
+ {
+  "id": 14,
+  "slug": "bandarban",
+  "name_en": "Bandarban",
+  "name_bn": "বান্দরবান",
+  "division": "chattogram",
+  "lat": 21.8071,
+  "lng": 92.3638,
+  "famous_for_bn": [
+   "মারমাদের মুন্ডি",
+   "বাঁশ কোড়ল",
+   "পাহাড়ি তাঁতের কাপড়",
+   "পাহাড়ি পেঁপে ও কলা"
+  ],
+  "famous_for_en": [
+   "Mundi (Marma rice noodles)",
+   "Bamboo shoot dishes",
+   "Handloom hill textiles",
+   "Hill papaya and bananas"
+  ],
+  "places": [
+   "nilgiri-hill",
+   "boga-lake",
+   "nafakhum-waterfall",
+   "buddha-dhatu-jadi",
+   "debotakhum"
+  ],
+  "place_count": 5,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 312.1,
+   "bus_hours": [
+    7.5,
+    10
+   ],
+   "bus_fare_from_bdt": 776,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/bandarban"
+ },
+ {
+  "id": 15,
+  "slug": "brahmanbaria",
+  "name_en": "Brahmanbaria",
+  "name_bn": "ব্রাহ্মণবাড়িয়া",
+  "division": "chattogram",
+  "lat": 23.953,
+  "lng": 91.0835,
+  "famous_for_bn": [
+   "ছানামুখী মিষ্টি",
+   "তিতাস নদীর তাজা মাছ",
+   "ঐতিহ্যবাহী পুতুলনাচ"
+  ],
+  "famous_for_en": [
+   "Chhanamukhi sweets",
+   "Fresh fish from the Titas",
+   "Traditional puppet shows"
+  ],
+  "places": [
+   "titas-river-brahmanbaria",
+   "haripur-zamindar-bari",
+   "arifail-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 103.4,
+   "bus_hours": [
+    4,
+    4
+   ],
+   "bus_fare_from_bdt": 253,
+   "direct_trains": 8
+  },
+  "url": "https://unseenbd.com/district/brahmanbaria"
+ },
+ {
+  "id": 16,
+  "slug": "chandpur",
+  "name_en": "Chandpur",
+  "name_bn": "চাঁদপুর",
+  "division": "chattogram",
+  "lat": 23.2797,
+  "lng": 90.7779,
+  "famous_for_bn": [
+   "পদ্মা-মেঘনার ইলিশ",
+   "নোনা ইলিশ",
+   "মতলবের ক্ষীর"
+  ],
+  "famous_for_en": [
+   "Padma-Meghna hilsa",
+   "Salted hilsa (nona ilish)",
+   "Matlab kheer"
+  ],
+  "places": [
+   "chandpur-boro-station-mohona",
+   "hajiganj-boro-masjid",
+   "lohagor-math"
+  ],
+  "place_count": 3,
+  "community_photo_count": 3,
+  "from_dhaka": {
+   "road_km": 91.7,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 394,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/chandpur"
+ },
+ {
+  "id": 17,
+  "slug": "chattogram",
+  "name_en": "Chattogram",
+  "name_bn": "চট্টগ্রাম",
+  "division": "chattogram",
+  "lat": 22.4367,
+  "lng": 91.8653,
+  "famous_for_bn": [
+   "মেজবানি মাংস",
+   "কালাভুনা",
+   "বেলা বিস্কুট",
+   "শুঁটকি"
+  ],
+  "famous_for_en": [
+   "Mezbani beef",
+   "Kala bhuna",
+   "Bela biscuit",
+   "Dried fish (shutki)"
+  ],
+  "places": [
+   "patenga-sea-beach",
+   "foys-lake",
+   "chandranath-hill",
+   "khoiyachhora-waterfall",
+   "guliakhali-sea-beach"
+  ],
+  "place_count": 5,
+  "community_photo_count": 5,
+  "from_dhaka": {
+   "road_km": 239.7,
+   "bus_hours": [
+    5.5,
+    7
+   ],
+   "bus_fare_from_bdt": 593,
+   "direct_trains": 7
+  },
+  "url": "https://unseenbd.com/district/chattogram"
+ },
+ {
+  "id": 18,
+  "slug": "cumilla",
+  "name_en": "Cumilla",
+  "name_bn": "কুমিল্লা",
+  "division": "chattogram",
+  "lat": 23.4369,
+  "lng": 91.034,
+  "famous_for_bn": [
+   "রসমালাই",
+   "খাদি কাপড়",
+   "বাটিক",
+   "বিজয়পুরের মৃৎশিল্প"
+  ],
+  "famous_for_en": [
+   "Rasmalai",
+   "Khadi cloth",
+   "Batik",
+   "Bijoypur pottery"
+  ],
+  "places": [
+   "shalban-vihara",
+   "mainamati-war-cemetery",
+   "dharmasagar-dighi",
+   "kotila-mura",
+   "nawab-faizunnesa-house"
+  ],
+  "place_count": 5,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 92.2,
+   "bus_hours": [
+    2,
+    3
+   ],
+   "bus_fare_from_bdt": 257,
+   "direct_trains": 5
+  },
+  "url": "https://unseenbd.com/district/cumilla"
+ },
+ {
+  "id": 19,
+  "slug": "coxs-bazar",
+  "name_en": "Cox's Bazar",
+  "name_bn": "কক্সবাজার",
+  "division": "chattogram",
+  "lat": 21.4726,
+  "lng": 92.071,
+  "famous_for_bn": [
+   "শুঁটকি",
+   "বার্মিজ আচার",
+   "ঝিনুক-শামুকের গয়না",
+   "মহেশখালীর মিষ্টি পান"
+  ],
+  "famous_for_en": [
+   "Dried fish (shutki)",
+   "Burmese-style pickles",
+   "Shell jewellery",
+   "Maheshkhali sweet paan"
+  ],
+  "places": [
+   "coxs-bazar-sea-beach",
+   "saint-martins-island",
+   "inani-beach",
+   "ramu-buddhist-monasteries",
+   "sonadia-island",
+   "adinath-temple-maheshkhali",
+   "himchari-hills-waterfall"
+  ],
+  "place_count": 7,
+  "community_photo_count": 6,
+  "from_dhaka": {
+   "road_km": 366.3,
+   "bus_hours": [
+    9,
+    12
+   ],
+   "bus_fare_from_bdt": 967,
+   "direct_trains": 2
+  },
+  "url": "https://unseenbd.com/district/coxs-bazar"
+ },
+ {
+  "id": 20,
+  "slug": "feni",
+  "name_en": "Feni",
+  "name_bn": "ফেনী",
+  "division": "chattogram",
+  "lat": 23.0032,
+  "lng": 91.4127,
+  "famous_for_bn": [
+   "খণ্ডলের মিষ্টি",
+   "মহিষের দুধের দই ও ঘি",
+   "মুহুরী এলাকার তাজা মাছ"
+  ],
+  "famous_for_en": [
+   "Khandal sweets",
+   "Buffalo-milk curd and ghee",
+   "Fresh fish from the Muhuri area"
+  ],
+  "places": [
+   "muhuri-project",
+   "bijoy-singh-dighi",
+   "chandgazi-bhuiyan-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 147.4,
+   "bus_hours": [
+    3,
+    4
+   ],
+   "bus_fare_from_bdt": 370,
+   "direct_trains": 4
+  },
+  "url": "https://unseenbd.com/district/feni"
+ },
+ {
+  "id": 21,
+  "slug": "khagrachhari",
+  "name_en": "Khagrachhari",
+  "name_bn": "খাগড়াছড়ি",
+  "division": "chattogram",
+  "lat": 23.1642,
+  "lng": 91.9521,
+  "famous_for_bn": [
+   "বাঁশ কোড়ল",
+   "পাহাড়ি হলুদ",
+   "হাতে বোনা পিনন-হাদি",
+   "পাহাড়ি আনারস ও কাঁঠাল"
+  ],
+  "famous_for_en": [
+   "Bamboo shoots",
+   "Hill turmeric",
+   "Handwoven pinon-hadi",
+   "Hill pineapple and jackfruit"
+  ],
+  "places": [
+   "alutila-cave",
+   "richhang-waterfall",
+   "debotar-pukur",
+   "shantipur-aranya-kutir",
+   "hatimatha-mayung-kopal"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 257.6,
+   "bus_hours": [
+    6.5,
+    8
+   ],
+   "bus_fare_from_bdt": 675,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/khagrachhari"
+ },
+ {
+  "id": 22,
+  "slug": "lakshmipur",
+  "name_en": "Lakshmipur",
+  "name_bn": "লক্ষ্মীপুর",
+  "division": "chattogram",
+  "lat": 22.9005,
+  "lng": 90.8557,
+  "famous_for_bn": [
+   "সয়াবিন",
+   "নারিকেল ও সুপারি",
+   "মেঘনার ইলিশ",
+   "মহিষের দই"
+  ],
+  "famous_for_en": [
+   "Soybean",
+   "Coconut and betel nut",
+   "Meghna hilsa",
+   "Buffalo curd"
+  ],
+  "places": [
+   "majuchowdhurir-hat",
+   "dalal-bazar-zamindar-bari",
+   "raipur-jiner-masjid"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 126.9,
+   "bus_hours": [
+    3.5,
+    4.5
+   ],
+   "bus_fare_from_bdt": 437,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/lakshmipur"
+ },
+ {
+  "id": 23,
+  "slug": "noakhali",
+  "name_en": "Noakhali",
+  "name_bn": "নোয়াখালী",
+  "division": "chattogram",
+  "lat": 22.811,
+  "lng": 91.1241,
+  "famous_for_bn": [
+   "মহিষের দুধের দই",
+   "নারিকেল ও সুপারি",
+   "খোলাজা পিঠা"
+  ],
+  "famous_for_en": [
+   "Buffalo-milk curd",
+   "Coconut and betel nut",
+   "Kholaja pitha"
+  ],
+  "places": [
+   "nijhum-dwip",
+   "bajra-shahi-mosque",
+   "gandhi-ashram-joyag"
+  ],
+  "place_count": 3,
+  "community_photo_count": 6,
+  "from_dhaka": {
+   "road_km": 151.3,
+   "bus_hours": [
+    4,
+    5.5
+   ],
+   "bus_fare_from_bdt": 401,
+   "direct_trains": 1
+  },
+  "url": "https://unseenbd.com/district/noakhali"
+ },
+ {
+  "id": 24,
+  "slug": "rangamati",
+  "name_en": "Rangamati",
+  "name_bn": "রাঙ্গামাটি",
+  "division": "chattogram",
+  "lat": 22.83,
+  "lng": 92.2795,
+  "famous_for_bn": [
+   "পাহাড়ি তাঁতের কাপড়",
+   "বাঁশ-বেতের হস্তশিল্প",
+   "কাপ্তাই হ্রদের মাছ",
+   "ব্যাম্বু চিকেন"
+  ],
+  "famous_for_en": [
+   "Handloom hill textiles",
+   "Bamboo and cane crafts",
+   "Kaptai Lake fish",
+   "Bamboo chicken"
+  ],
+  "places": [
+   "kaptai-lake",
+   "sajek-valley",
+   "shuvolong-waterfall",
+   "rajban-vihara",
+   "dhuppani-waterfall"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 285.7,
+   "bus_hours": [
+    8,
+    10
+   ],
+   "bus_fare_from_bdt": 749,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/rangamati"
+ },
+ {
+  "id": 25,
+  "slug": "habiganj",
+  "name_en": "Habiganj",
+  "name_bn": "হবিগঞ্জ",
+  "division": "sylhet",
+  "lat": 24.3681,
+  "lng": 91.4303,
+  "famous_for_bn": [
+   "চা",
+   "হাওরের তাজা মাছ",
+   "পাহাড়ি লেবু ও আনারস"
+  ],
+  "famous_for_en": [
+   "Tea",
+   "Fresh haor fish",
+   "Hill lemons and pineapple"
+  ],
+  "places": [
+   "satchhari-national-park",
+   "rema-kalenga-wildlife-sanctuary",
+   "bithangal-akhra"
+  ],
+  "place_count": 3,
+  "community_photo_count": 4,
+  "from_dhaka": {
+   "road_km": 144.9,
+   "bus_hours": [
+    3.5,
+    5
+   ],
+   "bus_fare_from_bdt": 404,
+   "direct_trains": 4
+  },
+  "url": "https://unseenbd.com/district/habiganj"
+ },
+ {
+  "id": 26,
+  "slug": "moulvibazar",
+  "name_en": "Moulvibazar",
+  "name_bn": "মৌলভীবাজার",
+  "division": "sylhet",
+  "lat": 24.4804,
+  "lng": 91.9154,
+  "famous_for_bn": [
+   "চা",
+   "সাত রঙের চা",
+   "মণিপুরি তাঁতের শাড়ি ও চাদর",
+   "আগর-আতর"
+  ],
+  "famous_for_en": [
+   "Tea",
+   "Seven-layer tea",
+   "Manipuri handloom saris and shawls",
+   "Agar attar (oud perfume)"
+  ],
+  "places": [
+   "lawachara-national-park",
+   "madhabkunda-waterfall",
+   "sreemangal-tea-gardens",
+   "hum-hum-waterfall",
+   "baikka-beel",
+   "madhabpur-lake",
+   "hakaluki-haor"
+  ],
+  "place_count": 7,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 196.8,
+   "bus_hours": [
+    5,
+    7.5
+   ],
+   "bus_fare_from_bdt": 493,
+   "direct_trains": 4
+  },
+  "url": "https://unseenbd.com/district/moulvibazar"
+ },
+ {
+  "id": 27,
+  "slug": "sunamganj",
+  "name_en": "Sunamganj",
+  "name_bn": "সুনামগঞ্জ",
+  "division": "sylhet",
+  "lat": 24.9386,
+  "lng": 91.346,
+  "famous_for_bn": [
+   "হাওরের তাজা মাছ",
+   "হাওরের শুঁটকি",
+   "বোরো ধানের চাল"
+  ],
+  "famous_for_en": [
+   "Fresh haor fish",
+   "Haor dried fish",
+   "Boro rice"
+  ],
+  "places": [
+   "tanguar-haor",
+   "niladri-lake",
+   "jadukata-river-barek-tila",
+   "shimul-bagan-tahirpur",
+   "hason-raja-museum"
+  ],
+  "place_count": 5,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 252.4,
+   "bus_hours": [
+    6.5,
+    8
+   ],
+   "bus_fare_from_bdt": 746,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/sunamganj"
+ },
+ {
+  "id": 28,
+  "slug": "sylhet",
+  "name_en": "Sylhet",
+  "name_bn": "সিলেট",
+  "division": "sylhet",
+  "lat": 24.9192,
+  "lng": 91.9873,
+  "famous_for_bn": [
+   "সাতকরা",
+   "চা",
+   "শীতলপাটি",
+   "মণিপুরি তাঁতের কাপড়"
+  ],
+  "famous_for_en": [
+   "Satkora citrus",
+   "Tea",
+   "Shitalpati (cool mats)",
+   "Manipuri handloom cloth"
+  ],
+  "places": [
+   "ratargul-swamp-forest",
+   "jaflong",
+   "bichanakandi",
+   "shah-jalal-dargah",
+   "dibir-haor-shapla-beel",
+   "bholaganj-sada-pathor",
+   "lalakhal-sari-river",
+   "panthumai-waterfall"
+  ],
+  "place_count": 8,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 227.2,
+   "bus_hours": [
+    5.5,
+    7
+   ],
+   "bus_fare_from_bdt": 624,
+   "direct_trains": 4
+  },
+  "url": "https://unseenbd.com/district/sylhet"
+ },
+ {
+  "id": 29,
+  "slug": "barguna",
+  "name_en": "Barguna",
+  "name_bn": "বরগুনা",
+  "division": "barishal",
+  "lat": 22.1412,
+  "lng": 90.1207,
+  "famous_for_bn": [
+   "ইলিশ",
+   "শুঁটকি",
+   "তরমুজ"
+  ],
+  "famous_for_en": [
+   "Hilsa",
+   "Dried fish",
+   "Watermelon"
+  ],
+  "places": [
+   "tengragiri-forest-taltali",
+   "haringhata-forest-laldia-beach",
+   "bibichini-shahi-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 230.4,
+   "bus_hours": [
+    6,
+    8
+   ],
+   "bus_fare_from_bdt": 677,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/barguna"
+ },
+ {
+  "id": 30,
+  "slug": "barishal",
+  "name_en": "Barishal",
+  "name_bn": "বরিশাল",
+  "division": "barishal",
+  "lat": 22.8017,
+  "lng": 90.3074,
+  "famous_for_bn": [
+   "আমড়া",
+   "ইলিশ",
+   "বালাম চাল",
+   "গৌরনদীর দই"
+  ],
+  "famous_for_en": [
+   "Hog plum (amra)",
+   "Hilsa",
+   "Balam rice",
+   "Gournadi curd"
+  ],
+  "places": [
+   "durga-sagar-dighi",
+   "guthia-baitul-aman-mosque",
+   "satla-shapla-beel",
+   "oxford-mission-church-barishal",
+   "lakutia-zamindar-bari"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 157,
+   "bus_hours": [
+    3.5,
+    5.5
+   ],
+   "bus_fare_from_bdt": 493,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/barishal"
+ },
+ {
+  "id": 31,
+  "slug": "bhola",
+  "name_en": "Bhola",
+  "name_bn": "ভোলা",
+  "division": "barishal",
+  "lat": 22.3727,
+  "lng": 90.709,
+  "famous_for_bn": [
+   "মহিষের দুধের কাঁচা দই",
+   "ইলিশ",
+   "নারকেল",
+   "সুপারি"
+  ],
+  "famous_for_en": [
+   "Buffalo-milk curd",
+   "Hilsa",
+   "Coconut",
+   "Betel nut"
+  ],
+  "places": [
+   "char-kukri-mukri",
+   "monpura-island",
+   "tarua-beach-dhal-char"
+  ],
+  "place_count": 3,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 197.4,
+   "bus_hours": [
+    5,
+    7
+   ],
+   "bus_fare_from_bdt": null,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/bhola"
+ },
+ {
+  "id": 32,
+  "slug": "jhalokathi",
+  "name_en": "Jhalokathi",
+  "name_bn": "ঝালকাঠি",
+  "division": "barishal",
+  "lat": 22.5728,
+  "lng": 90.1839,
+  "famous_for_bn": [
+   "শীতলপাটি",
+   "ঝালকাঠির গামছা",
+   "পেয়ারা",
+   "আমড়া"
+  ],
+  "famous_for_en": [
+   "Shital pati mats",
+   "Jhalokathi gamchha",
+   "Guava",
+   "Hog plum (amra)"
+  ],
+  "places": [
+   "bhimruli-floating-guava-market",
+   "kirtipasha-zamindar-bari",
+   "gabkhan-channel-bridge"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 171.7,
+   "bus_hours": [
+    4.5,
+    6.5
+   ],
+   "bus_fare_from_bdt": 700,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/jhalokathi"
+ },
+ {
+  "id": 33,
+  "slug": "patuakhali",
+  "name_en": "Patuakhali",
+  "name_bn": "পটুয়াখালী",
+  "division": "barishal",
+  "lat": 22.3139,
+  "lng": 90.4084,
+  "famous_for_bn": [
+   "ইলিশ",
+   "শুঁটকি",
+   "রাখাইন তাঁতের কাপড়",
+   "তরমুজ"
+  ],
+  "famous_for_en": [
+   "Hilsa",
+   "Dried fish",
+   "Rakhine handloom cloth",
+   "Watermelon"
+  ],
+  "places": [
+   "kuakata-beach",
+   "gangamati-char-kuakata",
+   "misripara-seema-buddhist-temple",
+   "sonar-char-rangabali",
+   "majidbaria-shahi-mosque"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 195,
+   "bus_hours": [
+    5,
+    7
+   ],
+   "bus_fare_from_bdt": 605,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/patuakhali"
+ },
+ {
+  "id": 34,
+  "slug": "pirojpur",
+  "name_en": "Pirojpur",
+  "name_bn": "পিরোজপুর",
+  "division": "barishal",
+  "lat": 22.5338,
+  "lng": 89.9932,
+  "famous_for_bn": [
+   "পেয়ারা",
+   "আমড়া",
+   "কাঠের নৌকা",
+   "সুপারি"
+  ],
+  "famous_for_en": [
+   "Guava",
+   "Hog plum (amra)",
+   "Wooden boats",
+   "Betel nut"
+  ],
+  "places": [
+   "atghar-kuriana-guava-orchards",
+   "rayerkathi-zamindar-bari",
+   "momin-mosque-mathbaria"
+  ],
+  "place_count": 3,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 187.4,
+   "bus_hours": [
+    3.5,
+    5
+   ],
+   "bus_fare_from_bdt": 566,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/pirojpur"
+ },
+ {
+  "id": 35,
+  "slug": "bagerhat",
+  "name_en": "Bagerhat",
+  "name_bn": "বাগেরহাট",
+  "division": "khulna",
+  "lat": 22.522,
+  "lng": 89.7599,
+  "famous_for_bn": [
+   "চিংড়ি",
+   "সুপারি",
+   "নারকেল",
+   "সুন্দরবনের মধু"
+  ],
+  "famous_for_en": [
+   "Shrimp",
+   "Betel nut",
+   "Coconut",
+   "Sundarbans honey"
+  ],
+  "places": [
+   "sixty-dome-mosque",
+   "khan-jahan-ali-mazar",
+   "katka-sundarbans",
+   "dublar-char",
+   "kodla-math"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 182.6,
+   "bus_hours": [
+    4.5,
+    8
+   ],
+   "bus_fare_from_bdt": 650,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/bagerhat"
+ },
+ {
+  "id": 36,
+  "slug": "chuadanga",
+  "name_en": "Chuadanga",
+  "name_bn": "চুয়াডাঙ্গা",
+  "division": "khulna",
+  "lat": 23.6083,
+  "lng": 88.848,
+  "famous_for_bn": [
+   "খেজুরের গুড়",
+   "পান",
+   "ভুট্টা",
+   "ব্ল্যাক বেঙ্গল ছাগল"
+  ],
+  "famous_for_en": [
+   "Date palm molasses",
+   "Betel leaf",
+   "Maize",
+   "Black Bengal goat"
+  ],
+  "places": [
+   "carew-and-co-darshana",
+   "atkobor-memorial",
+   "gholdari-shahi-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 218.3,
+   "bus_hours": [
+    5.5,
+    7
+   ],
+   "bus_fare_from_bdt": 592,
+   "direct_trains": 3
+  },
+  "url": "https://unseenbd.com/district/chuadanga"
+ },
+ {
+  "id": 37,
+  "slug": "jashore",
+  "name_en": "Jashore",
+  "name_bn": "যশোর",
+  "division": "khulna",
+  "lat": 23.0898,
+  "lng": 89.1747,
+  "famous_for_bn": [
+   "খেজুরের গুড় ও পাটালি",
+   "জামতলার মিষ্টি",
+   "নকশিকাঁথা",
+   "গদখালীর ফুল"
+  ],
+  "famous_for_en": [
+   "Date palm molasses and patali",
+   "Jamtala sweets",
+   "Nakshi kantha embroidery",
+   "Gadkhali flowers"
+  ],
+  "places": [
+   "sagardari-madhupalli",
+   "gadkhali-flower-fields",
+   "eleven-shiva-temples-abhaynagar"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 169.7,
+   "bus_hours": [
+    4.5,
+    7
+   ],
+   "bus_fare_from_bdt": 582,
+   "direct_trains": 5
+  },
+  "url": "https://unseenbd.com/district/jashore"
+ },
+ {
+  "id": 38,
+  "slug": "jhenaidah",
+  "name_en": "Jhenaidah",
+  "name_bn": "ঝিনাইদহ",
+  "division": "khulna",
+  "lat": 23.4891,
+  "lng": 89.0874,
+  "famous_for_bn": [
+   "কলা",
+   "পান",
+   "খেজুরের গুড়"
+  ],
+  "famous_for_en": [
+   "Bananas",
+   "Betel leaf",
+   "Date palm molasses"
+  ],
+  "places": [
+   "mallikpur-banyan-tree",
+   "barobazar-mosque-group",
+   "miyar-dalan"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 181.7,
+   "bus_hours": [
+    5,
+    7
+   ],
+   "bus_fare_from_bdt": 534,
+   "direct_trains": 3
+  },
+  "url": "https://unseenbd.com/district/jhenaidah"
+ },
+ {
+  "id": 39,
+  "slug": "khulna",
+  "name_en": "Khulna",
+  "name_bn": "খুলনা",
+  "division": "khulna",
+  "lat": 22.5856,
+  "lng": 89.4571,
+  "famous_for_bn": [
+   "চুইঝালের মাংস",
+   "গলদা চিংড়ি",
+   "সুন্দরবনের মধু",
+   "নারকেল"
+  ],
+  "famous_for_en": [
+   "Meat cooked with chui jhal",
+   "Giant freshwater prawn",
+   "Sundarbans honey",
+   "Coconut"
+  ],
+  "places": [
+   "karamjal-sundarbans",
+   "rupsha-khan-jahan-ali-bridge",
+   "dakshindihi-rabindra-complex",
+   "masjidkur-mosque",
+   "bhutiar-padma-beel"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 184.6,
+   "bus_hours": [
+    4.5,
+    6.5
+   ],
+   "bus_fare_from_bdt": 576,
+   "direct_trains": 3
+  },
+  "url": "https://unseenbd.com/district/khulna"
+ },
+ {
+  "id": 40,
+  "slug": "kushtia",
+  "name_en": "Kushtia",
+  "name_bn": "কুষ্টিয়া",
+  "division": "khulna",
+  "lat": 23.9229,
+  "lng": 89.022,
+  "famous_for_bn": [
+   "তিলের খাজা",
+   "কুলফি মালাই",
+   "কুমারখালীর তাঁতের কাপড়"
+  ],
+  "famous_for_en": [
+   "Tiler khaja (sesame brittle)",
+   "Kulfi malai",
+   "Kumarkhali handloom cloth"
+  ],
+  "places": [
+   "lalon-shah-shrine-cheuriya",
+   "shilaidaha-kuthibari",
+   "tagore-lodge-kushtia",
+   "mir-mosharraf-hossain-homestead",
+   "jhaudia-shahi-mosque"
+  ],
+  "place_count": 5,
+  "community_photo_count": 2,
+  "from_dhaka": {
+   "road_km": 173.1,
+   "bus_hours": [
+    5,
+    6.5
+   ],
+   "bus_fare_from_bdt": 700,
+   "direct_trains": 4
+  },
+  "url": "https://unseenbd.com/district/kushtia"
+ },
+ {
+  "id": 41,
+  "slug": "magura",
+  "name_en": "Magura",
+  "name_bn": "মাগুরা",
+  "division": "khulna",
+  "lat": 23.4432,
+  "lng": 89.4337,
+  "famous_for_bn": [
+   "হাজরাপুরী লিচু",
+   "খেজুরের গুড়",
+   "পাট"
+  ],
+  "famous_for_en": [
+   "Hazrapuri lychee",
+   "Date palm molasses",
+   "Jute"
+  ],
+  "places": [
+   "raja-sitaram-roy-palace",
+   "siddheshwari-math-magura",
+   "farrukh-ahmad-home-majhail"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 152.8,
+   "bus_hours": [
+    4.5,
+    6
+   ],
+   "bus_fare_from_bdt": 445,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/magura"
+ },
+ {
+  "id": 42,
+  "slug": "meherpur",
+  "name_en": "Meherpur",
+  "name_bn": "মেহেরপুর",
+  "division": "khulna",
+  "lat": 23.794,
+  "lng": 88.7071,
+  "famous_for_bn": [
+   "সাবিত্রী মিষ্টি",
+   "রসকদম্ব",
+   "হিমসাগর আম"
+  ],
+  "famous_for_en": [
+   "Sabitri sweet",
+   "Roshkodombo sweet",
+   "Himsagar mango"
+  ],
+  "places": [
+   "mujibnagar-memorial-complex",
+   "amjhupi-neelkuthi",
+   "bhatpara-neelkuthi"
+  ],
+  "place_count": 3,
+  "community_photo_count": 2,
+  "from_dhaka": {
+   "road_km": 233.5,
+   "bus_hours": [
+    6,
+    8
+   ],
+   "bus_fare_from_bdt": 671,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/meherpur"
+ },
+ {
+  "id": 43,
+  "slug": "narail",
+  "name_en": "Narail",
+  "name_bn": "নড়াইল",
+  "division": "khulna",
+  "lat": 23.1301,
+  "lng": 89.5801,
+  "famous_for_bn": [
+   "প্যাড়া সন্দেশ",
+   "খেজুরের গুড়",
+   "বিলের দেশি মাছ"
+  ],
+  "famous_for_en": [
+   "Pera sandesh",
+   "Date palm molasses",
+   "Wetland fish"
+  ],
+  "places": [
+   "sm-sultan-memorial-complex",
+   "chitra-river-bandha-ghat",
+   "noor-mohammad-sheikh-memorial-museum"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 135.6,
+   "bus_hours": [
+    3.5,
+    5
+   ],
+   "bus_fare_from_bdt": 409,
+   "direct_trains": 2
+  },
+  "url": "https://unseenbd.com/district/narail"
+ },
+ {
+  "id": 44,
+  "slug": "satkhira",
+  "name_en": "Satkhira",
+  "name_bn": "সাতক্ষীরা",
+  "division": "khulna",
+  "lat": 22.5129,
+  "lng": 89.1198,
+  "famous_for_bn": [
+   "সন্দেশ",
+   "হিমসাগর ও গোবিন্দভোগ আম",
+   "বাগদা চিংড়ি",
+   "কুল"
+  ],
+  "famous_for_en": [
+   "Sandesh",
+   "Himsagar and Gobindabhog mangoes",
+   "Tiger shrimp",
+   "Jujube"
+  ],
+  "places": [
+   "kalagachhia-eco-tourism-centre",
+   "mandarbaria-beach",
+   "jessoreshwari-kali-temple",
+   "nalta-sharif",
+   "tetulia-jame-mosque-tala"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 237.3,
+   "bus_hours": [
+    6,
+    8
+   ],
+   "bus_fare_from_bdt": 686,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/satkhira"
+ },
+ {
+  "id": 45,
+  "slug": "bogura",
+  "name_en": "Bogura",
+  "name_bn": "বগুড়া",
+  "division": "rajshahi",
+  "lat": 24.8245,
+  "lng": 89.3788,
+  "famous_for_bn": [
+   "বগুড়ার দই",
+   "ক্ষীরসা",
+   "মহাস্থানের কটকটি",
+   "লাল মরিচ"
+  ],
+  "famous_for_en": [
+   "Bogura doi (sweet yogurt)",
+   "Khirsa",
+   "Mahasthan kotkoti",
+   "Red chilli"
+  ],
+  "places": [
+   "mahasthangarh",
+   "gokul-medh-behular-basar-ghar",
+   "vasu-vihara",
+   "kherua-mosque-sherpur",
+   "sariakandi-kalitola-jamuna-ghat"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 197.8,
+   "bus_hours": [
+    4.5,
+    6.5
+   ],
+   "bus_fare_from_bdt": 486,
+   "direct_trains": 9
+  },
+  "url": "https://unseenbd.com/district/bogura"
+ },
+ {
+  "id": 46,
+  "slug": "joypurhat",
+  "name_en": "Joypurhat",
+  "name_bn": "জয়পুরহাট",
+  "division": "rajshahi",
+  "lat": 25.0927,
+  "lng": 89.0829,
+  "famous_for_bn": [
+   "লতিরাজ কচু",
+   "আলু",
+   "সোনালি মুরগি"
+  ],
+  "famous_for_en": [
+   "Latiraj taro stolons",
+   "Potatoes",
+   "Sonali chicken"
+  ],
+  "places": [
+   "baro-shibaloy-temple",
+   "nandail-dighi",
+   "lakma-rajbari"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 245.4,
+   "bus_hours": [
+    6,
+    8.5
+   ],
+   "bus_fare_from_bdt": 621,
+   "direct_trains": 6
+  },
+  "url": "https://unseenbd.com/district/joypurhat"
+ },
+ {
+  "id": 47,
+  "slug": "naogaon",
+  "name_en": "Naogaon",
+  "name_bn": "নওগাঁ",
+  "division": "rajshahi",
+  "lat": 24.8996,
+  "lng": 88.7516,
+  "famous_for_bn": [
+   "প্যারা সন্দেশ",
+   "চাল",
+   "নাক ফজলি আম"
+  ],
+  "famous_for_en": [
+   "Pera sandesh",
+   "Rice",
+   "Nak Fazli mango"
+  ],
+  "places": [
+   "paharpur-buddhist-vihara",
+   "kusumba-mosque",
+   "patisar-rabindra-kacharibari",
+   "altadighi-national-park",
+   "dibar-dighi"
+  ],
+  "place_count": 5,
+  "community_photo_count": 3,
+  "from_dhaka": {
+   "road_km": 247.2,
+   "bus_hours": [
+    6,
+    7
+   ],
+   "bus_fare_from_bdt": 611,
+   "direct_trains": 2
+  },
+  "url": "https://unseenbd.com/district/naogaon"
+ },
+ {
+  "id": 48,
+  "slug": "natore",
+  "name_en": "Natore",
+  "name_bn": "নাটোর",
+  "division": "rajshahi",
+  "lat": 24.3803,
+  "lng": 89.0868,
+  "famous_for_bn": [
+   "কাঁচাগোল্লা",
+   "চলনবিলের মাছ",
+   "খোলাবাড়িয়ার ঔষধি গাছ"
+  ],
+  "famous_for_en": [
+   "Kachagolla",
+   "Chalan Beel fish",
+   "Medicinal plants of Kholabaria"
+  ],
+  "places": [
+   "uttara-ganabhaban-dighapatia",
+   "natore-rajbari-rani-bhabani",
+   "halti-beel"
+  ],
+  "place_count": 3,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 209.1,
+   "bus_hours": [
+    5,
+    6.5
+   ],
+   "bus_fare_from_bdt": 515,
+   "direct_trains": 12
+  },
+  "url": "https://unseenbd.com/district/natore"
+ },
+ {
+  "id": 49,
+  "slug": "chapainawabganj",
+  "name_en": "Chapainawabganj",
+  "name_bn": "চাঁপাইনবাবগঞ্জ",
+  "division": "rajshahi",
+  "lat": 24.7156,
+  "lng": 88.2641,
+  "famous_for_bn": [
+   "ক্ষীরশাপাতি আম",
+   "কালাইয়ের রুটি",
+   "শিবগঞ্জের আদি চমচম",
+   "নকশিকাঁথা"
+  ],
+  "famous_for_en": [
+   "Khirsapat mango",
+   "Kalai ruti (black gram flatbread)",
+   "Adi chomchom of Shibganj",
+   "Nakshi kantha"
+  ],
+  "places": [
+   "chhoto-sona-mosque",
+   "darasbari-mosque-madrasa",
+   "kansat-mango-market"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 300,
+   "bus_hours": [
+    6.5,
+    8
+   ],
+   "bus_fare_from_bdt": 731,
+   "direct_trains": 1
+  },
+  "url": "https://unseenbd.com/district/chapainawabganj"
+ },
+ {
+  "id": 50,
+  "slug": "pabna",
+  "name_en": "Pabna",
+  "name_bn": "পাবনা",
+  "division": "rajshahi",
+  "lat": 24.0532,
+  "lng": 89.3853,
+  "famous_for_bn": [
+   "পাবনার ঘি",
+   "তাঁতের শাড়ি ও লুঙ্গি",
+   "ঈশ্বরদীর লিচু"
+  ],
+  "famous_for_en": [
+   "Pabna ghee",
+   "Handloom saris and lungis",
+   "Ishwardi lychees"
+  ],
+  "places": [
+   "hardinge-bridge-paksey",
+   "pabna-jor-bangla-temple",
+   "chatmohar-shahi-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 211.2,
+   "bus_hours": [
+    5,
+    7
+   ],
+   "bus_fare_from_bdt": 563,
+   "direct_trains": 9
+  },
+  "url": "https://unseenbd.com/district/pabna"
+ },
+ {
+  "id": 51,
+  "slug": "rajshahi",
+  "name_en": "Rajshahi",
+  "name_bn": "রাজশাহী",
+  "division": "rajshahi",
+  "lat": 24.4658,
+  "lng": 88.6514,
+  "famous_for_bn": [
+   "রাজশাহী সিল্ক",
+   "ফজলি আম",
+   "কালাইয়ের রুটি",
+   "মিষ্টি পান"
+  ],
+  "famous_for_en": [
+   "Rajshahi silk",
+   "Fazli mango",
+   "Kalai ruti (black gram flatbread)",
+   "Sweet betel leaf"
+  ],
+  "places": [
+   "varendra-research-museum",
+   "puthia-temple-complex",
+   "bagha-mosque",
+   "rajshahi-padma-riverside-t-bandh",
+   "kismat-maria-mosque"
+  ],
+  "place_count": 5,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 253.7,
+   "bus_hours": [
+    5.5,
+    7
+   ],
+   "bus_fare_from_bdt": 621,
+   "direct_trains": 5
+  },
+  "url": "https://unseenbd.com/district/rajshahi"
+ },
+ {
+  "id": 52,
+  "slug": "sirajganj",
+  "name_en": "Sirajganj",
+  "name_bn": "সিরাজগঞ্জ",
+  "division": "rajshahi",
+  "lat": 24.3916,
+  "lng": 89.5996,
+  "famous_for_bn": [
+   "তাঁতের শাড়ি ও লুঙ্গি",
+   "সলপের ঘোল",
+   "শাহজাদপুরের দুধ ও ঘি"
+  ],
+  "famous_for_en": [
+   "Handloom saris and lungis",
+   "Ghol (buttermilk) of Solop",
+   "Milk and ghee of Shahjadpur"
+  ],
+  "places": [
+   "shahjadpur-rabindra-kacharibari",
+   "hatikumrul-nabaratna-temple",
+   "chalan-beel-tarash"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 134.3,
+   "bus_hours": [
+    3,
+    4
+   ],
+   "bus_fare_from_bdt": 335,
+   "direct_trains": 8
+  },
+  "url": "https://unseenbd.com/district/sirajganj"
+ },
+ {
+  "id": 53,
+  "slug": "dinajpur",
+  "name_en": "Dinajpur",
+  "name_bn": "দিনাজপুর",
+  "division": "rangpur",
+  "lat": 25.6299,
+  "lng": 88.7869,
+  "famous_for_bn": [
+   "বেদানা লিচু",
+   "কাটারিভোগ চাল",
+   "চিড়া",
+   "পাঁপড়"
+  ],
+  "famous_for_en": [
+   "Bedana lychee",
+   "Kataribhog rice",
+   "Chira (flattened rice)",
+   "Papad"
+  ],
+  "places": [
+   "kantajew-temple",
+   "ramsagar-dighi",
+   "dinajpur-rajbari",
+   "nayabad-mosque",
+   "singra-national-park-birganj",
+   "sitakot-vihara-dinajpur"
+  ],
+  "place_count": 6,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 334.3,
+   "bus_hours": [
+    7,
+    10
+   ],
+   "bus_fare_from_bdt": 820,
+   "direct_trains": 6
+  },
+  "url": "https://unseenbd.com/district/dinajpur"
+ },
+ {
+  "id": 54,
+  "slug": "gaibandha",
+  "name_en": "Gaibandha",
+  "name_bn": "গাইবান্ধা",
+  "division": "rangpur",
+  "lat": 25.2987,
+  "lng": 89.5059,
+  "famous_for_bn": [
+   "রসমঞ্জরী",
+   "চরের মরিচ",
+   "ভুট্টা"
+  ],
+  "famous_for_en": [
+   "Roshomonjuri",
+   "Chillies from the chars",
+   "Maize"
+  ],
+  "places": [
+   "balashi-ghat",
+   "bardhan-kuthi-gobindaganj",
+   "mirer-bagan-shah-sultan-gazi-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 2,
+  "from_dhaka": {
+   "road_km": 263.1,
+   "bus_hours": [
+    6,
+    7.5
+   ],
+   "bus_fare_from_bdt": 671,
+   "direct_trains": 3
+  },
+  "url": "https://unseenbd.com/district/gaibandha"
+ },
+ {
+  "id": 55,
+  "slug": "kurigram",
+  "name_en": "Kurigram",
+  "name_bn": "কুড়িগ্রাম",
+  "division": "rangpur",
+  "lat": 25.7907,
+  "lng": 89.6953,
+  "famous_for_bn": [
+   "উলিপুরের ক্ষীরমোহন",
+   "সিদল ভর্তা",
+   "চরের চিনাবাদাম"
+  ],
+  "famous_for_en": [
+   "Khirmohon of Ulipur",
+   "Sidol bhorta (fermented fish mash)",
+   "Peanuts from the chars"
+  ],
+  "places": [
+   "chilmari-river-port",
+   "ulipur-munshibari",
+   "chandamari-mosque-rajarhat"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 341.5,
+   "bus_hours": [
+    8,
+    9
+   ],
+   "bus_fare_from_bdt": 875,
+   "direct_trains": 1
+  },
+  "url": "https://unseenbd.com/district/kurigram"
+ },
+ {
+  "id": 56,
+  "slug": "lalmonirhat",
+  "name_en": "Lalmonirhat",
+  "name_bn": "লালমনিরহাট",
+  "division": "rangpur",
+  "lat": 26.0574,
+  "lng": 89.2409,
+  "famous_for_bn": [
+   "তিস্তার বৈরালি মাছ",
+   "ভুট্টা",
+   "সুপারি"
+  ],
+  "famous_for_en": [
+   "Boirali fish from the Teesta",
+   "Maize",
+   "Betel nut"
+  ],
+  "places": [
+   "tin-bigha-corridor-dahagram",
+   "teesta-barrage-doani",
+   "harano-masjid-ramdas"
+  ],
+  "place_count": 3,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 339.1,
+   "bus_hours": [
+    8,
+    10
+   ],
+   "bus_fare_from_bdt": 868,
+   "direct_trains": 2
+  },
+  "url": "https://unseenbd.com/district/lalmonirhat"
+ },
+ {
+  "id": 57,
+  "slug": "nilphamari",
+  "name_en": "Nilphamari",
+  "name_bn": "নীলফামারী",
+  "division": "rangpur",
+  "lat": 26.0247,
+  "lng": 88.9295,
+  "famous_for_bn": [
+   "ডোমারের সন্দেশ",
+   "সৈয়দপুরের কাবাব ও বিরিয়ানি",
+   "আগাম আলু"
+  ],
+  "famous_for_en": [
+   "Sandesh of Domar",
+   "Kebabs and biryani of Saidpur",
+   "Early-season potatoes"
+  ],
+  "places": [
+   "nilsagar-dighi",
+   "chini-mosque-saidpur",
+   "dharmapaler-garh-jaldhaka"
+  ],
+  "place_count": 3,
+  "community_photo_count": 2,
+  "from_dhaka": {
+   "road_km": 347.8,
+   "bus_hours": [
+    7.5,
+    9
+   ],
+   "bus_fare_from_bdt": 887,
+   "direct_trains": 2
+  },
+  "url": "https://unseenbd.com/district/nilphamari"
+ },
+ {
+  "id": 58,
+  "slug": "panchagarh",
+  "name_en": "Panchagarh",
+  "name_bn": "পঞ্চগড়",
+  "division": "rangpur",
+  "lat": 26.2851,
+  "lng": 88.5755,
+  "famous_for_bn": [
+   "সমতলের চা",
+   "মহানন্দার নুড়ি পাথর",
+   "টমেটো"
+  ],
+  "famous_for_en": [
+   "Flat-land tea",
+   "River pebbles from the Mahananda",
+   "Tomatoes"
+  ],
+  "places": [
+   "tetulia-banglabandha-kanchenjunga-view",
+   "tetulia-flatland-tea-gardens",
+   "bhitargarh-fort-city"
+  ],
+  "place_count": 3,
+  "community_photo_count": 2,
+  "from_dhaka": {
+   "road_km": 412,
+   "bus_hours": [
+    9.5,
+    11
+   ],
+   "bus_fare_from_bdt": 1079,
+   "direct_trains": 3
+  },
+  "url": "https://unseenbd.com/district/panchagarh"
+ },
+ {
+  "id": 59,
+  "slug": "rangpur",
+  "name_en": "Rangpur",
+  "name_bn": "রংপুর",
+  "division": "rangpur",
+  "lat": 25.6497,
+  "lng": 89.2368,
+  "famous_for_bn": [
+   "শতরঞ্জি",
+   "হাঁড়িভাঙ্গা আম",
+   "শোলকা ও সিদল"
+  ],
+  "famous_for_en": [
+   "Shataranji (woven rugs)",
+   "Haribhanga mango",
+   "Sholka and sidol (regional dishes)"
+  ],
+  "places": [
+   "tajhat-palace",
+   "pairaband-begum-rokeya-birthplace",
+   "mithapukur-boro-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 304.8,
+   "bus_hours": [
+    7,
+    8.5
+   ],
+   "bus_fare_from_bdt": 767,
+   "direct_trains": 4
+  },
+  "url": "https://unseenbd.com/district/rangpur"
+ },
+ {
+  "id": 60,
+  "slug": "thakurgaon",
+  "name_en": "Thakurgaon",
+  "name_bn": "ঠাকুরগাঁও",
+  "division": "rangpur",
+  "lat": 25.9906,
+  "lng": 88.3456,
+  "famous_for_bn": [
+   "সূর্যপুরী আম",
+   "গম",
+   "আলু"
+  ],
+  "famous_for_en": [
+   "Suryapuri mango",
+   "Wheat",
+   "Potatoes"
+  ],
+  "places": [
+   "baliadangi-suryapuri-mango-tree",
+   "jamalpur-zamindarbari-jame-mosque-thakurgaon",
+   "raja-tonkonath-rajbari-ranishankail"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 391.6,
+   "bus_hours": [
+    8,
+    10.5
+   ],
+   "bus_fare_from_bdt": 957,
+   "direct_trains": 3
+  },
+  "url": "https://unseenbd.com/district/thakurgaon"
+ },
+ {
+  "id": 61,
+  "slug": "jamalpur",
+  "name_en": "Jamalpur",
+  "name_bn": "জামালপুর",
+  "division": "mymensingh",
+  "lat": 24.9732,
+  "lng": 89.8463,
+  "famous_for_bn": [
+   "নকশিকাঁথা",
+   "ইসলামপুরের কাঁসার বাসন",
+   "পিঠালি (ম্যান্দা)"
+  ],
+  "famous_for_en": [
+   "Nakshi kantha",
+   "Bell-metal ware of Islampur",
+   "Pithali (meat cooked with rice flour)"
+  ],
+  "places": [
+   "lauchapra-bakshiganj",
+   "gandhi-ashram-melandah",
+   "dayamoyee-temple-jamalpur"
+  ],
+  "place_count": 3,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 175.5,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 415,
+   "direct_trains": 5
+  },
+  "url": "https://unseenbd.com/district/jamalpur"
+ },
+ {
+  "id": 62,
+  "slug": "mymensingh",
+  "name_en": "Mymensingh",
+  "name_bn": "ময়মনসিংহ",
+  "division": "mymensingh",
+  "lat": 24.6991,
+  "lng": 90.4286,
+  "famous_for_bn": [
+   "মুক্তাগাছার মণ্ডা",
+   "চ্যাপা শুঁটকির ভর্তা",
+   "ফুলবাড়িয়ার লাল চিনি"
+  ],
+  "famous_for_en": [
+   "Monda of Muktagacha",
+   "Chepa shutki bhorta (fermented dried fish mash)",
+   "Red sugar of Fulbaria"
+  ],
+  "places": [
+   "shashi-lodge",
+   "zainul-abedin-museum-brahmaputra",
+   "muktagacha-zamindar-bari",
+   "alexander-castle-mymensingh",
+   "gabrakhali-garo-hills-haluaghat"
+  ],
+  "place_count": 5,
+  "community_photo_count": 0,
+  "from_dhaka": {
+   "road_km": 123.7,
+   "bus_hours": [
+    2.5,
+    3.5
+   ],
+   "bus_fare_from_bdt": 278,
+   "direct_trains": 7
+  },
+  "url": "https://unseenbd.com/district/mymensingh"
+ },
+ {
+  "id": 63,
+  "slug": "netrokona",
+  "name_en": "Netrokona",
+  "name_bn": "নেত্রকোনা",
+  "division": "mymensingh",
+  "lat": 24.8708,
+  "lng": 90.8446,
+  "famous_for_bn": [
+   "বালিশ মিষ্টি",
+   "বিজয়পুরের সাদামাটি",
+   "হাওরের মাছ"
+  ],
+  "famous_for_en": [
+   "Balish mishti (pillow sweet)",
+   "White clay of Bijoypur",
+   "Haor fish"
+  ],
+  "places": [
+   "bijoypur-china-clay-hills",
+   "someshwari-river-durgapur",
+   "ranikhong-mission",
+   "dingapota-haor",
+   "madanpur-shah-sultan-rumi-mazar"
+  ],
+  "place_count": 5,
+  "community_photo_count": 1,
+  "from_dhaka": {
+   "road_km": 159.7,
+   "bus_hours": [
+    3.5,
+    7
+   ],
+   "bus_fare_from_bdt": 374,
+   "direct_trains": 2
+  },
+  "url": "https://unseenbd.com/district/netrokona"
+ },
+ {
+  "id": 64,
+  "slug": "sherpur",
+  "name_en": "Sherpur",
+  "name_bn": "শেরপুর",
+  "division": "mymensingh",
+  "lat": 25.0823,
+  "lng": 90.0745,
+  "famous_for_bn": [
+   "তুলসীমালা চাল",
+   "ছানার পায়েস",
+   "গারোদের তাঁতে বোনা কাপড়"
+  ],
+  "famous_for_en": [
+   "Tulshimala rice",
+   "Chhanar payesh",
+   "Garo handwoven cloth"
+  ],
+  "places": [
+   "gajni-abakash-kendra",
+   "madhutila-eco-park",
+   "ghagra-khan-bari-mosque"
+  ],
+  "place_count": 3,
+  "community_photo_count": 5,
+  "from_dhaka": {
+   "road_km": 186.1,
+   "bus_hours": null,
+   "bus_fare_from_bdt": 441,
+   "direct_trains": 0
+  },
+  "url": "https://unseenbd.com/district/sherpur"
+ }
+]

@@ -1,0 +1,400 @@
+{
+ "languages": [
+  {
+   "code": "bn",
+   "label": "বাংলা",
+   "default": true,
+   "in_sitemap": true
+  },
+  {
+   "code": "en",
+   "label": "English",
+   "in_sitemap": true
+  },
+  {
+   "code": "zh",
+   "label": "中文（简体）",
+   "in_sitemap": false
+  },
+  {
+   "code": "fr",
+   "label": "Français",
+   "in_sitemap": false
+  },
+  {
+   "code": "de",
+   "label": "Deutsch",
+   "in_sitemap": false
+  },
+  {
+   "code": "it",
+   "label": "Italiano",
+   "in_sitemap": false
+  },
+  {
+   "code": "ja",
+   "label": "日本語",
+   "in_sitemap": false
+  }
+ ],
+ "budget_levels": [
+  {
+   "key": "low",
+   "label_bn": "হিসেবি",
+   "label_en": "Thrifty"
+  },
+  {
+   "key": "mid",
+   "label_bn": "মাঝামাঝি",
+   "label_en": "Moderate",
+   "default": true,
+   "hint_bn": "এসি বাসের ভাড়া, মাঝারি দামের হোটেল, রেস্তোরাঁয় খাওয়া"
+  },
+  {
+   "key": "high",
+   "label_bn": "আয়েশি",
+   "label_en": "Plush"
+  }
+ ],
+ "cost_categories": [
+  "transport",
+  "stay",
+  "food",
+  "ticket",
+  "shopping",
+  "other"
+ ],
+ "my_bangladesh_levels": [
+  {
+   "min_districts": 10,
+   "title_bn": "বাংলাদেশ এক্সপ্লোরার",
+   "title_en": "Bangladesh Explorer"
+  },
+  {
+   "min_districts": 25,
+   "title_bn": "বাংলাদেশ ট্রাভেলার",
+   "title_en": "Bangladesh Traveller"
+  },
+  {
+   "min_districts": 40,
+   "title_bn": "বাংলাদেশ অ্যাডভেঞ্চারার",
+   "title_en": "Bangladesh Adventurer"
+  },
+  {
+   "min_districts": 50,
+   "title_bn": "বাংলাদেশ মাস্টার",
+   "title_en": "Bangladesh Master"
+  },
+  {
+   "min_districts": 64,
+   "title_bn": "বাংলাদেশ লিজেন্ড",
+   "title_en": "Bangladesh Legend"
+  }
+ ],
+ "share_card": {
+  "types_bn": [
+   "মানচিত্র",
+   "স্তর",
+   "পাসপোর্ট"
+  ],
+  "types_en": [
+   "Map",
+   "Level",
+   "Passport"
+  ],
+  "colour_themes_bn": [
+   "সাঁঝ",
+   "ভোর",
+   "জামদানি",
+   "পদ্মা",
+   "মাটি",
+   "কুয়াশা"
+  ],
+  "colour_themes_en": [
+   "Dusk",
+   "Dawn",
+   "Jamdani",
+   "Padma",
+   "Earth",
+   "Mist"
+  ],
+  "sizes": [
+   "Link preview (1.91:1)",
+   "Post (4:5)",
+   "Square (1:1)",
+   "Story (9:16)"
+  ],
+  "options": [
+   "custom photo",
+   "caption",
+   "hometown",
+   "district name size (hidden/small/medium/large)",
+   "coloured districts",
+   "district photos",
+   "zoom to hometown",
+   "trip pins (district, date, note)"
+  ],
+  "exports": [
+   "PNG",
+   "WEBM 3D",
+   "360°"
+  ],
+  "post_text_styles": [
+   "Short",
+   "Detailed (all district names)",
+   "Stylish",
+   "Emoji"
+  ]
+ },
+ "games": [
+  {
+   "key": "ten_question_run",
+   "label_bn": "দশ প্রশ্নের দৌড়",
+   "rules": "District–division championship; 20-question rounds, challenge-a-friend link, verified leaderboard",
+   "label_en": "Ten-question sprint"
+  },
+  {
+   "key": "photo_clue",
+   "label_bn": "ছবির সূত্র",
+   "rules": "Identify the district from its map silhouette; 20 rounds, 4 options, one try each, +1 correct / −1 wrong",
+   "label_en": "Photo clue"
+  },
+  {
+   "key": "memory_match",
+   "label_bn": "স্মৃতি-জোড়া",
+   "rules": "Flip cards to pair 4 districts with their 4 divisions; 30-second timer starts on first flip; layout changes daily; fewer moves is better",
+   "label_en": "Memory pairs"
+  },
+  {
+   "key": "distance_duel",
+   "label_bn": "দূরত্বের দ্বন্দ্ব",
+   "rules": "Order 4 districts from nearest to farthest from a given district (straight-line centroid distance); 20 rounds",
+   "label_en": "Distance duel"
+  }
+ ],
+ "quizzes": [
+  {
+   "path": "/quiz/bangladesh",
+   "rules": "20 questions: which division is this district in; leaderboard"
+  },
+  {
+   "path": "/quiz/famous",
+   "rules": "20 questions: which district is this food/product famous for; one try each; leaderboard"
+  },
+  {
+   "path": "/quiz/personality",
+   "rules": "6 rounds, pick one of 4 place types each time; the most picked type is your travel style (just for fun)"
+  }
+ ],
+ "emergency_numbers": [
+  {
+   "number": "999",
+   "en": "National emergency service: police, fire service, ambulance"
+  },
+  {
+   "number": "333",
+   "en": "Government information and services"
+  },
+  {
+   "number": "16263",
+   "en": "Shastho Batayon: medical advice by phone"
+  },
+  {
+   "number": "109",
+   "en": "Helpline against violence towards women and children"
+  }
+ ],
+ "packing_list_groups_en": [
+  "Always",
+  "Monsoon",
+  "Winter",
+  "Hills",
+  "Sea and islands"
+ ],
+ "foreign_tour": [
+  {
+   "no": 1,
+   "region": "South Asia",
+   "country": "India",
+   "country_bn": "ভারত",
+   "cities": [
+    "Kolkata",
+    "Delhi",
+    "Darjeeling",
+    "Kashmir"
+   ]
+  },
+  {
+   "no": 2,
+   "region": "South Asia",
+   "country": "Nepal",
+   "country_bn": "নেপাল",
+   "cities": [
+    "Kathmandu",
+    "Pokhara"
+   ]
+  },
+  {
+   "no": 3,
+   "region": "South Asia",
+   "country": "Sri Lanka",
+   "country_bn": "শ্রীলঙ্কা",
+   "cities": [
+    "Colombo",
+    "Kandy",
+    "Galle"
+   ]
+  },
+  {
+   "no": 4,
+   "region": "South-East Asia",
+   "country": "Thailand",
+   "country_bn": "থাইল্যান্ড",
+   "cities": [
+    "Bangkok",
+    "Chiang Mai",
+    "Phuket"
+   ]
+  },
+  {
+   "no": 5,
+   "region": "South-East Asia",
+   "country": "Malaysia",
+   "country_bn": "মালয়েশিয়া",
+   "cities": [
+    "Kuala Lumpur",
+    "Penang",
+    "Langkawi"
+   ]
+  },
+  {
+   "no": 6,
+   "region": "South-East Asia",
+   "country": "Singapore",
+   "country_bn": "সিঙ্গাপুর",
+   "cities": [
+    "Marina Bay",
+    "Sentosa"
+   ]
+  },
+  {
+   "no": 7,
+   "region": "South-East Asia",
+   "country": "Vietnam",
+   "country_bn": "ভিয়েতনাম",
+   "cities": [
+    "Hanoi",
+    "Da Nang",
+    "Ho Chi Minh City"
+   ]
+  },
+  {
+   "no": 8,
+   "region": "East Asia",
+   "country": "China",
+   "country_bn": "চীন",
+   "cities": [
+    "Beijing",
+    "Shanghai",
+    "Guangzhou"
+   ]
+  },
+  {
+   "no": 9,
+   "region": "East Asia",
+   "country": "South Korea",
+   "country_bn": "দক্ষিণ কোরিয়া",
+   "cities": [
+    "Seoul",
+    "Busan",
+    "Jeju"
+   ]
+  },
+  {
+   "no": 10,
+   "region": "East Asia",
+   "country": "Japan",
+   "country_bn": "জাপান",
+   "cities": [
+    "Tokyo",
+    "Kyoto",
+    "Osaka"
+   ]
+  },
+  {
+   "no": 11,
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "country_bn": "সংযুক্ত আরব আমিরাত",
+   "cities": [
+    "Dubai",
+    "Abu Dhabi"
+   ]
+  },
+  {
+   "no": 12,
+   "region": "Europe",
+   "country": "United Kingdom",
+   "country_bn": "যুক্তরাজ্য",
+   "cities": [
+    "London",
+    "Edinburgh"
+   ]
+  },
+  {
+   "no": 13,
+   "region": "Europe",
+   "country": "Switzerland",
+   "country_bn": "সুইজারল্যান্ড",
+   "cities": [
+    "Zurich",
+    "Geneva",
+    "Lucerne"
+   ]
+  }
+ ],
+ "booking_links": {
+  "train": "https://eticket.railway.gov.bd/",
+  "bus": {
+   "name": "Shohoz",
+   "url": "https://www.shohoz.com/bus-tickets"
+  },
+  "air": [
+   {
+    "name": "Biman Bangladesh Airlines",
+    "url": "https://www.biman-airlines.com/"
+   },
+   {
+    "name": "US-Bangla Airlines",
+    "url": "https://usbair.com/"
+   },
+   {
+    "name": "Novoair",
+    "url": "https://www.flynovoair.com/"
+   }
+  ]
+ },
+ "listing_submission_tiers": [
+  {
+   "size": "small",
+   "label_bn": "ছোট",
+   "examples": "guesthouse, cottage, food stall",
+   "max_prices": 5,
+   "photos": "3–5"
+  },
+  {
+   "size": "medium",
+   "label_bn": "মাঝারি",
+   "examples": "mid-size hotel or restaurant",
+   "max_prices": 12,
+   "photos": "3–8"
+  },
+  {
+   "size": "large",
+   "label_bn": "বড়",
+   "examples": "large hotel, resort or restaurant chain",
+   "max_prices": 25,
+   "photos": "3–10"
+  }
+ ]
+}

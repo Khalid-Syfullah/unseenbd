@@ -1,0 +1,668 @@
+[
+ {
+  "to_district_id": 2,
+  "to": "faridpur",
+  "road_km": 107,
+  "bus_hours": [
+   2,
+   3
+  ],
+  "bus_fare_from_bdt": 317,
+  "direct_trains": 5
+ },
+ {
+  "to_district_id": 3,
+  "to": "gazipur",
+  "road_km": 37.9,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 112,
+  "direct_trains": 15
+ },
+ {
+  "to_district_id": 4,
+  "to": "gopalganj",
+  "road_km": 130.8,
+  "bus_hours": [
+   3,
+   4
+  ],
+  "bus_fare_from_bdt": 411,
+  "direct_trains": 2
+ },
+ {
+  "to_district_id": 5,
+  "to": "kishoreganj",
+  "road_km": 108.2,
+  "bus_hours": [
+   3,
+   4
+  ],
+  "bus_fare_from_bdt": 314,
+  "direct_trains": 10
+ },
+ {
+  "to_district_id": 6,
+  "to": "madaripur",
+  "road_km": 94.4,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 341,
+  "direct_trains": 1
+ },
+ {
+  "to_district_id": 7,
+  "to": "manikganj",
+  "road_km": 52.5,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 142,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 8,
+  "to": "munshiganj",
+  "road_km": 27.4,
+  "bus_hours": [
+   1,
+   2
+  ],
+  "bus_fare_from_bdt": 70,
+  "direct_trains": 1
+ },
+ {
+  "to_district_id": 9,
+  "to": "narayanganj",
+  "road_km": 15,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 44,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 10,
+  "to": "narsingdi",
+  "road_km": 45.5,
+  "bus_hours": [
+   1,
+   1.5
+  ],
+  "bus_fare_from_bdt": 144,
+  "direct_trains": 8
+ },
+ {
+  "to_district_id": 11,
+  "to": "rajbari",
+  "road_km": 108.8,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 330,
+  "direct_trains": 3
+ },
+ {
+  "to_district_id": 12,
+  "to": "shariatpur",
+  "road_km": 72.4,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 245,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 13,
+  "to": "tangail",
+  "road_km": 94.3,
+  "bus_hours": [
+   2,
+   4
+  ],
+  "bus_fare_from_bdt": 150,
+  "direct_trains": 11
+ },
+ {
+  "to_district_id": 14,
+  "to": "bandarban",
+  "road_km": 312.1,
+  "bus_hours": [
+   7.5,
+   10
+  ],
+  "bus_fare_from_bdt": 776,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 15,
+  "to": "brahmanbaria",
+  "road_km": 103.4,
+  "bus_hours": [
+   4,
+   4
+  ],
+  "bus_fare_from_bdt": 253,
+  "direct_trains": 8
+ },
+ {
+  "to_district_id": 16,
+  "to": "chandpur",
+  "road_km": 91.7,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 394,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 17,
+  "to": "chattogram",
+  "road_km": 239.7,
+  "bus_hours": [
+   5.5,
+   7
+  ],
+  "bus_fare_from_bdt": 593,
+  "direct_trains": 7
+ },
+ {
+  "to_district_id": 18,
+  "to": "cumilla",
+  "road_km": 92.2,
+  "bus_hours": [
+   2,
+   3
+  ],
+  "bus_fare_from_bdt": 257,
+  "direct_trains": 5
+ },
+ {
+  "to_district_id": 19,
+  "to": "coxs-bazar",
+  "road_km": 366.3,
+  "bus_hours": [
+   9,
+   12
+  ],
+  "bus_fare_from_bdt": 967,
+  "direct_trains": 2
+ },
+ {
+  "to_district_id": 20,
+  "to": "feni",
+  "road_km": 147.4,
+  "bus_hours": [
+   3,
+   4
+  ],
+  "bus_fare_from_bdt": 370,
+  "direct_trains": 4
+ },
+ {
+  "to_district_id": 21,
+  "to": "khagrachhari",
+  "road_km": 257.6,
+  "bus_hours": [
+   6.5,
+   8
+  ],
+  "bus_fare_from_bdt": 675,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 22,
+  "to": "lakshmipur",
+  "road_km": 126.9,
+  "bus_hours": [
+   3.5,
+   4.5
+  ],
+  "bus_fare_from_bdt": 437,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 23,
+  "to": "noakhali",
+  "road_km": 151.3,
+  "bus_hours": [
+   4,
+   5.5
+  ],
+  "bus_fare_from_bdt": 401,
+  "direct_trains": 1
+ },
+ {
+  "to_district_id": 24,
+  "to": "rangamati",
+  "road_km": 285.7,
+  "bus_hours": [
+   8,
+   10
+  ],
+  "bus_fare_from_bdt": 749,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 25,
+  "to": "habiganj",
+  "road_km": 144.9,
+  "bus_hours": [
+   3.5,
+   5
+  ],
+  "bus_fare_from_bdt": 404,
+  "direct_trains": 4
+ },
+ {
+  "to_district_id": 26,
+  "to": "moulvibazar",
+  "road_km": 196.8,
+  "bus_hours": [
+   5,
+   7.5
+  ],
+  "bus_fare_from_bdt": 493,
+  "direct_trains": 4
+ },
+ {
+  "to_district_id": 27,
+  "to": "sunamganj",
+  "road_km": 252.4,
+  "bus_hours": [
+   6.5,
+   8
+  ],
+  "bus_fare_from_bdt": 746,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 28,
+  "to": "sylhet",
+  "road_km": 227.2,
+  "bus_hours": [
+   5.5,
+   7
+  ],
+  "bus_fare_from_bdt": 624,
+  "direct_trains": 4
+ },
+ {
+  "to_district_id": 29,
+  "to": "barguna",
+  "road_km": 230.4,
+  "bus_hours": [
+   6,
+   8
+  ],
+  "bus_fare_from_bdt": 677,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 30,
+  "to": "barishal",
+  "road_km": 157,
+  "bus_hours": [
+   3.5,
+   5.5
+  ],
+  "bus_fare_from_bdt": 493,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 31,
+  "to": "bhola",
+  "road_km": 197.4,
+  "bus_hours": [
+   5,
+   7
+  ],
+  "bus_fare_from_bdt": null,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 32,
+  "to": "jhalokathi",
+  "road_km": 171.7,
+  "bus_hours": [
+   4.5,
+   6.5
+  ],
+  "bus_fare_from_bdt": 700,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 33,
+  "to": "patuakhali",
+  "road_km": 195,
+  "bus_hours": [
+   5,
+   7
+  ],
+  "bus_fare_from_bdt": 605,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 34,
+  "to": "pirojpur",
+  "road_km": 187.4,
+  "bus_hours": [
+   3.5,
+   5
+  ],
+  "bus_fare_from_bdt": 566,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 35,
+  "to": "bagerhat",
+  "road_km": 182.6,
+  "bus_hours": [
+   4.5,
+   8
+  ],
+  "bus_fare_from_bdt": 650,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 36,
+  "to": "chuadanga",
+  "road_km": 218.3,
+  "bus_hours": [
+   5.5,
+   7
+  ],
+  "bus_fare_from_bdt": 592,
+  "direct_trains": 3
+ },
+ {
+  "to_district_id": 37,
+  "to": "jashore",
+  "road_km": 169.7,
+  "bus_hours": [
+   4.5,
+   7
+  ],
+  "bus_fare_from_bdt": 582,
+  "direct_trains": 5
+ },
+ {
+  "to_district_id": 38,
+  "to": "jhenaidah",
+  "road_km": 181.7,
+  "bus_hours": [
+   5,
+   7
+  ],
+  "bus_fare_from_bdt": 534,
+  "direct_trains": 3
+ },
+ {
+  "to_district_id": 39,
+  "to": "khulna",
+  "road_km": 184.6,
+  "bus_hours": [
+   4.5,
+   6.5
+  ],
+  "bus_fare_from_bdt": 576,
+  "direct_trains": 3
+ },
+ {
+  "to_district_id": 40,
+  "to": "kushtia",
+  "road_km": 173.1,
+  "bus_hours": [
+   5,
+   6.5
+  ],
+  "bus_fare_from_bdt": 700,
+  "direct_trains": 4
+ },
+ {
+  "to_district_id": 41,
+  "to": "magura",
+  "road_km": 152.8,
+  "bus_hours": [
+   4.5,
+   6
+  ],
+  "bus_fare_from_bdt": 445,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 42,
+  "to": "meherpur",
+  "road_km": 233.5,
+  "bus_hours": [
+   6,
+   8
+  ],
+  "bus_fare_from_bdt": 671,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 43,
+  "to": "narail",
+  "road_km": 135.6,
+  "bus_hours": [
+   3.5,
+   5
+  ],
+  "bus_fare_from_bdt": 409,
+  "direct_trains": 2
+ },
+ {
+  "to_district_id": 44,
+  "to": "satkhira",
+  "road_km": 237.3,
+  "bus_hours": [
+   6,
+   8
+  ],
+  "bus_fare_from_bdt": 686,
+  "direct_trains": 0
+ },
+ {
+  "to_district_id": 45,
+  "to": "bogura",
+  "road_km": 197.8,
+  "bus_hours": [
+   4.5,
+   6.5
+  ],
+  "bus_fare_from_bdt": 486,
+  "direct_trains": 9
+ },
+ {
+  "to_district_id": 46,
+  "to": "joypurhat",
+  "road_km": 245.4,
+  "bus_hours": [
+   6,
+   8.5
+  ],
+  "bus_fare_from_bdt": 621,
+  "direct_trains": 6
+ },
+ {
+  "to_district_id": 47,
+  "to": "naogaon",
+  "road_km": 247.2,
+  "bus_hours": [
+   6,
+   7
+  ],
+  "bus_fare_from_bdt": 611,
+  "direct_trains": 2
+ },
+ {
+  "to_district_id": 48,
+  "to": "natore",
+  "road_km": 209.1,
+  "bus_hours": [
+   5,
+   6.5
+  ],
+  "bus_fare_from_bdt": 515,
+  "direct_trains": 12
+ },
+ {
+  "to_district_id": 49,
+  "to": "chapainawabganj",
+  "road_km": 300,
+  "bus_hours": [
+   6.5,
+   8
+  ],
+  "bus_fare_from_bdt": 731,
+  "direct_trains": 1
+ },
+ {
+  "to_district_id": 50,
+  "to": "pabna",
+  "road_km": 211.2,
+  "bus_hours": [
+   5,
+   7
+  ],
+  "bus_fare_from_bdt": 563,
+  "direct_trains": 9
+ },
+ {
+  "to_district_id": 51,
+  "to": "rajshahi",
+  "road_km": 253.7,
+  "bus_hours": [
+   5.5,
+   7
+  ],
+  "bus_fare_from_bdt": 621,
+  "direct_trains": 5
+ },
+ {
+  "to_district_id": 52,
+  "to": "sirajganj",
+  "road_km": 134.3,
+  "bus_hours": [
+   3,
+   4
+  ],
+  "bus_fare_from_bdt": 335,
+  "direct_trains": 8
+ },
+ {
+  "to_district_id": 53,
+  "to": "dinajpur",
+  "road_km": 334.3,
+  "bus_hours": [
+   7,
+   10
+  ],
+  "bus_fare_from_bdt": 820,
+  "direct_trains": 6
+ },
+ {
+  "to_district_id": 54,
+  "to": "gaibandha",
+  "road_km": 263.1,
+  "bus_hours": [
+   6,
+   7.5
+  ],
+  "bus_fare_from_bdt": 671,
+  "direct_trains": 3
+ },
+ {
+  "to_district_id": 55,
+  "to": "kurigram",
+  "road_km": 341.5,
+  "bus_hours": [
+   8,
+   9
+  ],
+  "bus_fare_from_bdt": 875,
+  "direct_trains": 1
+ },
+ {
+  "to_district_id": 56,
+  "to": "lalmonirhat",
+  "road_km": 339.1,
+  "bus_hours": [
+   8,
+   10
+  ],
+  "bus_fare_from_bdt": 868,
+  "direct_trains": 2
+ },
+ {
+  "to_district_id": 57,
+  "to": "nilphamari",
+  "road_km": 347.8,
+  "bus_hours": [
+   7.5,
+   9
+  ],
+  "bus_fare_from_bdt": 887,
+  "direct_trains": 2
+ },
+ {
+  "to_district_id": 58,
+  "to": "panchagarh",
+  "road_km": 412,
+  "bus_hours": [
+   9.5,
+   11
+  ],
+  "bus_fare_from_bdt": 1079,
+  "direct_trains": 3
+ },
+ {
+  "to_district_id": 59,
+  "to": "rangpur",
+  "road_km": 304.8,
+  "bus_hours": [
+   7,
+   8.5
+  ],
+  "bus_fare_from_bdt": 767,
+  "direct_trains": 4
+ },
+ {
+  "to_district_id": 60,
+  "to": "thakurgaon",
+  "road_km": 391.6,
+  "bus_hours": [
+   8,
+   10.5
+  ],
+  "bus_fare_from_bdt": 957,
+  "direct_trains": 3
+ },
+ {
+  "to_district_id": 61,
+  "to": "jamalpur",
+  "road_km": 175.5,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 415,
+  "direct_trains": 5
+ },
+ {
+  "to_district_id": 62,
+  "to": "mymensingh",
+  "road_km": 123.7,
+  "bus_hours": [
+   2.5,
+   3.5
+  ],
+  "bus_fare_from_bdt": 278,
+  "direct_trains": 7
+ },
+ {
+  "to_district_id": 63,
+  "to": "netrokona",
+  "road_km": 159.7,
+  "bus_hours": [
+   3.5,
+   7
+  ],
+  "bus_fare_from_bdt": 374,
+  "direct_trains": 2
+ },
+ {
+  "to_district_id": 64,
+  "to": "sherpur",
+  "road_km": 186.1,
+  "bus_hours": null,
+  "bus_fare_from_bdt": 441,
+  "direct_trains": 0
+ }
+]

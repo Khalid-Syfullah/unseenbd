@@ -1,0 +1,258 @@
+id,slug,name_en,name_bn,district,division,kind,popular,unseen,best_from_month,best_to_month,visit_hours,lat,lng,stars,url
+1,nilgiri-hill,Nilgiri,নীলগিরি,bandarban,chattogram,hill,True,False,7,2,4,21.91189,92.32546,722,https://unseenbd.com/place/nilgiri-hill
+2,boga-lake,Boga Lake,বগা লেক,bandarban,chattogram,river,True,False,11,2,24,21.98056,92.46944,755,https://unseenbd.com/place/boga-lake
+3,nafakhum-waterfall,Nafakhum Waterfall,নাফাখুম জলপ্রপাত,bandarban,chattogram,waterfall,True,False,10,2,24,21.7203,92.5337,683,https://unseenbd.com/place/nafakhum-waterfall
+4,buddha-dhatu-jadi,Buddha Dhatu Jadi (Golden Temple),বুদ্ধ ধাতু জাদি (স্বর্ণমন্দির),bandarban,chattogram,spiritual,True,False,10,3,1.5,22.22311,92.19772,857,https://unseenbd.com/place/buddha-dhatu-jadi
+5,debotakhum,Debotakhum,দেবতাখুম,bandarban,chattogram,river,False,True,11,3,8,22.23854,92.36818,879,https://unseenbd.com/place/debotakhum
+6,titas-river-brahmanbaria,Titas River,তিতাস নদী,brahmanbaria,chattogram,river,True,False,7,10,2,23.97093,91.11826,647,https://unseenbd.com/place/titas-river-brahmanbaria
+7,haripur-zamindar-bari,Haripur Zamindar Bari,হরিপুর জমিদারবাড়ি,brahmanbaria,chattogram,heritage,False,True,7,11,2,24.1085,91.25755,866,https://unseenbd.com/place/haripur-zamindar-bari
+8,arifail-mosque,Arifail Mosque,আরিফাইল মসজিদ,brahmanbaria,chattogram,spiritual,False,True,10,3,1,24.06994,91.10742,821,https://unseenbd.com/place/arifail-mosque
+9,chandpur-boro-station-mohona,Three Rivers Confluence (Boro Station Molhead),তিন নদীর মোহনা (বড় স্টেশন মোলহেড),chandpur,chattogram,river,True,False,10,3,2,23.23107,90.63937,934,https://unseenbd.com/place/chandpur-boro-station-mohona
+10,hajiganj-boro-masjid,Hajiganj Historic Boro Mosque,হাজীগঞ্জ ঐতিহাসিক বড় মসজিদ,chandpur,chattogram,spiritual,True,False,1,12,1,23.25161,90.85387,800,https://unseenbd.com/place/hajiganj-boro-masjid
+11,lohagor-math,Lohagor Math,লোহাগড় মঠ,chandpur,chattogram,heritage,False,True,10,3,1.5,23.18958,90.72651,515,https://unseenbd.com/place/lohagor-math
+12,patenga-sea-beach,Patenga Sea Beach,পতেঙ্গা সমুদ্রসৈকত,chattogram,chattogram,beach,True,False,10,3,2,22.23523,91.79139,953,https://unseenbd.com/place/patenga-sea-beach
+13,foys-lake,Foy's Lake,ফয়'স লেক,chattogram,chattogram,city,True,False,10,3,3,22.36841,91.79624,832,https://unseenbd.com/place/foys-lake
+14,chandranath-hill,Chandranath Hill and Temple,চন্দ্রনাথ পাহাড় ও মন্দির,chattogram,chattogram,hill,True,False,10,2,5,22.63354,91.68438,870,https://unseenbd.com/place/chandranath-hill
+15,khoiyachhora-waterfall,Khoiyachhora Waterfall,খৈয়াছড়া ঝরনা,chattogram,chattogram,waterfall,True,False,6,10,5,22.76944,91.61194,713,https://unseenbd.com/place/khoiyachhora-waterfall
+16,guliakhali-sea-beach,Guliakhali Sea Beach,গুলিয়াখালী সমুদ্রসৈকত,chattogram,chattogram,beach,False,True,9,2,3,22.59192,91.62316,706,https://unseenbd.com/place/guliakhali-sea-beach
+17,shalban-vihara,Shalban Vihara,শালবন বিহার,cumilla,chattogram,heritage,True,False,10,3,2.5,23.42623,91.13721,999,https://unseenbd.com/place/shalban-vihara
+18,mainamati-war-cemetery,Mainamati War Cemetery,ময়নামতি ওয়ার সিমেট্রি,cumilla,chattogram,heritage,True,False,10,3,1,23.4871,91.11198,900,https://unseenbd.com/place/mainamati-war-cemetery
+19,dharmasagar-dighi,Dharmasagar Dighi,ধর্মসাগর দিঘি,cumilla,chattogram,city,True,False,1,12,1.5,23.46444,91.17944,569,https://unseenbd.com/place/dharmasagar-dighi
+20,kotila-mura,Kotila Mura,কোটিলা মুড়া,cumilla,chattogram,heritage,False,True,10,3,1,23.45793,91.1234,811,https://unseenbd.com/place/kotila-mura
+21,nawab-faizunnesa-house,Nawab Faizunnesa's House,নবাব ফয়জুন্নেসার বাড়ি,cumilla,chattogram,heritage,False,True,10,3,1.5,23.22982,91.11357,541,https://unseenbd.com/place/nawab-faizunnesa-house
+22,coxs-bazar-sea-beach,Cox's Bazar Sea Beach,কক্সবাজার সমুদ্রসৈকত,coxs-bazar,chattogram,beach,True,False,11,3,4,21.42674,91.97179,935,https://unseenbd.com/place/coxs-bazar-sea-beach
+23,saint-martins-island,Saint Martin's Island,সেন্ট মার্টিন দ্বীপ,coxs-bazar,chattogram,island,True,False,12,1,24,20.62722,92.3225,530,https://unseenbd.com/place/saint-martins-island
+24,inani-beach,Inani Beach,ইনানী সৈকত,coxs-bazar,chattogram,beach,True,False,11,3,3,21.23447,92.04604,663,https://unseenbd.com/place/inani-beach
+25,ramu-buddhist-monasteries,Ramu Buddhist Monasteries,রামুর বৌদ্ধ বিহার,coxs-bazar,chattogram,spiritual,False,True,10,3,3,21.44788,92.09319,581,https://unseenbd.com/place/ramu-buddhist-monasteries
+26,sonadia-island,Sonadia Island,সোনাদিয়া দ্বীপ,coxs-bazar,chattogram,island,False,True,11,3,8,21.496,91.884,701,https://unseenbd.com/place/sonadia-island
+27,muhuri-project,Muhuri Project,মুহুরী প্রকল্প,feni,chattogram,river,True,False,10,2,3,22.83642,91.45366,823,https://unseenbd.com/place/muhuri-project
+28,bijoy-singh-dighi,Bijoy Singh Dighi,বিজয় সিংহ দিঘি,feni,chattogram,city,True,False,1,12,1,23.00294,91.37903,634,https://unseenbd.com/place/bijoy-singh-dighi
+29,chandgazi-bhuiyan-mosque,Chandgazi Bhuiyan Mosque,চাঁদগাজী ভূঞা মসজিদ,feni,chattogram,spiritual,False,True,10,3,1,23.08415,91.49617,765,https://unseenbd.com/place/chandgazi-bhuiyan-mosque
+30,alutila-cave,Alutila Cave,আলুটিলা গুহা,khagrachhari,chattogram,hill,True,False,10,3,2,23.08833,91.95667,943,https://unseenbd.com/place/alutila-cave
+31,richhang-waterfall,Richhang Waterfall,রিছাং ঝরনা,khagrachhari,chattogram,waterfall,True,False,6,10,2.5,23.06612,91.94326,667,https://unseenbd.com/place/richhang-waterfall
+32,debotar-pukur,Debotar Pukur (Matai Pukhiri),দেবতার পুকুর (মাতাই পুখিরি),khagrachhari,chattogram,river,False,True,10,3,4,23.01556,91.97194,756,https://unseenbd.com/place/debotar-pukur
+33,shantipur-aranya-kutir,Shantipur Aranya Kutir,শান্তিপুর অরণ্য কুটির,khagrachhari,chattogram,spiritual,False,True,10,3,2,23.25944,91.89306,803,https://unseenbd.com/place/shantipur-aranya-kutir
+34,hatimatha-mayung-kopal,Hatimatha (Mayung Kopal),হাতিমাথা (মায়ুং কপাল),khagrachhari,chattogram,hill,False,True,10,3,4,,,809,https://unseenbd.com/place/hatimatha-mayung-kopal
+35,majuchowdhurir-hat,Majuchowdhurir Hat,মজুচৌধুরীর হাট,lakshmipur,chattogram,river,True,False,10,3,2,22.87389,90.78389,637,https://unseenbd.com/place/majuchowdhurir-hat
+36,dalal-bazar-zamindar-bari,Dalal Bazar Zamindar Bari,দালাল বাজার জমিদারবাড়ি,lakshmipur,chattogram,heritage,False,True,10,3,1.5,22.96828,90.80441,858,https://unseenbd.com/place/dalal-bazar-zamindar-bari
+37,raipur-jiner-masjid,Jiner Masjid (Masjid-e-Jame Abdullah),জিনের মসজিদ (মসজিদ-ই-জামে আবদুল্লাহ),lakshmipur,chattogram,spiritual,False,True,1,12,1,23.0345,90.77126,967,https://unseenbd.com/place/raipur-jiner-masjid
+38,nijhum-dwip,Nijhum Dwip,নিঝুম দ্বীপ,noakhali,chattogram,island,True,False,11,3,24,22.0433,90.98018,577,https://unseenbd.com/place/nijhum-dwip
+39,bajra-shahi-mosque,Bajra Shahi Mosque,বজরা শাহী মসজিদ,noakhali,chattogram,spiritual,True,False,10,3,1,23.004,91.0931,523,https://unseenbd.com/place/bajra-shahi-mosque
+40,gandhi-ashram-joyag,"Gandhi Ashram, Joyag","গান্ধী আশ্রম, জয়াগ",noakhali,chattogram,heritage,False,True,10,3,1.5,23.06483,91.00685,805,https://unseenbd.com/place/gandhi-ashram-joyag
+41,kaptai-lake,Kaptai Lake,কাপ্তাই হ্রদ,rangamati,chattogram,river,True,False,9,2,6,22.65579,92.19587,902,https://unseenbd.com/place/kaptai-lake
+42,sajek-valley,Sajek Valley,সাজেক ভ্যালি,rangamati,chattogram,hill,True,False,7,2,24,23.38572,92.29205,725,https://unseenbd.com/place/sajek-valley
+43,shuvolong-waterfall,Shuvolong Waterfall,শুভলং ঝরনা,rangamati,chattogram,waterfall,True,False,6,10,4,22.71311,92.24905,700,https://unseenbd.com/place/shuvolong-waterfall
+44,rajban-vihara,Rajban Vihara,রাজবন বিহার,rangamati,chattogram,spiritual,True,False,10,3,1.5,22.66576,92.17061,988,https://unseenbd.com/place/rajban-vihara
+45,dhuppani-waterfall,Dhuppani Waterfall,ধুপপানি ঝরনা,rangamati,chattogram,waterfall,False,True,7,11,24,22.41405,92.41231,825,https://unseenbd.com/place/dhuppani-waterfall
+46,satchhari-national-park,Satchhari National Park,সাতছড়ি জাতীয় উদ্যান,habiganj,sylhet,forest,True,False,10,3,4,24.12679,91.44241,699,https://unseenbd.com/place/satchhari-national-park
+47,rema-kalenga-wildlife-sanctuary,Rema-Kalenga Wildlife Sanctuary,রেমা-কালেঙ্গা বন্যপ্রাণী অভয়ারণ্য,habiganj,sylhet,forest,False,True,11,3,6,24.18526,91.62422,570,https://unseenbd.com/place/rema-kalenga-wildlife-sanctuary
+48,bithangal-akhra,Bithangal Akhra,বিথঙ্গল আখড়া,habiganj,sylhet,spiritual,False,True,7,10,5,24.44628,91.24606,759,https://unseenbd.com/place/bithangal-akhra
+49,lawachara-national-park,Lawachara National Park,লাউয়াছড়া জাতীয় উদ্যান,moulvibazar,sylhet,forest,True,False,10,3,3,24.32502,91.78718,758,https://unseenbd.com/place/lawachara-national-park
+50,madhabkunda-waterfall,Madhabkunda Waterfall,মাধবকুণ্ড জলপ্রপাত,moulvibazar,sylhet,waterfall,True,False,6,10,3,24.63847,92.22456,869,https://unseenbd.com/place/madhabkunda-waterfall
+51,sreemangal-tea-gardens,Sreemangal Tea Gardens,শ্রীমঙ্গলের চা-বাগান,moulvibazar,sylhet,tea,True,False,4,11,4,24.30111,91.74778,599,https://unseenbd.com/place/sreemangal-tea-gardens
+52,hum-hum-waterfall,Hum Hum Waterfall,হামহাম জলপ্রপাত,moulvibazar,sylhet,waterfall,True,False,6,10,8,24.16773,91.91196,668,https://unseenbd.com/place/hum-hum-waterfall
+53,baikka-beel,Baikka Beel,বাইক্কা বিল,moulvibazar,sylhet,river,False,True,11,2,3,24.35147,91.70552,675,https://unseenbd.com/place/baikka-beel
+54,tanguar-haor,Tanguar Haor,টাঙ্গুয়ার হাওর,sunamganj,sylhet,river,True,False,7,10,24,25.15,91.06667,871,https://unseenbd.com/place/tanguar-haor
+55,niladri-lake,Niladri Lake (Shahid Siraj Lake),নীলাদ্রি লেক (শহীদ সিরাজ লেক),sunamganj,sylhet,river,True,False,8,2,3,25.19614,91.17396,557,https://unseenbd.com/place/niladri-lake
+56,jadukata-river-barek-tila,Jadukata River and Barek Tila,জাদুকাটা নদী ও বারেক টিলা,sunamganj,sylhet,river,True,False,10,3,3,25.19217,91.25091,604,https://unseenbd.com/place/jadukata-river-barek-tila
+57,shimul-bagan-tahirpur,Shimul Bagan (Silk-Cotton Grove),শিমুল বাগান,sunamganj,sylhet,forest,True,False,2,3,2,25.17794,91.24761,689,https://unseenbd.com/place/shimul-bagan-tahirpur
+58,hason-raja-museum,Hason Raja's House and Museum,হাসন রাজার বাড়ি ও জাদুঘর,sunamganj,sylhet,heritage,False,True,1,12,1,25.07105,91.39264,649,https://unseenbd.com/place/hason-raja-museum
+59,ratargul-swamp-forest,Ratargul Swamp Forest,রাতারগুল জলাবন,sylhet,sylhet,forest,True,False,7,10,3,25.01302,91.92302,706,https://unseenbd.com/place/ratargul-swamp-forest
+60,jaflong,Jaflong,জাফলং,sylhet,sylhet,river,True,False,7,11,4,25.18197,92.01415,842,https://unseenbd.com/place/jaflong
+61,bichanakandi,Bichanakandi,বিছানাকান্দি,sylhet,sylhet,river,True,False,7,10,5,25.17295,91.88837,538,https://unseenbd.com/place/bichanakandi
+62,shah-jalal-dargah,Shrine of Hazrat Shah Jalal,হযরত শাহজালালের (রহ.) মাজার,sylhet,sylhet,spiritual,True,False,1,12,1.5,24.90259,91.86659,761,https://unseenbd.com/place/shah-jalal-dargah
+63,dibir-haor-shapla-beel,Dibir Haor (Red Water Lily Beel),ডিবির হাওর (লাল শাপলার বিল),sylhet,sylhet,river,False,True,11,1,2,25.15713,92.12194,842,https://unseenbd.com/place/dibir-haor-shapla-beel
+64,lalbagh-fort,Lalbagh Fort,লালবাগ কেল্লা,dhaka,dhaka,heritage,True,False,11,2,2,23.71903,90.38806,924,https://unseenbd.com/place/lalbagh-fort
+65,ahsan-manzil,Ahsan Manzil,আহসান মঞ্জিল,dhaka,dhaka,heritage,True,False,10,3,2,23.7086,90.40606,630,https://unseenbd.com/place/ahsan-manzil
+66,jatiya-smriti-soudho-savar,National Martyrs' Memorial,জাতীয় স্মৃতিসৌধ,dhaka,dhaka,heritage,True,False,11,2,2,23.91123,90.25485,954,https://unseenbd.com/place/jatiya-smriti-soudho-savar
+67,armenian-church-armanitola,Armenian Church of Armanitola,"আর্মেনীয় গির্জা, আরমানিটোলা",dhaka,dhaka,spiritual,False,True,11,2,1,23.71248,90.4021,816,https://unseenbd.com/place/armenian-church-armanitola
+68,sadullapur-golap-gram,Sadullapur Rose Village,সাদুল্লাপুর গোলাপ গ্রাম,dhaka,dhaka,village,False,True,12,2,4,23.83112,90.32196,795,https://unseenbd.com/place/sadullapur-golap-gram
+69,jasimuddin-bari-ambikapur,Poet Jasimuddin's House,পল্লিকবি জসীমউদ্দীনের বাড়ি,faridpur,dhaka,heritage,True,False,11,2,2,23.61304,89.81984,758,https://unseenbd.com/place/jasimuddin-bari-ambikapur
+70,mathurapur-deul,Mathurapur Deul,মথুরাপুর দেউল,faridpur,dhaka,heritage,False,True,11,2,1.5,23.5617,89.62801,833,https://unseenbd.com/place/mathurapur-deul
+71,pathrail-mosque-bhanga,Pathrail Mosque,পাতরাইল মসজিদ,faridpur,dhaka,spiritual,False,True,11,2,1.5,23.34156,90.08917,591,https://unseenbd.com/place/pathrail-mosque-bhanga
+72,bhawal-national-park,Bhawal National Park,ভাওয়াল জাতীয় উদ্যান,gazipur,dhaka,forest,True,False,10,3,4,24.08181,90.3979,728,https://unseenbd.com/place/bhawal-national-park
+73,bhawal-rajbari,Bhawal Rajbari,ভাওয়াল রাজবাড়ি,gazipur,dhaka,heritage,False,True,1,12,1,24.0007,90.42554,553,https://unseenbd.com/place/bhawal-rajbari
+74,belai-beel,Belai Beel,বেলাই বিল,gazipur,dhaka,river,False,True,6,10,3,23.97422,90.46351,627,https://unseenbd.com/place/belai-beel
+75,bangabandhu-mausoleum-tungipara,"Mausoleum of Bangabandhu, Tungipara","বঙ্গবন্ধুর সমাধিসৌধ, টুঙ্গিপাড়া",gopalganj,dhaka,heritage,True,False,11,2,2,22.90632,89.89635,505,https://unseenbd.com/place/bangabandhu-mausoleum-tungipara
+76,orakandi-thakur-bari,Orakandi Thakur Bari,ওড়াকান্দি ঠাকুরবাড়ি,gopalganj,dhaka,spiritual,False,True,11,4,2,23.17752,89.82178,604,https://unseenbd.com/place/orakandi-thakur-bari
+77,ulpur-zamindar-bari,Ulpur Zamindar Bari,উলপুর জমিদার বাড়ি,gopalganj,dhaka,heritage,False,True,11,2,1.5,,,895,https://unseenbd.com/place/ulpur-zamindar-bari
+78,nikli-haor,Nikli Haor,নিকলী হাওর,kishoreganj,dhaka,river,True,False,6,9,8,24.33501,90.9551,667,https://unseenbd.com/place/nikli-haor
+79,itna-mithamain-austagram-haor-road,Itna-Mithamain-Austagram Haor Road,ইটনা-মিঠামইন-অষ্টগ্রাম হাওর সড়ক,kishoreganj,dhaka,river,True,False,7,9,8,24.40908,91.06729,784,https://unseenbd.com/place/itna-mithamain-austagram-haor-road
+80,sholakia-eidgah,Sholakia Eidgah,শোলাকিয়া ঈদগাহ,kishoreganj,dhaka,spiritual,True,False,1,12,1,24.43491,90.79236,850,https://unseenbd.com/place/sholakia-eidgah
+81,jangalbari-fort,Jangalbari Fort,জঙ্গলবাড়ি দুর্গ,kishoreganj,dhaka,heritage,False,True,11,2,1.5,24.4503,90.8421,696,https://unseenbd.com/place/jangalbari-fort
+82,chandrabati-shiva-temple,Chandrabati's Shiva Temple,চন্দ্রাবতীর শিবমন্দির,kishoreganj,dhaka,spiritual,False,True,11,2,1,24.49584,90.80081,736,https://unseenbd.com/place/chandrabati-shiva-temple
+83,shakuni-lake,Shakuni Lake,শকুনি লেক,madaripur,dhaka,city,True,False,10,3,1.5,23.16601,90.20809,536,https://unseenbd.com/place/shakuni-lake
+84,khalia-rajaram-temple,Rajaram Temple of Khalia,খালিয়া রাজারাম মন্দির,madaripur,dhaka,heritage,False,True,11,2,1,23.22363,90.00528,864,https://unseenbd.com/place/khalia-rajaram-temple
+85,auliapur-neelkuthi,Auliapur Neelkuthi,আউলিয়াপুর নীলকুঠি,madaripur,dhaka,heritage,False,True,11,2,1,23.22606,90.24701,869,https://unseenbd.com/place/auliapur-neelkuthi
+86,baliati-zamindar-bari,Baliati Zamindar Palace,বালিয়াটি জমিদার বাড়ি,manikganj,dhaka,heritage,True,False,11,2,2.5,23.99479,90.04251,723,https://unseenbd.com/place/baliati-zamindar-bari
+87,teota-zamindar-bari,Teota Zamindar Bari,তেওতা জমিদার বাড়ি,manikganj,dhaka,heritage,False,True,11,2,2,23.85846,89.7786,873,https://unseenbd.com/place/teota-zamindar-bari
+88,jhitka-sorisha-khet,Mustard Fields of Jhitka,ঝিটকার সরিষা খেত,manikganj,dhaka,village,False,True,12,1,3,23.77214,89.91248,675,https://unseenbd.com/place/jhitka-sorisha-khet
+89,idrakpur-fort,Idrakpur Fort,ইদ্রাকপুর কেল্লা,munshiganj,dhaka,heritage,True,False,11,2,1,23.54737,90.5337,781,https://unseenbd.com/place/idrakpur-fort
+90,mawa-ghat-padma,Mawa Ghat and the Padma Riverside,মাওয়া ঘাট ও পদ্মার পাড়,munshiganj,dhaka,river,True,False,10,3,3,23.46493,90.28839,957,https://unseenbd.com/place/mawa-ghat-padma
+91,sonarang-jora-math,Sonarang Twin Temples,সোনারং জোড়া মঠ,munshiganj,dhaka,heritage,False,True,11,2,1,23.52239,90.45918,771,https://unseenbd.com/place/sonarang-jora-math
+92,baba-adam-mosque,Baba Adam's Mosque,বাবা আদম মসজিদ,munshiganj,dhaka,spiritual,False,True,11,2,1,23.55643,90.49635,636,https://unseenbd.com/place/baba-adam-mosque
+93,arial-beel,Arial Beel,আড়িয়াল বিল,munshiganj,dhaka,river,False,True,7,10,4,23.54807,90.24836,568,https://unseenbd.com/place/arial-beel
+94,sonargaon-folk-art-museum,Sonargaon Folk Art and Craft Museum,সোনারগাঁও লোকশিল্প জাদুঘর,narayanganj,dhaka,heritage,True,False,11,2,3,23.64866,90.60158,709,https://unseenbd.com/place/sonargaon-folk-art-museum
+95,panam-nagar,Panam Nagar,পানাম নগর,narayanganj,dhaka,heritage,True,False,11,2,2,23.65601,90.60419,722,https://unseenbd.com/place/panam-nagar
+96,hajiganj-fort,Hajiganj Fort,হাজীগঞ্জ দুর্গ,narayanganj,dhaka,heritage,False,True,11,2,1,23.63343,90.51284,654,https://unseenbd.com/place/hajiganj-fort
+97,noapara-jamdani-palli,Noapara Jamdani Village,নোয়াপাড়া জামদানি পল্লি,narayanganj,dhaka,village,False,True,10,3,2,23.7284,90.51459,629,https://unseenbd.com/place/noapara-jamdani-palli
+98,goaldi-mosque,Goaldi Mosque,গোয়ালদি মসজিদ,narayanganj,dhaka,spiritual,False,True,11,2,1,23.65651,90.59347,808,https://unseenbd.com/place/goaldi-mosque
+99,wari-bateshwar,Wari-Bateshwar,উয়ারী-বটেশ্বর,narsingdi,dhaka,heritage,True,False,11,2,3,24.09289,90.82537,850,https://unseenbd.com/place/wari-bateshwar
+100,lakshman-saha-zamindar-bari,Lakshman Saha Zamindar Bari,লক্ষ্মণ সাহার জমিদার বাড়ি,narsingdi,dhaka,heritage,False,True,11,2,1.5,23.899,90.59491,877,https://unseenbd.com/place/lakshman-saha-zamindar-bari
+101,girish-chandra-sen-house,Girish Chandra Sen's House,গিরিশ চন্দ্র সেনের বাড়ি,narsingdi,dhaka,heritage,False,True,1,12,1,23.88961,90.66392,940,https://unseenbd.com/place/girish-chandra-sen-house
+102,mir-mosharraf-hossain-memorial,Mir Mosharraf Hossain Memorial Centre,মীর মশাররফ হোসেন স্মৃতিকেন্দ্র,rajbari,dhaka,heritage,True,False,11,2,1.5,23.68374,89.53944,533,https://unseenbd.com/place/mir-mosharraf-hossain-memorial
+103,godar-bazar-padma-riverside,Godar Bazar Padma Riverside,গোদার বাজার পদ্মার পাড়,rajbari,dhaka,river,False,True,11,2,2,23.77836,89.65021,811,https://unseenbd.com/place/godar-bazar-padma-riverside
+104,nalia-jor-bangla-temple,Nalia Jor Bangla Temple,নলিয়া জোড় বাংলা মন্দির,rajbari,dhaka,heritage,False,True,11,2,1,23.60808,89.62003,690,https://unseenbd.com/place/nalia-jor-bangla-temple
+105,sureshwar-darbar-sharif,Sureshwar Darbar Sharif,সুরেশ্বর দরবার শরিফ,shariatpur,dhaka,spiritual,True,False,11,2,2,23.31157,90.46179,563,https://unseenbd.com/place/sureshwar-darbar-sharif
+106,rudrakar-math,Rudrakar Math,রুদ্রকর মঠ,shariatpur,dhaka,heritage,False,True,11,2,1,23.18291,90.34589,708,https://unseenbd.com/place/rudrakar-math
+107,dhanuka-manasa-bari,Dhanuka Manasa Bari,ধানুকা মনসা বাড়ি,shariatpur,dhaka,heritage,False,True,11,2,1,23.20029,90.34845,650,https://unseenbd.com/place/dhanuka-manasa-bari
+108,mohera-zamindar-bari,Mohera Zamindar Bari,মহেরা জমিদার বাড়ি,tangail,dhaka,heritage,True,False,11,2,3,24.16261,90.04194,959,https://unseenbd.com/place/mohera-zamindar-bari
+109,atia-mosque,Atia Mosque,আতিয়া মসজিদ,tangail,dhaka,spiritual,True,False,11,2,1,24.18402,89.91142,817,https://unseenbd.com/place/atia-mosque
+110,madhupur-national-park,Madhupur National Park,মধুপুর জাতীয় উদ্যান,tangail,dhaka,forest,True,False,11,3,8,24.68883,90.13925,528,https://unseenbd.com/place/madhupur-national-park
+111,pathrail-tant-palli,Pathrail Weaving Village,পাথরাইল তাঁতপল্লি,tangail,dhaka,village,False,True,10,3,2.5,24.20461,89.9371,688,https://unseenbd.com/place/pathrail-tant-palli
+112,bashulia-basail,Bashulia,বাসুলিয়া,tangail,dhaka,river,False,True,7,9,2,24.23633,90.07967,697,https://unseenbd.com/place/bashulia-basail
+113,sixty-dome-mosque,Sixty Dome Mosque,ষাট গম্বুজ মসজিদ,bagerhat,khulna,spiritual,True,False,11,2,2,22.6745,89.74182,812,https://unseenbd.com/place/sixty-dome-mosque
+114,khan-jahan-ali-mazar,Khan Jahan Ali's Tomb,খান জাহান আলীর মাজার,bagerhat,khulna,spiritual,True,False,11,2,1.5,22.66097,89.75838,831,https://unseenbd.com/place/khan-jahan-ali-mazar
+115,katka-sundarbans,"Katka, Sundarbans","কটকা, সুন্দরবন",bagerhat,khulna,forest,True,False,11,2,24,21.85406,89.77233,548,https://unseenbd.com/place/katka-sundarbans
+116,dublar-char,Dublar Char,দুবলার চর,bagerhat,khulna,island,True,False,11,2,24,21.76699,89.54069,589,https://unseenbd.com/place/dublar-char
+117,kodla-math,Kodla Math,কোদলা মঠ,bagerhat,khulna,heritage,False,True,11,2,1,22.74198,89.77244,898,https://unseenbd.com/place/kodla-math
+118,carew-and-co-darshana,Carew & Co of Darshana,দর্শনার কেরু অ্যান্ড কোম্পানি,chuadanga,khulna,heritage,True,False,11,3,2,23.53012,88.8002,944,https://unseenbd.com/place/carew-and-co-darshana
+119,atkobor-memorial,Atkobor Memorial,আটকবর স্মৃতিসৌধ,chuadanga,khulna,heritage,False,True,1,12,1,23.63981,88.65558,595,https://unseenbd.com/place/atkobor-memorial
+120,gholdari-shahi-mosque,Gholdari Shahi Mosque,ঘোলদাড়ী শাহী মসজিদ,chuadanga,khulna,spiritual,False,True,11,2,1,23.66806,88.94337,932,https://unseenbd.com/place/gholdari-shahi-mosque
+121,sagardari-madhupalli,Sagardari Madhupalli,সাগরদাঁড়ি মধুপল্লী,jashore,khulna,heritage,True,False,11,2,2,22.81918,89.16348,824,https://unseenbd.com/place/sagardari-madhupalli
+122,gadkhali-flower-fields,Gadkhali Flower Fields,গদখালী ফুলের রাজ্য,jashore,khulna,village,True,False,12,3,3,23.08141,89.05963,992,https://unseenbd.com/place/gadkhali-flower-fields
+123,eleven-shiva-temples-abhaynagar,"Eleven Shiva Temples, Abhaynagar","এগারো শিব মন্দির, অভয়নগর",jashore,khulna,spiritual,False,True,11,2,1.5,23.00975,89.43323,682,https://unseenbd.com/place/eleven-shiva-temples-abhaynagar
+124,mallikpur-banyan-tree,Mallikpur Banyan Tree,মল্লিকপুরের বটগাছ,jhenaidah,khulna,forest,True,False,10,3,1.5,23.37014,89.19967,774,https://unseenbd.com/place/mallikpur-banyan-tree
+125,barobazar-mosque-group,Barobazar Mosque Group,বারোবাজারের প্রাচীন মসজিদগুচ্ছ,jhenaidah,khulna,heritage,False,True,11,2,3,23.30315,89.14208,892,https://unseenbd.com/place/barobazar-mosque-group
+126,miyar-dalan,Miyar Dalan,মিয়ার দালান,jhenaidah,khulna,heritage,False,True,11,2,1,23.56217,89.18505,781,https://unseenbd.com/place/miyar-dalan
+127,karamjal-sundarbans,"Karamjal, Sundarbans","করমজল, সুন্দরবন",khulna,khulna,forest,True,False,11,3,4,22.42833,89.59096,576,https://unseenbd.com/place/karamjal-sundarbans
+128,rupsha-khan-jahan-ali-bridge,Rupsha Bridge (Khan Jahan Ali Bridge),রূপসা সেতু (খান জাহান আলী সেতু),khulna,khulna,city,True,False,1,12,1.5,22.77765,89.584,834,https://unseenbd.com/place/rupsha-khan-jahan-ali-bridge
+129,dakshindihi-rabindra-complex,Dakshindihi Rabindra Complex,দক্ষিণডিহি রবীন্দ্র কমপ্লেক্স,khulna,khulna,heritage,False,True,11,2,1.5,22.9897,89.4597,603,https://unseenbd.com/place/dakshindihi-rabindra-complex
+130,masjidkur-mosque,Masjidkur Mosque,মসজিদকুঁড় মসজিদ,khulna,khulna,spiritual,False,True,11,2,1,22.47889,89.28553,932,https://unseenbd.com/place/masjidkur-mosque
+131,bhutiar-padma-beel,Bhutiar Lotus Wetland,ভূতিয়ার পদ্মবিল,khulna,khulna,river,False,True,7,10,3,22.91852,89.70602,568,https://unseenbd.com/place/bhutiar-padma-beel
+132,lalon-shah-shrine-cheuriya,"Lalon Shah's Shrine, Cheuriya","লালন শাহের মাজার, ছেঁউড়িয়া",kushtia,khulna,spiritual,True,False,10,3,2,23.89579,89.1521,981,https://unseenbd.com/place/lalon-shah-shrine-cheuriya
+133,shilaidaha-kuthibari,Shilaidaha Kuthibari,শিলাইদহ রবীন্দ্র কুঠিবাড়ি,kushtia,khulna,heritage,True,False,11,3,2.5,23.91977,89.22009,549,https://unseenbd.com/place/shilaidaha-kuthibari
+134,tagore-lodge-kushtia,Tagore Lodge,টেগর লজ,kushtia,khulna,heritage,False,True,1,12,0.5,23.90163,89.14623,826,https://unseenbd.com/place/tagore-lodge-kushtia
+135,mir-mosharraf-hossain-homestead,Mir Mosharraf Hossain's Homestead,মীর মশাররফ হোসেনের বাস্তুভিটা,kushtia,khulna,heritage,False,True,11,2,1,23.88306,89.17202,747,https://unseenbd.com/place/mir-mosharraf-hossain-homestead
+136,jhaudia-shahi-mosque,Jhaudia Shahi Mosque,ঝাউদিয়া শাহী মসজিদ,kushtia,khulna,spiritual,False,True,11,2,1,23.77498,89.05517,793,https://unseenbd.com/place/jhaudia-shahi-mosque
+137,raja-sitaram-roy-palace,Raja Sitaram Roy's Palace,রাজা সীতারাম রায়ের রাজবাড়ি,magura,khulna,heritage,False,True,11,2,2,23.40398,89.59557,696,https://unseenbd.com/place/raja-sitaram-roy-palace
+138,siddheshwari-math-magura,Siddheshwari Math,সিদ্ধেশ্বরী মঠ,magura,khulna,spiritual,False,True,10,2,1,23.50475,89.39954,824,https://unseenbd.com/place/siddheshwari-math-magura
+139,farrukh-ahmad-home-majhail,"Poet Farrukh Ahmad's Home, Majhail","কবি ফররুখ আহমদের বাড়ি, মাঝাইল",magura,khulna,heritage,False,True,11,2,1.5,,,900,https://unseenbd.com/place/farrukh-ahmad-home-majhail
+140,mujibnagar-memorial-complex,Mujibnagar Memorial Complex,মুজিবনগর স্মৃতি কমপ্লেক্স,meherpur,khulna,heritage,True,False,11,3,3,23.64779,88.59377,919,https://unseenbd.com/place/mujibnagar-memorial-complex
+141,amjhupi-neelkuthi,Amjhupi Neelkuthi,আমঝুপি নীলকুঠি,meherpur,khulna,heritage,False,True,11,2,1.5,23.74117,88.67819,950,https://unseenbd.com/place/amjhupi-neelkuthi
+142,bhatpara-neelkuthi,Bhatpara Neelkuthi,ভাটপাড়া নীলকুঠি,meherpur,khulna,heritage,False,True,11,2,1,23.84435,88.702,942,https://unseenbd.com/place/bhatpara-neelkuthi
+143,sm-sultan-memorial-complex,S M Sultan Memorial Complex,এস এম সুলতান স্মৃতি সংগ্রহশালা,narail,khulna,heritage,True,False,11,2,2,23.15816,89.50352,740,https://unseenbd.com/place/sm-sultan-memorial-complex
+144,chitra-river-bandha-ghat,Chitra River and Bandha Ghat,চিত্রা নদী ও বাঁধাঘাট,narail,khulna,river,False,True,8,2,2,23.16232,89.50199,638,https://unseenbd.com/place/chitra-river-bandha-ghat
+145,noor-mohammad-sheikh-memorial-museum,Bir Shrestha Noor Mohammad Sheikh Memorial Museum,বীরশ্রেষ্ঠ নূর মোহাম্মদ শেখ স্মৃতি জাদুঘর,narail,khulna,heritage,False,True,1,12,1,23.21117,89.58269,891,https://unseenbd.com/place/noor-mohammad-sheikh-memorial-museum
+146,kalagachhia-eco-tourism-centre,Kalagachhia Eco-tourism Centre,কলাগাছিয়া ইকো ট্যুরিজম কেন্দ্র,satkhira,khulna,forest,False,True,11,3,4,22.21574,89.23779,702,https://unseenbd.com/place/kalagachhia-eco-tourism-centre
+147,mandarbaria-beach,Mandarbaria Beach,মান্দারবাড়িয়া সমুদ্র সৈকত,satkhira,khulna,beach,False,True,11,2,24,21.67333,89.28023,639,https://unseenbd.com/place/mandarbaria-beach
+148,jessoreshwari-kali-temple,Jessoreshwari Kali Temple,যশোরেশ্বরী কালী মন্দির,satkhira,khulna,spiritual,True,False,10,3,1,22.3062,89.1128,889,https://unseenbd.com/place/jessoreshwari-kali-temple
+149,nalta-sharif,Nalta Sharif,নলতা শরীফ,satkhira,khulna,spiritual,True,False,11,2,1.5,22.51441,89.0144,534,https://unseenbd.com/place/nalta-sharif
+150,tetulia-jame-mosque-tala,Tetulia Jame Mosque,তেঁতুলিয়া জামে মসজিদ,satkhira,khulna,spiritual,False,True,11,2,1,22.7817,89.2513,966,https://unseenbd.com/place/tetulia-jame-mosque-tala
+151,tengragiri-forest-taltali,Tengragiri Forest (Fatrar Bon),টেংরাগিরি বন (ফাতরার বন),barguna,barishal,forest,True,False,11,3,4,21.86932,90.07625,779,https://unseenbd.com/place/tengragiri-forest-taltali
+152,haringhata-forest-laldia-beach,Haringhata Forest and Laldia Beach,হরিণঘাটা বন ও লালদিয়া সৈকত,barguna,barishal,beach,False,True,11,3,5,21.97368,89.96109,817,https://unseenbd.com/place/haringhata-forest-laldia-beach
+153,bibichini-shahi-mosque,Bibichini Shahi Mosque,বিবিচিনি শাহী মসজিদ,barguna,barishal,spiritual,False,True,11,2,1,22.47282,90.20072,521,https://unseenbd.com/place/bibichini-shahi-mosque
+154,durga-sagar-dighi,Durga Sagar,দুর্গাসাগর দিঘি,barishal,barishal,river,True,False,11,2,2,22.761,90.2892,720,https://unseenbd.com/place/durga-sagar-dighi
+155,guthia-baitul-aman-mosque,Guthia Mosque (Baitul Aman Jame Masjid),গুঠিয়া মসজিদ (বায়তুল আমান জামে মসজিদ),barishal,barishal,spiritual,True,False,1,12,1.5,22.78335,90.2389,549,https://unseenbd.com/place/guthia-baitul-aman-mosque
+156,satla-shapla-beel,Satla Water-lily Wetland,সাতলার শাপলা বিল,barishal,barishal,river,True,False,8,11,3,22.91156,90.06322,997,https://unseenbd.com/place/satla-shapla-beel
+157,oxford-mission-church-barishal,Oxford Mission Church,অক্সফোর্ড মিশন গির্জা,barishal,barishal,spiritual,False,True,1,12,1,22.70429,90.36282,574,https://unseenbd.com/place/oxford-mission-church-barishal
+158,lakutia-zamindar-bari,Lakutia Zamindar Bari,লাকুটিয়া জমিদার বাড়ি,barishal,barishal,heritage,False,True,11,2,1,22.76249,90.33009,729,https://unseenbd.com/place/lakutia-zamindar-bari
+159,char-kukri-mukri,Char Kukri Mukri,চর কুকরি-মুকরি,bhola,barishal,island,True,False,11,3,24,21.9351,90.6406,521,https://unseenbd.com/place/char-kukri-mukri
+160,monpura-island,Monpura Island,মনপুরা দ্বীপ,bhola,barishal,island,True,False,11,3,24,22.25865,90.96444,923,https://unseenbd.com/place/monpura-island
+161,tarua-beach-dhal-char,"Tarua Beach, Dhal Char","তারুয়া সমুদ্র সৈকত, ঢালচর",bhola,barishal,beach,False,True,11,2,24,21.87093,90.71537,848,https://unseenbd.com/place/tarua-beach-dhal-char
+162,bhimruli-floating-guava-market,Bhimruli Floating Guava Market,ভীমরুলি ভাসমান পেয়ারা বাজার,jhalokathi,barishal,village,True,False,7,9,4,22.71375,90.16284,587,https://unseenbd.com/place/bhimruli-floating-guava-market
+163,kirtipasha-zamindar-bari,Kirtipasha Zamindar Bari,কীর্তিপাশা জমিদার বাড়ি,jhalokathi,barishal,heritage,False,True,11,2,1,22.68185,90.16685,542,https://unseenbd.com/place/kirtipasha-zamindar-bari
+164,gabkhan-channel-bridge,Gabkhan Channel and Bridge,গাবখান চ্যানেল ও সেতু,jhalokathi,barishal,river,False,True,10,3,1.5,22.6414,90.17941,833,https://unseenbd.com/place/gabkhan-channel-bridge
+165,kuakata-beach,Kuakata Beach,কুয়াকাটা সমুদ্র সৈকত,patuakhali,barishal,beach,True,False,11,3,24,21.81434,90.12229,673,https://unseenbd.com/place/kuakata-beach
+166,gangamati-char-kuakata,Gangamati Char,গঙ্গামতির চর,patuakhali,barishal,beach,False,True,11,3,3,21.802,90.1835,780,https://unseenbd.com/place/gangamati-char-kuakata
+167,misripara-seema-buddhist-temple,Misripara Seema Buddhist Temple,মিশ্রিপাড়া সীমা বৌদ্ধ বিহার,patuakhali,barishal,spiritual,False,True,11,3,1.5,21.83384,90.17624,872,https://unseenbd.com/place/misripara-seema-buddhist-temple
+168,sonar-char-rangabali,Sonar Char,সোনার চর,patuakhali,barishal,island,False,True,11,2,24,21.8275,90.51391,945,https://unseenbd.com/place/sonar-char-rangabali
+169,majidbaria-shahi-mosque,Majidbaria Shahi Mosque,মজিদবাড়িয়া শাহী মসজিদ,patuakhali,barishal,spiritual,False,True,11,2,1,22.2498,90.1954,897,https://unseenbd.com/place/majidbaria-shahi-mosque
+170,atghar-kuriana-guava-orchards,Atghar Kuriana Guava Orchards and Boat Market,আটঘর কুড়িয়ানার পেয়ারাবাগান ও নৌকার হাট,pirojpur,barishal,village,True,False,6,9,5,22.7401,90.15454,968,https://unseenbd.com/place/atghar-kuriana-guava-orchards
+171,rayerkathi-zamindar-bari,Rayerkathi Zamindar Bari,রায়েরকাঠি জমিদার বাড়ি,pirojpur,barishal,heritage,False,True,11,2,1.5,22.59736,89.98656,678,https://unseenbd.com/place/rayerkathi-zamindar-bari
+172,momin-mosque-mathbaria,Momin Mosque,মমিন মসজিদ,pirojpur,barishal,spiritual,False,True,11,2,1,22.38309,89.94278,647,https://unseenbd.com/place/momin-mosque-mathbaria
+173,mahasthangarh,Mahasthangarh,মহাস্থানগড়,bogura,rajshahi,heritage,True,False,11,2,4,24.96072,89.34511,815,https://unseenbd.com/place/mahasthangarh
+174,gokul-medh-behular-basar-ghar,Gokul Medh (Behula's Bridal Chamber),গোকুল মেধ (বেহুলার বাসরঘর),bogura,rajshahi,heritage,True,False,11,2,1.5,24.93622,89.33661,846,https://unseenbd.com/place/gokul-medh-behular-basar-ghar
+175,vasu-vihara,Vasu Vihara (Bhasu Bihar),ভাসু বিহার,bogura,rajshahi,heritage,False,True,11,2,1.5,24.983,89.29747,947,https://unseenbd.com/place/vasu-vihara
+176,kherua-mosque-sherpur,Kherua Mosque,খেরুয়া মসজিদ,bogura,rajshahi,spiritual,False,True,10,3,1,24.65914,89.41714,897,https://unseenbd.com/place/kherua-mosque-sherpur
+177,sariakandi-kalitola-jamuna-ghat,"Kalitola Ghat, Sariakandi",সারিয়াকান্দির কালিতলা ঘাট,bogura,rajshahi,river,False,True,10,3,3,24.89204,89.58066,961,https://unseenbd.com/place/sariakandi-kalitola-jamuna-ghat
+178,baro-shibaloy-temple,Baro Shibaloy Temple,বারো শিবালয় মন্দির,joypurhat,rajshahi,spiritual,True,False,11,3,1,25.13146,89.01592,983,https://unseenbd.com/place/baro-shibaloy-temple
+179,nandail-dighi,Nandail Dighi,নান্দাইল দিঘি,joypurhat,rajshahi,river,False,True,11,2,2,25.06159,89.21045,979,https://unseenbd.com/place/nandail-dighi
+180,lakma-rajbari,Lakma Rajbari,লকমা রাজবাড়ি,joypurhat,rajshahi,heritage,False,True,11,2,1.5,25.2064,88.9476,836,https://unseenbd.com/place/lakma-rajbari
+181,paharpur-buddhist-vihara,Paharpur Buddhist Vihara,পাহাড়পুর বৌদ্ধ বিহার,naogaon,rajshahi,heritage,True,False,11,2,3,25.03114,88.97697,768,https://unseenbd.com/place/paharpur-buddhist-vihara
+182,kusumba-mosque,Kusumba Mosque,কুসুম্বা মসজিদ,naogaon,rajshahi,spiritual,True,False,10,3,1,24.75278,88.68147,654,https://unseenbd.com/place/kusumba-mosque
+183,patisar-rabindra-kacharibari,Patisar Rabindra Kacharibari,পতিসর রবীন্দ্র কাছারিবাড়ি,naogaon,rajshahi,heritage,False,True,11,3,2,24.61681,89.08939,979,https://unseenbd.com/place/patisar-rabindra-kacharibari
+184,altadighi-national-park,Altadighi National Park,আলতাদিঘি জাতীয় উদ্যান,naogaon,rajshahi,forest,False,True,11,2,3,25.18646,88.86614,962,https://unseenbd.com/place/altadighi-national-park
+185,dibar-dighi,Dibar Dighi,দিবর দিঘি,naogaon,rajshahi,heritage,False,True,11,3,1.5,25.12222,88.62067,719,https://unseenbd.com/place/dibar-dighi
+186,uttara-ganabhaban-dighapatia,Dighapatia Palace (Uttara Ganabhaban),দিঘাপতিয়া রাজবাড়ি (উত্তরা গণভবন),natore,rajshahi,heritage,True,False,11,2,2,24.44089,89.01014,983,https://unseenbd.com/place/uttara-ganabhaban-dighapatia
+187,natore-rajbari-rani-bhabani,Natore Rajbari (Rani Bhabani's Palace),নাটোর রাজবাড়ি (রানি ভবানীর রাজবাড়ি),natore,rajshahi,heritage,True,False,11,2,2,24.42019,88.99139,965,https://unseenbd.com/place/natore-rajbari-rani-bhabani
+188,halti-beel,Halti Beel,হালতি বিল,natore,rajshahi,river,False,True,7,9,3,24.48954,89.0024,837,https://unseenbd.com/place/halti-beel
+189,chhoto-sona-mosque,Chhoto Sona Mosque,ছোট সোনা মসজিদ,chapainawabganj,rajshahi,spiritual,True,False,11,2,1.5,24.81372,88.14314,695,https://unseenbd.com/place/chhoto-sona-mosque
+190,darasbari-mosque-madrasa,Darasbari Mosque and Madrasa,দারাসবাড়ি মসজিদ ও মাদ্রাসা,chapainawabganj,rajshahi,heritage,False,True,11,2,1.5,24.83239,88.13647,980,https://unseenbd.com/place/darasbari-mosque-madrasa
+191,kansat-mango-market,Kansat Mango Market,কানসাট আমবাজার,chapainawabganj,rajshahi,village,True,False,5,7,2,24.73215,88.17005,628,https://unseenbd.com/place/kansat-mango-market
+192,hardinge-bridge-paksey,"Hardinge Bridge, Paksey","হার্ডিঞ্জ ব্রিজ, পাকশী",pabna,rajshahi,heritage,True,False,10,3,2.5,24.07023,89.03826,936,https://unseenbd.com/place/hardinge-bridge-paksey
+193,pabna-jor-bangla-temple,Jor Bangla Temple,জোড় বাংলা মন্দির,pabna,rajshahi,heritage,False,True,10,3,1,24.00147,89.24503,664,https://unseenbd.com/place/pabna-jor-bangla-temple
+194,chatmohar-shahi-mosque,Chatmohar Shahi Mosque,চাটমোহর শাহি মসজিদ,pabna,rajshahi,spiritual,False,True,10,3,1,24.22747,89.29103,717,https://unseenbd.com/place/chatmohar-shahi-mosque
+195,varendra-research-museum,Varendra Research Museum,বরেন্দ্র গবেষণা জাদুঘর,rajshahi,rajshahi,heritage,True,False,1,12,1.5,24.3671,88.5924,964,https://unseenbd.com/place/varendra-research-museum
+196,puthia-temple-complex,Puthia Rajbari and Temple Complex,পুঠিয়া রাজবাড়ি ও মন্দিরগুচ্ছ,rajshahi,rajshahi,heritage,True,False,11,2,3,24.36189,88.83664,606,https://unseenbd.com/place/puthia-temple-complex
+197,bagha-mosque,Bagha Mosque,বাঘা মসজিদ,rajshahi,rajshahi,spiritual,True,False,10,3,1.5,24.19603,88.83947,861,https://unseenbd.com/place/bagha-mosque
+198,rajshahi-padma-riverside-t-bandh,Padma Riverside and T-Bandh,পদ্মার পাড় ও টি-বাঁধ,rajshahi,rajshahi,river,True,False,10,3,2,24.36184,88.57009,944,https://unseenbd.com/place/rajshahi-padma-riverside-t-bandh
+199,kismat-maria-mosque,Kismat Maria Mosque,কিসমত মাড়িয়া মসজিদ,rajshahi,rajshahi,spiritual,False,True,10,3,1,24.42581,88.78014,665,https://unseenbd.com/place/kismat-maria-mosque
+200,shahjadpur-rabindra-kacharibari,"Rabindra Kacharibari, Shahjadpur",শাহজাদপুর রবীন্দ্র কাছারিবাড়ি,sirajganj,rajshahi,heritage,True,False,11,3,1.5,24.17542,89.59411,723,https://unseenbd.com/place/shahjadpur-rabindra-kacharibari
+201,hatikumrul-nabaratna-temple,Hatikumrul Nabaratna Temple,হাটিকুমরুল নবরত্ন মন্দির,sirajganj,rajshahi,heritage,False,True,10,3,1.5,24.43289,89.55297,634,https://unseenbd.com/place/hatikumrul-nabaratna-temple
+202,chalan-beel-tarash,Chalan Beel (Tarash side),চলনবিল (তাড়াশ অংশ),sirajganj,rajshahi,river,True,False,7,10,5,24.41706,89.30313,625,https://unseenbd.com/place/chalan-beel-tarash
+203,kantajew-temple,Kantajew Temple,কান্তজিউ মন্দির,dinajpur,rangpur,spiritual,True,False,11,2,2,25.79042,88.66672,595,https://unseenbd.com/place/kantajew-temple
+204,ramsagar-dighi,Ramsagar,রামসাগর,dinajpur,rangpur,river,True,False,11,2,3,25.55444,88.62333,770,https://unseenbd.com/place/ramsagar-dighi
+205,dinajpur-rajbari,Dinajpur Rajbari,দিনাজপুর রাজবাড়ি,dinajpur,rangpur,heritage,True,False,11,2,1.5,25.64619,88.65611,604,https://unseenbd.com/place/dinajpur-rajbari
+206,nayabad-mosque,Nayabad Mosque,নয়াবাদ মসজিদ,dinajpur,rangpur,spiritual,False,True,11,2,1,25.78183,88.65867,949,https://unseenbd.com/place/nayabad-mosque
+207,singra-national-park-birganj,Singra National Park,সিংড়া জাতীয় উদ্যান,dinajpur,rangpur,forest,False,True,11,3,3,25.89012,88.56305,556,https://unseenbd.com/place/singra-national-park-birganj
+208,balashi-ghat,Balashi Ghat,বালাসী ঘাট,gaibandha,rangpur,river,True,False,10,3,3,25.31446,89.61614,777,https://unseenbd.com/place/balashi-ghat
+209,bardhan-kuthi-gobindaganj,Bardhan Kuthi,বর্ধনকুঠি,gaibandha,rangpur,heritage,False,True,11,2,1,25.13554,89.40021,864,https://unseenbd.com/place/bardhan-kuthi-gobindaganj
+210,mirer-bagan-shah-sultan-gazi-mosque,"Shah Sultan Gazi Mosque, Mirer Bagan",মীরের বাগানের শাহ সুলতান গাজীর মসজিদ,gaibandha,rangpur,spiritual,False,True,11,3,1,25.38897,89.58026,761,https://unseenbd.com/place/mirer-bagan-shah-sultan-gazi-mosque
+211,chilmari-river-port,Chilmari River Port,চিলমারী নদীবন্দর,kurigram,rangpur,river,True,False,11,3,3,25.5723,89.67934,951,https://unseenbd.com/place/chilmari-river-port
+212,ulipur-munshibari,Ulipur Munshibari,উলিপুর মুন্সিবাড়ি,kurigram,rangpur,heritage,False,True,11,2,1.5,25.67511,89.62833,823,https://unseenbd.com/place/ulipur-munshibari
+213,chandamari-mosque-rajarhat,Chandamari Mosque,চান্দামারী মসজিদ,kurigram,rangpur,spiritual,False,True,11,3,1,25.77653,89.53542,629,https://unseenbd.com/place/chandamari-mosque-rajarhat
+214,tin-bigha-corridor-dahagram,Tin Bigha Corridor and Dahagram-Angarpota,তিনবিঘা করিডোর ও দহগ্রাম-আঙ্গরপোতা,lalmonirhat,rangpur,village,True,False,11,2,3,26.30106,88.98482,856,https://unseenbd.com/place/tin-bigha-corridor-dahagram
+215,teesta-barrage-doani,Teesta Barrage,তিস্তা ব্যারাজ,lalmonirhat,rangpur,river,True,False,10,3,3,26.17872,89.05167,622,https://unseenbd.com/place/teesta-barrage-doani
+216,harano-masjid-ramdas,Harano Masjid (the Lost Mosque),হারানো মসজিদ,lalmonirhat,rangpur,spiritual,False,True,11,3,1,25.85989,89.50581,707,https://unseenbd.com/place/harano-masjid-ramdas
+217,nilsagar-dighi,Nilsagar,নীলসাগর,nilphamari,rangpur,river,True,False,11,2,2.5,26.00342,88.75539,720,https://unseenbd.com/place/nilsagar-dighi
+218,chini-mosque-saidpur,Chini Mosque of Saidpur,সৈয়দপুরের চিনি মসজিদ,nilphamari,rangpur,spiritual,True,False,1,12,1,25.7943,88.8903,876,https://unseenbd.com/place/chini-mosque-saidpur
+219,dharmapaler-garh-jaldhaka,Dharmapaler Garh,ধর্মপালের গড়,nilphamari,rangpur,heritage,False,True,11,2,1.5,26.07867,88.89867,796,https://unseenbd.com/place/dharmapaler-garh-jaldhaka
+220,tetulia-banglabandha-kanchenjunga-view,Tetulia and Banglabandha Zero Point,তেঁতুলিয়া ও বাংলাবান্ধা জিরো পয়েন্ট,panchagarh,rangpur,river,True,False,10,12,16,26.50304,88.34373,750,https://unseenbd.com/place/tetulia-banglabandha-kanchenjunga-view
+221,tetulia-flatland-tea-gardens,Flat-land Tea Gardens of Tetulia,তেঁতুলিয়ার সমতলের চা-বাগান,panchagarh,rangpur,tea,True,False,4,11,3,26.54022,88.43042,676,https://unseenbd.com/place/tetulia-flatland-tea-gardens
+222,bhitargarh-fort-city,Bhitargarh Fort City and Maharaja Dighi,ভিতরগড় দুর্গনগরী ও মহারাজার দিঘি,panchagarh,rangpur,heritage,False,True,11,2,2.5,26.45176,88.61555,658,https://unseenbd.com/place/bhitargarh-fort-city
+223,tajhat-palace,Tajhat Palace,তাজহাট জমিদারবাড়ি,rangpur,rangpur,heritage,True,False,10,3,2,25.72531,89.27989,651,https://unseenbd.com/place/tajhat-palace
+224,pairaband-begum-rokeya-birthplace,"Begum Rokeya's Birthplace, Pairaband",পায়রাবন্দে বেগম রোকেয়ার জন্মভিটা,rangpur,rangpur,heritage,False,True,11,2,1.5,25.66681,89.30017,611,https://unseenbd.com/place/pairaband-begum-rokeya-birthplace
+225,mithapukur-boro-mosque,Mithapukur Boro Mosque,মিঠাপুকুর বড় মসজিদ,rangpur,rangpur,spiritual,False,True,10,3,1,25.57822,89.26972,808,https://unseenbd.com/place/mithapukur-boro-mosque
+226,baliadangi-suryapuri-mango-tree,Suryapuri Mango Tree of Baliadangi,বালিয়াডাঙ্গীর সূর্যপুরী আমগাছ,thakurgaon,rangpur,village,True,False,1,12,1.5,26.14101,88.21594,893,https://unseenbd.com/place/baliadangi-suryapuri-mango-tree
+227,jamalpur-zamindarbari-jame-mosque-thakurgaon,Jamalpur Zamindar Bari Jame Mosque,জামালপুর জমিদারবাড়ি জামে মসজিদ,thakurgaon,rangpur,spiritual,False,True,10,3,1,26.01014,88.37581,862,https://unseenbd.com/place/jamalpur-zamindarbari-jame-mosque-thakurgaon
+228,raja-tonkonath-rajbari-ranishankail,Raja Tonkonath's Rajbari,রাজা টংকনাথের রাজবাড়ি,thakurgaon,rangpur,heritage,False,True,11,2,1.5,25.89275,88.27453,629,https://unseenbd.com/place/raja-tonkonath-rajbari-ranishankail
+229,lauchapra-bakshiganj,Lauchapra Recreation Centre,লাউচাপড়া অবকাশ কেন্দ্র,jamalpur,mymensingh,hill,True,False,10,3,4,25.28341,89.92094,972,https://unseenbd.com/place/lauchapra-bakshiganj
+230,gandhi-ashram-melandah,Gandhi Ashram and Mukti Sangram Museum,গান্ধী আশ্রম ও মুক্তিসংগ্রাম জাদুঘর,jamalpur,mymensingh,heritage,False,True,11,3,2,24.86285,89.86652,855,https://unseenbd.com/place/gandhi-ashram-melandah
+231,dayamoyee-temple-jamalpur,Dayamoyee Temple,দয়াময়ী মন্দির,jamalpur,mymensingh,spiritual,False,True,10,3,1,24.92308,89.94988,853,https://unseenbd.com/place/dayamoyee-temple-jamalpur
+232,shashi-lodge,Shashi Lodge,শশী লজ,mymensingh,mymensingh,heritage,True,False,10,3,1.5,24.76179,90.40299,860,https://unseenbd.com/place/shashi-lodge
+233,zainul-abedin-museum-brahmaputra,Zainul Abedin Museum and the Brahmaputra Riverside,জয়নুল আবেদিন সংগ্রহশালা ও ব্রহ্মপুত্রের পাড়,mymensingh,mymensingh,city,True,False,10,3,2.5,24.77033,90.39494,941,https://unseenbd.com/place/zainul-abedin-museum-brahmaputra
+234,muktagacha-zamindar-bari,Muktagacha Zamindar Bari,মুক্তাগাছা জমিদারবাড়ি,mymensingh,mymensingh,heritage,True,False,10,3,2,24.76936,90.25533,747,https://unseenbd.com/place/muktagacha-zamindar-bari
+235,alexander-castle-mymensingh,Alexander Castle,আলেকজান্ডার ক্যাসেল,mymensingh,mymensingh,heritage,False,True,10,3,1,24.76575,90.40203,745,https://unseenbd.com/place/alexander-castle-mymensingh
+236,gabrakhali-garo-hills-haluaghat,Gabrakhali Garo Hills,গাবরাখালী গারো পাহাড়,mymensingh,mymensingh,hill,False,True,10,3,4,25.14798,90.45618,661,https://unseenbd.com/place/gabrakhali-garo-hills-haluaghat
+237,bijoypur-china-clay-hills,Bijoypur China Clay Hills,বিজয়পুরের সাদামাটির পাহাড়,netrokona,mymensingh,hill,True,False,10,3,4,25.15768,90.64133,990,https://unseenbd.com/place/bijoypur-china-clay-hills
+238,someshwari-river-durgapur,Someshwari River,সোমেশ্বরী নদী,netrokona,mymensingh,river,True,False,11,3,3,25.12492,90.67311,647,https://unseenbd.com/place/someshwari-river-durgapur
+239,ranikhong-mission,Ranikhong Mission,রানিখং মিশন,netrokona,mymensingh,spiritual,False,True,10,3,1.5,25.17263,90.65819,975,https://unseenbd.com/place/ranikhong-mission
+240,dingapota-haor,Dingapota Haor,ডিঙ্গাপোতা হাওর,netrokona,mymensingh,river,False,True,6,9,5,24.81422,91.04626,604,https://unseenbd.com/place/dingapota-haor
+241,madanpur-shah-sultan-rumi-mazar,"Shrine of Shah Sultan Qamruddin Rumi, Madanpur",মদনপুরে শাহ সুলতান কমরউদ্দিন রুমির মাজার,netrokona,mymensingh,spiritual,False,True,10,3,1,24.80441,90.75245,755,https://unseenbd.com/place/madanpur-shah-sultan-rumi-mazar
+242,gajni-abakash-kendra,Gajni Recreation Centre,গজনী অবকাশ কেন্দ্র,sherpur,mymensingh,hill,True,False,10,3,4,25.24486,90.04346,760,https://unseenbd.com/place/gajni-abakash-kendra
+243,madhutila-eco-park,Madhutila Eco Park,মধুটিলা ইকোপার্ক,sherpur,mymensingh,forest,True,False,10,3,3,25.2059,90.1532,799,https://unseenbd.com/place/madhutila-eco-park
+244,ghagra-khan-bari-mosque,Ghagra Khan Bari Jame Mosque,ঘাঘড়া খানবাড়ি জামে মসজিদ,sherpur,mymensingh,spiritual,False,True,10,3,1,25.11264,90.03697,695,https://unseenbd.com/place/ghagra-khan-bari-mosque
+245,adinath-temple-maheshkhali,"Adinath Temple, Maheshkhali",মহেশখালীর আদিনাথ মন্দির,coxs-bazar,chattogram,spiritual,False,True,11,2,4,21.52842,91.97499,567,https://unseenbd.com/place/adinath-temple-maheshkhali
+246,bholaganj-sada-pathor,Bholaganj Sada Pathor,ভোলাগঞ্জ সাদাপাথর,sylhet,sylhet,river,False,True,6,10,4,25.17187,91.75169,946,https://unseenbd.com/place/bholaganj-sada-pathor
+247,himchari-hills-waterfall,Himchari Hills and Waterfall,হিমছড়ি পাহাড় ও ঝরনা,coxs-bazar,chattogram,waterfall,False,True,6,2,3,21.35506,92.02572,926,https://unseenbd.com/place/himchari-hills-waterfall
+248,lalakhal-sari-river,Lalakhal and the Sari River,লালাখাল ও সারি নদী,sylhet,sylhet,river,False,True,6,2,4,25.10578,92.17625,966,https://unseenbd.com/place/lalakhal-sari-river
+249,madhabpur-lake,Madhabpur Lake,মাধবপুর লেক,moulvibazar,sylhet,river,False,True,11,2,3,24.28113,91.81778,978,https://unseenbd.com/place/madhabpur-lake
+250,panthumai-waterfall,Panthumai Waterfall (Pangthumai),পান্থুমাই ঝরনা (পাংথুমাই),sylhet,sylhet,waterfall,False,True,6,9,4,25.178,91.95559,673,https://unseenbd.com/place/panthumai-waterfall
+251,sitakot-vihara-dinajpur,Sitakot Vihara,সীতাকোট বিহার,dinajpur,rangpur,heritage,False,True,11,2,2,25.4142,89.05153,776,https://unseenbd.com/place/sitakot-vihara-dinajpur
+253,baitul-mukarram-national-mosque,Baitul Mukarram National Mosque,বায়তুল মোকাররম জাতীয় মসজিদ,dhaka,dhaka,spiritual,True,False,1,12,1,23.72947,90.41262,664,https://unseenbd.com/place/baitul-mukarram-national-mosque
+254,bangladesh-national-museum,Bangladesh National Museum,বাংলাদেশ জাতীয় জাদুঘর,dhaka,dhaka,heritage,True,False,1,12,3,23.73748,90.39448,687,https://unseenbd.com/place/bangladesh-national-museum
+255,central-shaheed-minar,Central Shaheed Minar,কেন্দ্রীয় শহীদ মিনার,dhaka,dhaka,heritage,True,False,2,12,1,23.72721,90.39664,610,https://unseenbd.com/place/central-shaheed-minar
+256,dhakeshwari-temple,Dhakeshwari National Temple,ঢাকেশ্বরী জাতীয় মন্দির,dhaka,dhaka,spiritual,True,False,1,12,1.5,23.72296,90.39025,703,https://unseenbd.com/place/dhakeshwari-temple
+257,hakaluki-haor,Hakaluki Haor,হাকালুকি হাওর,moulvibazar,sylhet,river,True,False,7,12,8,,,721,https://unseenbd.com/place/hakaluki-haor
+258,national-parliament-house,National Parliament House,জাতীয় সংসদ ভবন,dhaka,dhaka,heritage,True,False,1,12,1,23.76229,90.37855,901,https://unseenbd.com/place/national-parliament-house
