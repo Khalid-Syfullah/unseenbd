@@ -249,6 +249,17 @@ export type CommunityPhoto = {
   createdAt: string;
 };
 
+export type CommunityListing = {
+  id: number;
+  kind: "business" | "food" | "product";
+  category: string | null;
+  name: string;
+  area: string | null;
+  description: string | null;
+  phone: string | null;
+  sponsored: boolean;
+};
+
 export type CommunityPost = {
   id: number;
   author: string;

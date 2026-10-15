@@ -1,23 +1,22 @@
-import { and, count, desc, eq, inArray } from "drizzle-orm";
+import { and, count, desc, eq, inArray, type SQL } from "drizzle-orm";
 import { getDb } from "../db/client";
-import { districts, photos, postComments, posts, suggestions, users } from "../db/schema";
+import { districts, listings, photos, postComments, posts, suggestions, users } from "../db/schema";
 import { nameIn } from "./shared";
 import type { Lang } from "./lang";
-import type { CommunityPhoto, CommunityPost, CommunitySuggestion } from "./types";
+import type { CommunityListing, CommunityPhoto, CommunityPost, CommunitySuggestion } from "./types";
 
 /*
  * Community content that visitors submit and a moderator approves. These tables start empty,
  * so every list can legitimately be empty and pages show an empty state.
  */
 
-/** Latest approved, public traveller photos, newest first. */
-export async function listLatestPhotos(lang: Lang = "bn", limit = 12): Promise<CommunityPhoto[]> {
+function approvedPhotos(lang: Lang, limit: number, where?: SQL): CommunityPhoto[] {
   const db = getDb();
   return db
     .select({ p: photos, d: districts })
     .from(photos)
     .innerJoin(districts, eq(photos.districtId, districts.id))
-    .where(and(eq(photos.status, "approved"), eq(photos.isPublic, true)))
+    .where(and(eq(photos.status, "approved"), eq(photos.isPublic, true), where))
     .orderBy(desc(photos.createdAt), desc(photos.id))
     .limit(limit)
     .all()
@@ -31,6 +30,54 @@ export async function listLatestPhotos(lang: Lang = "bn", limit = 12): Promise<C
       district: { slug: d.slug, name: nameIn(lang, d) },
       likes: p.likes,
       createdAt: p.createdAt,
+    }));
+}
+
+/** Latest approved, public traveller photos, newest first. */
+export async function listLatestPhotos(lang: Lang = "bn", limit = 12): Promise<CommunityPhoto[]> {
+  return approvedPhotos(lang, limit);
+}
+
+/** Approved traveller photos of one place, newest first. */
+export async function listPlacePhotos(
+  placeId: number,
+  lang: Lang = "bn",
+  limit = 12,
+): Promise<CommunityPhoto[]> {
+  return approvedPhotos(lang, limit, eq(photos.placeId, placeId));
+}
+
+/** Approved traveller photos of one district, newest first. */
+export async function listDistrictPhotos(
+  districtId: number,
+  lang: Lang = "bn",
+  limit = 6,
+): Promise<CommunityPhoto[]> {
+  return approvedPhotos(lang, limit, eq(photos.districtId, districtId));
+}
+
+/** Approved owner listings (stays, restaurants, home food, products) of one district. */
+export async function listDistrictListings(
+  districtId: number,
+  limit = 12,
+): Promise<CommunityListing[]> {
+  const db = getDb();
+  return db
+    .select()
+    .from(listings)
+    .where(and(eq(listings.status, "approved"), eq(listings.districtId, districtId)))
+    .orderBy(desc(listings.sponsored), desc(listings.createdAt), desc(listings.id))
+    .limit(limit)
+    .all()
+    .map((l) => ({
+      id: l.id,
+      kind: l.kind,
+      category: l.category,
+      name: l.name,
+      area: l.area,
+      description: l.description,
+      phone: l.phone,
+      sponsored: l.sponsored,
     }));
 }
 

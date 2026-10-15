@@ -141,3 +141,9 @@ export async function listTrending(lang: Lang = "bn"): Promise<{
     }),
   };
 }
+
+/** Votes a place has in the trending snapshot (0 when it is not in the top list). */
+export async function getTrendVotes(slug: string): Promise<number> {
+  const row = curatedSlugs("trending").find((r) => r.placeSlug === slug);
+  return row?.votes ?? 0;
+}

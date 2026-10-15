@@ -33,6 +33,7 @@ let cachedRaw: string | null | undefined;
 let cachedList: readonly string[] = EMPTY;
 
 function getSnapshot(): readonly string[] {
+  if (memory) return memory;
   const raw = readRaw();
   if (raw !== cachedRaw) {
     cachedRaw = raw;
@@ -46,12 +47,36 @@ function getServerSnapshot(): readonly string[] {
   return EMPTY;
 }
 
+const listeners = new Set<() => void>();
+/** Used while storage cannot be written, so the page still reacts to clicks. */
+let memory: readonly string[] | null = null;
+
 function subscribe(onChange: () => void): () => void {
+  listeners.add(onChange);
   const onStorage = (e: StorageEvent) => {
     if (e.key === null || e.key === VISITED_KEY) onChange();
   };
   window.addEventListener("storage", onStorage);
-  return () => window.removeEventListener("storage", onStorage);
+  return () => {
+    listeners.delete(onChange);
+    window.removeEventListener("storage", onStorage);
+  };
+}
+
+/** Marks a district as visited (or clears it) and tells every component that shows the list. */
+export function setDistrictVisited(slug: string, visited: boolean) {
+  const current = getSnapshot();
+  const has = current.includes(slug);
+  if (has === visited) return;
+  const next = visited ? [...current, slug] : current.filter((s) => s !== slug);
+  try {
+    if (next.length) window.localStorage.setItem(VISITED_KEY, JSON.stringify(next));
+    else window.localStorage.removeItem(VISITED_KEY);
+    memory = null;
+  } catch {
+    memory = next; // storage is blocked; the change lives until the page closes
+  }
+  for (const listener of listeners) listener();
 }
 
 /** The visited district slugs. Empty on the server and during hydration, then the real list. */
