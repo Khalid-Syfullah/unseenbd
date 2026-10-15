@@ -1095,5 +1095,202 @@
         "other": "{count} pays visités"
       }
     }
+  },
+  "games": {
+    "title": "Espace jeux du Bangladesh",
+    "metaDescription": "Quatre petits jeux quotidiens sur les 64 districts du Bangladesh : sprint des divisions, contours à deviner, paires de mémoire et duel des distances. Gratuit, avec des classements vérifiés.",
+    "kicker": "Nouveau chaque jour · record sur cinq parties",
+    "intro": "Quatre petits jeux sur les 64 districts. Tout le monde a les mêmes manches aujourd'hui : comparez vos scores entre amis.",
+    "tabs": "Jeux",
+    "names": {
+      "ten_question_run": "Sprint des dix questions",
+      "photo_clue": "Indice photo",
+      "memory_match": "Paires de mémoire",
+      "distance_duel": "Duel des distances",
+      "district_quiz": "Quiz des districts",
+      "famous_quiz": "Quiz des spécialités"
+    },
+    "rules": {
+      "ten_question_run": "Choisissez la division de chaque district. 20 questions, un point chacune.",
+      "photo_clue": "Reconnaissez le district à son contour. 20 manches, un seul essai : +1 si juste, −1 si faux.",
+      "memory_match": "Associez 4 districts à leurs divisions. Le chrono de 30 secondes démarre au premier retournement ; moins de coups, plus de points.",
+      "distance_duel": "Classez quatre districts du plus proche au plus éloigné de la cible, à vol d'oiseau. 20 manches.",
+      "district_quiz": "20 questions : dans quelle division se trouve ce district ?",
+      "famous_quiz": "20 questions : de quel district vient ce plat ou cet artisanat ? Un seul essai."
+    },
+    "todaySet": "Série du jour · {date}",
+    "pastSet": "Série du {date}",
+    "round": "Manche {n}/{total}",
+    "status": "Manche {n} sur {total}. {right} justes, {wrong} fausses, {points} points.",
+    "question": {
+      "division": "Dans quelle division se trouve {district} ?",
+      "silhouette": "Quel est ce district ?",
+      "famous": "Quel district est célèbre pour {item} ?"
+    },
+    "silhouetteAlt": "Contour du district mystère",
+    "correct": "Juste",
+    "incorrect": "Faux",
+    "feedbackRight": "Bonne réponse !",
+    "feedbackWrong": "Pas tout à fait. La réponse est {answer}.",
+    "explainDivision": "{district} se trouve dans la division de {division}.",
+    "explainFamous": "{item} : {district}.",
+    "aboutDistrict": "À propos de {district}",
+    "next": "Question suivante",
+    "finish": "Voir votre score",
+    "memory": {
+      "board": "Cartes mémoire",
+      "district": "District",
+      "division": "Division",
+      "moves": {
+        "one": "{count} coup",
+        "other": "{count} coups"
+      },
+      "timeLeft": "{seconds} s restantes",
+      "pairs": "{count} paires sur 4",
+      "hint": "Le chrono démarre quand vous retournez la première carte.",
+      "faceDown": "Carte {n}, face cachée",
+      "faceUp": "Carte {n} : {name}",
+      "matched": "Associée",
+      "timeUp": "Temps écoulé !",
+      "cleared": "Toutes les paires trouvées !"
+    },
+    "duel": {
+      "prompt": "Du plus proche au plus éloigné de {district}",
+      "hint": "Touchez les districts du plus proche au plus éloigné, ou faites-les glisser. Au clavier, utilisez les flèches sur une poignée.",
+      "handle": "Déplacer {name}. Position {n} sur 4.",
+      "tap": "Placer {name} ensuite",
+      "position": "Position {n}",
+      "nearest": "Le plus proche",
+      "farthest": "Le plus éloigné",
+      "check": "Vérifier l'ordre",
+      "reset": "Recommencer",
+      "trueOrder": "Le bon ordre",
+      "km": "{km} km",
+      "rightOrder": "Bon ordre !",
+      "wrongOrder": "Pas cette fois.",
+      "nextRound": "Manche suivante",
+      "moved": "{name} est maintenant en position {n}."
+    },
+    "result": {
+      "title": "Votre score",
+      "score": "{score} / {total}",
+      "ranks": {
+        "champion": "Champion des districts",
+        "expert": "Voyageur aguerri",
+        "traveller": "Vous découvrez le Bangladesh",
+        "beginner": "Tout voyage commence quelque part"
+      },
+      "movesLine": {
+        "one": "Terminé en {count} coup",
+        "other": "Terminé en {count} coups"
+      },
+      "timeUpLine": "Temps écoulé avec {count} paires sur 4.",
+      "playAgain": "Rejouer",
+      "challenge": "Défier un ami",
+      "challengeText": "J'ai fait {score}/20 à {game} sur Unseen BD. Saurez-vous me battre ?",
+      "review": "Vos réponses",
+      "beat": "Vous avez battu {name} !",
+      "lost": "{name} gagne cette fois.",
+      "tie": "Égalité avec {name} !"
+    },
+    "challenge": {
+      "banner": "{name} a fait {score} / 20 sur cette série. Ferez-vous mieux ?",
+      "friend": "Votre ami"
+    },
+    "submit": {
+      "title": "Inscrivez votre nom au classement",
+      "name": "Votre nom",
+      "hint": "2 à 24 caractères. Les noms apparaissent après une rapide vérification.",
+      "send": "Envoyer le score",
+      "sent": "Merci ! Votre score de {score} / 20 est enregistré. Votre nom apparaîtra une fois vérifié.",
+      "already": "Vous avez déjà envoyé le score du jour pour ce jeu.",
+      "notToday": "Seule la série du jour compte pour le classement.",
+      "errors": {
+        "name_length": "Utilisez 2 à 24 caractères.",
+        "name_invalid": "Utilisez des lettres, sans lien.",
+        "name_profane": "Merci de choisir un autre nom.",
+        "already_submitted": "Vous avez déjà envoyé le score du jour pour ce jeu.",
+        "rate_limited": "Trop d'essais. Patientez quelques minutes.",
+        "stale_date": "Cette série est terminée. Jouez celle du jour pour entrer au classement.",
+        "generic": "Le score n'a pas pu être envoyé. Réessayez."
+      }
+    },
+    "record": {
+      "title": "Votre record",
+      "best": "Meilleur",
+      "lastFive": "Cinq dernières parties",
+      "none": "Jouez une partie pour lancer votre record. Il reste sur cet appareil."
+    },
+    "leaderboard": {
+      "title": "Meilleurs joueurs · {game}",
+      "players": {
+        "one": "{count} joueur",
+        "other": "{count} joueurs"
+      },
+      "empty": "Aucun nom pour l'instant. Jouez la série du jour et soyez le premier.",
+      "note": "Les scores sont vérifiés par le serveur et les noms par une personne avant d'apparaître.",
+      "card": "Carte du classement",
+      "share": "Partager le lien",
+      "shareTitle": "Meilleurs joueurs : {game}",
+      "cardTitle": "Meilleurs joueurs",
+      "cardMine": "Mon score du jour : {score} / {total}",
+      "cardEmpty": "Soyez le premier au classement",
+      "cardPreview": "Aperçu de la carte du classement",
+      "size": "Format",
+      "download": "Télécharger en PNG",
+      "shareImage": "Partager l'image"
+    },
+    "more": {
+      "title": "À essayer aussi",
+      "famous": "Quiz des spécialités",
+      "famousBody": "Devinez le district d'une douceur, d'un poisson ou d'un artisanat.",
+      "districts": "Quiz des districts",
+      "districtsBody": "Vingt districts, huit divisions. Combien saurez-vous placer ?",
+      "personality": "Profil de voyageur",
+      "personalityBody": "Six choix rapides révèlent quel voyageur vous êtes.",
+      "myMap": "Mon Bangladesh",
+      "myMapBody": "Cochez les districts que vous avez vus et partagez votre carte.",
+      "bucket": "Liste d'envies",
+      "bucketBody": "Gardez les lieux à voir dans une seule liste."
+    }
+  },
+  "quiz": {
+    "dailyNote": "Une nouvelle série chaque jour à minuit, heure du Bangladesh.",
+    "bangladesh": {
+      "title": "Quiz des districts : quelle division ?",
+      "metaDescription": "Vingt districts du Bangladesh : trouvez la division de chacun. Une nouvelle série chaque jour, avec un classement vérifié.",
+      "intro": "Vingt districts, huit divisions. Trouvez la bonne division pour chacun et apprenez en chemin."
+    },
+    "famous": {
+      "title": "Quiz des spécialités",
+      "metaDescription": "Quel district en est célèbre ? Vingt plats, douceurs et artisanats du Bangladesh. Une nouvelle série chaque jour, avec un classement vérifié.",
+      "intro": "Douceurs, poissons, fruits et artisanat : vingt fiertés du Bangladesh. De quel district vient chacune ?"
+    },
+    "personality": {
+      "title": "Quel voyageur êtes-vous ?",
+      "metaDescription": "Six choix rapides entre quatre types de lieux au Bangladesh révèlent votre style de voyage, avec des lieux assortis. Juste pour le plaisir.",
+      "intro": "Six manches, quatre lieux à chaque fois. Choisissez celui où vous préféreriez aller ; le type le plus choisi est votre style. Juste pour le plaisir.",
+      "round": "Choix {n} sur {total}",
+      "question": "Où préféreriez-vous aller ?",
+      "pick": "Choisir {name}, {district}",
+      "resultKicker": "Votre style de voyage",
+      "suggested": "Des lieux pour vous",
+      "again": "Recommencer",
+      "share": "Partager votre style",
+      "shareText": "Mon style de voyage sur Unseen BD : {style}. Et vous ?",
+      "picks": "Vos choix",
+      "styles": {
+        "sea": "Mer et îles",
+        "hills": "Collines et forêts",
+        "heritage": "Histoire et patrimoine",
+        "countryside": "Rivières et villages"
+      },
+      "bodies": {
+        "sea": "Vous suivez l'air salin : longues plages, bateaux vers les îles et couchers de soleil sur le golfe du Bengale.",
+        "hills": "Vous filez vers le vert : sentiers des collines, cascades, jardins de thé et chemins forestiers.",
+        "heritage": "Vous aimez les histoires : vieux forts, mosquées, temples et villes chargées de siècles.",
+        "countryside": "Vous prenez votre temps : traversées de rivières, eaux des haors et vie de village loin du trafic."
+      }
+    }
   }
 }

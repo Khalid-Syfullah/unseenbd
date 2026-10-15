@@ -1057,5 +1057,199 @@
         "other": "去过 {count} 个国家"
       }
     }
+  },
+  "games": {
+    "title": "孟加拉国游戏中心",
+    "metaDescription": "关于孟加拉国 64 个县的四款每日小游戏：专区冲刺、轮廓猜谜、记忆配对和距离对决。免费，排行榜经过核实。",
+    "kicker": "每天更新 · 五局记录",
+    "intro": "关于 64 个县的四款小游戏。今天每个人的题目都一样，可以和朋友比比分数。",
+    "tabs": "游戏",
+    "names": {
+      "ten_question_run": "十题冲刺",
+      "photo_clue": "图片线索",
+      "memory_match": "记忆配对",
+      "distance_duel": "距离对决",
+      "district_quiz": "县区测验",
+      "famous_quiz": "名产测验"
+    },
+    "rules": {
+      "ten_question_run": "选出每个县所属的专区。共 20 题，每题 1 分。",
+      "photo_clue": "根据轮廓说出县名。共 20 轮，每轮只能答一次：答对 +1，答错 −1。",
+      "memory_match": "把 4 个县和它们的专区配对。翻开第一张牌时开始 30 秒计时；步数越少得分越高。",
+      "distance_duel": "按直线距离，把四个县从离目标最近到最远排序。共 20 轮。",
+      "district_quiz": "20 道题：这个县属于哪个专区？",
+      "famous_quiz": "20 道题：这种食物或手工艺来自哪个县？每题只能答一次。"
+    },
+    "todaySet": "今日题目 · {date}",
+    "pastSet": "{date} 的题目",
+    "round": "第 {n}/{total} 轮",
+    "status": "第 {n} 轮，共 {total} 轮。答对 {right}，答错 {wrong}，{points} 分。",
+    "question": {
+      "division": "{district}属于哪个专区？",
+      "silhouette": "这是哪个县？",
+      "famous": "哪个县以{item}闻名？"
+    },
+    "silhouetteAlt": "神秘县的轮廓",
+    "correct": "正确",
+    "incorrect": "错误",
+    "feedbackRight": "答对了！",
+    "feedbackWrong": "不太对。答案是{answer}。",
+    "explainDivision": "{district}位于{division}专区。",
+    "explainFamous": "{item}：{district}。",
+    "aboutDistrict": "了解{district}",
+    "next": "下一题",
+    "finish": "查看得分",
+    "memory": {
+      "board": "记忆卡片",
+      "district": "县",
+      "division": "专区",
+      "moves": {
+        "other": "{count} 步"
+      },
+      "timeLeft": "剩余 {seconds} 秒",
+      "pairs": "已配对 {count}/4",
+      "hint": "翻开第一张牌时开始计时。",
+      "faceDown": "第 {n} 张牌，背面朝上",
+      "faceUp": "第 {n} 张牌：{name}",
+      "matched": "已配对",
+      "timeUp": "时间到！",
+      "cleared": "全部配对成功！"
+    },
+    "duel": {
+      "prompt": "距离{district}由近到远",
+      "hint": "按由近到远依次点击各县，或拖动排序。使用键盘时，在拖动柄上按方向键。",
+      "handle": "移动{name}。当前第 {n} 位，共 4 位。",
+      "tap": "把{name}放在下一位",
+      "position": "第 {n} 位",
+      "nearest": "最近",
+      "farthest": "最远",
+      "check": "检查顺序",
+      "reset": "重新开始",
+      "trueOrder": "正确顺序",
+      "km": "{km} 公里",
+      "rightOrder": "顺序正确！",
+      "wrongOrder": "这次没对。",
+      "nextRound": "下一轮",
+      "moved": "{name}现在位于第 {n} 位。"
+    },
+    "result": {
+      "title": "你的得分",
+      "score": "{score} / {total}",
+      "ranks": {
+        "champion": "县区冠军",
+        "expert": "资深旅行者",
+        "traveller": "正在认识孟加拉国",
+        "beginner": "每段旅程都有起点"
+      },
+      "movesLine": {
+        "other": "{count} 步完成"
+      },
+      "timeUpLine": "时间到，已配对 {count}/4。",
+      "playAgain": "再玩一次",
+      "challenge": "挑战好友",
+      "challengeText": "我在 Unseen BD 的{game}中得了 {score}/20。你能超过我吗？",
+      "review": "你的答案",
+      "beat": "你赢了{name}！",
+      "lost": "这次{name}赢了。",
+      "tie": "与{name}打成平手！"
+    },
+    "challenge": {
+      "banner": "{name}在这组题目中得了 {score} / 20。你能超过吗？",
+      "friend": "你的朋友"
+    },
+    "submit": {
+      "title": "把你的名字登上排行榜",
+      "name": "你的名字",
+      "hint": "2–24 个字符。简单审核后显示名字。",
+      "send": "提交分数",
+      "sent": "谢谢！你的 {score} / 20 分已收到。审核通过后会显示你的名字。",
+      "already": "你今天已经提交过这个游戏的分数。",
+      "notToday": "只有今天的题目计入排行榜。",
+      "errors": {
+        "name_length": "请使用 2–24 个字符。",
+        "name_invalid": "请使用文字，不要包含链接。",
+        "name_profane": "请换一个名字。",
+        "already_submitted": "你今天已经提交过这个游戏的分数。",
+        "rate_limited": "尝试次数过多，请稍等几分钟。",
+        "stale_date": "这组题目已结束。玩今天的题目才能登上排行榜。",
+        "generic": "分数提交失败，请重试。"
+      }
+    },
+    "record": {
+      "title": "你的记录",
+      "best": "最佳",
+      "lastFive": "最近五局",
+      "none": "玩一局即可开始记录。记录只保存在此设备上。"
+    },
+    "leaderboard": {
+      "title": "高分玩家 · {game}",
+      "players": {
+        "other": "{count} 位玩家"
+      },
+      "empty": "还没有名字。玩今天的题目，成为第一名吧。",
+      "note": "分数由服务器核实，名字在显示前由人工审核。",
+      "card": "排行榜卡片",
+      "share": "分享链接",
+      "shareTitle": "高分玩家：{game}",
+      "cardTitle": "高分玩家",
+      "cardMine": "我今天的得分：{score} / {total}",
+      "cardEmpty": "成为榜上第一人",
+      "cardPreview": "排行榜卡片预览",
+      "size": "尺寸",
+      "download": "下载 PNG",
+      "shareImage": "分享图片"
+    },
+    "more": {
+      "title": "更多玩法",
+      "famous": "名产测验",
+      "famousBody": "猜猜一道甜点、一种鱼或一门手艺来自哪个县。",
+      "districts": "县区测验",
+      "districtsBody": "二十个县，八个专区。你能放对几个？",
+      "personality": "旅行性格",
+      "personalityBody": "六次快速选择，看看你是哪种旅行者。",
+      "myMap": "我的孟加拉国",
+      "myMapBody": "勾选你去过的县，并分享你的地图。",
+      "bucket": "心愿清单",
+      "bucketBody": "把想去的地方放在一个清单里。"
+    }
+  },
+  "quiz": {
+    "dailyNote": "每天孟加拉国时间午夜更新题目。",
+    "bangladesh": {
+      "title": "县区测验：属于哪个专区？",
+      "metaDescription": "孟加拉国的二十个县：选出每个县所属的专区。每天更新，排行榜经过核实。",
+      "intro": "二十个县，八个专区。为每个县选出正确的专区，顺便学点新知识。"
+    },
+    "famous": {
+      "title": "名产测验",
+      "metaDescription": "哪个县以它闻名？孟加拉国的二十种食物、甜点和手工艺。每天更新，排行榜经过核实。",
+      "intro": "甜点、鱼、水果和手工艺：孟加拉国引以为傲的二十样东西。它们分别来自哪个县？"
+    },
+    "personality": {
+      "title": "你是哪种旅行者？",
+      "metaDescription": "在孟加拉国四类地方之间做六次快速选择，看出你的旅行风格，并推荐相配的地方。纯属娱乐。",
+      "intro": "共六轮，每轮四个地方。选出你更想去的那个；选得最多的类型就是你的风格。纯属娱乐。",
+      "round": "第 {n}/{total} 次选择",
+      "question": "你更想去哪里？",
+      "pick": "选择{name}（{district}）",
+      "resultKicker": "你的旅行风格",
+      "suggested": "为你推荐的地方",
+      "again": "再测一次",
+      "share": "分享你的风格",
+      "shareText": "我在 Unseen BD 的旅行风格：{style}。你的呢？",
+      "picks": "你的选择",
+      "styles": {
+        "sea": "大海与海岛",
+        "hills": "山丘与森林",
+        "heritage": "历史与遗产",
+        "countryside": "河流与乡村"
+      },
+      "bodies": {
+        "sea": "你追随海风：漫长的海滩、驶向海岛的小船，还有孟加拉湾的日落。",
+        "hills": "你奔向绿色：山间小路、瀑布、茶园和林间步道。",
+        "heritage": "你喜欢故事：古堡、清真寺、寺庙，以及有着数百年历史的城市。",
+        "countryside": "你喜欢慢下来：乘船过河、湿地湖泊，以及远离喧嚣的乡村生活。"
+      }
+    }
   }
 }

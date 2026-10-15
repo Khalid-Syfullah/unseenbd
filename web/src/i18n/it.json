@@ -1095,5 +1095,202 @@
         "other": "{count} paesi visitati"
       }
     }
+  },
+  "games": {
+    "title": "Sala giochi del Bangladesh",
+    "metaDescription": "Quattro brevi giochi quotidiani sui 64 distretti del Bangladesh: sprint delle divisioni, sagome da indovinare, coppie di memoria e duello delle distanze. Gratis, con classifiche verificate.",
+    "kicker": "Nuovo ogni giorno · record su cinque partite",
+    "intro": "Quattro brevi giochi sui 64 distretti. Oggi tutti hanno gli stessi turni, così potete confrontare i punteggi tra amici.",
+    "tabs": "Giochi",
+    "names": {
+      "ten_question_run": "Sprint delle dieci domande",
+      "photo_clue": "Indizio fotografico",
+      "memory_match": "Coppie di memoria",
+      "distance_duel": "Duello delle distanze",
+      "district_quiz": "Quiz dei distretti",
+      "famous_quiz": "Quiz delle specialità"
+    },
+    "rules": {
+      "ten_question_run": "Scegli la divisione di ogni distretto. 20 domande, un punto ciascuna.",
+      "photo_clue": "Riconosci il distretto dalla sagoma. 20 turni, un solo tentativo: +1 se giusto, −1 se sbagliato.",
+      "memory_match": "Abbina 4 distretti alle loro divisioni. Il timer di 30 secondi parte alla prima carta girata; meno mosse, più punti.",
+      "distance_duel": "Ordina quattro distretti dal più vicino al più lontano dal bersaglio, in linea d'aria. 20 turni.",
+      "district_quiz": "20 domande: in quale divisione si trova questo distretto?",
+      "famous_quiz": "20 domande: da quale distretto viene questo cibo o artigianato? Un solo tentativo."
+    },
+    "todaySet": "Serie di oggi · {date}",
+    "pastSet": "Serie del {date}",
+    "round": "Turno {n}/{total}",
+    "status": "Turno {n} di {total}. {right} giuste, {wrong} sbagliate, {points} punti.",
+    "question": {
+      "division": "In quale divisione si trova {district}?",
+      "silhouette": "Quale distretto è questo?",
+      "famous": "Quale distretto è famoso per {item}?"
+    },
+    "silhouetteAlt": "Sagoma del distretto misterioso",
+    "correct": "Giusto",
+    "incorrect": "Sbagliato",
+    "feedbackRight": "Giusto!",
+    "feedbackWrong": "Non proprio. La risposta è {answer}.",
+    "explainDivision": "{district} si trova nella divisione di {division}.",
+    "explainFamous": "{item}: {district}.",
+    "aboutDistrict": "Scopri {district}",
+    "next": "Domanda successiva",
+    "finish": "Vedi il punteggio",
+    "memory": {
+      "board": "Carte della memoria",
+      "district": "Distretto",
+      "division": "Divisione",
+      "moves": {
+        "one": "{count} mossa",
+        "other": "{count} mosse"
+      },
+      "timeLeft": "{seconds} s rimasti",
+      "pairs": "{count} coppie su 4",
+      "hint": "Il timer parte quando giri la prima carta.",
+      "faceDown": "Carta {n}, coperta",
+      "faceUp": "Carta {n}: {name}",
+      "matched": "Abbinata",
+      "timeUp": "Tempo scaduto!",
+      "cleared": "Tutte le coppie trovate!"
+    },
+    "duel": {
+      "prompt": "Dal più vicino al più lontano da {district}",
+      "hint": "Tocca i distretti dal più vicino al più lontano, oppure trascinali. Da tastiera, usa le frecce su una maniglia.",
+      "handle": "Sposta {name}. Posizione {n} di 4.",
+      "tap": "Metti {name} come prossimo",
+      "position": "Posizione {n}",
+      "nearest": "Il più vicino",
+      "farthest": "Il più lontano",
+      "check": "Controlla l'ordine",
+      "reset": "Ricomincia",
+      "trueOrder": "L'ordine giusto",
+      "km": "{km} km",
+      "rightOrder": "Ordine giusto!",
+      "wrongOrder": "Non questa volta.",
+      "nextRound": "Turno successivo",
+      "moved": "{name} ora è in posizione {n}."
+    },
+    "result": {
+      "title": "Il tuo punteggio",
+      "score": "{score} / {total}",
+      "ranks": {
+        "champion": "Campione dei distretti",
+        "expert": "Viaggiatore esperto",
+        "traveller": "Stai conoscendo il Bangladesh",
+        "beginner": "Ogni viaggio comincia da qualche parte"
+      },
+      "movesLine": {
+        "one": "Completato in {count} mossa",
+        "other": "Completato in {count} mosse"
+      },
+      "timeUpLine": "Tempo scaduto con {count} coppie su 4.",
+      "playAgain": "Gioca ancora",
+      "challenge": "Sfida un amico",
+      "challengeText": "Ho fatto {score}/20 a {game} su Unseen BD. Riesci a battermi?",
+      "review": "Le tue risposte",
+      "beat": "Hai battuto {name}!",
+      "lost": "Stavolta vince {name}.",
+      "tie": "Pareggio con {name}!"
+    },
+    "challenge": {
+      "banner": "{name} ha fatto {score} / 20 in questa serie. Riesci a fare meglio?",
+      "friend": "Il tuo amico"
+    },
+    "submit": {
+      "title": "Metti il tuo nome in classifica",
+      "name": "Il tuo nome",
+      "hint": "Da 2 a 24 caratteri. I nomi compaiono dopo un breve controllo.",
+      "send": "Invia punteggio",
+      "sent": "Grazie! Il tuo punteggio di {score} / 20 è arrivato. Il tuo nome comparirà dopo il controllo.",
+      "already": "Hai già inviato il punteggio di oggi per questo gioco.",
+      "notToday": "Per la classifica conta solo la serie di oggi.",
+      "errors": {
+        "name_length": "Usa da 2 a 24 caratteri.",
+        "name_invalid": "Usa lettere, senza link.",
+        "name_profane": "Scegli un altro nome, per favore.",
+        "already_submitted": "Hai già inviato il punteggio di oggi per questo gioco.",
+        "rate_limited": "Troppi tentativi. Aspetta qualche minuto.",
+        "stale_date": "Questa serie è finita. Gioca quella di oggi per entrare in classifica.",
+        "generic": "Non è stato possibile inviare il punteggio. Riprova."
+      }
+    },
+    "record": {
+      "title": "Il tuo record",
+      "best": "Migliore",
+      "lastFive": "Ultime cinque partite",
+      "none": "Gioca una partita per iniziare il tuo record. Resta su questo dispositivo."
+    },
+    "leaderboard": {
+      "title": "Migliori giocatori · {game}",
+      "players": {
+        "one": "{count} giocatore",
+        "other": "{count} giocatori"
+      },
+      "empty": "Ancora nessun nome. Gioca la serie di oggi e sii il primo.",
+      "note": "I punteggi sono verificati dal server e i nomi da una persona prima di comparire.",
+      "card": "Scheda della classifica",
+      "share": "Condividi il link",
+      "shareTitle": "Migliori giocatori: {game}",
+      "cardTitle": "Migliori giocatori",
+      "cardMine": "Il mio punteggio di oggi: {score} / {total}",
+      "cardEmpty": "Sii il primo in classifica",
+      "cardPreview": "Anteprima della scheda della classifica",
+      "size": "Formato",
+      "download": "Scarica PNG",
+      "shareImage": "Condividi immagine"
+    },
+    "more": {
+      "title": "Da provare anche",
+      "famous": "Quiz delle specialità",
+      "famousBody": "Indovina il distretto dietro un dolce, un pesce o un artigianato.",
+      "districts": "Quiz dei distretti",
+      "districtsBody": "Venti distretti, otto divisioni. Quanti riesci a collocare?",
+      "personality": "Profilo di viaggio",
+      "personalityBody": "Sei scelte veloci ti dicono che tipo di viaggiatore sei.",
+      "myMap": "Il mio Bangladesh",
+      "myMapBody": "Spunta i distretti che hai visto e condividi la tua mappa.",
+      "bucket": "Lista dei desideri",
+      "bucketBody": "Tieni in un'unica lista i luoghi che vuoi vedere."
+    }
+  },
+  "quiz": {
+    "dailyNote": "Una nuova serie ogni giorno a mezzanotte, ora del Bangladesh.",
+    "bangladesh": {
+      "title": "Quiz dei distretti: quale divisione?",
+      "metaDescription": "Venti distretti del Bangladesh: scegli la divisione di ciascuno. Una nuova serie ogni giorno, con classifica verificata.",
+      "intro": "Venti distretti, otto divisioni. Trova la divisione giusta per ciascuno e impara qualcosa lungo la strada."
+    },
+    "famous": {
+      "title": "Quiz delle specialità",
+      "metaDescription": "Quale distretto ne è famoso? Venti cibi, dolci e artigianati del Bangladesh. Una nuova serie ogni giorno, con classifica verificata.",
+      "intro": "Dolci, pesce, frutta e artigianato: venti orgogli del Bangladesh. Da quale distretto viene ciascuno?"
+    },
+    "personality": {
+      "title": "Che tipo di viaggiatore sei?",
+      "metaDescription": "Sei scelte veloci tra quattro tipi di luoghi del Bangladesh rivelano il tuo stile di viaggio, con luoghi adatti. Solo per divertimento.",
+      "intro": "Sei turni, quattro luoghi ciascuno. Scegli dove preferiresti andare; il tipo che scegli di più è il tuo stile. Solo per divertimento.",
+      "round": "Scelta {n} di {total}",
+      "question": "Dove preferiresti andare?",
+      "pick": "Scegli {name}, {district}",
+      "resultKicker": "Il tuo stile di viaggio",
+      "suggested": "Luoghi per te",
+      "again": "Rifallo",
+      "share": "Condividi il tuo stile",
+      "shareText": "Il mio stile di viaggio su Unseen BD: {style}. E il tuo?",
+      "picks": "Le tue scelte",
+      "styles": {
+        "sea": "Mare e isole",
+        "hills": "Colline e foreste",
+        "heritage": "Storia e patrimonio",
+        "countryside": "Fiumi e villaggi"
+      },
+      "bodies": {
+        "sea": "Segui l'aria salmastra: spiagge lunghe, barche verso le isole e tramonti sul Golfo del Bengala.",
+        "hills": "Corri verso il verde: sentieri collinari, cascate, piantagioni di tè e boschi.",
+        "heritage": "Ami le storie: vecchi forti, moschee, templi e città con secoli alle spalle.",
+        "countryside": "Rallenti: traversate sui fiumi, le acque degli haor e la vita di villaggio lontano dal traffico."
+      }
+    }
   }
 }

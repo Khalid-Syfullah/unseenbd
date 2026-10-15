@@ -1095,5 +1095,202 @@
         "other": "{count} countries visited"
       }
     }
+  },
+  "games": {
+    "title": "Bangladesh game hub",
+    "metaDescription": "Four quick daily games about the 64 districts of Bangladesh: a division sprint, outline clues, memory pairs and a distance duel. Free, with checked leaderboards.",
+    "kicker": "New every day · five-round record",
+    "intro": "Four short games about the 64 districts. Everyone gets the same rounds today, so you can compare scores with friends.",
+    "tabs": "Games",
+    "names": {
+      "ten_question_run": "Ten-question sprint",
+      "photo_clue": "Photo clue",
+      "memory_match": "Memory pairs",
+      "distance_duel": "Distance duel",
+      "district_quiz": "District quiz",
+      "famous_quiz": "Famous foods quiz"
+    },
+    "rules": {
+      "ten_question_run": "Pick the division each district belongs to. 20 questions, one point each.",
+      "photo_clue": "Name the district from its outline. 20 rounds, one try each: +1 if right, −1 if wrong.",
+      "memory_match": "Match 4 districts with their divisions. The 30-second timer starts on your first flip; fewer moves scores more.",
+      "distance_duel": "Put four districts in order from nearest to farthest from the target, by straight-line distance. 20 rounds.",
+      "district_quiz": "20 questions: which division is this district in?",
+      "famous_quiz": "20 questions: which district is this food or craft from? One try each."
+    },
+    "todaySet": "Today's set · {date}",
+    "pastSet": "The set from {date}",
+    "round": "Round {n}/{total}",
+    "status": "Round {n} of {total}. {right} right, {wrong} wrong, {points} points.",
+    "question": {
+      "division": "Which division is {district} in?",
+      "silhouette": "Which district is this?",
+      "famous": "Which district is famous for {item}?"
+    },
+    "silhouetteAlt": "Outline of the mystery district",
+    "correct": "Correct",
+    "incorrect": "Wrong",
+    "feedbackRight": "Correct!",
+    "feedbackWrong": "Not quite. The answer is {answer}.",
+    "explainDivision": "{district} is in {division} division.",
+    "explainFamous": "{item}: {district}.",
+    "aboutDistrict": "About {district}",
+    "next": "Next question",
+    "finish": "See your score",
+    "memory": {
+      "board": "Memory cards",
+      "district": "District",
+      "division": "Division",
+      "moves": {
+        "one": "{count} move",
+        "other": "{count} moves"
+      },
+      "timeLeft": "{seconds} s left",
+      "pairs": "{count} of 4 pairs",
+      "hint": "The timer starts when you flip the first card.",
+      "faceDown": "Card {n}, face down",
+      "faceUp": "Card {n}: {name}",
+      "matched": "Matched",
+      "timeUp": "Time's up!",
+      "cleared": "All pairs matched!"
+    },
+    "duel": {
+      "prompt": "Nearest to farthest from {district}",
+      "hint": "Tap the districts from nearest to farthest, or drag them. With a keyboard, use the arrow keys on a handle.",
+      "handle": "Move {name}. Position {n} of 4.",
+      "tap": "Put {name} next",
+      "position": "Position {n}",
+      "nearest": "Nearest",
+      "farthest": "Farthest",
+      "check": "Check order",
+      "reset": "Start again",
+      "trueOrder": "The right order",
+      "km": "{km} km",
+      "rightOrder": "Right order!",
+      "wrongOrder": "Not this time.",
+      "nextRound": "Next round",
+      "moved": "{name} is now at position {n}."
+    },
+    "result": {
+      "title": "Your score",
+      "score": "{score} / {total}",
+      "ranks": {
+        "champion": "District champion",
+        "expert": "Seasoned traveller",
+        "traveller": "Getting to know Bangladesh",
+        "beginner": "Every journey starts somewhere"
+      },
+      "movesLine": {
+        "one": "Cleared in {count} move",
+        "other": "Cleared in {count} moves"
+      },
+      "timeUpLine": "Time ran out with {count} of 4 pairs.",
+      "playAgain": "Play again",
+      "challenge": "Challenge a friend",
+      "challengeText": "I scored {score}/20 in {game} on Unseen BD. Can you beat me?",
+      "review": "Your answers",
+      "beat": "You beat {name}!",
+      "lost": "{name} wins this time.",
+      "tie": "It's a tie with {name}!"
+    },
+    "challenge": {
+      "banner": "{name} scored {score} / 20 on this set. Can you beat it?",
+      "friend": "Your friend"
+    },
+    "submit": {
+      "title": "Put your name on the leaderboard",
+      "name": "Your name",
+      "hint": "2–24 characters. Names appear after a quick check.",
+      "send": "Send score",
+      "sent": "Thanks! Your score of {score} / 20 is in. Your name appears once it has been checked.",
+      "already": "You have already sent today's score for this game.",
+      "notToday": "Only today's set counts for the leaderboard.",
+      "errors": {
+        "name_length": "Use 2–24 characters.",
+        "name_invalid": "Use letters, and no links.",
+        "name_profane": "Please pick another name.",
+        "already_submitted": "You have already sent today's score for this game.",
+        "rate_limited": "Too many tries. Wait a few minutes.",
+        "stale_date": "That set has ended. Play today's set to get on the board.",
+        "generic": "Your score could not be sent. Try again."
+      }
+    },
+    "record": {
+      "title": "Your record",
+      "best": "Best",
+      "lastFive": "Last five rounds",
+      "none": "Play a round to start your record. It stays on this device."
+    },
+    "leaderboard": {
+      "title": "Top players · {game}",
+      "players": {
+        "one": "{count} player",
+        "other": "{count} players"
+      },
+      "empty": "No names yet. Play today's set and be the first.",
+      "note": "Scores are checked by the server and names by a person before they appear.",
+      "card": "Leaderboard card",
+      "share": "Share link",
+      "shareTitle": "Top players: {game}",
+      "cardTitle": "Top players",
+      "cardMine": "My score today: {score} / {total}",
+      "cardEmpty": "Be the first on the board",
+      "cardPreview": "Leaderboard card preview",
+      "size": "Size",
+      "download": "Download PNG",
+      "shareImage": "Share image"
+    },
+    "more": {
+      "title": "More to try",
+      "famous": "Famous foods quiz",
+      "famousBody": "Guess the district behind a sweet, a fish or a craft.",
+      "districts": "District quiz",
+      "districtsBody": "Twenty districts, eight divisions. How many can you place?",
+      "personality": "Travel personality",
+      "personalityBody": "Six quick picks tell you what kind of traveller you are.",
+      "myMap": "My Bangladesh",
+      "myMapBody": "Tick the districts you have seen and share your map.",
+      "bucket": "Bucket list",
+      "bucketBody": "Keep the places you want to see in one list."
+    }
+  },
+  "quiz": {
+    "dailyNote": "A new set every day at midnight, Bangladesh time.",
+    "bangladesh": {
+      "title": "District quiz: which division?",
+      "metaDescription": "Twenty districts of Bangladesh: pick the division each one is in. A new set every day, with a checked leaderboard.",
+      "intro": "Twenty districts, eight divisions. Pick the right division for each and learn a little on the way."
+    },
+    "famous": {
+      "title": "Famous foods quiz",
+      "metaDescription": "Which district is famous for it? Twenty foods, sweets and crafts of Bangladesh. A new set every day, with a checked leaderboard.",
+      "intro": "Sweets, fish, fruit and crafts: twenty things Bangladesh is proud of. Which district does each come from?"
+    },
+    "personality": {
+      "title": "What kind of traveller are you?",
+      "metaDescription": "Six quick picks between four kinds of place in Bangladesh tell you your travel style, with places to match. Just for fun.",
+      "intro": "Six rounds, four places each. Pick the one you would rather go to; the kind you pick most is your style. Just for fun.",
+      "round": "Pick {n} of {total}",
+      "question": "Where would you rather go?",
+      "pick": "Choose {name}, {district}",
+      "resultKicker": "Your travel style",
+      "suggested": "Places for you",
+      "again": "Take it again",
+      "share": "Share your style",
+      "shareText": "My travel style on Unseen BD: {style}. What's yours?",
+      "picks": "Your picks",
+      "styles": {
+        "sea": "Sea and islands",
+        "hills": "Hills and forests",
+        "heritage": "History and heritage",
+        "countryside": "Rivers and villages"
+      },
+      "bodies": {
+        "sea": "You follow the salt air: long beaches, island boats and sunsets over the Bay of Bengal.",
+        "hills": "You head for the green: hill tracks, waterfalls, tea gardens and forest trails.",
+        "heritage": "You love a story: old forts, mosques, temples and cities with centuries behind them.",
+        "countryside": "You slow down: river crossings, haor waters and village life far from the traffic."
+      }
+    }
   }
 }

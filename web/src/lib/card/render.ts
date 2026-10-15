@@ -85,12 +85,13 @@ export function layoutFor(input: CardInput, geo: CardGeo | null): CardLayout {
   });
 }
 
-function font(weight: number, px: number, family: string): string {
+/** A canvas font string; exported for the other canvas cards (leaderboard). */
+export function font(weight: number, px: number, family: string): string {
   return `${weight} ${Math.max(1, Math.round(px))}px ${family}`;
 }
 
 /** Draws one line in `rect`, shrinking from `px` to `minPx` and then cutting with "…". */
-function drawFitted(
+export function drawFitted(
   g: G,
   text: string,
   rect: Rect,
@@ -124,7 +125,7 @@ function drawFitted(
   return g.measureText(line).width;
 }
 
-function roundRect(g: G, r: Rect, radius: number) {
+export function roundRect(g: G, r: Rect, radius: number) {
   const rad = Math.max(0, Math.min(radius, r.w / 2, r.h / 2));
   g.beginPath();
   g.moveTo(r.x + rad, r.y);
@@ -172,8 +173,11 @@ function jamdaniTile(theme: CardTheme, cell: number): HTMLCanvasElement {
 }
 
 function drawBackground(g: G, layout: CardLayout, theme: CardTheme) {
-  const { w, h } = layout.size;
-  const u = layout.unit;
+  paintBackground(g, layout.size.w, layout.size.h, layout.unit, theme);
+}
+
+/** The theme background: gradient, accent glow and (Jamdani) the motif. Shared by every card. */
+export function paintBackground(g: G, w: number, h: number, u: number, theme: CardTheme) {
   const grad = g.createLinearGradient(0, 0, w, h);
   grad.addColorStop(0, theme.bg[0]);
   grad.addColorStop(1, theme.bg[1]);

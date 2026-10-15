@@ -52,6 +52,7 @@ export {
 } from "./routes";
 export { getTrain, listTrains } from "./trains";
 export { getDistrictCovers, getMyBangladeshLevels } from "./my-map";
+export { getGameData, getGameDataSync, getPersonalityData, type PersonalityPlace } from "./games";
 export {
   getPlannerData,
   type PlannerData,

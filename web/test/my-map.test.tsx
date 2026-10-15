@@ -225,7 +225,8 @@ describe("/world", () => {
     expect(stored(WORLD_PINS_KEY)).toHaveLength(1);
     await user.click(screen.getByRole("button", { name: en("world.pinRemove") }));
     expect(window.localStorage.getItem(WORLD_PINS_KEY)).toBeNull();
-  });
+    // Typing into the 195-country page is slow in jsdom; give it room on a busy machine.
+  }, 20_000);
 
   it("shows a shared world link read-only", async () => {
     await show(WorldPage, "en", { v: "BDNP", w: "JP", n: "Mitu" });

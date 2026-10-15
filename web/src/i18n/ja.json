@@ -1057,5 +1057,199 @@
         "other": "{count} か国を訪問"
       }
     }
+  },
+  "games": {
+    "title": "バングラデシュ ゲームハブ",
+    "metaDescription": "バングラデシュの64県を題材にした毎日の4つのミニゲーム：管区スプリント、輪郭クイズ、神経衰弱、距離対決。無料で、検証済みのランキング付き。",
+    "kicker": "毎日更新 · 5回分の記録",
+    "intro": "64の県を題材にした4つのミニゲーム。今日は全員が同じ問題なので、友だちとスコアを比べられます。",
+    "tabs": "ゲーム",
+    "names": {
+      "ten_question_run": "10問スプリント",
+      "photo_clue": "写真のヒント",
+      "memory_match": "神経衰弱",
+      "distance_duel": "距離対決",
+      "district_quiz": "県クイズ",
+      "famous_quiz": "名物クイズ"
+    },
+    "rules": {
+      "ten_question_run": "各県がどの管区に属するかを選びます。全20問、1問1点。",
+      "photo_clue": "輪郭から県名を当てます。全20ラウンド、各1回まで：正解 +1、不正解 −1。",
+      "memory_match": "4つの県とその管区を組み合わせます。最初のカードをめくると30秒のタイマーが始まり、少ない手数ほど高得点です。",
+      "distance_duel": "目標の県から直線距離で近い順に4つの県を並べます。全20ラウンド。",
+      "district_quiz": "20問：この県はどの管区にある？",
+      "famous_quiz": "20問：この料理や工芸品はどの県のもの？各問1回まで。"
+    },
+    "todaySet": "今日の問題 · {date}",
+    "pastSet": "{date}の問題",
+    "round": "ラウンド {n}/{total}",
+    "status": "全{total}ラウンド中 {n} ラウンド目。正解 {right}、不正解 {wrong}、{points}点。",
+    "question": {
+      "division": "{district}はどの管区にある？",
+      "silhouette": "これはどの県？",
+      "famous": "{item}で有名な県はどこ？"
+    },
+    "silhouetteAlt": "なぞの県の輪郭",
+    "correct": "正解",
+    "incorrect": "不正解",
+    "feedbackRight": "正解！",
+    "feedbackWrong": "惜しい。答えは{answer}です。",
+    "explainDivision": "{district}は{division}管区にあります。",
+    "explainFamous": "{item}：{district}。",
+    "aboutDistrict": "{district}について",
+    "next": "次の問題",
+    "finish": "スコアを見る",
+    "memory": {
+      "board": "神経衰弱のカード",
+      "district": "県",
+      "division": "管区",
+      "moves": {
+        "other": "{count}手"
+      },
+      "timeLeft": "残り{seconds}秒",
+      "pairs": "{count}/4ペア",
+      "hint": "最初のカードをめくるとタイマーが始まります。",
+      "faceDown": "カード{n}、裏向き",
+      "faceUp": "カード{n}：{name}",
+      "matched": "そろった",
+      "timeUp": "時間切れ！",
+      "cleared": "すべてのペアがそろいました！"
+    },
+    "duel": {
+      "prompt": "{district}から近い順に",
+      "hint": "近い順に県をタップするか、ドラッグして並べます。キーボードではハンドル上で矢印キーを使います。",
+      "handle": "{name}を移動。4つ中{n}番目。",
+      "tap": "次に{name}を置く",
+      "position": "{n}番目",
+      "nearest": "いちばん近い",
+      "farthest": "いちばん遠い",
+      "check": "順番を確認",
+      "reset": "やり直す",
+      "trueOrder": "正しい順番",
+      "km": "{km} km",
+      "rightOrder": "正しい順番です！",
+      "wrongOrder": "今回は残念。",
+      "nextRound": "次のラウンド",
+      "moved": "{name}は{n}番目になりました。"
+    },
+    "result": {
+      "title": "あなたのスコア",
+      "score": "{score} / {total}",
+      "ranks": {
+        "champion": "県マスター",
+        "expert": "ベテラン旅行者",
+        "traveller": "バングラデシュを知り始めた人",
+        "beginner": "どんな旅もどこかから始まる"
+      },
+      "movesLine": {
+        "other": "{count}手でクリア"
+      },
+      "timeUpLine": "時間切れ、{count}/4ペア。",
+      "playAgain": "もう一度遊ぶ",
+      "challenge": "友だちに挑戦",
+      "challengeText": "Unseen BD の{game}で {score}/20 を取りました。超えられる？",
+      "review": "あなたの回答",
+      "beat": "{name}に勝ちました！",
+      "lost": "今回は{name}の勝ちです。",
+      "tie": "{name}と引き分け！"
+    },
+    "challenge": {
+      "banner": "{name}はこの問題で {score} / 20 でした。超えられますか？",
+      "friend": "友だち"
+    },
+    "submit": {
+      "title": "ランキングに名前を載せる",
+      "name": "名前",
+      "hint": "2〜24文字。簡単な確認のあとに表示されます。",
+      "send": "スコアを送信",
+      "sent": "ありがとうございます！{score} / 20 のスコアを受け付けました。確認後に名前が表示されます。",
+      "already": "このゲームの今日のスコアはすでに送信済みです。",
+      "notToday": "ランキングに入るのは今日の問題だけです。",
+      "errors": {
+        "name_length": "2〜24文字で入力してください。",
+        "name_invalid": "文字を使い、リンクは入れないでください。",
+        "name_profane": "別の名前にしてください。",
+        "already_submitted": "このゲームの今日のスコアはすでに送信済みです。",
+        "rate_limited": "試行回数が多すぎます。数分待ってください。",
+        "stale_date": "この問題は終了しました。ランキングに入るには今日の問題を遊んでください。",
+        "generic": "スコアを送信できませんでした。もう一度お試しください。"
+      }
+    },
+    "record": {
+      "title": "あなたの記録",
+      "best": "ベスト",
+      "lastFive": "直近5回",
+      "none": "1回遊ぶと記録が始まります。記録はこの端末に保存されます。"
+    },
+    "leaderboard": {
+      "title": "トッププレイヤー · {game}",
+      "players": {
+        "other": "{count}人"
+      },
+      "empty": "まだ名前はありません。今日の問題を遊んで一番乗りしましょう。",
+      "note": "スコアはサーバーが検証し、名前は表示前に人が確認します。",
+      "card": "ランキングカード",
+      "share": "リンクを共有",
+      "shareTitle": "トッププレイヤー：{game}",
+      "cardTitle": "トッププレイヤー",
+      "cardMine": "今日のスコア：{score} / {total}",
+      "cardEmpty": "ランキング一番乗りを目指そう",
+      "cardPreview": "ランキングカードのプレビュー",
+      "size": "サイズ",
+      "download": "PNGをダウンロード",
+      "shareImage": "画像を共有"
+    },
+    "more": {
+      "title": "ほかにもどうぞ",
+      "famous": "名物クイズ",
+      "famousBody": "お菓子や魚、工芸品がどの県のものか当ててみよう。",
+      "districts": "県クイズ",
+      "districtsBody": "20の県と8つの管区。いくつ正しく当てられる？",
+      "personality": "旅のタイプ診断",
+      "personalityBody": "6回の選択であなたの旅のタイプがわかります。",
+      "myMap": "マイ・バングラデシュ",
+      "myMapBody": "訪れた県にチェックを入れて、地図を共有しよう。",
+      "bucket": "行きたいリスト",
+      "bucketBody": "行きたい場所をひとつのリストにまとめよう。"
+    }
+  },
+  "quiz": {
+    "dailyNote": "毎日バングラデシュ時間の午前0時に新しい問題に変わります。",
+    "bangladesh": {
+      "title": "県クイズ：どの管区？",
+      "metaDescription": "バングラデシュの20の県がどの管区にあるかを当てよう。毎日更新、検証済みのランキング付き。",
+      "intro": "20の県と8つの管区。それぞれ正しい管区を選んで、ついでに少し詳しくなりましょう。"
+    },
+    "famous": {
+      "title": "名物クイズ",
+      "metaDescription": "どの県の名物？バングラデシュの料理、お菓子、工芸品を20問。毎日更新、検証済みのランキング付き。",
+      "intro": "お菓子、魚、果物、工芸品：バングラデシュ自慢の20品。それぞれどの県のもの？"
+    },
+    "personality": {
+      "title": "あなたはどんな旅人？",
+      "metaDescription": "バングラデシュの4種類の場所から6回選ぶだけで、あなたの旅のスタイルとおすすめの場所がわかります。お遊びです。",
+      "intro": "全6ラウンド、毎回4つの場所。行ってみたいほうを選んでください。いちばん多く選んだタイプがあなたのスタイルです。お遊びです。",
+      "round": "{total}回中{n}回目の選択",
+      "question": "どこに行ってみたい？",
+      "pick": "{name}（{district}）を選ぶ",
+      "resultKicker": "あなたの旅のスタイル",
+      "suggested": "あなたにおすすめの場所",
+      "again": "もう一度診断する",
+      "share": "スタイルを共有",
+      "shareText": "Unseen BD での私の旅のスタイル：{style}。あなたは？",
+      "picks": "あなたの選択",
+      "styles": {
+        "sea": "海と島",
+        "hills": "丘と森",
+        "heritage": "歴史と遺産",
+        "countryside": "川と村"
+      },
+      "bodies": {
+        "sea": "潮風に誘われるタイプ。長い砂浜、島へ渡る舟、ベンガル湾に沈む夕日。",
+        "hills": "緑を目指すタイプ。丘の道、滝、茶園、森の小道。",
+        "heritage": "物語が好きなタイプ。古い砦、モスク、寺院、何世紀もの歴史をもつ街。",
+        "countryside": "のんびり派。川の渡し、ハオールの水辺、喧騒から離れた村の暮らし。"
+      }
+    }
   }
 }
