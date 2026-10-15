@@ -1,0 +1,2315 @@
+[
+ {
+  "slug": "nilgiri-hill",
+  "scene": "hill",
+  "variant": "cloudsea",
+  "mood": "day",
+  "svg": "svg/nilgiri-hill.svg",
+  "w640": "w640/nilgiri-hill.webp",
+  "w1200": "w1200/nilgiri-hill.webp"
+ },
+ {
+  "slug": "boga-lake",
+  "scene": "river",
+  "variant": "hill-lake",
+  "mood": "dawn",
+  "svg": "svg/boga-lake.svg",
+  "w640": "w640/boga-lake.webp",
+  "w1200": "w1200/boga-lake.webp"
+ },
+ {
+  "slug": "nafakhum-waterfall",
+  "scene": "waterfall",
+  "variant": "wide",
+  "mood": "dawn",
+  "svg": "svg/nafakhum-waterfall.svg",
+  "w640": "w640/nafakhum-waterfall.webp",
+  "w1200": "w1200/nafakhum-waterfall.webp"
+ },
+ {
+  "slug": "buddha-dhatu-jadi",
+  "scene": "arch",
+  "variant": "zedi",
+  "mood": "day",
+  "svg": "svg/buddha-dhatu-jadi.svg",
+  "w640": "w640/buddha-dhatu-jadi.webp",
+  "w1200": "w1200/buddha-dhatu-jadi.webp"
+ },
+ {
+  "slug": "debotakhum",
+  "scene": "river",
+  "variant": "canyon",
+  "mood": "golden",
+  "svg": "svg/debotakhum.svg",
+  "w640": "w640/debotakhum.webp",
+  "w1200": "w1200/debotakhum.webp"
+ },
+ {
+  "slug": "titas-river-brahmanbaria",
+  "scene": "river",
+  "variant": "boats",
+  "mood": "monsoon",
+  "svg": "svg/titas-river-brahmanbaria.svg",
+  "w640": "w640/titas-river-brahmanbaria.webp",
+  "w1200": "w1200/titas-river-brahmanbaria.webp"
+ },
+ {
+  "slug": "haripur-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "monsoon",
+  "svg": "svg/haripur-zamindar-bari.svg",
+  "w640": "w640/haripur-zamindar-bari.webp",
+  "w1200": "w1200/haripur-zamindar-bari.webp"
+ },
+ {
+  "slug": "arifail-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/arifail-mosque.svg",
+  "w640": "w640/arifail-mosque.webp",
+  "w1200": "w1200/arifail-mosque.webp"
+ },
+ {
+  "slug": "chandpur-boro-station-mohona",
+  "scene": "river",
+  "variant": "boats",
+  "mood": "dusk",
+  "svg": "svg/chandpur-boro-station-mohona.svg",
+  "w640": "w640/chandpur-boro-station-mohona.webp",
+  "w1200": "w1200/chandpur-boro-station-mohona.webp"
+ },
+ {
+  "slug": "hajiganj-boro-masjid",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "golden",
+  "svg": "svg/hajiganj-boro-masjid.svg",
+  "w640": "w640/hajiganj-boro-masjid.webp",
+  "w1200": "w1200/hajiganj-boro-masjid.webp"
+ },
+ {
+  "slug": "lohagor-math",
+  "scene": "arch",
+  "variant": "temple-math",
+  "mood": "mist",
+  "svg": "svg/lohagor-math.svg",
+  "w640": "w640/lohagor-math.webp",
+  "w1200": "w1200/lohagor-math.webp"
+ },
+ {
+  "slug": "patenga-sea-beach",
+  "scene": "beach",
+  "variant": "ships",
+  "mood": "day",
+  "svg": "svg/patenga-sea-beach.svg",
+  "w640": "w640/patenga-sea-beach.webp",
+  "w1200": "w1200/patenga-sea-beach.webp"
+ },
+ {
+  "slug": "foys-lake",
+  "scene": "city",
+  "variant": "hill-lake",
+  "mood": "day",
+  "svg": "svg/foys-lake.svg",
+  "w640": "w640/foys-lake.webp",
+  "w1200": "w1200/foys-lake.webp"
+ },
+ {
+  "slug": "chandranath-hill",
+  "scene": "hill",
+  "variant": "hilltemple",
+  "mood": "golden",
+  "svg": "svg/chandranath-hill.svg",
+  "w640": "w640/chandranath-hill.webp",
+  "w1200": "w1200/chandranath-hill.webp"
+ },
+ {
+  "slug": "khoiyachhora-waterfall",
+  "scene": "waterfall",
+  "variant": "tall",
+  "mood": "monsoon",
+  "svg": "svg/khoiyachhora-waterfall.svg",
+  "w640": "w640/khoiyachhora-waterfall.webp",
+  "w1200": "w1200/khoiyachhora-waterfall.webp"
+ },
+ {
+  "slug": "guliakhali-sea-beach",
+  "scene": "beach",
+  "variant": "grass",
+  "mood": "dawn",
+  "svg": "svg/guliakhali-sea-beach.svg",
+  "w640": "w640/guliakhali-sea-beach.webp",
+  "w1200": "w1200/guliakhali-sea-beach.webp"
+ },
+ {
+  "slug": "shalban-vihara",
+  "scene": "arch",
+  "variant": "ruins",
+  "mood": "mist",
+  "svg": "svg/shalban-vihara.svg",
+  "w640": "w640/shalban-vihara.webp",
+  "w1200": "w1200/shalban-vihara.webp"
+ },
+ {
+  "slug": "mainamati-war-cemetery",
+  "scene": "arch",
+  "variant": "cemetery",
+  "mood": "dusk",
+  "svg": "svg/mainamati-war-cemetery.svg",
+  "w640": "w640/mainamati-war-cemetery.webp",
+  "w1200": "w1200/mainamati-war-cemetery.webp"
+ },
+ {
+  "slug": "dharmasagar-dighi",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "dawn",
+  "svg": "svg/dharmasagar-dighi.svg",
+  "w640": "w640/dharmasagar-dighi.webp",
+  "w1200": "w1200/dharmasagar-dighi.webp"
+ },
+ {
+  "slug": "kotila-mura",
+  "scene": "arch",
+  "variant": "ruins-mounds",
+  "mood": "day",
+  "svg": "svg/kotila-mura.svg",
+  "w640": "w640/kotila-mura.webp",
+  "w1200": "w1200/kotila-mura.webp"
+ },
+ {
+  "slug": "nawab-faizunnesa-house",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "mist",
+  "svg": "svg/nawab-faizunnesa-house.svg",
+  "w640": "w640/nawab-faizunnesa-house.webp",
+  "w1200": "w1200/nawab-faizunnesa-house.webp"
+ },
+ {
+  "slug": "coxs-bazar-sea-beach",
+  "scene": "beach",
+  "variant": "resort",
+  "mood": "dusk",
+  "svg": "svg/coxs-bazar-sea-beach.svg",
+  "w640": "w640/coxs-bazar-sea-beach.webp",
+  "w1200": "w1200/coxs-bazar-sea-beach.webp"
+ },
+ {
+  "slug": "saint-martins-island",
+  "scene": "island",
+  "variant": "coral",
+  "mood": "mist",
+  "svg": "svg/saint-martins-island.svg",
+  "w640": "w640/saint-martins-island.webp",
+  "w1200": "w1200/saint-martins-island.webp"
+ },
+ {
+  "slug": "inani-beach",
+  "scene": "beach",
+  "variant": "resort",
+  "mood": "dusk",
+  "svg": "svg/inani-beach.svg",
+  "w640": "w640/inani-beach.webp",
+  "w1200": "w1200/inani-beach.webp"
+ },
+ {
+  "slug": "ramu-buddhist-monasteries",
+  "scene": "arch",
+  "variant": "kyang",
+  "mood": "day",
+  "svg": "svg/ramu-buddhist-monasteries.svg",
+  "w640": "w640/ramu-buddhist-monasteries.webp",
+  "w1200": "w1200/ramu-buddhist-monasteries.webp"
+ },
+ {
+  "slug": "sonadia-island",
+  "scene": "island",
+  "variant": "sand",
+  "mood": "day",
+  "svg": "svg/sonadia-island.svg",
+  "w640": "w640/sonadia-island.webp",
+  "w1200": "w1200/sonadia-island.webp"
+ },
+ {
+  "slug": "muhuri-project",
+  "scene": "river",
+  "variant": "barrage",
+  "mood": "dusk",
+  "svg": "svg/muhuri-project.svg",
+  "w640": "w640/muhuri-project.webp",
+  "w1200": "w1200/muhuri-project.webp"
+ },
+ {
+  "slug": "bijoy-singh-dighi",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "dawn",
+  "svg": "svg/bijoy-singh-dighi.svg",
+  "w640": "w640/bijoy-singh-dighi.webp",
+  "w1200": "w1200/bijoy-singh-dighi.webp"
+ },
+ {
+  "slug": "chandgazi-bhuiyan-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/chandgazi-bhuiyan-mosque.svg",
+  "w640": "w640/chandgazi-bhuiyan-mosque.webp",
+  "w1200": "w1200/chandgazi-bhuiyan-mosque.webp"
+ },
+ {
+  "slug": "alutila-cave",
+  "scene": "hill",
+  "variant": "cave",
+  "mood": "golden",
+  "svg": "svg/alutila-cave.svg",
+  "w640": "w640/alutila-cave.webp",
+  "w1200": "w1200/alutila-cave.webp"
+ },
+ {
+  "slug": "richhang-waterfall",
+  "scene": "waterfall",
+  "variant": "tall",
+  "mood": "dawn",
+  "svg": "svg/richhang-waterfall.svg",
+  "w640": "w640/richhang-waterfall.webp",
+  "w1200": "w1200/richhang-waterfall.webp"
+ },
+ {
+  "slug": "debotar-pukur",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "mist",
+  "svg": "svg/debotar-pukur.svg",
+  "w640": "w640/debotar-pukur.webp",
+  "w1200": "w1200/debotar-pukur.webp"
+ },
+ {
+  "slug": "shantipur-aranya-kutir",
+  "scene": "arch",
+  "variant": "zedi",
+  "mood": "mist",
+  "svg": "svg/shantipur-aranya-kutir.svg",
+  "w640": "w640/shantipur-aranya-kutir.webp",
+  "w1200": "w1200/shantipur-aranya-kutir.webp"
+ },
+ {
+  "slug": "hatimatha-mayung-kopal",
+  "scene": "hill",
+  "variant": "cloudsea",
+  "mood": "golden",
+  "svg": "svg/hatimatha-mayung-kopal.svg",
+  "w640": "w640/hatimatha-mayung-kopal.webp",
+  "w1200": "w1200/hatimatha-mayung-kopal.webp"
+ },
+ {
+  "slug": "majuchowdhurir-hat",
+  "scene": "river",
+  "variant": "port",
+  "mood": "dusk",
+  "svg": "svg/majuchowdhurir-hat.svg",
+  "w640": "w640/majuchowdhurir-hat.webp",
+  "w1200": "w1200/majuchowdhurir-hat.webp"
+ },
+ {
+  "slug": "dalal-bazar-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "dusk",
+  "svg": "svg/dalal-bazar-zamindar-bari.svg",
+  "w640": "w640/dalal-bazar-zamindar-bari.webp",
+  "w1200": "w1200/dalal-bazar-zamindar-bari.webp"
+ },
+ {
+  "slug": "raipur-jiner-masjid",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/raipur-jiner-masjid.svg",
+  "w640": "w640/raipur-jiner-masjid.webp",
+  "w1200": "w1200/raipur-jiner-masjid.webp"
+ },
+ {
+  "slug": "nijhum-dwip",
+  "scene": "island",
+  "variant": "deer",
+  "mood": "golden",
+  "svg": "svg/nijhum-dwip.svg",
+  "w640": "w640/nijhum-dwip.webp",
+  "w1200": "w1200/nijhum-dwip.webp"
+ },
+ {
+  "slug": "bajra-shahi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/bajra-shahi-mosque.svg",
+  "w640": "w640/bajra-shahi-mosque.webp",
+  "w1200": "w1200/bajra-shahi-mosque.webp"
+ },
+ {
+  "slug": "gandhi-ashram-joyag",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "mist",
+  "svg": "svg/gandhi-ashram-joyag.svg",
+  "w640": "w640/gandhi-ashram-joyag.webp",
+  "w1200": "w1200/gandhi-ashram-joyag.webp"
+ },
+ {
+  "slug": "kaptai-lake",
+  "scene": "river",
+  "variant": "hill-lake",
+  "mood": "golden",
+  "svg": "svg/kaptai-lake.svg",
+  "w640": "w640/kaptai-lake.webp",
+  "w1200": "w1200/kaptai-lake.webp"
+ },
+ {
+  "slug": "sajek-valley",
+  "scene": "hill",
+  "variant": "cloudsea",
+  "mood": "golden",
+  "svg": "svg/sajek-valley.svg",
+  "w640": "w640/sajek-valley.webp",
+  "w1200": "w1200/sajek-valley.webp"
+ },
+ {
+  "slug": "shuvolong-waterfall",
+  "scene": "waterfall",
+  "variant": "tall",
+  "mood": "monsoon",
+  "svg": "svg/shuvolong-waterfall.svg",
+  "w640": "w640/shuvolong-waterfall.webp",
+  "w1200": "w1200/shuvolong-waterfall.webp"
+ },
+ {
+  "slug": "rajban-vihara",
+  "scene": "arch",
+  "variant": "zedi",
+  "mood": "day",
+  "svg": "svg/rajban-vihara.svg",
+  "w640": "w640/rajban-vihara.webp",
+  "w1200": "w1200/rajban-vihara.webp"
+ },
+ {
+  "slug": "dhuppani-waterfall",
+  "scene": "waterfall",
+  "variant": "tall",
+  "mood": "day",
+  "svg": "svg/dhuppani-waterfall.svg",
+  "w640": "w640/dhuppani-waterfall.webp",
+  "w1200": "w1200/dhuppani-waterfall.webp"
+ },
+ {
+  "slug": "satchhari-national-park",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "dawn",
+  "svg": "svg/satchhari-national-park.svg",
+  "w640": "w640/satchhari-national-park.webp",
+  "w1200": "w1200/satchhari-national-park.webp"
+ },
+ {
+  "slug": "rema-kalenga-wildlife-sanctuary",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "golden",
+  "svg": "svg/rema-kalenga-wildlife-sanctuary.svg",
+  "w640": "w640/rema-kalenga-wildlife-sanctuary.webp",
+  "w1200": "w1200/rema-kalenga-wildlife-sanctuary.webp"
+ },
+ {
+  "slug": "bithangal-akhra",
+  "scene": "arch",
+  "variant": "temple",
+  "mood": "day",
+  "svg": "svg/bithangal-akhra.svg",
+  "w640": "w640/bithangal-akhra.webp",
+  "w1200": "w1200/bithangal-akhra.webp"
+ },
+ {
+  "slug": "lawachara-national-park",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "golden",
+  "svg": "svg/lawachara-national-park.svg",
+  "w640": "w640/lawachara-national-park.webp",
+  "w1200": "w1200/lawachara-national-park.webp"
+ },
+ {
+  "slug": "madhabkunda-waterfall",
+  "scene": "waterfall",
+  "variant": "tall",
+  "mood": "golden",
+  "svg": "svg/madhabkunda-waterfall.svg",
+  "w640": "w640/madhabkunda-waterfall.webp",
+  "w1200": "w1200/madhabkunda-waterfall.webp"
+ },
+ {
+  "slug": "sreemangal-tea-gardens",
+  "scene": "tea",
+  "variant": "hills",
+  "mood": "dusk",
+  "svg": "svg/sreemangal-tea-gardens.svg",
+  "w640": "w640/sreemangal-tea-gardens.webp",
+  "w1200": "w1200/sreemangal-tea-gardens.webp"
+ },
+ {
+  "slug": "hum-hum-waterfall",
+  "scene": "waterfall",
+  "variant": "tall",
+  "mood": "monsoon",
+  "svg": "svg/hum-hum-waterfall.svg",
+  "w640": "w640/hum-hum-waterfall.webp",
+  "w1200": "w1200/hum-hum-waterfall.webp"
+ },
+ {
+  "slug": "baikka-beel",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "dawn",
+  "svg": "svg/baikka-beel.svg",
+  "w640": "w640/baikka-beel.webp",
+  "w1200": "w1200/baikka-beel.webp"
+ },
+ {
+  "slug": "tanguar-haor",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "monsoon",
+  "svg": "svg/tanguar-haor.svg",
+  "w640": "w640/tanguar-haor.webp",
+  "w1200": "w1200/tanguar-haor.webp"
+ },
+ {
+  "slug": "niladri-lake",
+  "scene": "river",
+  "variant": "hill-lake",
+  "mood": "day",
+  "svg": "svg/niladri-lake.svg",
+  "w640": "w640/niladri-lake.webp",
+  "w1200": "w1200/niladri-lake.webp"
+ },
+ {
+  "slug": "jadukata-river-barek-tila",
+  "scene": "river",
+  "variant": "stony",
+  "mood": "golden",
+  "svg": "svg/jadukata-river-barek-tila.svg",
+  "w640": "w640/jadukata-river-barek-tila.webp",
+  "w1200": "w1200/jadukata-river-barek-tila.webp"
+ },
+ {
+  "slug": "shimul-bagan-tahirpur",
+  "scene": "forest",
+  "variant": "shimul",
+  "mood": "mist",
+  "svg": "svg/shimul-bagan-tahirpur.svg",
+  "w640": "w640/shimul-bagan-tahirpur.webp",
+  "w1200": "w1200/shimul-bagan-tahirpur.webp"
+ },
+ {
+  "slug": "hason-raja-museum",
+  "scene": "arch",
+  "variant": "museum",
+  "mood": "day",
+  "svg": "svg/hason-raja-museum.svg",
+  "w640": "w640/hason-raja-museum.webp",
+  "w1200": "w1200/hason-raja-museum.webp"
+ },
+ {
+  "slug": "ratargul-swamp-forest",
+  "scene": "forest",
+  "variant": "swamp",
+  "mood": "dawn",
+  "svg": "svg/ratargul-swamp-forest.svg",
+  "w640": "w640/ratargul-swamp-forest.webp",
+  "w1200": "w1200/ratargul-swamp-forest.webp"
+ },
+ {
+  "slug": "jaflong",
+  "scene": "river",
+  "variant": "stony",
+  "mood": "monsoon",
+  "svg": "svg/jaflong.svg",
+  "w640": "w640/jaflong.webp",
+  "w1200": "w1200/jaflong.webp"
+ },
+ {
+  "slug": "bichanakandi",
+  "scene": "river",
+  "variant": "stony",
+  "mood": "monsoon",
+  "svg": "svg/bichanakandi.svg",
+  "w640": "w640/bichanakandi.webp",
+  "w1200": "w1200/bichanakandi.webp"
+ },
+ {
+  "slug": "shah-jalal-dargah",
+  "scene": "arch",
+  "variant": "shrine",
+  "mood": "day",
+  "svg": "svg/shah-jalal-dargah.svg",
+  "w640": "w640/shah-jalal-dargah.webp",
+  "w1200": "w1200/shah-jalal-dargah.webp"
+ },
+ {
+  "slug": "dibir-haor-shapla-beel",
+  "scene": "river",
+  "variant": "lilies",
+  "mood": "dusk",
+  "svg": "svg/dibir-haor-shapla-beel.svg",
+  "w640": "w640/dibir-haor-shapla-beel.webp",
+  "w1200": "w1200/dibir-haor-shapla-beel.webp"
+ },
+ {
+  "slug": "lalbagh-fort",
+  "scene": "arch",
+  "variant": "fort-dome",
+  "mood": "day",
+  "svg": "svg/lalbagh-fort.svg",
+  "w640": "w640/lalbagh-fort.webp",
+  "w1200": "w1200/lalbagh-fort.webp"
+ },
+ {
+  "slug": "ahsan-manzil",
+  "scene": "arch",
+  "variant": "palace-manzil",
+  "mood": "mist",
+  "svg": "svg/ahsan-manzil.svg",
+  "w640": "w640/ahsan-manzil.webp",
+  "w1200": "w1200/ahsan-manzil.webp"
+ },
+ {
+  "slug": "jatiya-smriti-soudho-savar",
+  "scene": "arch",
+  "variant": "smriti",
+  "mood": "dawn",
+  "svg": "svg/jatiya-smriti-soudho-savar.svg",
+  "w640": "w640/jatiya-smriti-soudho-savar.webp",
+  "w1200": "w1200/jatiya-smriti-soudho-savar.webp"
+ },
+ {
+  "slug": "armenian-church-armanitola",
+  "scene": "arch",
+  "variant": "church",
+  "mood": "day",
+  "svg": "svg/armenian-church-armanitola.svg",
+  "w640": "w640/armenian-church-armanitola.webp",
+  "w1200": "w1200/armenian-church-armanitola.webp"
+ },
+ {
+  "slug": "sadullapur-golap-gram",
+  "scene": "village",
+  "variant": "flowers",
+  "mood": "mist",
+  "svg": "svg/sadullapur-golap-gram.svg",
+  "w640": "w640/sadullapur-golap-gram.webp",
+  "w1200": "w1200/sadullapur-golap-gram.webp"
+ },
+ {
+  "slug": "jasimuddin-bari-ambikapur",
+  "scene": "arch",
+  "variant": "homestead",
+  "mood": "day",
+  "svg": "svg/jasimuddin-bari-ambikapur.svg",
+  "w640": "w640/jasimuddin-bari-ambikapur.webp",
+  "w1200": "w1200/jasimuddin-bari-ambikapur.webp"
+ },
+ {
+  "slug": "mathurapur-deul",
+  "scene": "arch",
+  "variant": "temple-math",
+  "mood": "dawn",
+  "svg": "svg/mathurapur-deul.svg",
+  "w640": "w640/mathurapur-deul.webp",
+  "w1200": "w1200/mathurapur-deul.webp"
+ },
+ {
+  "slug": "pathrail-mosque-bhanga",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dusk",
+  "svg": "svg/pathrail-mosque-bhanga.svg",
+  "w640": "w640/pathrail-mosque-bhanga.webp",
+  "w1200": "w1200/pathrail-mosque-bhanga.webp"
+ },
+ {
+  "slug": "bhawal-national-park",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "day",
+  "svg": "svg/bhawal-national-park.svg",
+  "w640": "w640/bhawal-national-park.webp",
+  "w1200": "w1200/bhawal-national-park.webp"
+ },
+ {
+  "slug": "bhawal-rajbari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "mist",
+  "svg": "svg/bhawal-rajbari.svg",
+  "w640": "w640/bhawal-rajbari.webp",
+  "w1200": "w1200/bhawal-rajbari.webp"
+ },
+ {
+  "slug": "belai-beel",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "golden",
+  "svg": "svg/belai-beel.svg",
+  "w640": "w640/belai-beel.webp",
+  "w1200": "w1200/belai-beel.webp"
+ },
+ {
+  "slug": "bangabandhu-mausoleum-tungipara",
+  "scene": "arch",
+  "variant": "tomb",
+  "mood": "day",
+  "svg": "svg/bangabandhu-mausoleum-tungipara.svg",
+  "w640": "w640/bangabandhu-mausoleum-tungipara.webp",
+  "w1200": "w1200/bangabandhu-mausoleum-tungipara.webp"
+ },
+ {
+  "slug": "orakandi-thakur-bari",
+  "scene": "arch",
+  "variant": "temple",
+  "mood": "dawn",
+  "svg": "svg/orakandi-thakur-bari.svg",
+  "w640": "w640/orakandi-thakur-bari.webp",
+  "w1200": "w1200/orakandi-thakur-bari.webp"
+ },
+ {
+  "slug": "ulpur-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "golden",
+  "svg": "svg/ulpur-zamindar-bari.svg",
+  "w640": "w640/ulpur-zamindar-bari.webp",
+  "w1200": "w1200/ulpur-zamindar-bari.webp"
+ },
+ {
+  "slug": "nikli-haor",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "golden",
+  "svg": "svg/nikli-haor.svg",
+  "w640": "w640/nikli-haor.webp",
+  "w1200": "w1200/nikli-haor.webp"
+ },
+ {
+  "slug": "itna-mithamain-austagram-haor-road",
+  "scene": "river",
+  "variant": "road",
+  "mood": "monsoon",
+  "svg": "svg/itna-mithamain-austagram-haor-road.svg",
+  "w640": "w640/itna-mithamain-austagram-haor-road.webp",
+  "w1200": "w1200/itna-mithamain-austagram-haor-road.webp"
+ },
+ {
+  "slug": "sholakia-eidgah",
+  "scene": "arch",
+  "variant": "eidgah",
+  "mood": "golden",
+  "svg": "svg/sholakia-eidgah.svg",
+  "w640": "w640/sholakia-eidgah.webp",
+  "w1200": "w1200/sholakia-eidgah.webp"
+ },
+ {
+  "slug": "jangalbari-fort",
+  "scene": "arch",
+  "variant": "fort",
+  "mood": "dawn",
+  "svg": "svg/jangalbari-fort.svg",
+  "w640": "w640/jangalbari-fort.webp",
+  "w1200": "w1200/jangalbari-fort.webp"
+ },
+ {
+  "slug": "chandrabati-shiva-temple",
+  "scene": "arch",
+  "variant": "temple",
+  "mood": "mist",
+  "svg": "svg/chandrabati-shiva-temple.svg",
+  "w640": "w640/chandrabati-shiva-temple.webp",
+  "w1200": "w1200/chandrabati-shiva-temple.webp"
+ },
+ {
+  "slug": "shakuni-lake",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "dawn",
+  "svg": "svg/shakuni-lake.svg",
+  "w640": "w640/shakuni-lake.webp",
+  "w1200": "w1200/shakuni-lake.webp"
+ },
+ {
+  "slug": "khalia-rajaram-temple",
+  "scene": "arch",
+  "variant": "temple",
+  "mood": "mist",
+  "svg": "svg/khalia-rajaram-temple.svg",
+  "w640": "w640/khalia-rajaram-temple.webp",
+  "w1200": "w1200/khalia-rajaram-temple.webp"
+ },
+ {
+  "slug": "auliapur-neelkuthi",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "dawn",
+  "svg": "svg/auliapur-neelkuthi.svg",
+  "w640": "w640/auliapur-neelkuthi.webp",
+  "w1200": "w1200/auliapur-neelkuthi.webp"
+ },
+ {
+  "slug": "baliati-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "mist",
+  "svg": "svg/baliati-zamindar-bari.svg",
+  "w640": "w640/baliati-zamindar-bari.webp",
+  "w1200": "w1200/baliati-zamindar-bari.webp"
+ },
+ {
+  "slug": "teota-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/teota-zamindar-bari.svg",
+  "w640": "w640/teota-zamindar-bari.webp",
+  "w1200": "w1200/teota-zamindar-bari.webp"
+ },
+ {
+  "slug": "jhitka-sorisha-khet",
+  "scene": "village",
+  "variant": "mustard",
+  "mood": "dawn",
+  "svg": "svg/jhitka-sorisha-khet.svg",
+  "w640": "w640/jhitka-sorisha-khet.webp",
+  "w1200": "w1200/jhitka-sorisha-khet.webp"
+ },
+ {
+  "slug": "idrakpur-fort",
+  "scene": "arch",
+  "variant": "fort",
+  "mood": "mist",
+  "svg": "svg/idrakpur-fort.svg",
+  "w640": "w640/idrakpur-fort.webp",
+  "w1200": "w1200/idrakpur-fort.webp"
+ },
+ {
+  "slug": "mawa-ghat-padma",
+  "scene": "river",
+  "variant": "port",
+  "mood": "day",
+  "svg": "svg/mawa-ghat-padma.svg",
+  "w640": "w640/mawa-ghat-padma.webp",
+  "w1200": "w1200/mawa-ghat-padma.webp"
+ },
+ {
+  "slug": "sonarang-jora-math",
+  "scene": "arch",
+  "variant": "temple-row",
+  "mood": "dawn",
+  "svg": "svg/sonarang-jora-math.svg",
+  "w640": "w640/sonarang-jora-math.webp",
+  "w1200": "w1200/sonarang-jora-math.webp"
+ },
+ {
+  "slug": "baba-adam-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/baba-adam-mosque.svg",
+  "w640": "w640/baba-adam-mosque.webp",
+  "w1200": "w1200/baba-adam-mosque.webp"
+ },
+ {
+  "slug": "arial-beel",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "golden",
+  "svg": "svg/arial-beel.svg",
+  "w640": "w640/arial-beel.webp",
+  "w1200": "w1200/arial-beel.webp"
+ },
+ {
+  "slug": "sonargaon-folk-art-museum",
+  "scene": "arch",
+  "variant": "museum",
+  "mood": "dusk",
+  "svg": "svg/sonargaon-folk-art-museum.svg",
+  "w640": "w640/sonargaon-folk-art-museum.webp",
+  "w1200": "w1200/sonargaon-folk-art-museum.webp"
+ },
+ {
+  "slug": "panam-nagar",
+  "scene": "arch",
+  "variant": "street",
+  "mood": "dusk",
+  "svg": "svg/panam-nagar.svg",
+  "w640": "w640/panam-nagar.webp",
+  "w1200": "w1200/panam-nagar.webp"
+ },
+ {
+  "slug": "hajiganj-fort",
+  "scene": "arch",
+  "variant": "fort",
+  "mood": "golden",
+  "svg": "svg/hajiganj-fort.svg",
+  "w640": "w640/hajiganj-fort.webp",
+  "w1200": "w1200/hajiganj-fort.webp"
+ },
+ {
+  "slug": "noapara-jamdani-palli",
+  "scene": "village",
+  "variant": "weaving",
+  "mood": "golden",
+  "svg": "svg/noapara-jamdani-palli.svg",
+  "w640": "w640/noapara-jamdani-palli.webp",
+  "w1200": "w1200/noapara-jamdani-palli.webp"
+ },
+ {
+  "slug": "goaldi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/goaldi-mosque.svg",
+  "w640": "w640/goaldi-mosque.webp",
+  "w1200": "w1200/goaldi-mosque.webp"
+ },
+ {
+  "slug": "wari-bateshwar",
+  "scene": "arch",
+  "variant": "ruins-mounds",
+  "mood": "day",
+  "svg": "svg/wari-bateshwar.svg",
+  "w640": "w640/wari-bateshwar.webp",
+  "w1200": "w1200/wari-bateshwar.webp"
+ },
+ {
+  "slug": "lakshman-saha-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "dawn",
+  "svg": "svg/lakshman-saha-zamindar-bari.svg",
+  "w640": "w640/lakshman-saha-zamindar-bari.webp",
+  "w1200": "w1200/lakshman-saha-zamindar-bari.webp"
+ },
+ {
+  "slug": "girish-chandra-sen-house",
+  "scene": "arch",
+  "variant": "homestead",
+  "mood": "dawn",
+  "svg": "svg/girish-chandra-sen-house.svg",
+  "w640": "w640/girish-chandra-sen-house.webp",
+  "w1200": "w1200/girish-chandra-sen-house.webp"
+ },
+ {
+  "slug": "mir-mosharraf-hossain-memorial",
+  "scene": "arch",
+  "variant": "obelisk",
+  "mood": "golden",
+  "svg": "svg/mir-mosharraf-hossain-memorial.svg",
+  "w640": "w640/mir-mosharraf-hossain-memorial.webp",
+  "w1200": "w1200/mir-mosharraf-hossain-memorial.webp"
+ },
+ {
+  "slug": "godar-bazar-padma-riverside",
+  "scene": "river",
+  "variant": "ghat",
+  "mood": "mist",
+  "svg": "svg/godar-bazar-padma-riverside.svg",
+  "w640": "w640/godar-bazar-padma-riverside.webp",
+  "w1200": "w1200/godar-bazar-padma-riverside.webp"
+ },
+ {
+  "slug": "nalia-jor-bangla-temple",
+  "scene": "arch",
+  "variant": "temple-jorbangla",
+  "mood": "dawn",
+  "svg": "svg/nalia-jor-bangla-temple.svg",
+  "w640": "w640/nalia-jor-bangla-temple.webp",
+  "w1200": "w1200/nalia-jor-bangla-temple.webp"
+ },
+ {
+  "slug": "sureshwar-darbar-sharif",
+  "scene": "arch",
+  "variant": "shrine",
+  "mood": "day",
+  "svg": "svg/sureshwar-darbar-sharif.svg",
+  "w640": "w640/sureshwar-darbar-sharif.webp",
+  "w1200": "w1200/sureshwar-darbar-sharif.webp"
+ },
+ {
+  "slug": "rudrakar-math",
+  "scene": "arch",
+  "variant": "temple-math",
+  "mood": "golden",
+  "svg": "svg/rudrakar-math.svg",
+  "w640": "w640/rudrakar-math.webp",
+  "w1200": "w1200/rudrakar-math.webp"
+ },
+ {
+  "slug": "dhanuka-manasa-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/dhanuka-manasa-bari.svg",
+  "w640": "w640/dhanuka-manasa-bari.webp",
+  "w1200": "w1200/dhanuka-manasa-bari.webp"
+ },
+ {
+  "slug": "mohera-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/mohera-zamindar-bari.svg",
+  "w640": "w640/mohera-zamindar-bari.webp",
+  "w1200": "w1200/mohera-zamindar-bari.webp"
+ },
+ {
+  "slug": "atia-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "mist",
+  "svg": "svg/atia-mosque.svg",
+  "w640": "w640/atia-mosque.webp",
+  "w1200": "w1200/atia-mosque.webp"
+ },
+ {
+  "slug": "madhupur-national-park",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "dawn",
+  "svg": "svg/madhupur-national-park.svg",
+  "w640": "w640/madhupur-national-park.webp",
+  "w1200": "w1200/madhupur-national-park.webp"
+ },
+ {
+  "slug": "pathrail-tant-palli",
+  "scene": "village",
+  "variant": "weaving",
+  "mood": "day",
+  "svg": "svg/pathrail-tant-palli.svg",
+  "w640": "w640/pathrail-tant-palli.webp",
+  "w1200": "w1200/pathrail-tant-palli.webp"
+ },
+ {
+  "slug": "bashulia-basail",
+  "scene": "river",
+  "variant": "boats",
+  "mood": "dawn",
+  "svg": "svg/bashulia-basail.svg",
+  "w640": "w640/bashulia-basail.webp",
+  "w1200": "w1200/bashulia-basail.webp"
+ },
+ {
+  "slug": "sixty-dome-mosque",
+  "scene": "arch",
+  "variant": "mosque-many",
+  "mood": "day",
+  "svg": "svg/sixty-dome-mosque.svg",
+  "w640": "w640/sixty-dome-mosque.webp",
+  "w1200": "w1200/sixty-dome-mosque.webp"
+ },
+ {
+  "slug": "khan-jahan-ali-mazar",
+  "scene": "arch",
+  "variant": "shrine",
+  "mood": "dusk",
+  "svg": "svg/khan-jahan-ali-mazar.svg",
+  "w640": "w640/khan-jahan-ali-mazar.webp",
+  "w1200": "w1200/khan-jahan-ali-mazar.webp"
+ },
+ {
+  "slug": "katka-sundarbans",
+  "scene": "forest",
+  "variant": "mangrove",
+  "mood": "dawn",
+  "svg": "svg/katka-sundarbans.svg",
+  "w640": "w640/katka-sundarbans.webp",
+  "w1200": "w1200/katka-sundarbans.webp"
+ },
+ {
+  "slug": "dublar-char",
+  "scene": "island",
+  "variant": "fish",
+  "mood": "day",
+  "svg": "svg/dublar-char.svg",
+  "w640": "w640/dublar-char.webp",
+  "w1200": "w1200/dublar-char.webp"
+ },
+ {
+  "slug": "kodla-math",
+  "scene": "arch",
+  "variant": "temple-math",
+  "mood": "mist",
+  "svg": "svg/kodla-math.svg",
+  "w640": "w640/kodla-math.webp",
+  "w1200": "w1200/kodla-math.webp"
+ },
+ {
+  "slug": "carew-and-co-darshana",
+  "scene": "arch",
+  "variant": "factory",
+  "mood": "dawn",
+  "svg": "svg/carew-and-co-darshana.svg",
+  "w640": "w640/carew-and-co-darshana.webp",
+  "w1200": "w1200/carew-and-co-darshana.webp"
+ },
+ {
+  "slug": "atkobor-memorial",
+  "scene": "arch",
+  "variant": "obelisk",
+  "mood": "mist",
+  "svg": "svg/atkobor-memorial.svg",
+  "w640": "w640/atkobor-memorial.webp",
+  "w1200": "w1200/atkobor-memorial.webp"
+ },
+ {
+  "slug": "gholdari-shahi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/gholdari-shahi-mosque.svg",
+  "w640": "w640/gholdari-shahi-mosque.webp",
+  "w1200": "w1200/gholdari-shahi-mosque.webp"
+ },
+ {
+  "slug": "sagardari-madhupalli",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "dusk",
+  "svg": "svg/sagardari-madhupalli.svg",
+  "w640": "w640/sagardari-madhupalli.webp",
+  "w1200": "w1200/sagardari-madhupalli.webp"
+ },
+ {
+  "slug": "gadkhali-flower-fields",
+  "scene": "village",
+  "variant": "flowers",
+  "mood": "day",
+  "svg": "svg/gadkhali-flower-fields.svg",
+  "w640": "w640/gadkhali-flower-fields.webp",
+  "w1200": "w1200/gadkhali-flower-fields.webp"
+ },
+ {
+  "slug": "eleven-shiva-temples-abhaynagar",
+  "scene": "arch",
+  "variant": "temple-row",
+  "mood": "day",
+  "svg": "svg/eleven-shiva-temples-abhaynagar.svg",
+  "w640": "w640/eleven-shiva-temples-abhaynagar.webp",
+  "w1200": "w1200/eleven-shiva-temples-abhaynagar.webp"
+ },
+ {
+  "slug": "mallikpur-banyan-tree",
+  "scene": "forest",
+  "variant": "banyan",
+  "mood": "dawn",
+  "svg": "svg/mallikpur-banyan-tree.svg",
+  "w640": "w640/mallikpur-banyan-tree.webp",
+  "w1200": "w1200/mallikpur-banyan-tree.webp"
+ },
+ {
+  "slug": "barobazar-mosque-group",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/barobazar-mosque-group.svg",
+  "w640": "w640/barobazar-mosque-group.webp",
+  "w1200": "w1200/barobazar-mosque-group.webp"
+ },
+ {
+  "slug": "miyar-dalan",
+  "scene": "arch",
+  "variant": "homestead",
+  "mood": "golden",
+  "svg": "svg/miyar-dalan.svg",
+  "w640": "w640/miyar-dalan.webp",
+  "w1200": "w1200/miyar-dalan.webp"
+ },
+ {
+  "slug": "karamjal-sundarbans",
+  "scene": "forest",
+  "variant": "mangrove",
+  "mood": "day",
+  "svg": "svg/karamjal-sundarbans.svg",
+  "w640": "w640/karamjal-sundarbans.webp",
+  "w1200": "w1200/karamjal-sundarbans.webp"
+ },
+ {
+  "slug": "rupsha-khan-jahan-ali-bridge",
+  "scene": "river",
+  "variant": "cable-bridge",
+  "mood": "day",
+  "svg": "svg/rupsha-khan-jahan-ali-bridge.svg",
+  "w640": "w640/rupsha-khan-jahan-ali-bridge.webp",
+  "w1200": "w1200/rupsha-khan-jahan-ali-bridge.webp"
+ },
+ {
+  "slug": "dakshindihi-rabindra-complex",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "golden",
+  "svg": "svg/dakshindihi-rabindra-complex.svg",
+  "w640": "w640/dakshindihi-rabindra-complex.webp",
+  "w1200": "w1200/dakshindihi-rabindra-complex.webp"
+ },
+ {
+  "slug": "masjidkur-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/masjidkur-mosque.svg",
+  "w640": "w640/masjidkur-mosque.webp",
+  "w1200": "w1200/masjidkur-mosque.webp"
+ },
+ {
+  "slug": "bhutiar-padma-beel",
+  "scene": "river",
+  "variant": "lilies",
+  "mood": "monsoon",
+  "svg": "svg/bhutiar-padma-beel.svg",
+  "w640": "w640/bhutiar-padma-beel.webp",
+  "w1200": "w1200/bhutiar-padma-beel.webp"
+ },
+ {
+  "slug": "lalon-shah-shrine-cheuriya",
+  "scene": "arch",
+  "variant": "shrine",
+  "mood": "dusk",
+  "svg": "svg/lalon-shah-shrine-cheuriya.svg",
+  "w640": "w640/lalon-shah-shrine-cheuriya.webp",
+  "w1200": "w1200/lalon-shah-shrine-cheuriya.webp"
+ },
+ {
+  "slug": "shilaidaha-kuthibari",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "dusk",
+  "svg": "svg/shilaidaha-kuthibari.svg",
+  "w640": "w640/shilaidaha-kuthibari.webp",
+  "w1200": "w1200/shilaidaha-kuthibari.webp"
+ },
+ {
+  "slug": "tagore-lodge-kushtia",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "mist",
+  "svg": "svg/tagore-lodge-kushtia.svg",
+  "w640": "w640/tagore-lodge-kushtia.webp",
+  "w1200": "w1200/tagore-lodge-kushtia.webp"
+ },
+ {
+  "slug": "mir-mosharraf-hossain-homestead",
+  "scene": "arch",
+  "variant": "homestead",
+  "mood": "golden",
+  "svg": "svg/mir-mosharraf-hossain-homestead.svg",
+  "w640": "w640/mir-mosharraf-hossain-homestead.webp",
+  "w1200": "w1200/mir-mosharraf-hossain-homestead.webp"
+ },
+ {
+  "slug": "jhaudia-shahi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/jhaudia-shahi-mosque.svg",
+  "w640": "w640/jhaudia-shahi-mosque.webp",
+  "w1200": "w1200/jhaudia-shahi-mosque.webp"
+ },
+ {
+  "slug": "raja-sitaram-roy-palace",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "golden",
+  "svg": "svg/raja-sitaram-roy-palace.svg",
+  "w640": "w640/raja-sitaram-roy-palace.webp",
+  "w1200": "w1200/raja-sitaram-roy-palace.webp"
+ },
+ {
+  "slug": "siddheshwari-math-magura",
+  "scene": "arch",
+  "variant": "temple-math",
+  "mood": "day",
+  "svg": "svg/siddheshwari-math-magura.svg",
+  "w640": "w640/siddheshwari-math-magura.webp",
+  "w1200": "w1200/siddheshwari-math-magura.webp"
+ },
+ {
+  "slug": "farrukh-ahmad-home-majhail",
+  "scene": "arch",
+  "variant": "homestead",
+  "mood": "dusk",
+  "svg": "svg/farrukh-ahmad-home-majhail.svg",
+  "w640": "w640/farrukh-ahmad-home-majhail.webp",
+  "w1200": "w1200/farrukh-ahmad-home-majhail.webp"
+ },
+ {
+  "slug": "mujibnagar-memorial-complex",
+  "scene": "arch",
+  "variant": "obelisk",
+  "mood": "day",
+  "svg": "svg/mujibnagar-memorial-complex.svg",
+  "w640": "w640/mujibnagar-memorial-complex.webp",
+  "w1200": "w1200/mujibnagar-memorial-complex.webp"
+ },
+ {
+  "slug": "amjhupi-neelkuthi",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "day",
+  "svg": "svg/amjhupi-neelkuthi.svg",
+  "w640": "w640/amjhupi-neelkuthi.webp",
+  "w1200": "w1200/amjhupi-neelkuthi.webp"
+ },
+ {
+  "slug": "bhatpara-neelkuthi",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "day",
+  "svg": "svg/bhatpara-neelkuthi.svg",
+  "w640": "w640/bhatpara-neelkuthi.webp",
+  "w1200": "w1200/bhatpara-neelkuthi.webp"
+ },
+ {
+  "slug": "sm-sultan-memorial-complex",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/sm-sultan-memorial-complex.svg",
+  "w640": "w640/sm-sultan-memorial-complex.webp",
+  "w1200": "w1200/sm-sultan-memorial-complex.webp"
+ },
+ {
+  "slug": "chitra-river-bandha-ghat",
+  "scene": "river",
+  "variant": "port",
+  "mood": "monsoon",
+  "svg": "svg/chitra-river-bandha-ghat.svg",
+  "w640": "w640/chitra-river-bandha-ghat.webp",
+  "w1200": "w1200/chitra-river-bandha-ghat.webp"
+ },
+ {
+  "slug": "noor-mohammad-sheikh-memorial-museum",
+  "scene": "arch",
+  "variant": "museum",
+  "mood": "day",
+  "svg": "svg/noor-mohammad-sheikh-memorial-museum.svg",
+  "w640": "w640/noor-mohammad-sheikh-memorial-museum.webp",
+  "w1200": "w1200/noor-mohammad-sheikh-memorial-museum.webp"
+ },
+ {
+  "slug": "kalagachhia-eco-tourism-centre",
+  "scene": "forest",
+  "variant": "mangrove",
+  "mood": "golden",
+  "svg": "svg/kalagachhia-eco-tourism-centre.svg",
+  "w640": "w640/kalagachhia-eco-tourism-centre.webp",
+  "w1200": "w1200/kalagachhia-eco-tourism-centre.webp"
+ },
+ {
+  "slug": "mandarbaria-beach",
+  "scene": "beach",
+  "variant": "resort",
+  "mood": "dusk",
+  "svg": "svg/mandarbaria-beach.svg",
+  "w640": "w640/mandarbaria-beach.webp",
+  "w1200": "w1200/mandarbaria-beach.webp"
+ },
+ {
+  "slug": "jessoreshwari-kali-temple",
+  "scene": "arch",
+  "variant": "temple",
+  "mood": "golden",
+  "svg": "svg/jessoreshwari-kali-temple.svg",
+  "w640": "w640/jessoreshwari-kali-temple.webp",
+  "w1200": "w1200/jessoreshwari-kali-temple.webp"
+ },
+ {
+  "slug": "nalta-sharif",
+  "scene": "arch",
+  "variant": "shrine",
+  "mood": "mist",
+  "svg": "svg/nalta-sharif.svg",
+  "w640": "w640/nalta-sharif.webp",
+  "w1200": "w1200/nalta-sharif.webp"
+ },
+ {
+  "slug": "tetulia-jame-mosque-tala",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/tetulia-jame-mosque-tala.svg",
+  "w640": "w640/tetulia-jame-mosque-tala.webp",
+  "w1200": "w1200/tetulia-jame-mosque-tala.webp"
+ },
+ {
+  "slug": "tengragiri-forest-taltali",
+  "scene": "forest",
+  "variant": "mangrove",
+  "mood": "day",
+  "svg": "svg/tengragiri-forest-taltali.svg",
+  "w640": "w640/tengragiri-forest-taltali.webp",
+  "w1200": "w1200/tengragiri-forest-taltali.webp"
+ },
+ {
+  "slug": "haringhata-forest-laldia-beach",
+  "scene": "beach",
+  "variant": "forest",
+  "mood": "mist",
+  "svg": "svg/haringhata-forest-laldia-beach.svg",
+  "w640": "w640/haringhata-forest-laldia-beach.webp",
+  "w1200": "w1200/haringhata-forest-laldia-beach.webp"
+ },
+ {
+  "slug": "bibichini-shahi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/bibichini-shahi-mosque.svg",
+  "w640": "w640/bibichini-shahi-mosque.webp",
+  "w1200": "w1200/bibichini-shahi-mosque.webp"
+ },
+ {
+  "slug": "durga-sagar-dighi",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "day",
+  "svg": "svg/durga-sagar-dighi.svg",
+  "w640": "w640/durga-sagar-dighi.webp",
+  "w1200": "w1200/durga-sagar-dighi.webp"
+ },
+ {
+  "slug": "guthia-baitul-aman-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "golden",
+  "svg": "svg/guthia-baitul-aman-mosque.svg",
+  "w640": "w640/guthia-baitul-aman-mosque.webp",
+  "w1200": "w1200/guthia-baitul-aman-mosque.webp"
+ },
+ {
+  "slug": "satla-shapla-beel",
+  "scene": "river",
+  "variant": "lilies",
+  "mood": "monsoon",
+  "svg": "svg/satla-shapla-beel.svg",
+  "w640": "w640/satla-shapla-beel.webp",
+  "w1200": "w1200/satla-shapla-beel.webp"
+ },
+ {
+  "slug": "oxford-mission-church-barishal",
+  "scene": "arch",
+  "variant": "church",
+  "mood": "mist",
+  "svg": "svg/oxford-mission-church-barishal.svg",
+  "w640": "w640/oxford-mission-church-barishal.webp",
+  "w1200": "w1200/oxford-mission-church-barishal.webp"
+ },
+ {
+  "slug": "lakutia-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/lakutia-zamindar-bari.svg",
+  "w640": "w640/lakutia-zamindar-bari.webp",
+  "w1200": "w1200/lakutia-zamindar-bari.webp"
+ },
+ {
+  "slug": "char-kukri-mukri",
+  "scene": "island",
+  "variant": "deer",
+  "mood": "day",
+  "svg": "svg/char-kukri-mukri.svg",
+  "w640": "w640/char-kukri-mukri.webp",
+  "w1200": "w1200/char-kukri-mukri.webp"
+ },
+ {
+  "slug": "monpura-island",
+  "scene": "island",
+  "variant": "deer",
+  "mood": "golden",
+  "svg": "svg/monpura-island.svg",
+  "w640": "w640/monpura-island.webp",
+  "w1200": "w1200/monpura-island.webp"
+ },
+ {
+  "slug": "tarua-beach-dhal-char",
+  "scene": "beach",
+  "variant": "char",
+  "mood": "dusk",
+  "svg": "svg/tarua-beach-dhal-char.svg",
+  "w640": "w640/tarua-beach-dhal-char.webp",
+  "w1200": "w1200/tarua-beach-dhal-char.webp"
+ },
+ {
+  "slug": "bhimruli-floating-guava-market",
+  "scene": "village",
+  "variant": "floating",
+  "mood": "golden",
+  "svg": "svg/bhimruli-floating-guava-market.svg",
+  "w640": "w640/bhimruli-floating-guava-market.webp",
+  "w1200": "w1200/bhimruli-floating-guava-market.webp"
+ },
+ {
+  "slug": "kirtipasha-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/kirtipasha-zamindar-bari.svg",
+  "w640": "w640/kirtipasha-zamindar-bari.webp",
+  "w1200": "w1200/kirtipasha-zamindar-bari.webp"
+ },
+ {
+  "slug": "gabkhan-channel-bridge",
+  "scene": "river",
+  "variant": "boats",
+  "mood": "mist",
+  "svg": "svg/gabkhan-channel-bridge.svg",
+  "w640": "w640/gabkhan-channel-bridge.webp",
+  "w1200": "w1200/gabkhan-channel-bridge.webp"
+ },
+ {
+  "slug": "kuakata-beach",
+  "scene": "beach",
+  "variant": "resort",
+  "mood": "day",
+  "svg": "svg/kuakata-beach.svg",
+  "w640": "w640/kuakata-beach.webp",
+  "w1200": "w1200/kuakata-beach.webp"
+ },
+ {
+  "slug": "gangamati-char-kuakata",
+  "scene": "beach",
+  "variant": "char",
+  "mood": "golden",
+  "svg": "svg/gangamati-char-kuakata.svg",
+  "w640": "w640/gangamati-char-kuakata.webp",
+  "w1200": "w1200/gangamati-char-kuakata.webp"
+ },
+ {
+  "slug": "misripara-seema-buddhist-temple",
+  "scene": "arch",
+  "variant": "kyang",
+  "mood": "dawn",
+  "svg": "svg/misripara-seema-buddhist-temple.svg",
+  "w640": "w640/misripara-seema-buddhist-temple.webp",
+  "w1200": "w1200/misripara-seema-buddhist-temple.webp"
+ },
+ {
+  "slug": "sonar-char-rangabali",
+  "scene": "island",
+  "variant": "deer",
+  "mood": "day",
+  "svg": "svg/sonar-char-rangabali.svg",
+  "w640": "w640/sonar-char-rangabali.webp",
+  "w1200": "w1200/sonar-char-rangabali.webp"
+ },
+ {
+  "slug": "majidbaria-shahi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "mist",
+  "svg": "svg/majidbaria-shahi-mosque.svg",
+  "w640": "w640/majidbaria-shahi-mosque.webp",
+  "w1200": "w1200/majidbaria-shahi-mosque.webp"
+ },
+ {
+  "slug": "atghar-kuriana-guava-orchards",
+  "scene": "village",
+  "variant": "floating",
+  "mood": "day",
+  "svg": "svg/atghar-kuriana-guava-orchards.svg",
+  "w640": "w640/atghar-kuriana-guava-orchards.webp",
+  "w1200": "w1200/atghar-kuriana-guava-orchards.webp"
+ },
+ {
+  "slug": "rayerkathi-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "mist",
+  "svg": "svg/rayerkathi-zamindar-bari.svg",
+  "w640": "w640/rayerkathi-zamindar-bari.webp",
+  "w1200": "w1200/rayerkathi-zamindar-bari.webp"
+ },
+ {
+  "slug": "momin-mosque-mathbaria",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/momin-mosque-mathbaria.svg",
+  "w640": "w640/momin-mosque-mathbaria.webp",
+  "w1200": "w1200/momin-mosque-mathbaria.webp"
+ },
+ {
+  "slug": "mahasthangarh",
+  "scene": "arch",
+  "variant": "fort-ruined",
+  "mood": "day",
+  "svg": "svg/mahasthangarh.svg",
+  "w640": "w640/mahasthangarh.webp",
+  "w1200": "w1200/mahasthangarh.webp"
+ },
+ {
+  "slug": "gokul-medh-behular-basar-ghar",
+  "scene": "arch",
+  "variant": "ruins-mounds",
+  "mood": "day",
+  "svg": "svg/gokul-medh-behular-basar-ghar.svg",
+  "w640": "w640/gokul-medh-behular-basar-ghar.webp",
+  "w1200": "w1200/gokul-medh-behular-basar-ghar.webp"
+ },
+ {
+  "slug": "vasu-vihara",
+  "scene": "arch",
+  "variant": "ruins",
+  "mood": "mist",
+  "svg": "svg/vasu-vihara.svg",
+  "w640": "w640/vasu-vihara.webp",
+  "w1200": "w1200/vasu-vihara.webp"
+ },
+ {
+  "slug": "kherua-mosque-sherpur",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/kherua-mosque-sherpur.svg",
+  "w640": "w640/kherua-mosque-sherpur.webp",
+  "w1200": "w1200/kherua-mosque-sherpur.webp"
+ },
+ {
+  "slug": "sariakandi-kalitola-jamuna-ghat",
+  "scene": "river",
+  "variant": "port",
+  "mood": "dawn",
+  "svg": "svg/sariakandi-kalitola-jamuna-ghat.svg",
+  "w640": "w640/sariakandi-kalitola-jamuna-ghat.webp",
+  "w1200": "w1200/sariakandi-kalitola-jamuna-ghat.webp"
+ },
+ {
+  "slug": "baro-shibaloy-temple",
+  "scene": "arch",
+  "variant": "temple-row",
+  "mood": "day",
+  "svg": "svg/baro-shibaloy-temple.svg",
+  "w640": "w640/baro-shibaloy-temple.webp",
+  "w1200": "w1200/baro-shibaloy-temple.webp"
+ },
+ {
+  "slug": "nandail-dighi",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "mist",
+  "svg": "svg/nandail-dighi.svg",
+  "w640": "w640/nandail-dighi.webp",
+  "w1200": "w1200/nandail-dighi.webp"
+ },
+ {
+  "slug": "lakma-rajbari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/lakma-rajbari.svg",
+  "w640": "w640/lakma-rajbari.webp",
+  "w1200": "w1200/lakma-rajbari.webp"
+ },
+ {
+  "slug": "paharpur-buddhist-vihara",
+  "scene": "arch",
+  "variant": "ruins",
+  "mood": "mist",
+  "svg": "svg/paharpur-buddhist-vihara.svg",
+  "w640": "w640/paharpur-buddhist-vihara.webp",
+  "w1200": "w1200/paharpur-buddhist-vihara.webp"
+ },
+ {
+  "slug": "kusumba-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "golden",
+  "svg": "svg/kusumba-mosque.svg",
+  "w640": "w640/kusumba-mosque.webp",
+  "w1200": "w1200/kusumba-mosque.webp"
+ },
+ {
+  "slug": "patisar-rabindra-kacharibari",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "dawn",
+  "svg": "svg/patisar-rabindra-kacharibari.svg",
+  "w640": "w640/patisar-rabindra-kacharibari.webp",
+  "w1200": "w1200/patisar-rabindra-kacharibari.webp"
+ },
+ {
+  "slug": "altadighi-national-park",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "day",
+  "svg": "svg/altadighi-national-park.svg",
+  "w640": "w640/altadighi-national-park.webp",
+  "w1200": "w1200/altadighi-national-park.webp"
+ },
+ {
+  "slug": "dibar-dighi",
+  "scene": "arch",
+  "variant": "pillar",
+  "mood": "mist",
+  "svg": "svg/dibar-dighi.svg",
+  "w640": "w640/dibar-dighi.webp",
+  "w1200": "w1200/dibar-dighi.webp"
+ },
+ {
+  "slug": "uttara-ganabhaban-dighapatia",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "dusk",
+  "svg": "svg/uttara-ganabhaban-dighapatia.svg",
+  "w640": "w640/uttara-ganabhaban-dighapatia.webp",
+  "w1200": "w1200/uttara-ganabhaban-dighapatia.webp"
+ },
+ {
+  "slug": "natore-rajbari-rani-bhabani",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/natore-rajbari-rani-bhabani.svg",
+  "w640": "w640/natore-rajbari-rani-bhabani.webp",
+  "w1200": "w1200/natore-rajbari-rani-bhabani.webp"
+ },
+ {
+  "slug": "halti-beel",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "golden",
+  "svg": "svg/halti-beel.svg",
+  "w640": "w640/halti-beel.webp",
+  "w1200": "w1200/halti-beel.webp"
+ },
+ {
+  "slug": "chhoto-sona-mosque",
+  "scene": "arch",
+  "variant": "mosque-many",
+  "mood": "day",
+  "svg": "svg/chhoto-sona-mosque.svg",
+  "w640": "w640/chhoto-sona-mosque.webp",
+  "w1200": "w1200/chhoto-sona-mosque.webp"
+ },
+ {
+  "slug": "darasbari-mosque-madrasa",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/darasbari-mosque-madrasa.svg",
+  "w640": "w640/darasbari-mosque-madrasa.webp",
+  "w1200": "w1200/darasbari-mosque-madrasa.webp"
+ },
+ {
+  "slug": "kansat-mango-market",
+  "scene": "village",
+  "variant": "mango",
+  "mood": "day",
+  "svg": "svg/kansat-mango-market.svg",
+  "w640": "w640/kansat-mango-market.webp",
+  "w1200": "w1200/kansat-mango-market.webp"
+ },
+ {
+  "slug": "hardinge-bridge-paksey",
+  "scene": "river",
+  "variant": "truss-bridge",
+  "mood": "day",
+  "svg": "svg/hardinge-bridge-paksey.svg",
+  "w640": "w640/hardinge-bridge-paksey.webp",
+  "w1200": "w1200/hardinge-bridge-paksey.webp"
+ },
+ {
+  "slug": "pabna-jor-bangla-temple",
+  "scene": "arch",
+  "variant": "temple-jorbangla",
+  "mood": "day",
+  "svg": "svg/pabna-jor-bangla-temple.svg",
+  "w640": "w640/pabna-jor-bangla-temple.webp",
+  "w1200": "w1200/pabna-jor-bangla-temple.webp"
+ },
+ {
+  "slug": "chatmohar-shahi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "mist",
+  "svg": "svg/chatmohar-shahi-mosque.svg",
+  "w640": "w640/chatmohar-shahi-mosque.webp",
+  "w1200": "w1200/chatmohar-shahi-mosque.webp"
+ },
+ {
+  "slug": "varendra-research-museum",
+  "scene": "arch",
+  "variant": "museum",
+  "mood": "mist",
+  "svg": "svg/varendra-research-museum.svg",
+  "w640": "w640/varendra-research-museum.webp",
+  "w1200": "w1200/varendra-research-museum.webp"
+ },
+ {
+  "slug": "puthia-temple-complex",
+  "scene": "arch",
+  "variant": "temple-nabaratna",
+  "mood": "day",
+  "svg": "svg/puthia-temple-complex.svg",
+  "w640": "w640/puthia-temple-complex.webp",
+  "w1200": "w1200/puthia-temple-complex.webp"
+ },
+ {
+  "slug": "bagha-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/bagha-mosque.svg",
+  "w640": "w640/bagha-mosque.webp",
+  "w1200": "w1200/bagha-mosque.webp"
+ },
+ {
+  "slug": "rajshahi-padma-riverside-t-bandh",
+  "scene": "river",
+  "variant": "ghat",
+  "mood": "day",
+  "svg": "svg/rajshahi-padma-riverside-t-bandh.svg",
+  "w640": "w640/rajshahi-padma-riverside-t-bandh.webp",
+  "w1200": "w1200/rajshahi-padma-riverside-t-bandh.webp"
+ },
+ {
+  "slug": "kismat-maria-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/kismat-maria-mosque.svg",
+  "w640": "w640/kismat-maria-mosque.webp",
+  "w1200": "w1200/kismat-maria-mosque.webp"
+ },
+ {
+  "slug": "shahjadpur-rabindra-kacharibari",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "dusk",
+  "svg": "svg/shahjadpur-rabindra-kacharibari.svg",
+  "w640": "w640/shahjadpur-rabindra-kacharibari.webp",
+  "w1200": "w1200/shahjadpur-rabindra-kacharibari.webp"
+ },
+ {
+  "slug": "hatikumrul-nabaratna-temple",
+  "scene": "arch",
+  "variant": "temple-nabaratna",
+  "mood": "mist",
+  "svg": "svg/hatikumrul-nabaratna-temple.svg",
+  "w640": "w640/hatikumrul-nabaratna-temple.webp",
+  "w1200": "w1200/hatikumrul-nabaratna-temple.webp"
+ },
+ {
+  "slug": "chalan-beel-tarash",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "monsoon",
+  "svg": "svg/chalan-beel-tarash.svg",
+  "w640": "w640/chalan-beel-tarash.webp",
+  "w1200": "w1200/chalan-beel-tarash.webp"
+ },
+ {
+  "slug": "kantajew-temple",
+  "scene": "arch",
+  "variant": "temple-nabaratna",
+  "mood": "day",
+  "svg": "svg/kantajew-temple.svg",
+  "w640": "w640/kantajew-temple.webp",
+  "w1200": "w1200/kantajew-temple.webp"
+ },
+ {
+  "slug": "ramsagar-dighi",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "dusk",
+  "svg": "svg/ramsagar-dighi.svg",
+  "w640": "w640/ramsagar-dighi.webp",
+  "w1200": "w1200/ramsagar-dighi.webp"
+ },
+ {
+  "slug": "dinajpur-rajbari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "dusk",
+  "svg": "svg/dinajpur-rajbari.svg",
+  "w640": "w640/dinajpur-rajbari.webp",
+  "w1200": "w1200/dinajpur-rajbari.webp"
+ },
+ {
+  "slug": "nayabad-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "mist",
+  "svg": "svg/nayabad-mosque.svg",
+  "w640": "w640/nayabad-mosque.webp",
+  "w1200": "w1200/nayabad-mosque.webp"
+ },
+ {
+  "slug": "singra-national-park-birganj",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "day",
+  "svg": "svg/singra-national-park-birganj.svg",
+  "w640": "w640/singra-national-park-birganj.webp",
+  "w1200": "w1200/singra-national-park-birganj.webp"
+ },
+ {
+  "slug": "balashi-ghat",
+  "scene": "river",
+  "variant": "port",
+  "mood": "day",
+  "svg": "svg/balashi-ghat.svg",
+  "w640": "w640/balashi-ghat.webp",
+  "w1200": "w1200/balashi-ghat.webp"
+ },
+ {
+  "slug": "bardhan-kuthi-gobindaganj",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "day",
+  "svg": "svg/bardhan-kuthi-gobindaganj.svg",
+  "w640": "w640/bardhan-kuthi-gobindaganj.webp",
+  "w1200": "w1200/bardhan-kuthi-gobindaganj.webp"
+ },
+ {
+  "slug": "mirer-bagan-shah-sultan-gazi-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dusk",
+  "svg": "svg/mirer-bagan-shah-sultan-gazi-mosque.svg",
+  "w640": "w640/mirer-bagan-shah-sultan-gazi-mosque.webp",
+  "w1200": "w1200/mirer-bagan-shah-sultan-gazi-mosque.webp"
+ },
+ {
+  "slug": "chilmari-river-port",
+  "scene": "river",
+  "variant": "port",
+  "mood": "golden",
+  "svg": "svg/chilmari-river-port.svg",
+  "w640": "w640/chilmari-river-port.webp",
+  "w1200": "w1200/chilmari-river-port.webp"
+ },
+ {
+  "slug": "ulipur-munshibari",
+  "scene": "arch",
+  "variant": "homestead",
+  "mood": "mist",
+  "svg": "svg/ulipur-munshibari.svg",
+  "w640": "w640/ulipur-munshibari.webp",
+  "w1200": "w1200/ulipur-munshibari.webp"
+ },
+ {
+  "slug": "chandamari-mosque-rajarhat",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/chandamari-mosque-rajarhat.svg",
+  "w640": "w640/chandamari-mosque-rajarhat.webp",
+  "w1200": "w1200/chandamari-mosque-rajarhat.webp"
+ },
+ {
+  "slug": "tin-bigha-corridor-dahagram",
+  "scene": "village",
+  "variant": "corridor",
+  "mood": "golden",
+  "svg": "svg/tin-bigha-corridor-dahagram.svg",
+  "w640": "w640/tin-bigha-corridor-dahagram.webp",
+  "w1200": "w1200/tin-bigha-corridor-dahagram.webp"
+ },
+ {
+  "slug": "teesta-barrage-doani",
+  "scene": "river",
+  "variant": "barrage",
+  "mood": "day",
+  "svg": "svg/teesta-barrage-doani.svg",
+  "w640": "w640/teesta-barrage-doani.webp",
+  "w1200": "w1200/teesta-barrage-doani.webp"
+ },
+ {
+  "slug": "harano-masjid-ramdas",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dusk",
+  "svg": "svg/harano-masjid-ramdas.svg",
+  "w640": "w640/harano-masjid-ramdas.webp",
+  "w1200": "w1200/harano-masjid-ramdas.webp"
+ },
+ {
+  "slug": "nilsagar-dighi",
+  "scene": "city",
+  "variant": "dighi",
+  "mood": "day",
+  "svg": "svg/nilsagar-dighi.svg",
+  "w640": "w640/nilsagar-dighi.webp",
+  "w1200": "w1200/nilsagar-dighi.webp"
+ },
+ {
+  "slug": "chini-mosque-saidpur",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "day",
+  "svg": "svg/chini-mosque-saidpur.svg",
+  "w640": "w640/chini-mosque-saidpur.webp",
+  "w1200": "w1200/chini-mosque-saidpur.webp"
+ },
+ {
+  "slug": "dharmapaler-garh-jaldhaka",
+  "scene": "arch",
+  "variant": "fort-ruined",
+  "mood": "day",
+  "svg": "svg/dharmapaler-garh-jaldhaka.svg",
+  "w640": "w640/dharmapaler-garh-jaldhaka.webp",
+  "w1200": "w1200/dharmapaler-garh-jaldhaka.webp"
+ },
+ {
+  "slug": "tetulia-banglabandha-kanchenjunga-view",
+  "scene": "river",
+  "variant": "peak",
+  "mood": "mist",
+  "svg": "svg/tetulia-banglabandha-kanchenjunga-view.svg",
+  "w640": "w640/tetulia-banglabandha-kanchenjunga-view.webp",
+  "w1200": "w1200/tetulia-banglabandha-kanchenjunga-view.webp"
+ },
+ {
+  "slug": "tetulia-flatland-tea-gardens",
+  "scene": "tea",
+  "variant": "flat",
+  "mood": "dusk",
+  "svg": "svg/tetulia-flatland-tea-gardens.svg",
+  "w640": "w640/tetulia-flatland-tea-gardens.webp",
+  "w1200": "w1200/tetulia-flatland-tea-gardens.webp"
+ },
+ {
+  "slug": "bhitargarh-fort-city",
+  "scene": "arch",
+  "variant": "fort-ruined",
+  "mood": "golden",
+  "svg": "svg/bhitargarh-fort-city.svg",
+  "w640": "w640/bhitargarh-fort-city.webp",
+  "w1200": "w1200/bhitargarh-fort-city.webp"
+ },
+ {
+  "slug": "tajhat-palace",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "dawn",
+  "svg": "svg/tajhat-palace.svg",
+  "w640": "w640/tajhat-palace.webp",
+  "w1200": "w1200/tajhat-palace.webp"
+ },
+ {
+  "slug": "pairaband-begum-rokeya-birthplace",
+  "scene": "arch",
+  "variant": "homestead",
+  "mood": "mist",
+  "svg": "svg/pairaband-begum-rokeya-birthplace.svg",
+  "w640": "w640/pairaband-begum-rokeya-birthplace.webp",
+  "w1200": "w1200/pairaband-begum-rokeya-birthplace.webp"
+ },
+ {
+  "slug": "mithapukur-boro-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "dawn",
+  "svg": "svg/mithapukur-boro-mosque.svg",
+  "w640": "w640/mithapukur-boro-mosque.webp",
+  "w1200": "w1200/mithapukur-boro-mosque.webp"
+ },
+ {
+  "slug": "baliadangi-suryapuri-mango-tree",
+  "scene": "village",
+  "variant": "mango",
+  "mood": "day",
+  "svg": "svg/baliadangi-suryapuri-mango-tree.svg",
+  "w640": "w640/baliadangi-suryapuri-mango-tree.webp",
+  "w1200": "w1200/baliadangi-suryapuri-mango-tree.webp"
+ },
+ {
+  "slug": "jamalpur-zamindarbari-jame-mosque-thakurgaon",
+  "scene": "arch",
+  "variant": "shrine",
+  "mood": "dusk",
+  "svg": "svg/jamalpur-zamindarbari-jame-mosque-thakurgaon.svg",
+  "w640": "w640/jamalpur-zamindarbari-jame-mosque-thakurgaon.webp",
+  "w1200": "w1200/jamalpur-zamindarbari-jame-mosque-thakurgaon.webp"
+ },
+ {
+  "slug": "raja-tonkonath-rajbari-ranishankail",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "day",
+  "svg": "svg/raja-tonkonath-rajbari-ranishankail.svg",
+  "w640": "w640/raja-tonkonath-rajbari-ranishankail.webp",
+  "w1200": "w1200/raja-tonkonath-rajbari-ranishankail.webp"
+ },
+ {
+  "slug": "lauchapra-bakshiganj",
+  "scene": "hill",
+  "variant": "green",
+  "mood": "golden",
+  "svg": "svg/lauchapra-bakshiganj.svg",
+  "w640": "w640/lauchapra-bakshiganj.webp",
+  "w1200": "w1200/lauchapra-bakshiganj.webp"
+ },
+ {
+  "slug": "gandhi-ashram-melandah",
+  "scene": "arch",
+  "variant": "museum",
+  "mood": "golden",
+  "svg": "svg/gandhi-ashram-melandah.svg",
+  "w640": "w640/gandhi-ashram-melandah.webp",
+  "w1200": "w1200/gandhi-ashram-melandah.webp"
+ },
+ {
+  "slug": "dayamoyee-temple-jamalpur",
+  "scene": "arch",
+  "variant": "temple-nabaratna",
+  "mood": "day",
+  "svg": "svg/dayamoyee-temple-jamalpur.svg",
+  "w640": "w640/dayamoyee-temple-jamalpur.webp",
+  "w1200": "w1200/dayamoyee-temple-jamalpur.webp"
+ },
+ {
+  "slug": "shashi-lodge",
+  "scene": "arch",
+  "variant": "bungalow",
+  "mood": "mist",
+  "svg": "svg/shashi-lodge.svg",
+  "w640": "w640/shashi-lodge.webp",
+  "w1200": "w1200/shashi-lodge.webp"
+ },
+ {
+  "slug": "zainul-abedin-museum-brahmaputra",
+  "scene": "city",
+  "variant": "museum",
+  "mood": "dawn",
+  "svg": "svg/zainul-abedin-museum-brahmaputra.svg",
+  "w640": "w640/zainul-abedin-museum-brahmaputra.webp",
+  "w1200": "w1200/zainul-abedin-museum-brahmaputra.webp"
+ },
+ {
+  "slug": "muktagacha-zamindar-bari",
+  "scene": "arch",
+  "variant": "palace",
+  "mood": "golden",
+  "svg": "svg/muktagacha-zamindar-bari.svg",
+  "w640": "w640/muktagacha-zamindar-bari.webp",
+  "w1200": "w1200/muktagacha-zamindar-bari.webp"
+ },
+ {
+  "slug": "alexander-castle-mymensingh",
+  "scene": "arch",
+  "variant": "fort",
+  "mood": "dawn",
+  "svg": "svg/alexander-castle-mymensingh.svg",
+  "w640": "w640/alexander-castle-mymensingh.webp",
+  "w1200": "w1200/alexander-castle-mymensingh.webp"
+ },
+ {
+  "slug": "gabrakhali-garo-hills-haluaghat",
+  "scene": "hill",
+  "variant": "green",
+  "mood": "mist",
+  "svg": "svg/gabrakhali-garo-hills-haluaghat.svg",
+  "w640": "w640/gabrakhali-garo-hills-haluaghat.webp",
+  "w1200": "w1200/gabrakhali-garo-hills-haluaghat.webp"
+ },
+ {
+  "slug": "bijoypur-china-clay-hills",
+  "scene": "hill",
+  "variant": "clay",
+  "mood": "day",
+  "svg": "svg/bijoypur-china-clay-hills.svg",
+  "w640": "w640/bijoypur-china-clay-hills.webp",
+  "w1200": "w1200/bijoypur-china-clay-hills.webp"
+ },
+ {
+  "slug": "someshwari-river-durgapur",
+  "scene": "river",
+  "variant": "stony",
+  "mood": "golden",
+  "svg": "svg/someshwari-river-durgapur.svg",
+  "w640": "w640/someshwari-river-durgapur.webp",
+  "w1200": "w1200/someshwari-river-durgapur.webp"
+ },
+ {
+  "slug": "ranikhong-mission",
+  "scene": "arch",
+  "variant": "church",
+  "mood": "day",
+  "svg": "svg/ranikhong-mission.svg",
+  "w640": "w640/ranikhong-mission.webp",
+  "w1200": "w1200/ranikhong-mission.webp"
+ },
+ {
+  "slug": "dingapota-haor",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "monsoon",
+  "svg": "svg/dingapota-haor.svg",
+  "w640": "w640/dingapota-haor.webp",
+  "w1200": "w1200/dingapota-haor.webp"
+ },
+ {
+  "slug": "madanpur-shah-sultan-rumi-mazar",
+  "scene": "arch",
+  "variant": "shrine",
+  "mood": "dusk",
+  "svg": "svg/madanpur-shah-sultan-rumi-mazar.svg",
+  "w640": "w640/madanpur-shah-sultan-rumi-mazar.webp",
+  "w1200": "w1200/madanpur-shah-sultan-rumi-mazar.webp"
+ },
+ {
+  "slug": "gajni-abakash-kendra",
+  "scene": "hill",
+  "variant": "green",
+  "mood": "day",
+  "svg": "svg/gajni-abakash-kendra.svg",
+  "w640": "w640/gajni-abakash-kendra.webp",
+  "w1200": "w1200/gajni-abakash-kendra.webp"
+ },
+ {
+  "slug": "madhutila-eco-park",
+  "scene": "forest",
+  "variant": "woods",
+  "mood": "golden",
+  "svg": "svg/madhutila-eco-park.svg",
+  "w640": "w640/madhutila-eco-park.webp",
+  "w1200": "w1200/madhutila-eco-park.webp"
+ },
+ {
+  "slug": "ghagra-khan-bari-mosque",
+  "scene": "arch",
+  "variant": "mosque",
+  "mood": "mist",
+  "svg": "svg/ghagra-khan-bari-mosque.svg",
+  "w640": "w640/ghagra-khan-bari-mosque.webp",
+  "w1200": "w1200/ghagra-khan-bari-mosque.webp"
+ },
+ {
+  "slug": "adinath-temple-maheshkhali",
+  "scene": "arch",
+  "variant": "temple",
+  "mood": "dusk",
+  "svg": "svg/adinath-temple-maheshkhali.svg",
+  "w640": "w640/adinath-temple-maheshkhali.webp",
+  "w1200": "w1200/adinath-temple-maheshkhali.webp"
+ },
+ {
+  "slug": "bholaganj-sada-pathor",
+  "scene": "river",
+  "variant": "stony",
+  "mood": "dawn",
+  "svg": "svg/bholaganj-sada-pathor.svg",
+  "w640": "w640/bholaganj-sada-pathor.webp",
+  "w1200": "w1200/bholaganj-sada-pathor.webp"
+ },
+ {
+  "slug": "himchari-hills-waterfall",
+  "scene": "waterfall",
+  "variant": "sea",
+  "mood": "monsoon",
+  "svg": "svg/himchari-hills-waterfall.svg",
+  "w640": "w640/himchari-hills-waterfall.webp",
+  "w1200": "w1200/himchari-hills-waterfall.webp"
+ },
+ {
+  "slug": "lalakhal-sari-river",
+  "scene": "river",
+  "variant": "stony",
+  "mood": "monsoon",
+  "svg": "svg/lalakhal-sari-river.svg",
+  "w640": "w640/lalakhal-sari-river.webp",
+  "w1200": "w1200/lalakhal-sari-river.webp"
+ },
+ {
+  "slug": "madhabpur-lake",
+  "scene": "river",
+  "variant": "hill-lake",
+  "mood": "dawn",
+  "svg": "svg/madhabpur-lake.svg",
+  "w640": "w640/madhabpur-lake.webp",
+  "w1200": "w1200/madhabpur-lake.webp"
+ },
+ {
+  "slug": "panthumai-waterfall",
+  "scene": "waterfall",
+  "variant": "tall",
+  "mood": "dawn",
+  "svg": "svg/panthumai-waterfall.svg",
+  "w640": "w640/panthumai-waterfall.webp",
+  "w1200": "w1200/panthumai-waterfall.webp"
+ },
+ {
+  "slug": "sitakot-vihara-dinajpur",
+  "scene": "arch",
+  "variant": "ruins",
+  "mood": "dawn",
+  "svg": "svg/sitakot-vihara-dinajpur.svg",
+  "w640": "w640/sitakot-vihara-dinajpur.webp",
+  "w1200": "w1200/sitakot-vihara-dinajpur.webp"
+ },
+ {
+  "slug": "baitul-mukarram-national-mosque",
+  "scene": "arch",
+  "variant": "mosque-modern",
+  "mood": "day",
+  "svg": "svg/baitul-mukarram-national-mosque.svg",
+  "w640": "w640/baitul-mukarram-national-mosque.webp",
+  "w1200": "w1200/baitul-mukarram-national-mosque.webp"
+ },
+ {
+  "slug": "bangladesh-national-museum",
+  "scene": "arch",
+  "variant": "museum",
+  "mood": "golden",
+  "svg": "svg/bangladesh-national-museum.svg",
+  "w640": "w640/bangladesh-national-museum.webp",
+  "w1200": "w1200/bangladesh-national-museum.webp"
+ },
+ {
+  "slug": "central-shaheed-minar",
+  "scene": "arch",
+  "variant": "minar",
+  "mood": "mist",
+  "svg": "svg/central-shaheed-minar.svg",
+  "w640": "w640/central-shaheed-minar.webp",
+  "w1200": "w1200/central-shaheed-minar.webp"
+ },
+ {
+  "slug": "dhakeshwari-temple",
+  "scene": "arch",
+  "variant": "temple",
+  "mood": "day",
+  "svg": "svg/dhakeshwari-temple.svg",
+  "w640": "w640/dhakeshwari-temple.webp",
+  "w1200": "w1200/dhakeshwari-temple.webp"
+ },
+ {
+  "slug": "hakaluki-haor",
+  "scene": "river",
+  "variant": "haor",
+  "mood": "monsoon",
+  "svg": "svg/hakaluki-haor.svg",
+  "w640": "w640/hakaluki-haor.webp",
+  "w1200": "w1200/hakaluki-haor.webp"
+ },
+ {
+  "slug": "national-parliament-house",
+  "scene": "arch",
+  "variant": "parliament",
+  "mood": "mist",
+  "svg": "svg/national-parliament-house.svg",
+  "w640": "w640/national-parliament-house.webp",
+  "w1200": "w1200/national-parliament-house.webp"
+ }
+]

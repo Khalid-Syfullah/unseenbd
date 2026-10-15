@@ -1,0 +1,87 @@
+[
+ {
+  "key": "dusk",
+  "name_en": "Dusk",
+  "name_bn": "সাঁঝ",
+  "bg": [
+   "#1B1F4B",
+   "#5B2A55"
+  ],
+  "land": "#2C3364",
+  "visited": "#F2A541",
+  "border": "#1B1F4B",
+  "text": "#FBF6EC",
+  "accent": "#FF8A65"
+ },
+ {
+  "key": "dawn",
+  "name_en": "Dawn",
+  "name_bn": "ভোর",
+  "bg": [
+   "#FDE7D3",
+   "#F9C9B6"
+  ],
+  "land": "#F6DCCB",
+  "visited": "#E2483A",
+  "border": "#FDF2E9",
+  "text": "#3A2232",
+  "accent": "#F2A541"
+ },
+ {
+  "key": "jamdani",
+  "name_en": "Jamdani",
+  "name_bn": "জামদানি",
+  "bg": [
+   "#F4EEE2",
+   "#E9DFCB"
+  ],
+  "land": "#E4D8C0",
+  "visited": "#7B2D5B",
+  "border": "#F4EEE2",
+  "text": "#2B1B2E",
+  "accent": "#C9A227",
+  "pattern": true
+ },
+ {
+  "key": "padma",
+  "name_en": "Padma",
+  "name_bn": "পদ্মা",
+  "bg": [
+   "#0F4C64",
+   "#1E7C93"
+  ],
+  "land": "#2A6F86",
+  "visited": "#CFE1F1",
+  "border": "#0F4C64",
+  "text": "#F2FAFF",
+  "accent": "#F2A541"
+ },
+ {
+  "key": "earth",
+  "name_en": "Earth",
+  "name_bn": "মাটি",
+  "bg": [
+   "#EADBC4",
+   "#D6B48C"
+  ],
+  "land": "#E2CDB0",
+  "visited": "#8C4A2F",
+  "border": "#EADBC4",
+  "text": "#3B2416",
+  "accent": "#2F7A3F"
+ },
+ {
+  "key": "mist",
+  "name_en": "Mist",
+  "name_bn": "কুয়াশা",
+  "bg": [
+   "#E9EEF2",
+   "#D3DEE6"
+  ],
+  "land": "#DDE5EB",
+  "visited": "#0E6B4E",
+  "border": "#F3F6F8",
+  "text": "#16232E",
+  "accent": "#2E86A8"
+ }
+]

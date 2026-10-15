@@ -1,0 +1,21 @@
+{
+  "name": "unseenbd-assets",
+  "private": true,
+  "type": "module",
+  "description": "Generators for the Unseen BD brand, maps, icons and place covers",
+  "scripts": {
+    "all": "node brand.mjs && node maps.mjs && node icons.mjs && node covers.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "d3-geo": "^3.1.1",
+    "harfbuzzjs": "^1.6.3",
+    "i18n-iso-countries": "^7.14.0",
+    "mapshaper": "^0.7.86",
+    "opentype.js": "^2.0.0",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.5",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

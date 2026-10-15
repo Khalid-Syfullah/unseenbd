@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Unseen BD">
+  <rect width="32" height="32" rx="7" fill="#0E6B4E"/>
+  <clipPath id="e"><path d="M4 16C8.5 8.6 23.5 8.6 28 16C23.5 23.4 8.5 23.4 4 16Z"/></clipPath>
+  <path d="M4 16C8.5 8.6 23.5 8.6 28 16C23.5 23.4 8.5 23.4 4 16Z" fill="#FBF6EC"/>
+  <g clip-path="url(#e)"><circle cx="16" cy="15.4" r="4.6" fill="#E2483A"/><rect x="2" y="17.4" width="28" height="9" fill="#2E86A8"/></g></svg>

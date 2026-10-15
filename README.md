@@ -7,7 +7,9 @@ A teardown of [Unseen Bangladesh / অদেখা বাংলাদেশ](htt
 | [`FEATURES.md`](FEATURES.md) | Every feature, page by page, as observed in the browser (bn and en) |
 | [`MASTER_PROMPT.md`](MASTER_PROMPT.md) | A single prompt for an AI coding agent to build a site with the same feature set, including data model, planner/cost algorithms, API surface, SEO and acceptance tests |
 | [`data/`](data) | Structured data extracted from all 1,294 sitemap pages (bn + en) |
+| [`assets/`](assets) | 1,123 original assets for the **Unseen BD** build: brand and app icons, district/division/world maps, icon sets, illustrations, passport stamps, level badges, card themes and an illustrated cover for each of the 257 places ([index](assets/README.md)) |
 | [`scripts/extract.py`](scripts/extract.py) | Re-runs the extraction from a crawl |
+| [`tools/assets/`](tools/assets) | The generators that build `assets/` |
 
 ## Data at a glance
 

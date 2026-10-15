@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Unseen BD">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#138060"/><stop offset="1" stop-color="#0A503C"/></linearGradient></defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <defs>
+    <clipPath id="eye"><path d="M84 256C148 146 364 146 428 256C364 366 148 366 84 256Z"/></clipPath>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B97B8"/><stop offset="1" stop-color="#1E6E8E"/></linearGradient>
+  </defs>
+  <path d="M84 256C148 146 364 146 428 256C364 366 148 366 84 256Z" fill="#FBF6EC"/>
+  <g clip-path="url(#eye)">
+    <path d="M60 282C120 250 170 238 214 262C232 272 246 280 262 282H470V420H60Z" fill="#1FA06C" opacity=".9"/>
+    <circle cx="256" cy="250" r="64" fill="#E2483A"/>
+    <rect x="60" y="282" width="420" height="140" fill="url(#water)"/>
+    <path d="M150 312h70M262 312h104M196 338h88" stroke="#FBF6EC" stroke-width="11" stroke-linecap="round" opacity=".9"/>
+  </g></svg>

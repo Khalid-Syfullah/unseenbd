@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Lost on the map"><rect width="800" height="600" rx="32" fill="#FBF6EC"/><rect x="140" y="120" width="520" height="360" rx="20" fill="#EFE3CB" transform="rotate(-4 400 300)"/>
+     <path d="M180 420c80-60 120 20 200-40s140-40 240-110" stroke="#2E86A8" stroke-width="10" stroke-dasharray="2 22" stroke-linecap="round" fill="none"/>
+     <g transform="translate(400 290)"><circle r="92" fill="#FBF6EC" stroke="#10172E" stroke-width="10"/><path d="M-20 26l52-58-14 70z" fill="#E2483A"/><path d="M20 -26l-52 58 14-70z" fill="#10172E"/></g>
+     <path d="M600 160l30 30M630 160l-30 30" stroke="#E2483A" stroke-width="12" stroke-linecap="round"/></svg>
