@@ -6,6 +6,7 @@ import {
   eq,
   gt,
   gte,
+  inArray,
   isNotNull,
   like,
   lte,
@@ -15,6 +16,7 @@ import {
   type SQL,
 } from "drizzle-orm";
 import { haversineKm } from "@/lib/geo";
+import { matchPlaceIds } from "./search";
 import { getDb } from "../db/client";
 import { districts, places, routes } from "../db/schema";
 import { pick, type Lang } from "./lang";
@@ -68,6 +70,9 @@ function searchSql(q: string): SQL | undefined {
     conds.push(like(places.slug, `%${slugish}%`));
     conds.push(like(districts.slug, `%${slugish}%`));
   }
+  // Transliteration and accents are matched in code; add those places to the SQL matches.
+  const ids = matchPlaceIds(term);
+  if (ids.length) conds.push(inArray(places.id, ids));
   return or(...conds);
 }
 

@@ -2,3 +2,4 @@
 - 2026-10-15 phase 02 (opus) — Data, seed, i18n and formatters
 - 2026-10-15 phase 03 (opus) — Design system components and maps
 - 2026-10-15 phase 04 (sonnet) — Home page
+- 2026-10-15 phase 05 (sonnet) — Explore, lists, search, near me and bucket list

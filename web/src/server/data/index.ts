@@ -33,6 +33,7 @@ export {
   listUnseenByDivision,
 } from "./catalog";
 export { listApprovedSuggestions, listLatestPhotos, listLatestPosts } from "./community";
+export { cleanQuery, matchPlaceIds, searchAll, MAX_QUERY_LENGTH } from "./search";
 export { findRouteSlug, getRoute, listRoutes, listRoutesFromDhaka } from "./routes";
 export { getTrain, listTrains } from "./trains";
 export type * from "./types";

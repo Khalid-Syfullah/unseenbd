@@ -271,3 +271,18 @@ export type CommunitySuggestion = {
   votes: number;
   stars: number | null;
 };
+
+/* Search ------------------------------------------------------------------------------------- */
+
+export type SearchResults = {
+  /** The cleaned query. */
+  query: string;
+  districts: DistrictListItem[];
+  places: PlaceSummary[];
+  photos: CommunityPhoto[];
+  posts: CommunityPost[];
+  /** Matches before the lists were cut to their limits. */
+  totalPlaces: number;
+  totalPhotos: number;
+  totalPosts: number;
+};

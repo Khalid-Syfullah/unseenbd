@@ -144,7 +144,13 @@ export function PlaceRow({
   meta,
   className,
 }: {
-  place: Pick<PlaceSummary, "slug" | "name" | "district" | "kind" | "cover">;
+  place: {
+    slug: string;
+    name: string;
+    district: { name: string };
+    kind: { label: string };
+    cover: { w640: string } | null;
+  };
   href?: string;
   /** Rank in a list (1-based), shown at the left. */
   rank?: number;
