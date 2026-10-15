@@ -28,3 +28,11 @@ export function seedDataDir(): string {
 export function assetsDir(): string {
   return resolve(webRoot(), process.env.ASSETS_DIR ?? "../assets");
 }
+
+/**
+ * Uploaded media (community photos, post photos): `web/storage/media/` by default, or
+ * `MEDIA_DIR`. Files are served by `GET /media/…` (`src/app/media/[...path]/route.ts`).
+ */
+export function mediaDir(): string {
+  return resolve(webRoot(), process.env.MEDIA_DIR ?? "storage/media");
+}

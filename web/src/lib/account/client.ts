@@ -128,11 +128,14 @@ export async function csrfToken(): Promise<string | null> {
   }
 }
 
-export type ApiInit = Omit<RequestInit, "body"> & { json?: unknown };
+export type ApiInit = Omit<RequestInit, "body"> & { json?: unknown; form?: FormData };
 
-/** `fetch` for this site's API: same-origin cookies, JSON body, and the CSRF header. */
+/**
+ * `fetch` for this site's API: same-origin cookies, a JSON (`json`) or multipart (`form`) body,
+ * and the CSRF header.
+ */
 export async function apiFetch(url: string, init: ApiInit = {}): Promise<Response> {
-  const { json, headers, ...rest } = init;
+  const { json, form, headers, ...rest } = init;
   const h = new Headers(headers);
   const method = (rest.method ?? "GET").toUpperCase();
   if (method !== "GET" && method !== "HEAD") {
@@ -146,7 +149,7 @@ export async function apiFetch(url: string, init: ApiInit = {}): Promise<Respons
     ...rest,
     method,
     headers: h,
-    body: json !== undefined ? JSON.stringify(json) : undefined,
+    body: json !== undefined ? JSON.stringify(json) : form,
   });
 }
 

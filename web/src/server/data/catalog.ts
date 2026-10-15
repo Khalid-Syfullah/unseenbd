@@ -1,6 +1,8 @@
 import { and, asc, count, eq } from "drizzle-orm";
 import { getDb } from "../db/client";
 import { curation, divisions, kinds, months, places } from "../db/schema";
+import { seasonOf, type SeasonInfo } from "@/lib/community/season";
+import { liveComments, liveVotes, placeVotes, snapshotSeason } from "../community/trend";
 import type { Lang } from "./lang";
 import { inSeasonSql } from "./places";
 import {
@@ -109,41 +111,81 @@ export async function listUnseenByDivision(lang: Lang = "bn"): Promise<UnseenByD
   });
 }
 
-/** The trending snapshot (votes, likes, comments), in ranking order. */
-export async function listTrending(lang: Lang = "bn"): Promise<{
+/** How many places the trending ranking returns at most. */
+export const TRENDING_MAX = 100;
+
+/**
+ * This season's trending ranking: live votes (one per visitor per place per season) plus, during
+ * the season it was taken in, the seeded snapshot. Ordered by votes, then the snapshot's order,
+ * then the editorial score.
+ */
+export async function listTrending(
+  lang: Lang = "bn",
+  now: Date = new Date(),
+): Promise<{
   month: number | null;
+  season: SeasonInfo;
   items: TrendingItem[];
 }> {
   const db = getDb();
-  const rows = curatedSlugs("trending");
-  const summaries = new Map(
-    placeSummariesBySlug(
-      db,
-      rows.map((r) => r.placeSlug),
-      lang,
-    ).map((p) => [p.slug, p]),
+  const season = seasonOf(now);
+  const snapshot = curatedSlugs("trending");
+  const snapshotMonth = snapshot[0]?.month ?? null;
+  const base = snapshotSeason(snapshotMonth) === season.key ? snapshot : [];
+  const votes = liveVotes(season.key);
+  const comments = liveComments(season.key);
+
+  const idBySlug = new Map(
+    db
+      .select({ id: places.id, slug: places.slug })
+      .from(places)
+      .all()
+      .map((r) => [r.slug, r.id]),
   );
-  return {
-    month: rows[0]?.month ?? null,
-    items: rows.flatMap((r) => {
-      const place = summaries.get(r.placeSlug);
-      return place
-        ? [
-            {
-              place,
-              votes: r.votes ?? 0,
-              likes: r.likes ?? 0,
-              comments: r.comments ?? 0,
-              stars: r.stars ?? place.stars,
-            },
-          ]
-        : [];
-    }),
-  };
+  const slugById = new Map([...idBySlug].map(([slug, id]) => [id, slug]));
+  const slugs = [
+    ...new Set([
+      ...base.map((r) => r.placeSlug),
+      ...[...votes.keys()].map((id) => slugById.get(id)).filter((s): s is string => Boolean(s)),
+    ]),
+  ];
+  const summaries = new Map(placeSummariesBySlug(db, slugs, lang).map((p) => [p.slug, p]));
+  const baseBySlug = new Map(base.map((r, i) => [r.placeSlug, { row: r, order: i }]));
+
+  const items = slugs.flatMap((slug) => {
+    const place = summaries.get(slug);
+    if (!place) return [];
+    const b = baseBySlug.get(slug)?.row;
+    const id = idBySlug.get(slug)!;
+    return [
+      {
+        place,
+        votes: (b?.votes ?? 0) + (votes.get(id) ?? 0),
+        likes: b?.likes ?? 0,
+        comments: (b?.comments ?? 0) + (comments.get(id) ?? 0),
+        stars: b?.stars ?? place.stars,
+      },
+    ];
+  });
+  const order = (slug: string) => baseBySlug.get(slug)?.order ?? Number.MAX_SAFE_INTEGER;
+  items.sort(
+    (a, b) =>
+      b.votes - a.votes ||
+      order(a.place.slug) - order(b.place.slug) ||
+      b.stars - a.stars ||
+      a.place.slug.localeCompare(b.place.slug),
+  );
+  return { month: snapshotMonth, season, items: items.slice(0, TRENDING_MAX) };
 }
 
-/** Votes a place has in the trending snapshot (0 when it is not in the top list). */
-export async function getTrendVotes(slug: string): Promise<number> {
-  const row = curatedSlugs("trending").find((r) => r.placeSlug === slug);
-  return row?.votes ?? 0;
+/** This season's trending votes for a place (snapshot during its season, plus live votes). */
+export async function getTrendVotes(slug: string, now: Date = new Date()): Promise<number> {
+  const season = seasonOf(now);
+  const snapshot = curatedSlugs("trending");
+  const base =
+    snapshotSeason(snapshot[0]?.month ?? null) === season.key
+      ? (snapshot.find((r) => r.placeSlug === slug)?.votes ?? 0)
+      : 0;
+  const place = getDb().select({ id: places.id }).from(places).where(eq(places.slug, slug)).get();
+  return place ? base + placeVotes(place.id, season.key) : base;
 }

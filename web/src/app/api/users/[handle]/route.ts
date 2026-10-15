@@ -11,7 +11,7 @@ type Ctx = { params: Promise<{ handle: string }> };
  */
 export async function GET(request: NextRequest, { params }: Ctx) {
   const { handle } = await params;
-  const profile = getPublicProfile(handle, toLang(request.nextUrl.searchParams.get("lang")));
+  const profile = await getPublicProfile(handle, toLang(request.nextUrl.searchParams.get("lang")));
   if (!profile) return fail(404, "not_found");
   return ok(profile);
 }

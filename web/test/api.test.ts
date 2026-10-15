@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { NextRequest } from "next/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { GET as districtGET } from "@/app/api/districts/[slug]/route";
 import { GET as famousGET } from "@/app/api/famous/route";
 import { GET as placeListGET } from "@/app/api/place-list/route";
@@ -112,7 +112,14 @@ describe("list endpoints", () => {
       sylhetPopular.every((p: { division: { slug: string } }) => p.division.slug === "sylhet"),
     ).toBe(true);
     expect(await ok(await unseenGET(req("/api/unseen")))).toHaveLength(8);
-    expect((await ok(await trendGET(req("/api/trend")))).items).toHaveLength(56);
+    // Trending is live (votes), so it is cached for a minute only; the seeded snapshot counts
+    // during autumn 2026, when it was taken.
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date("2026-10-15T06:00:00Z"));
+    const trend = await trendGET(req("/api/trend")).finally(() => vi.useRealTimers());
+    expect(trend.status).toBe(200);
+    expect(trend.headers.get("Cache-Control")).toContain("max-age=60");
+    expect(((await trend.json()) as { items: unknown[] }).items).toHaveLength(56);
     expect(await ok(await famousGET(req("/api/famous?lang=en")))).toHaveLength(64);
   });
 });

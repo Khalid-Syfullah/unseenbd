@@ -1,6 +1,6 @@
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import HomePage from "@/app/[lang]/page";
 import { PARTNER_BANNER, PARTNER_BANNER_DISMISS_KEY } from "@/config/site";
 import type { Locale } from "@/i18n/locales";
@@ -80,7 +80,10 @@ describe("home page", () => {
   });
 
   it("lists the trending places and the 24 popular destinations", async () => {
-    const { container } = await renderHome("en");
+    // The seeded trending snapshot belongs to autumn 2026.
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date("2026-10-15T06:00:00Z"));
+    const { container } = await renderHome("en").finally(() => vi.useRealTimers());
     const trending = container.querySelector("#trending")!;
     expect(within(trending as HTMLElement).getAllByRole("listitem").length).toBeGreaterThanOrEqual(
       10,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { PostFeedCard } from "@/components/community/PostFeedCard";
 import { DistrictsByDivision } from "@/components/home/DistrictsByDivision";
 import { DivisionFilter } from "@/components/home/DivisionFilter";
 import { JsonLd } from "@/components/home/JsonLd";
@@ -22,12 +23,11 @@ import { Accordion } from "@/components/ui/Navigation";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { PlaceCard } from "@/components/ui/PlaceCard";
 import { PlaceRow } from "@/components/ui/PlaceCard";
-import { PostCard } from "@/components/ui/PostCard";
 import { RouteCard } from "@/components/ui/RouteCard";
 import { PARTNER_BANNER } from "@/config/site";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
-import { monthName } from "@/lib/format";
+import { localizeDigits, monthName } from "@/lib/format";
 import { alternatesFor } from "@/lib/seo";
 import { currentMonth, inSeason } from "@/lib/season";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -105,7 +105,7 @@ export default async function HomePage({ params }: PageProps) {
     listDivisions(lang),
     listDistrictsByDivision(lang),
     listLatestPhotos(lang, 12),
-    listLatestPosts(POSTS_PAGE * 6),
+    listLatestPosts(POSTS_PAGE * 6, lang),
     listApprovedSuggestions(lang, 10),
     listTrending(lang),
     listPopular(lang),
@@ -342,7 +342,7 @@ export default async function HomePage({ params }: PageProps) {
               <PhotoTile
                 key={p.id}
                 photo={{
-                  src: p.src,
+                  src: p.thumb ?? p.src,
                   alt: t("home.photos.alt", { district: p.district.name }),
                   width: p.width,
                   height: p.height,
@@ -381,21 +381,7 @@ export default async function HomePage({ params }: PageProps) {
             pageSize={POSTS_PAGE}
             className="grid items-start gap-3 sm:grid-cols-2 lg:gap-5 xl:grid-cols-4"
             items={posts.map((p) => (
-              <PostCard
-                key={p.id}
-                post={{
-                  author: p.author,
-                  date: p.createdAt,
-                  text: p.body,
-                  photos: p.photos.map((src) => ({
-                    src,
-                    alt: t("home.posts.photoAlt", { author: p.author }),
-                  })),
-                  likes: p.likes,
-                  stars: p.stars ?? undefined,
-                  comments: p.comments,
-                }}
-              />
+              <PostFeedCard key={p.id} post={p} />
             ))}
           />
         ) : (
@@ -434,7 +420,15 @@ export default async function HomePage({ params }: PageProps) {
       </Section>
 
       {/* 11. Trending this season */}
-      <Section id="trending" title={t("home.trending.title")}>
+      <Section
+        id="trending"
+        title={t("home.trending.title")}
+        intro={t("trend.seasonNote", {
+          season: t(`trend.season.${trending.season.season}`, {
+            year: localizeDigits(String(trending.season.year), lang),
+          }),
+        })}
+      >
         {topTrending.length ? (
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
             <div className="flex flex-col gap-2">

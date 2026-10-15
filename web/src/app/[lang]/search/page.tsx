@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PostFeedCard } from "@/components/community/PostFeedCard";
 import { notFound } from "next/navigation";
 import { PageContainer, PageHeader, PageSection } from "@/components/discovery/PageHeader";
 import { ButtonLink } from "@/components/ui/Button";
@@ -9,7 +10,6 @@ import { EmptyState } from "@/components/ui/Feedback";
 import { SearchInput } from "@/components/ui/Form";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { PlaceCard } from "@/components/ui/PlaceCard";
-import { PostCard } from "@/components/ui/PostCard";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
 import { formatNumber } from "@/lib/format";
@@ -169,13 +169,13 @@ export default async function SearchPage({ params, searchParams }: PageProps) {
                   <PhotoTile
                     key={p.id}
                     photo={{
-                      src: p.src,
+                      src: p.thumb ?? p.src,
                       alt: p.caption ?? t("home.photos.alt", { district: p.district.name }),
                       width: p.width,
                       height: p.height,
                       caption: p.district.name,
                       likes: p.likes,
-                      href: href(`/district/${p.district.slug}`),
+                      href: href(`/photo/${p.id}`),
                     }}
                   />
                 ))}
@@ -191,21 +191,7 @@ export default async function SearchPage({ params, searchParams }: PageProps) {
             >
               <div className="grid gap-4 md:grid-cols-2">
                 {results.posts.map((p) => (
-                  <PostCard
-                    key={p.id}
-                    post={{
-                      author: p.author,
-                      date: p.createdAt,
-                      text: p.body,
-                      photos: p.photos.map((src) => ({
-                        src,
-                        alt: t("home.posts.photoAlt", { author: p.author }),
-                      })),
-                      likes: p.likes,
-                      comments: p.comments,
-                      stars: p.stars ?? undefined,
-                    }}
-                  />
+                  <PostFeedCard key={p.id} post={p} />
                 ))}
               </div>
             </PageSection>

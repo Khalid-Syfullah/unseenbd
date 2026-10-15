@@ -5,6 +5,7 @@ import type {
   ImageCredit,
   PlaceCover,
   PlacePhoto,
+  PostPhoto,
   RouteFlight,
   RouteWater,
   TrainClass,
@@ -255,14 +256,19 @@ export type TrainDetail = TrainSummary & {
 
 /* Community ---------------------------------------------------------------------------------- */
 
+export type { PostPhoto };
+
 export type CommunityPhoto = {
   id: number;
   src: string;
+  /** Grid-size copy (≤ 640 px); null for photos stored without one. */
+  thumb: string | null;
   width: number;
   height: number;
   uploader: string;
   caption: string | null;
   district: { slug: string; name: string };
+  place: { slug: string; name: string } | null;
   likes: number;
   createdAt: string;
 };
@@ -281,13 +287,18 @@ export type CommunityListing = {
 export type CommunityPost = {
   id: number;
   author: string;
+  authorHandle: string;
   body: string;
-  photos: string[];
+  photos: PostPhoto[];
+  district: { slug: string; name: string } | null;
   likes: number;
   comments: number;
   /** 0–1000 (shown ★ x/10); null when nobody has rated the post. */
   stars: number | null;
+  ratings: number;
+  status: "pending" | "approved" | "rejected";
   createdAt: string;
+  updatedAt: string | null;
 };
 
 export type CommunitySuggestion = {

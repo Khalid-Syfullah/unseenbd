@@ -22,6 +22,25 @@ import * as postsMine from "@/app/api/posts/mine/route";
 import * as trips from "@/app/api/trips/route";
 import * as tripById from "@/app/api/trips/[id]/route";
 import * as users from "@/app/api/users/[handle]/route";
+import * as communityApproved from "@/app/api/community/approved/route";
+import * as communityQuota from "@/app/api/community/quota/route";
+import * as guideSuggestions from "@/app/api/guide-suggestions/route";
+import * as guideQuota from "@/app/api/guide-suggestions/quota/route";
+import * as photosRoute from "@/app/api/photos/route";
+import * as photoById from "@/app/api/photos/[id]/route";
+import * as photoComments from "@/app/api/photos/[id]/comments/route";
+import * as photoReact from "@/app/api/photos/[id]/react/route";
+import * as photosQuota from "@/app/api/photos/quota/route";
+import * as postsRoute from "@/app/api/posts/route";
+import * as postById from "@/app/api/posts/[id]/route";
+import * as postComments from "@/app/api/posts/[id]/comments/route";
+import * as postReact from "@/app/api/posts/[id]/react/route";
+import * as reactions from "@/app/api/reactions/route";
+import * as reportsRoute from "@/app/api/reports/route";
+import * as suggestionsRoute from "@/app/api/suggestions/route";
+import * as suggestionReact from "@/app/api/suggestions/[id]/react/route";
+import * as trendComments from "@/app/api/trend/comments/route";
+import * as trendVote from "@/app/api/trend/vote/route";
 
 type Handler = (
   req: NextRequest,
@@ -48,7 +67,65 @@ const ROUTES: [RegExp, Module, string[]][] = [
   [/^\/api\/trips$/, trips, []],
   [/^\/api\/trips\/([^/]+)$/, tripById, ["id"]],
   [/^\/api\/users\/([^/]+)$/, users, ["handle"]],
+  [/^\/api\/community\/approved$/, communityApproved, []],
+  [/^\/api\/community\/quota$/, communityQuota, []],
+  [/^\/api\/guide-suggestions$/, guideSuggestions, []],
+  [/^\/api\/guide-suggestions\/quota$/, guideQuota, []],
+  [/^\/api\/photos$/, photosRoute, []],
+  [/^\/api\/photos\/quota$/, photosQuota, []],
+  [/^\/api\/photos\/([^/]+)$/, photoById, ["id"]],
+  [/^\/api\/photos\/([^/]+)\/comments$/, photoComments, ["id"]],
+  [/^\/api\/photos\/([^/]+)\/react$/, photoReact, ["id"]],
+  [/^\/api\/posts$/, postsRoute, []],
+  [/^\/api\/posts\/([^/]+)$/, postById, ["id"]],
+  [/^\/api\/posts\/([^/]+)\/comments$/, postComments, ["id"]],
+  [/^\/api\/posts\/([^/]+)\/react$/, postReact, ["id"]],
+  [/^\/api\/reactions$/, reactions, []],
+  [/^\/api\/reports$/, reportsRoute, []],
+  [/^\/api\/suggestions$/, suggestionsRoute, []],
+  [/^\/api\/suggestions\/([^/]+)\/react$/, suggestionReact, ["id"]],
+  [/^\/api\/trend\/comments$/, trendComments, []],
+  [/^\/api\/trend\/vote$/, trendVote, []],
 ];
+
+/**
+ * Encodes a FormData by hand (any FormData/Blob implementation, jsdom's included), the way a
+ * browser sends it.
+ */
+export async function encodeMultipart(
+  form: FormData,
+): Promise<{ body: Uint8Array; contentType: string }> {
+  const boundary = `----ubdtest${Math.random().toString(16).slice(2)}`;
+  const enc = new TextEncoder();
+  const parts: Uint8Array[] = [];
+  for (const [name, value] of form.entries()) {
+    if (typeof value === "string") {
+      parts.push(
+        enc.encode(`--${boundary}\r\nContent-Disposition: form-data; name="${name}"\r\n\r\n`),
+        enc.encode(value),
+        enc.encode("\r\n"),
+      );
+    } else {
+      const blob = value as Blob & { name?: string };
+      parts.push(
+        enc.encode(
+          `--${boundary}\r\nContent-Disposition: form-data; name="${name}"; filename="${blob.name ?? "blob"}"\r\n` +
+            `Content-Type: ${blob.type || "application/octet-stream"}\r\n\r\n`,
+        ),
+        new Uint8Array(await blob.arrayBuffer()),
+        enc.encode("\r\n"),
+      );
+    }
+  }
+  parts.push(enc.encode(`--${boundary}--\r\n`));
+  const body = new Uint8Array(parts.reduce((n, p) => n + p.length, 0));
+  let at = 0;
+  for (const p of parts) {
+    body.set(p, at);
+    at += p.length;
+  }
+  return { body, contentType: `multipart/form-data; boundary=${boundary}` };
+}
 
 let ipCounter = 0;
 export function freshIp(): string {
@@ -58,6 +135,8 @@ export function freshIp(): string {
 
 export type CallOptions = {
   json?: unknown;
+  /** A multipart body (uploads). */
+  form?: FormData;
   /** Send this CSRF token (`false`: none; default: the one this browser holds). */
   csrf?: string | false;
   headers?: Record<string, string>;
@@ -107,10 +186,15 @@ export class TestBrowser {
     if (this.cookies.size) headers.set("cookie", this.cookieHeader());
     const token = options.csrf === undefined ? this.csrf : options.csrf;
     if (token) headers.set("x-csrf-token", token);
-    let body: string | undefined;
+    let body: BodyInit | undefined;
     if (options.json !== undefined) {
       headers.set("content-type", "application/json");
       body = JSON.stringify(options.json);
+    } else if (options.form) {
+      const encoded = await encodeMultipart(options.form);
+      headers.set("content-type", encoded.contentType);
+      headers.set("content-length", String(encoded.body.length));
+      body = encoded.body as BodyInit;
     }
     const req = new NextRequest(url, { method, headers, body });
     const res = await handler(req, { params: Promise.resolve(params) });
@@ -130,6 +214,10 @@ export class TestBrowser {
     });
     return this.call((init.method ?? "GET").toUpperCase(), path, {
       json,
+      form:
+        init.body && typeof init.body === "object" && "entries" in init.body
+          ? (init.body as FormData)
+          : undefined,
       csrf: headers.get("x-csrf-token") ?? false,
       headers: extra,
     });

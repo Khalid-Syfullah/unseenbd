@@ -8,6 +8,7 @@ import {
   type KeyboardEvent,
   type ReactNode,
   type SelectHTMLAttributes,
+  type ComponentProps,
 } from "react";
 import { useLocale, useT } from "@/i18n/client";
 import { contentLocale } from "@/i18n/locales";
@@ -83,6 +84,47 @@ export function TextInput({ icon, invalid, className, ...rest }: TextInputProps)
         className={cn(CONTROL, icon ? "pr-3 pl-10" : "px-3", className)}
         {...rest}
       />
+    </div>
+  );
+}
+
+export type TextAreaProps = ComponentProps<"textarea"> & {
+  invalid?: boolean;
+  /** Shows "n / max" under the box (needs `maxLength`). */
+  counter?: boolean;
+};
+
+/** Multi-line text input in the same style; grows with `rows`, optional character counter. */
+export function TextArea({
+  invalid,
+  counter,
+  className,
+  maxLength,
+  value,
+  ...rest
+}: TextAreaProps) {
+  const lang = contentLocale(useLocale());
+  const length = typeof value === "string" ? value.length : 0;
+  return (
+    <div className="flex w-full flex-col gap-1">
+      <textarea
+        aria-invalid={invalid || undefined}
+        maxLength={maxLength}
+        value={value}
+        className={cn(CONTROL, "h-auto min-h-24 resize-y px-3 py-2.5 leading-relaxed", className)}
+        {...rest}
+      />
+      {counter && maxLength ? (
+        <span
+          aria-hidden
+          className={cn(
+            "num self-end text-xs",
+            length >= maxLength ? "font-semibold text-danger" : "text-muted",
+          )}
+        >
+          {formatNumber(length, lang)} / {formatNumber(maxLength, lang)}
+        </span>
+      ) : null}
     </div>
   );
 }

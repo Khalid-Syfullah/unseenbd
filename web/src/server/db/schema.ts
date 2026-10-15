@@ -23,6 +23,7 @@ import type {
   PlaceCover,
   PlaceFromDhaka,
   PlacePhoto,
+  PostPhoto,
   RouteBus,
   RouteFlight,
   RouteWater,
@@ -434,6 +435,8 @@ export const photos = sqliteTable(
     placeId: integer("place_id").references(() => places.id),
     caption: text("caption"),
     src: text("src").notNull(),
+    /** Small copy for grids (≤ 640 px), made in the browser next to the full image. */
+    thumb: text("thumb"),
     width: integer("width"),
     height: integer("height"),
     status: text("status")
@@ -462,7 +465,9 @@ export const photoComments = sqliteTable(
     userId: integer("user_id").references(() => users.id, { onDelete: "set null" }),
     name: text("name").notNull(),
     body: text("body").notNull(),
-    status: text("status").$type<"visible" | "hidden">().notNull().default("visible"),
+    /** New comments are `pending`; a moderator makes them `visible` (or `hidden`). */
+    status: text("status").$type<"pending" | "visible" | "hidden">().notNull().default("visible"),
+    ipHash: text("ip_hash"),
     createdAt: createdAt(),
   },
   (t) => [index("photo_comments_photo_idx").on(t.photoId)],
@@ -476,7 +481,7 @@ export const posts = sqliteTable(
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     body: text("body").notNull(),
-    photos: json<string[]>("photos"),
+    photos: json<PostPhoto[]>("photos"),
     districtId: integer("district_id").references(() => districts.id),
     placeId: integer("place_id").references(() => places.id),
     status: text("status")
@@ -506,6 +511,8 @@ export const postComments = sqliteTable(
       .notNull()
       .references(() => users.id, { onDelete: "cascade" }),
     body: text("body").notNull(),
+    /** New comments are `pending` until a moderator approves (`visible`) or hides them. */
+    status: text("status").$type<"pending" | "visible" | "hidden">().notNull().default("pending"),
     createdAt: createdAt(),
   },
   (t) => [index("post_comments_post_idx").on(t.postId)],
@@ -533,6 +540,9 @@ export const reports = sqliteTable(
     targetType: text("target_type").notNull(),
     targetId: integer("target_id").notNull(),
     reason: text("reason").notNull(),
+    /** Optional free-text note from the reporter. */
+    note: text("note"),
+    /** Who reported: `u:<user id>` or a hashed device id. */
     reporter: text("reporter"),
     status: text("status").$type<"open" | "resolved" | "dismissed">().notNull().default("open"),
     createdAt: createdAt(),
@@ -609,7 +619,11 @@ export const trendComments = sqliteTable(
     userId: integer("user_id").references(() => users.id, { onDelete: "set null" }),
     name: text("name").notNull(),
     body: text("body").notNull(),
-    status: text("status").$type<"visible" | "hidden">().notNull().default("visible"),
+    /** Season key the comment was written in (see `src/lib/community/season.ts`). */
+    season: text("season"),
+    /** New comments are `pending`; a moderator makes them `visible` (or `hidden`). */
+    status: text("status").$type<"pending" | "visible" | "hidden">().notNull().default("visible"),
+    ipHash: text("ip_hash"),
     createdAt: createdAt(),
   },
   (t) => [index("trend_comments_place_idx").on(t.placeId)],
@@ -720,6 +734,21 @@ export const shortLinks = sqliteTable("short_links", {
   name: text("name"),
   createdAt: createdAt(),
 });
+
+/**
+ * Daily quotas for open submissions (photo batches per IP, posts per user, …). `key` is a hashed
+ * IP or `u:<user id>`; `day` is the date in Bangladesh time. Rows older than a week are pruned.
+ */
+export const quotaHits = sqliteTable(
+  "quota_hits",
+  {
+    day: text("day").notNull(),
+    scope: text("scope").notNull(),
+    key: text("key").notNull(),
+    count: integer("count").notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.day, t.scope, t.key] })],
+);
 
 /** Traffic as daily aggregates only (no per-visitor rows). */
 export const dailyStats = sqliteTable(

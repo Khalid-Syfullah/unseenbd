@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useId, useState } from "react";
+import Link from "next/link";
+import { useId, useState, type ReactNode } from "react";
 import { useLocale, useT } from "@/i18n/client";
 import { contentLocale } from "@/i18n/locales";
 import { formatDate, formatNumber, localizeDigits, starScore } from "@/lib/format";
@@ -12,6 +13,8 @@ import { Icon } from "./Icon";
 
 export type PostCardData = {
   author: string;
+  /** Link to the author's public profile. */
+  authorHref?: string;
   /** ISO date or date-time. */
   date: string;
   text: string;
@@ -21,6 +24,8 @@ export type PostCardData = {
   stars?: number;
   comments: number;
   liked?: boolean;
+  /** The viewer's own ★ rating (1–10), when they rated it. */
+  myRating?: number | null;
 };
 
 const ACTION =
@@ -34,14 +39,23 @@ const ACTION =
 export function PostCard({
   post,
   onLike,
+  onRate,
   onShare,
   onComments,
+  headerExtra,
+  children,
   className,
 }: {
   post: PostCardData;
   onLike?: () => void;
+  /** Makes the ★ score a button (opens the rating picker). */
+  onRate?: () => void;
   onShare?: () => void;
   onComments?: () => void;
+  /** Shown at the right of the header (status tag, menu). */
+  headerExtra?: ReactNode;
+  /** Shown under the action row (comments, owner actions). */
+  children?: ReactNode;
   className?: string;
 }) {
   const t = useT();
@@ -56,12 +70,22 @@ export function PostCard({
     <article className={cn(CARD, "gap-3 p-4", className)}>
       <header className="flex items-center gap-3">
         <Avatar name={post.author} />
-        <div className="flex min-w-0 flex-col">
-          <span className="truncate font-semibold">{post.author}</span>
+        <div className="flex min-w-0 flex-1 flex-col">
+          {post.authorHref ? (
+            <Link
+              href={post.authorHref}
+              className="truncate font-semibold underline-offset-4 hover:text-primary hover:underline"
+            >
+              {post.author}
+            </Link>
+          ) : (
+            <span className="truncate font-semibold">{post.author}</span>
+          )}
           <time dateTime={post.date} className="text-sm text-muted">
             {formatDate(post.date, lang)}
           </time>
         </div>
+        {headerExtra}
       </header>
 
       <div>
@@ -129,7 +153,29 @@ export function PostCard({
           </span>
           <span className="sr-only">{t("ui.likes", { count: post.likes })}</span>
         </button>
-        {post.stars !== undefined ? (
+        {onRate ? (
+          <button
+            type="button"
+            onClick={onRate}
+            aria-pressed={Boolean(post.myRating)}
+            className={cn(ACTION, "num")}
+          >
+            <Icon name="star" size={16} className="text-accent" />
+            {post.stars !== undefined ? (
+              <>
+                <span aria-hidden>{localizeDigits(`${starScore(post.stars)}/10`, lang)}</span>
+                <span className="sr-only">
+                  {t("ui.rating", { score: starScore(post.stars) })}.{" "}
+                  {post.myRating
+                    ? t("community.yourRating", { score: post.myRating })
+                    : t("community.rate")}
+                </span>
+              </>
+            ) : (
+              t("community.rate")
+            )}
+          </button>
+        ) : post.stars !== undefined ? (
           <span className="num inline-flex min-h-11 items-center gap-1 px-2 text-sm font-semibold text-muted">
             <Icon name="star" size={16} className="text-accent" />
             <span aria-hidden>{localizeDigits(`${starScore(post.stars)}/10`, lang)}</span>
@@ -145,6 +191,7 @@ export function PostCard({
           {t("ui.comments", { count: post.comments })}
         </button>
       </footer>
+      {children}
     </article>
   );
 }

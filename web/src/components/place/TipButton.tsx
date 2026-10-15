@@ -1,21 +1,26 @@
 "use client";
 
+import { useState } from "react";
+import { TipDialog, type TipTarget } from "@/components/community/TipDialog";
 import { Button } from "@/components/ui/Button";
-import { useToast } from "@/components/ui/Toast";
 import { useT } from "@/i18n/client";
 
-/** "Send a tip" opens the tips form once the community features exist; until then it says so. */
-export function TipButton() {
+/** "Send a tip or correction" on place and district pages; opens the private tips form. */
+export function TipButton({ target, about }: { target: TipTarget; about: string }) {
   const t = useT();
-  const toast = useToast();
+  const [open, setOpen] = useState(false);
   return (
-    <Button
-      variant="secondary"
-      icon="flag"
-      onClick={() => toast.show(t("place.tipSoon"))}
-      className="w-fit"
-    >
-      {t("place.tipButton")}
-    </Button>
+    <>
+      <Button variant="secondary" icon="flag" onClick={() => setOpen(true)} className="w-fit">
+        {t("place.tipButton")}
+      </Button>
+      <TipDialog
+        open={open}
+        onClose={() => setOpen(false)}
+        target={target}
+        about={about}
+        initialKind="correction"
+      />
+    </>
   );
 }

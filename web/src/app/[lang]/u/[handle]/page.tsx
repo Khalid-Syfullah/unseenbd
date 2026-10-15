@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PostFeedCard } from "@/components/community/PostFeedCard";
 import { PageContainer, PageSection } from "@/components/discovery/PageHeader";
 import { BangladeshMap } from "@/components/maps/BangladeshMap";
 import { Avatar } from "@/components/ui/Avatar";
@@ -19,7 +20,7 @@ type PageProps = { params: Promise<{ lang: string; handle: string }> };
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, handle } = await params;
   if (!isLocale(lang)) return {};
-  const profile = getPublicProfile(decodeURIComponent(handle), contentLocale(lang));
+  const profile = await getPublicProfile(decodeURIComponent(handle), contentLocale(lang));
   if (!profile) return {};
   const t = getT(lang);
   return {
@@ -36,7 +37,7 @@ export default async function PublicProfilePage({ params }: PageProps) {
   const locale: Locale = lang;
   const content = contentLocale(locale);
   const t = getT(locale);
-  const profile = getPublicProfile(decodeURIComponent(handle), content);
+  const profile = await getPublicProfile(decodeURIComponent(handle), content);
   if (!profile) notFound();
   const nothing =
     !profile.trips.length && !profile.photos.length && !profile.posts.length && !profile.visited;
@@ -119,12 +120,19 @@ export default async function PublicProfilePage({ params }: PageProps) {
                 <Card as="figure" className="gap-0">
                   {/* eslint-disable-next-line @next/next/no-img-element -- user uploads, any size */}
                   <img
-                    src={p.src}
+                    src={p.thumb ?? p.src}
                     alt={p.caption ?? p.district.name}
                     loading="lazy"
                     className="aspect-square w-full object-cover"
                   />
-                  <figcaption className="p-3 text-sm font-semibold">{p.district.name}</figcaption>
+                  <figcaption className="p-3 text-sm font-semibold">
+                    <Link
+                      href={localePath(locale, `/photo/${p.id}`)}
+                      className="underline-offset-4 hover:text-primary hover:underline"
+                    >
+                      {p.district.name}
+                    </Link>
+                  </figcaption>
                 </Card>
               </li>
             ))}
@@ -134,15 +142,10 @@ export default async function PublicProfilePage({ params }: PageProps) {
 
       {profile.posts.length ? (
         <PageSection id="posts" title={t("publicProfile.posts")}>
-          <ul className="flex flex-col gap-3">
+          <ul className="grid items-start gap-3 md:grid-cols-2">
             {profile.posts.map((post) => (
               <li key={post.id}>
-                <Card as="article" className="gap-2 p-4">
-                  <time dateTime={post.createdAt} className="text-sm text-muted">
-                    {formatDate(post.createdAt.slice(0, 10), content)}
-                  </time>
-                  <p className="whitespace-pre-line">{post.body}</p>
-                </Card>
+                <PostFeedCard post={post} />
               </li>
             ))}
           </ul>

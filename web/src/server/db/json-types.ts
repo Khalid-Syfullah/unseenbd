@@ -118,3 +118,11 @@ export const TRAIN_CLASSES: readonly TrainClass[] = [
   "ac_seat",
   "ac_berth",
 ];
+
+/** A photo attached to a post (stored under `/media/`, made by the browser pipeline). */
+export type PostPhoto = {
+  src: string;
+  thumb: string | null;
+  width: number;
+  height: number;
+};

@@ -10,6 +10,8 @@ import {
   SignOutButton,
   TripShare,
 } from "@/components/account/ProfileActions";
+import { PostComposer } from "@/components/community/PostComposer";
+import { PostFeedCard } from "@/components/community/PostFeedCard";
 import { PageContainer } from "@/components/discovery/PageHeader";
 import { QueryPagination } from "@/components/discovery/QueryPagination";
 import { BangladeshMap } from "@/components/maps/BangladeshMap";
@@ -18,6 +20,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Card, StatTile } from "@/components/ui/Card";
 import { StatusTag } from "@/components/ui/Chip";
 import { EmptyState } from "@/components/ui/Feedback";
+import type { DivisionGroup } from "@/components/ui/Form";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { PillTabs } from "@/components/ui/Navigation";
 import { contentLocale, isLocale, localePath, type Locale } from "@/i18n/locales";
@@ -27,7 +30,9 @@ import { formatDate, formatMoney, formatNumber } from "@/lib/format";
 import { firstParam, pageParam, type SearchParams } from "@/lib/params";
 import { districtSlugOf, TOTAL_DISTRICTS } from "@/lib/visited/districts";
 import { listHistory } from "@/server/account/history";
-import { getSummary, listMyPhotos, listMyPosts, listWantToGo } from "@/server/account/profile";
+import { getSummary, listMyPhotos, listWantToGo } from "@/server/account/profile";
+import { listDistrictsByDivision } from "@/server/data";
+import { listUserPosts } from "@/server/data/community";
 import { listTrips, type TripSummary } from "@/server/account/trips";
 import { currentSession } from "@/server/auth/current";
 import { accountUser } from "@/server/auth/users";
@@ -83,6 +88,7 @@ export default async function ProfilePage({ params, searchParams }: PageProps) {
   const tab: Tab = isTab(requested) ? requested : composing ? "posts" : "summary";
   const base = localePath(locale, "/profile");
   const href = (id: Tab) => (id === "summary" ? base : `${base}?tab=${id}`);
+  const postsData = tab === "posts" ? await loadPostsTab(user.id, locale) : null;
 
   return (
     <PageContainer className="gap-6">
@@ -135,9 +141,7 @@ export default async function ProfilePage({ params, searchParams }: PageProps) {
         ) : null}
         {tab === "trips" ? <TripsTab trips={listTrips(user.id)} locale={locale} t={t} /> : null}
         {tab === "photos" ? <PhotosTab userId={user.id} locale={locale} t={t} /> : null}
-        {tab === "posts" ? (
-          <PostsTab userId={user.id} locale={locale} t={t} composing={composing} />
-        ) : null}
+        {postsData ? <PostsTab t={t} composing={composing} data={postsData} /> : null}
         {tab === "want" ? <WantTab userId={user.id} locale={locale} t={t} /> : null}
         {tab === "settings" ? <SettingsTab user={accountUser(user)} locale={locale} t={t} /> : null}
       </section>
@@ -383,7 +387,7 @@ function PhotosTab({ userId, locale, t }: TabProps) {
             <Card as="figure" className="gap-0">
               {/* eslint-disable-next-line @next/next/no-img-element -- user uploads, any size */}
               <img
-                src={p.src}
+                src={p.thumb ?? p.src}
                 alt={p.caption ?? p.district.name}
                 loading="lazy"
                 className="aspect-square w-full object-cover"
@@ -402,33 +406,43 @@ function PhotosTab({ userId, locale, t }: TabProps) {
   );
 }
 
-const POST_TONE = { pending: "info", approved: "good", rejected: "danger" } as const;
-
-function PostsTab({ userId, locale, t, composing }: TabProps & { composing: boolean }) {
+async function loadPostsTab(userId: number, locale: Locale) {
   const lang = contentLocale(locale);
-  const posts = listMyPosts(userId);
+  const [posts, groups] = await Promise.all([
+    listUserPosts(userId, { lang }),
+    listDistrictsByDivision(lang),
+  ]);
+  const divisions: DivisionGroup[] = groups.map((g) => ({
+    slug: g.slug,
+    name: g.name,
+    districts: g.districts.map((d) => ({ slug: d.slug, name: d.name })),
+  }));
+  return { posts, divisions };
+}
+
+function PostsTab({
+  t,
+  composing,
+  data: { posts, divisions },
+}: {
+  t: Translator;
+  composing: boolean;
+  data: Awaited<ReturnType<typeof loadPostsTab>>;
+}) {
   return (
     <>
-      {composing ? (
-        <p role="status" className="rounded-md bg-primary-wash px-4 py-3 text-sm text-primary">
-          {t("profile.posts.composerSoon")}
-        </p>
-      ) : null}
+      <Card as="section" aria-labelledby="compose-title" className="gap-3 p-4 md:p-5">
+        <h2 id="compose-title" className="text-h3">
+          {t("posts.composerTitle")}
+        </h2>
+        <p className="text-sm text-muted">{t("posts.composerIntro")}</p>
+        <PostComposer divisions={divisions} autoFocus={composing} />
+      </Card>
       {posts.length ? (
-        <ul className="flex flex-col gap-3">
+        <ul className="grid items-start gap-3 md:grid-cols-2">
           {posts.map((post) => (
             <li key={post.id}>
-              <Card as="article" className="gap-2 p-4">
-                <div className="flex items-center justify-between gap-2 text-sm text-muted">
-                  <time dateTime={post.createdAt}>
-                    {formatDate(post.createdAt.slice(0, 10), lang)}
-                  </time>
-                  <StatusTag tone={POST_TONE[post.status]}>
-                    {t(`profile.photos.status.${post.status}`)}
-                  </StatusTag>
-                </div>
-                <p className="whitespace-pre-line">{post.body}</p>
-              </Card>
+              <PostFeedCard post={post} owner divisions={divisions} />
             </li>
           ))}
         </ul>

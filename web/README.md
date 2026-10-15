@@ -194,6 +194,54 @@ between devices. Environment variables are documented in [`.env.example`](.env.e
 - Other endpoints: `GET/PATCH/DELETE /api/me`, `/api/me/summary`, `/api/me/photos` (GET,
   DELETE), `/api/posts/mine`, `/api/users/:handle`.
 
+## Community: photos, posts, suggestions and trending
+
+Everything visitors write or upload is stored `pending` (comments: `pending` → `visible`) and only
+shown once a moderator approves it (the admin screens arrive with phase 15). All text is plain:
+`src/lib/community/text.ts` strips tags and invisible characters on the way in, React escapes it
+on the way out, and nothing is rendered as HTML. Limits and daily quotas live in
+`src/lib/community/rules.ts`, shared by the forms and the API.
+
+- **Uploads** (`/upload`, open to everyone): `src/lib/media/prepare.ts` decodes each photo in the
+  browser (EXIF rotation applied), draws it on a canvas and re-encodes it as WebP (JPEG where the
+  browser cannot write WebP) at most 2000 px, plus a 480 px thumbnail; a byte-level check
+  (`src/lib/media/image-bytes.ts`) then removes any EXIF/XMP/IPTC block left. Only these copies
+  are sent, so GPS and camera data never leave the device. `POST /api/photos` checks everything
+  again: real JPEG/WebP by magic bytes, ≤ 5 MB, ≤ 2000 px (thumbnail ≤ 640 px), metadata stripped
+  once more, district and place valid, consent given; 2 batches a day per IP
+  (`GET /api/photos/quota` → `{limit, used, remaining}`).
+- **Storage:** files go to `MEDIA_DIR` (default `web/storage/media/`, gitignored) as
+  `{yyyy}/{mm}/{random}.webp` and `…-t.webp`, served by `GET /media/…`
+  (`src/app/media/[...path]/route.ts`) with a one-year immutable cache. Deleting a photo or post
+  (or the account) deletes its files.
+- **Gallery** (`/gallery?q=&district=&page=`, `GET /api/photos`): masonry of approved public
+  photos, search over area/caption, place and district names, district select and map filter.
+  **`/photo/:id`** (`GET /api/photos/:id`): the photo, likes, comments (≤ 100 characters,
+  `GET/POST /api/photos/:id/comments`) and a report dialog (`POST /api/reports`).
+- **Posts** (signed in): the composer on `/profile?tab=posts` (text, emoji picker, district, up
+  to 4 photos through the same pipeline); `POST /api/posts`, `PATCH/DELETE /api/posts/:id` (own
+  posts only; an edit goes back to `pending`), feed on the home page, profiles and `/post/:id`,
+  with 👍 likes, ★ 1–10 ratings (`POST /api/posts/:id/react`), share and comments
+  (`/api/posts/:id/comments`, signed in).
+- **Suggestions** (`/suggest?kind=place|food`, `POST /api/suggestions`): approved ones show on
+  the home page (`GET /api/community/approved?page=`) with ♥, ▲ and ★
+  (`POST /api/suggestions/:id/react`).
+- **Likes, votes, ratings:** one per visitor per item (`likes` table): the account (`u:<id>`)
+  or, logged out, a random device id in the httpOnly `ubd_device` cookie, stored only as an HMAC.
+  Cached pages read the visitor's own reactions in one batched `GET /api/reactions`.
+- **Trending** (`src/lib/community/season.ts`): one vote per visitor per place per season
+  (winter Nov–Feb, summer Mar–May, monsoon Jun–Aug, autumn Sep–Oct; `trend_votes`), via the
+  place page's "Add to trending" (`GET/POST /api/trend/vote`) with "why go now?" comments
+  (`/api/trend/comments?ref=`). The home ranking is this season's live votes plus the seeded
+  snapshot during the season it was taken in (autumn 2026).
+- **Tips and corrections** (place and district pages, `POST /api/guide-suggestions`) are private
+  to moderators; there is no public read endpoint.
+- **Abuse limits:** CSRF on every write (the session token, or the pre-sign-in double-submit
+  token), 60 writes a minute per IP, and daily quotas in the `quota_hits` table (Bangladesh day;
+  hashed IPs or user ids, never raw IPs): photo batches 2/IP, posts 5/user, suggestions and tips
+  5/IP, comments 30, reports 20. `GET /api/community/quota` and `/api/guide-suggestions/quota`
+  report what is left.
+
 ## Interface strings and formatting
 
 Message catalogs are `src/i18n/{bn,en,zh,fr,de,it,ja}.json`, all with the same keys (a test

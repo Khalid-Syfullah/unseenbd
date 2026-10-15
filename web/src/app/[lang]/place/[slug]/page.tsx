@@ -49,6 +49,9 @@ import {
 
 type PageProps = { params: Promise<{ lang: string; slug: string }> };
 
+/** Traveller photos and trending votes change with moderation: refresh every 10 minutes. */
+export const revalidate = 600;
+
 export async function generateStaticParams() {
   const all = await allPlaces({});
   return (["bn", "en"] as const).flatMap((lang) => all.map((p) => ({ lang, slug: p.slug })));
@@ -527,23 +530,34 @@ export default async function PlacePage({ params }: PageProps) {
                   <PhotoTile
                     key={p.id}
                     photo={{
-                      src: p.src,
+                      src: p.thumb ?? p.src,
                       alt: p.caption ?? place.name,
                       width: p.width,
                       height: p.height,
                       caption: p.uploader,
                       likes: p.likes,
+                      href: localePath(locale, `/photo/${p.id}`),
                     }}
                   />
                 ))}
               </div>
+            ) : null}
+            {travellerPhotos.length ? (
+              <ButtonLink
+                href={localePath(locale, `/upload?place=${place.slug}`)}
+                icon="camera"
+                variant="secondary"
+                className="w-fit"
+              >
+                {t("place.addPhoto")}
+              </ButtonLink>
             ) : (
               <EmptyState
                 illustration="upload"
                 body={t("place.photosEmpty")}
                 action={
                   <ButtonLink
-                    href={localePath(locale, "/upload")}
+                    href={localePath(locale, `/upload?place=${place.slug}`)}
                     icon="camera"
                     variant="secondary"
                   >
@@ -582,7 +596,7 @@ export default async function PlacePage({ params }: PageProps) {
 
           <PageSection id="tip" title={t("place.tipTitle")}>
             <p className="text-muted">{t("place.tipBody")}</p>
-            <TipButton />
+            <TipButton target={{ place: place.slug }} about={place.name} />
           </PageSection>
         </div>
 

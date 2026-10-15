@@ -8,6 +8,10 @@ import { getDb } from "../db/client";
 import { districts, photos, places, posts, wishlist } from "../db/schema";
 import type { Lang } from "../data/lang";
 import { getUserByHandle } from "../auth/users";
+import { deletePhotos } from "../community/photos";
+import type { PostPhoto } from "../db/json-types";
+import { listUserPosts } from "../data/community";
+import type { CommunityPost } from "../data/types";
 import { getVisited, getWorldOf } from "./sync";
 import { listTrips, tripTotals, type TripSummary } from "./trips";
 
@@ -55,6 +59,7 @@ export function getSummary(userId: number): ProfileSummary {
 export type MyPhoto = {
   id: number;
   src: string;
+  thumb: string | null;
   width: number | null;
   height: number | null;
   caption: string | null;
@@ -76,6 +81,7 @@ export function listMyPhotos(
     .select({
       id: photos.id,
       src: photos.src,
+      thumb: photos.thumb,
       width: photos.width,
       height: photos.height,
       caption: photos.caption,
@@ -95,6 +101,7 @@ export function listMyPhotos(
     .map((r) => ({
       id: r.id,
       src: r.src,
+      thumb: r.thumb,
       width: r.width,
       height: r.height,
       caption: r.caption,
@@ -105,15 +112,15 @@ export function listMyPhotos(
     }));
 }
 
-/** Deletes every photo the user uploaded (rows; comments go with them). Returns the count. */
+/** Deletes every photo the user uploaded (rows and files; comments go with them). */
 export function deleteMyPhotos(userId: number): number {
-  return getDb().delete(photos).where(eq(photos.userId, userId)).run().changes;
+  return deletePhotos({ userId });
 }
 
 export type MyPost = {
   id: number;
   body: string;
-  photos: string[];
+  photos: PostPhoto[];
   status: "pending" | "approved" | "rejected";
   likes: number;
   createdAt: string;
@@ -190,10 +197,10 @@ export type PublicProfile = {
   visited: number[] | null;
   trips: TripSummary[];
   photos: MyPhoto[];
-  posts: MyPost[];
+  posts: CommunityPost[];
 };
 
-export function getPublicProfile(handle: string, lang: Lang): PublicProfile | null {
+export async function getPublicProfile(handle: string, lang: Lang): Promise<PublicProfile | null> {
   const user = getUserByHandle(handle);
   if (!user) return null;
   return {
@@ -203,6 +210,6 @@ export function getPublicProfile(handle: string, lang: Lang): PublicProfile | nu
     visited: user.publicMap ? getVisited(user.id) : null,
     trips: listTrips(user.id, { publicOnly: true }),
     photos: listMyPhotos(user.id, lang, { approvedPublicOnly: true }),
-    posts: listMyPosts(user.id, { approvedOnly: true }),
+    posts: await listUserPosts(user.id, { approvedOnly: true, lang }),
   };
 }

@@ -16,7 +16,9 @@ import {
 } from "@/lib/account/rules";
 import { isThemePref, type ThemePref } from "@/lib/theme";
 import { getDb } from "../db/client";
-import { photos, users } from "../db/schema";
+import { deletePhotos } from "../community/photos";
+import { deleteAllPosts } from "../community/posts";
+import { users } from "../db/schema";
 import { hashPassword, verifyAgainstDummy, verifyPassword } from "./crypto";
 
 export type UserRow = typeof users.$inferSelect;
@@ -266,9 +268,8 @@ export function updateProfile(userId: number, patch: ProfilePatch): UpdateResult
  * explicitly because they would otherwise only lose their owner.
  */
 export function deleteAccount(userId: number): void {
-  const db = getDb();
-  db.transaction((tx) => {
-    tx.delete(photos).where(eq(photos.userId, userId)).run();
-    tx.delete(users).where(eq(users.id, userId)).run();
-  });
+  // Photos and post photos are files too: remove those first, then the rows go with the user.
+  deletePhotos({ userId });
+  deleteAllPosts(userId);
+  getDb().delete(users).where(eq(users.id, userId)).run();
 }

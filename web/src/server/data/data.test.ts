@@ -179,7 +179,9 @@ describe("districts and catalogue", () => {
     expect(await listPopular()).toHaveLength(24);
     const unseen = await listUnseenByDivision();
     expect(unseen.reduce((n, d) => n + d.count, 0)).toBe(127);
-    const trending = await listTrending("en");
+    // The snapshot counts during the season it was taken in (autumn 2026).
+    const trending = await listTrending("en", new Date("2026-10-15T06:00:00Z"));
+    expect(trending.season.key).toBe("2026-autumn");
     expect(trending.items).toHaveLength(56);
     expect(trending.items[0]?.place.slug).toBe("nilgiri-hill");
   });

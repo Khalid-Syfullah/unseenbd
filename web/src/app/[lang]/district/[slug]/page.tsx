@@ -7,6 +7,7 @@ import { BangladeshMap } from "@/components/maps/BangladeshMap";
 import { Breadcrumb } from "@/components/place/Breadcrumb";
 import { DistrictActions } from "@/components/place/DistrictActions";
 import { ListingGrid } from "@/components/place/ListingGrid";
+import { TipButton } from "@/components/place/TipButton";
 import { ViewRecorder } from "@/components/place/ViewRecorder";
 import { ButtonLink, TextLink } from "@/components/ui/Button";
 import { CARD, CardGrid } from "@/components/ui/Card";
@@ -29,6 +30,9 @@ import {
 } from "@/server/data";
 
 type PageProps = { params: Promise<{ lang: string; slug: string }> };
+
+/** Traveller photos change with moderation: refresh every 10 minutes. */
+export const revalidate = 600;
 
 export async function generateStaticParams() {
   const all = await listDistricts("en");
@@ -254,12 +258,13 @@ export default async function DistrictPage({ params }: PageProps) {
                 <PhotoTile
                   key={p.id}
                   photo={{
-                    src: p.src,
+                    src: p.thumb ?? p.src,
                     alt: p.caption ?? district.name,
                     width: p.width,
                     height: p.height,
-                    caption: p.uploader,
+                    caption: p.place?.name ?? p.uploader,
                     likes: p.likes,
+                    href: localePath(locale, `/photo/${p.id}`),
                   }}
                 />
               ))}
@@ -276,7 +281,11 @@ export default async function DistrictPage({ params }: PageProps) {
             illustration="upload"
             body={t("district.photosEmpty", { name: district.name })}
             action={
-              <ButtonLink href={localePath(locale, "/upload")} icon="camera" variant="secondary">
+              <ButtonLink
+                href={localePath(locale, `/upload?district=${district.slug}`)}
+                icon="camera"
+                variant="secondary"
+              >
                 {t("place.addPhoto")}
               </ButtonLink>
             }
@@ -319,6 +328,11 @@ export default async function DistrictPage({ params }: PageProps) {
           </ul>
         </PageSection>
       ) : null}
+
+      <PageSection id="tip" title={t("place.tipTitle")}>
+        <p className="text-muted">{t("district.tipBody", { name: district.name })}</p>
+        <TipButton target={{ district: district.slug }} about={district.name} />
+      </PageSection>
     </div>
   );
 }

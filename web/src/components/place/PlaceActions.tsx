@@ -1,19 +1,19 @@
 "use client";
 
-import { useId } from "react";
+import { useState } from "react";
+import { TipDialog } from "@/components/community/TipDialog";
+import { TrendButton } from "@/components/community/TrendButton";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/components/ui/cn";
 import { useToast } from "@/components/ui/Toast";
-import { useLocale, useT } from "@/i18n/client";
-import { formatNumber } from "@/lib/format";
-import { contentLocale } from "@/i18n/locales";
+import { useT } from "@/i18n/client";
 import { setBucketStatus, useBucket } from "@/lib/bucket";
 import { shareOrCopy } from "@/lib/share";
 
 /**
  * The four actions on a place page: Want to go (the bucket-list store), Share (Web Share API,
- * copying the link where it is missing), Add to trending (shown disabled until voting opens) and
- * Write an experience or warning (the tips form arrives with the community features).
+ * copying the link where it is missing), Add to trending (one vote per visitor per season) and
+ * Write an experience or warning (a private note to the editors).
  */
 export function PlaceActions({
   slug,
@@ -27,10 +27,9 @@ export function PlaceActions({
   className?: string;
 }) {
   const t = useT();
-  const lang = contentLocale(useLocale());
   const toast = useToast();
   const bucket = useBucket();
-  const noteId = useId();
+  const [tipOpen, setTipOpen] = useState(false);
   const wanted = bucket[slug] === "want";
 
   async function share() {
@@ -52,15 +51,17 @@ export function PlaceActions({
       <Button variant="secondary" icon="share" onClick={share}>
         {t("common.share")}
       </Button>
-      <Button variant="secondary" icon="upvote" disabled aria-describedby={noteId}>
-        {t("place.trendAdd", { count: formatNumber(trendCount, lang) })}
-      </Button>
-      <span id={noteId} className="sr-only">
-        {t("place.trendSoon")}
-      </span>
-      <Button variant="secondary" icon="comment" onClick={() => toast.show(t("place.tipSoon"))}>
+      <TrendButton slug={slug} name={name} initialVotes={trendCount} />
+      <Button variant="secondary" icon="comment" onClick={() => setTipOpen(true)}>
         {t("place.writeTip")}
       </Button>
+      <TipDialog
+        open={tipOpen}
+        onClose={() => setTipOpen(false)}
+        target={{ place: slug }}
+        about={name}
+        initialKind="experience"
+      />
     </div>
   );
 }
