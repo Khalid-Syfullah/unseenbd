@@ -11,7 +11,7 @@ import { hubGameFromQuery, parseGameChallenge } from "@/lib/games/challenge";
 import { dhakaDate } from "@/lib/games/seed";
 import { HUB_GAMES, isHubGame, type HubGame } from "@/lib/games/types";
 import type { SearchParams } from "@/lib/params";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { getGameData } from "@/server/data";
 import { topEntries } from "@/server/leaderboard";
 
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Pick<PageProps, "params">): P
     description: t("games.metaDescription"),
     alternates: alternatesFor(lang, "/play"),
     openGraph: {
+      images: ogImages(lang),
       title: t("games.title"),
       description: t("games.metaDescription"),
       url: localePath(lang, "/play"),

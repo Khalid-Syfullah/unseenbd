@@ -30,6 +30,14 @@ export function assetsDir(): string {
 }
 
 /**
+ * Real place photos fetched from Wikimedia Commons by `npm run photos`: `web/storage/photos/`
+ * (`w640/{slug}.webp`, `w1200/{slug}.webp`), or `PHOTOS_DIR`. Served by `GET /photos/…`.
+ */
+export function photosDir(): string {
+  return resolve(webRoot(), process.env.PHOTOS_DIR ?? "storage/photos");
+}
+
+/**
  * Uploaded media (community photos, post photos): `web/storage/media/` by default, or
  * `MEDIA_DIR`. Files are served by `GET /media/…` (`src/app/media/[...path]/route.ts`).
  */

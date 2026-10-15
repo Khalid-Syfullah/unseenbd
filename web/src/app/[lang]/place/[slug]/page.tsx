@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageSection } from "@/components/discovery/PageHeader";
@@ -18,6 +17,7 @@ import { isKind, KindBadge, StatusTag } from "@/components/ui/Chip";
 import { EmptyState } from "@/components/ui/Feedback";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { PhotoTile } from "@/components/ui/PhotoTile";
+import { PlaceImage } from "@/components/ui/PlaceImage";
 import { PlaceCard } from "@/components/ui/PlaceCard";
 import { contentLocale, isLocale, localePath, type Locale } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
@@ -194,10 +194,10 @@ export default async function PlacePage({ params }: PageProps) {
   const intro = place.description;
   const cover = place.photo ?? null;
   const coverSrc = cover?.src ?? place.cover?.w1200 ?? null;
-  const credit =
-    cover && place.imageCredit
-      ? t("place.creditPhoto", { by: place.imageCredit.by, license: place.imageCredit.license })
-      : t("place.creditIllustration");
+  const coverSmall = cover?.w640 ?? place.cover?.w640 ?? null;
+  const credit = cover
+    ? t("place.creditPhoto", { by: cover.author, license: cover.license })
+    : t("place.creditIllustration");
   const group = checklistGroup(place.kind.key);
   const checklist = [...BASE_CHECKLIST, ...CHECKLIST[group]];
 
@@ -259,23 +259,36 @@ export default async function PlacePage({ params }: PageProps) {
           <header className="flex flex-col gap-4">
             <figure className="-mx-4 flex flex-col gap-1.5 md:mx-0">
               <div className="relative aspect-[3/2] overflow-hidden bg-surface-2 md:rounded-lg">
-                {coverSrc ? (
-                  <Image
-                    src={coverSrc}
+                {coverSrc && coverSmall ? (
+                  <PlaceImage
+                    w640={coverSmall}
+                    w1200={coverSrc}
                     alt={
                       cover
                         ? ((lang === "bn" ? cover.alt_bn : cover.alt_en) ?? place.name)
                         : place.name
                     }
+                    sizes="(min-width: 1200px) 800px, 100vw"
                     width={1200}
                     height={800}
-                    unoptimized
                     priority
-                    className="size-full object-cover"
                   />
                 ) : null}
               </div>
-              <figcaption className="px-4 text-sm text-muted md:px-0">{credit}</figcaption>
+              <figcaption className="px-4 text-sm text-muted md:px-0">
+                {cover ? (
+                  <a
+                    href={cover.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2 hover:text-text"
+                  >
+                    {credit}
+                  </a>
+                ) : (
+                  credit
+                )}
+              </figcaption>
             </figure>
             <div className="flex flex-wrap items-center gap-2">
               {isKind(place.kind.key) ? (

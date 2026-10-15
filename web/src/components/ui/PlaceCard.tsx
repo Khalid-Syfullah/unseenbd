@@ -1,21 +1,22 @@
 "use client";
 
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { useLocale, useT } from "@/i18n/client";
 import { contentLocale, localePath } from "@/i18n/locales";
 import { formatMonthRange, formatNumber, formatStars, localizeDigits } from "@/lib/format";
+import type { PlacePhoto } from "@/server/db/json-types";
 import type { PlaceSummary } from "@/server/data/types";
 import { CARD, CARD_LIFT, CardLink } from "./Card";
 import { isKind, KindBadge, StatusTag } from "./Chip";
 import { cn } from "./cn";
 import { Icon } from "./Icon";
+import { PlaceImage } from "./PlaceImage";
 
 /** The fields a place card shows (a `PlaceSummary` has them all). */
 export type PlaceCardData = Pick<
   PlaceSummary,
   "slug" | "name" | "district" | "kind" | "bestFromMonth" | "bestToMonth" | "cover" | "description"
->;
+> & { photo?: Pick<PlacePhoto, "author" | "license" | "source"> | null };
 
 export type PlaceCounts = { likes?: number; votes?: number; stars?: number };
 
@@ -88,15 +89,25 @@ export function PlaceCard({
     <article className={cn(CARD, CARD_LIFT, className)}>
       <div className="relative aspect-[3/2] overflow-hidden bg-surface-2">
         {place.cover ? (
-          <Image
-            src={place.cover.w640}
+          <PlaceImage
+            w640={place.cover.w640}
+            w1200={place.cover.w1200}
             alt=""
-            width={640}
-            height={427}
-            unoptimized
+            sizes="(min-width: 1024px) 380px, (min-width: 640px) 45vw, 100vw"
             priority={priority}
-            className="size-full object-cover"
           />
+        ) : null}
+        {place.photo ? (
+          <p className="bg-black/65 text-white absolute inset-x-0 bottom-0 z-10 truncate px-3 py-1 text-xs">
+            <a
+              href={place.photo.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-2 hover:underline"
+            >
+              {t("place.creditPhoto", { by: place.photo.author, license: place.photo.license })}
+            </a>
+          </p>
         ) : null}
         <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
           {isKind(place.kind.key) ? (
@@ -184,14 +195,7 @@ export function PlaceRow({
       ) : null}
       <div className="size-[72px] shrink-0 overflow-hidden rounded-md bg-surface-2">
         {place.cover ? (
-          <Image
-            src={place.cover.w640}
-            alt=""
-            width={72}
-            height={72}
-            unoptimized
-            className="size-full object-cover"
-          />
+          <PlaceImage w640={place.cover.w640} alt="" sizes="72px" width={72} height={72} />
         ) : null}
       </div>
       <div className="flex min-w-0 flex-col">

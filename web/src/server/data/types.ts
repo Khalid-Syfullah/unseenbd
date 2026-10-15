@@ -50,6 +50,8 @@ export type PlaceSummary = {
   stars: number;
   cover: PlaceCover | null;
   imageCredit: ImageCredit | null;
+  /** Real Commons photo with its credit; when set, `cover.w640` / `w1200` already point at it. */
+  photo: PlacePhoto | null;
   /** Description in `lang` (English fallback); null until written. */
   description: string | null;
 };
@@ -70,7 +72,6 @@ export type PlaceDetail = PlaceSummary & {
   accessibility: string | null;
   entryFee: string | null;
   openingHours: string | null;
-  photo: PlacePhoto | null;
   fromDhaka: FromDhaka | null;
   nearby: PlaceSummary[];
 };

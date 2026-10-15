@@ -10,7 +10,7 @@ import type { SearchParams } from "@/lib/params";
 import { DEFAULT_LEVEL } from "@/lib/planner/constants";
 import type { PlanInput } from "@/lib/planner/types";
 import { DEFAULT_PEOPLE, districtResolver, parsePlanQuery } from "@/lib/planner/url";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { getPlannerData } from "@/server/data";
 
@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Pick<PageProps, "params">): P
     description: t("plan.metaDescription"),
     alternates: alternatesFor(lang, "/plan"),
     openGraph: {
+      images: ogImages(lang),
       title: t("plan.title"),
       description: t("plan.metaDescription"),
       url: localePath(lang, "/plan"),

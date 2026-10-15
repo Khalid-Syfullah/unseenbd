@@ -7,7 +7,7 @@ import { gamePagePath, parseGameChallenge } from "@/lib/games/challenge";
 import { dhakaDate } from "@/lib/games/seed";
 import type { QuizGame } from "@/lib/games/types";
 import type { SearchParams } from "@/lib/params";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { getGameData } from "@/server/data";
 import { topEntries } from "@/server/leaderboard";
 import { MoreToTry } from "./MoreToTry";
@@ -45,6 +45,7 @@ export async function quizMetadata(
     description: t(COPY[game].description),
     alternates: alternatesFor(lang, path),
     openGraph: {
+      images: ogImages(lang),
       title: t(COPY[game].title),
       description: t(COPY[game].description),
       url: localePath(lang, path),

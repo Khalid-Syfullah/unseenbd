@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { AccountProvider } from "@/components/account/AccountProvider";
+import { ServiceWorker } from "@/components/ServiceWorker";
 import { VisitCounter } from "@/components/VisitCounter";
 import { AppHeader } from "@/components/ui/AppHeader";
 import { Footer } from "@/components/ui/Footer";
@@ -11,6 +12,7 @@ import { fontVariables } from "@/fonts";
 import { I18nProvider } from "@/i18n/client";
 import { DEFAULT_LOCALE, HTML_LANG, isLocale, LOCALES } from "@/i18n/locales";
 import { getMessages, getT } from "@/i18n/messages";
+import { ogImages } from "@/lib/seo";
 import { SITE_NAME, SITE_URL, THEME_COLOR } from "@/lib/site";
 import { THEME_SCRIPT } from "@/lib/theme";
 import { listDivisions, toLang } from "@/server/data";
@@ -36,6 +38,14 @@ export async function generateMetadata({
     description: t("meta.description"),
     applicationName: SITE_NAME,
     manifest: "/manifest.webmanifest",
+    openGraph: {
+      type: "website",
+      siteName: SITE_NAME,
+      locale: HTML_LANG[isLocale(lang) ? lang : DEFAULT_LOCALE].replace("-", "_"),
+      images: ogImages(isLocale(lang) ? lang : DEFAULT_LOCALE),
+    },
+    twitter: { card: "summary_large_image", images: ["/social/og-default-en.png"] },
+    robots: { index: true, follow: true, "max-image-preview": "large" } as Metadata["robots"],
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "48x48" },
@@ -79,6 +89,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <ToastProvider>
             <AccountProvider />
             <VisitCounter />
+            <ServiceWorker />
             <a
               href="#main"
               className="fixed top-2 left-2 z-[90] -translate-y-[200%] rounded-md bg-raised px-4 py-3 font-semibold text-primary shadow-3 transition-transform duration-[var(--dur-2)] ease-standard focus-visible:translate-y-0 print:hidden"

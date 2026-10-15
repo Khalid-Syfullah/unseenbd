@@ -8,7 +8,7 @@ import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
 import type { SearchParams } from "@/lib/params";
 import { districtResolver, parseTripCostQuery } from "@/lib/planner/url";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { getPlannerData } from "@/server/data";
 
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Pick<PageProps, "params">): P
     description: t("tripCost.metaDescription"),
     alternates: alternatesFor(lang, "/trip-cost"),
     openGraph: {
+      images: ogImages(lang),
       title: t("tripCost.title"),
       description: t("tripCost.metaDescription"),
       url: localePath(lang, "/trip-cost"),

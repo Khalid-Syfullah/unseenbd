@@ -7,7 +7,7 @@ import { myMapDivisions } from "@/components/my-map/data";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
 import type { SearchParams } from "@/lib/params";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { parseDistrictShare } from "@/lib/visited/encode";
 import { getDistrictCovers, getMyBangladeshLevels } from "@/server/data";
 
@@ -33,7 +33,11 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
       description,
       robots: { index: false, follow: true },
       alternates: { canonical: localePath(lang, "/my-bangladesh") },
-      openGraph: { title, description },
+      openGraph: {
+        images: ogImages(lang),
+        title,
+        description,
+      },
     };
   }
   return {

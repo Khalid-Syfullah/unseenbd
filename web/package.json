@@ -9,6 +9,7 @@
   "scripts": {
     "sync-assets": "node scripts/sync-assets.mjs",
     "icons": "node scripts/gen-icons.mjs",
+    "photos": "node scripts/fetch-photos.mjs",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx scripts/db.ts migrate",
     "db:seed": "tsx scripts/db.ts seed",
@@ -54,6 +55,7 @@
     "jsdom": "^29.1.1",
     "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",
     "typescript": "5.9",

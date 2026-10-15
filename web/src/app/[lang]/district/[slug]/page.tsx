@@ -170,7 +170,19 @@ export default async function DistrictPage({ params }: PageProps) {
             {t("district.divisionLine", { division: district.divisionRef.name })}
           </p>
           {district.intro ? <p className="max-w-[68ch] text-lg">{district.intro}</p> : null}
-          <DistrictActions slug={district.slug} title={title} />
+          <DistrictActions
+            slug={district.slug}
+            title={title}
+            offline={{
+              pages: [
+                localePath(locale, `/district/${district.slug}`),
+                ...district.places.map((p) => localePath(locale, `/place/${p.slug}`)),
+              ],
+              images: district.places.flatMap((p) =>
+                p.cover ? [p.cover.w640, p.cover.w1200] : [],
+              ),
+            }}
+          />
         </div>
         <div className="mx-auto w-full max-w-[240px] md:order-2">
           <BangladeshMap

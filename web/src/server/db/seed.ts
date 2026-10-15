@@ -11,7 +11,7 @@ import { join } from "node:path";
 import type { BetterSQLite3Database } from "drizzle-orm/better-sqlite3";
 import type Database from "better-sqlite3";
 import { MONTHS } from "@/lib/months";
-import { assetsDir, seedDataDir } from "../paths";
+import { assetsDir, photosDir, seedDataDir } from "../paths";
 import type {
   ImageCredit,
   PlaceFromDhaka,
@@ -165,7 +165,33 @@ export type SeedCounts = {
   districtTexts: number;
 };
 
-export type SeedOptions = { dataDir?: string; assetsDir?: string };
+export type SeedOptions = { dataDir?: string; assetsDir?: string; photosDir?: string };
+
+/** One credited Commons photo (`data/content/photos.json`). */
+type RawPhoto = {
+  slug: string;
+  file: string;
+  author: string;
+  license: string;
+  license_url: string;
+  source: string;
+};
+
+/**
+ * Credited photos by place slug. A photo counts only when `photos.json` lists it and both WebP
+ * sizes are on disk (they are fetched, not committed), so a fresh checkout shows the illustrated
+ * covers until `npm run photos` has run.
+ */
+function readPhotos(dataDir: string, photos: string): Map<string, RawPhoto> {
+  const path = join(dataDir, "content", "photos.json");
+  const out = new Map<string, RawPhoto>();
+  if (!existsSync(path)) return out;
+  for (const entry of JSON.parse(readFileSync(path, "utf8")) as RawPhoto[]) {
+    const present = ["w640", "w1200"].every((w) => existsSync(join(photos, w, entry.file)));
+    if (present) out.set(entry.slug, entry);
+  }
+  return out;
+}
 
 function readJson<T>(dir: string, file: string): T {
   return JSON.parse(readFileSync(join(dir, file), "utf8")) as T;
@@ -211,6 +237,7 @@ function insertAll<T extends Parameters<SeedDb["insert"]>[0]>(
 export function seedDatabase(db: SeedDb, options: SeedOptions = {}): SeedCounts {
   const dataDir = options.dataDir ?? seedDataDir();
   const assets = options.assetsDir ?? assetsDir();
+  const photoFiles = readPhotos(dataDir, options.photosDir ?? photosDir());
 
   const rawDivisions = readJson<RawDivision[]>(dataDir, "divisions.json");
   const rawDistricts = readJson<RawDistrict[]>(dataDir, "districts.json");
@@ -302,7 +329,16 @@ export function seedDatabase(db: SeedDb, options: SeedOptions = {}): SeedCounts 
             mood: c.mood,
           }
         : null,
-      photo: null,
+      photo: photoFiles.has(p.slug)
+        ? {
+            src: `/photos/w1200/${photoFiles.get(p.slug)!.file}`,
+            w640: `/photos/w640/${photoFiles.get(p.slug)!.file}`,
+            author: photoFiles.get(p.slug)!.author,
+            license: photoFiles.get(p.slug)!.license,
+            license_url: photoFiles.get(p.slug)!.license_url,
+            source: photoFiles.get(p.slug)!.source,
+          }
+        : null,
       nearby: p.nearby,
       fromDhaka: p.from_dhaka,
       descriptionBn: text?.bn.description ?? null,

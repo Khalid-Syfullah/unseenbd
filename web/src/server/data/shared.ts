@@ -67,7 +67,9 @@ export function toPlaceSummary(row: PlaceJoinRow, lang: Lang): PlaceSummary {
     lat: p.lat,
     lng: p.lng,
     stars: p.stars,
-    cover: p.cover,
+    // A real photo replaces the illustration wherever a cover is shown.
+    cover: p.photo && p.cover ? { ...p.cover, w640: p.photo.w640, w1200: p.photo.src } : p.cover,
+    photo: p.photo,
     imageCredit: p.imageCredit,
     description: pick(lang, p.descriptionBn, p.descriptionEn),
   };

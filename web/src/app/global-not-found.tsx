@@ -4,6 +4,7 @@ import { fontVariables } from "@/fonts";
 import { localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
 import { THEME_SCRIPT } from "@/lib/theme";
+import { listDistricts } from "@/server/data";
 import "./globals.css";
 
 /*
@@ -23,7 +24,8 @@ export const metadata: Metadata = {
 const linkClass =
   "inline-flex min-h-11 items-center rounded-md px-5 font-semibold transition-colors duration-[var(--dur-1)] ease-standard";
 
-export default function GlobalNotFound() {
+export default async function GlobalNotFound() {
+  const [bnDistricts, enDistricts] = await Promise.all([listDistricts("bn"), listDistricts("en")]);
   return (
     <html lang="bn" dir="ltr" className={fontVariables} suppressHydrationWarning>
       <head>
@@ -55,6 +57,39 @@ export default function GlobalNotFound() {
               {en("notFound.backHome")}
             </Link>
           </p>
+          <p className="flex flex-wrap gap-3">
+            <Link
+              href={localePath("bn", "/explore")}
+              className={`${linkClass} border border-border-strong bg-raised text-text hover:bg-primary-wash`}
+            >
+              {bn("notFound.explore")}
+            </Link>
+            <Link
+              href={localePath("bn", "/my-bangladesh")}
+              className={`${linkClass} border border-border-strong bg-raised text-text hover:bg-primary-wash`}
+            >
+              {bn("notFound.myBangladesh")}
+            </Link>
+          </p>
+          <nav aria-label={bn("notFound.allDistricts")} className="flex flex-col gap-2">
+            <h2 className="text-h3">{bn("notFound.allDistricts")}</h2>
+            <ul className="flex flex-wrap gap-x-1">
+              {bnDistricts.map((d, i) => (
+                <li key={d.slug}>
+                  <Link
+                    href={localePath("bn", `/district/${d.slug}`)}
+                    className="inline-flex min-h-11 items-center px-2.5 text-primary underline-offset-2 hover:underline"
+                  >
+                    {d.name}
+                    <span lang="en" className="sr-only">
+                      {" "}
+                      {enDistricts[i]?.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </main>
       </body>
     </html>

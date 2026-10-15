@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/place/Breadcrumb";
 import { TrainList } from "@/components/routes/TrainList";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { listDistricts, listTrains } from "@/server/data";
 
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: t("trains.metaDescription"),
     alternates: alternatesFor(lang, "/trains"),
     openGraph: {
+      images: ogImages(lang),
       title: t("trains.title"),
       description: t("trains.metaDescription"),
       url: localePath(lang, "/trains"),

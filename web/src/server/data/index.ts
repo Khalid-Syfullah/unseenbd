@@ -51,6 +51,12 @@ export {
   listRoutesFromDhaka,
 } from "./routes";
 export { getTrain, listTrains } from "./trains";
+export {
+  listEmergencyNumbers,
+  listForeignTour,
+  type EmergencyNumber,
+  type ForeignCountry,
+} from "./reference";
 export { getDistrictCovers, getMyBangladeshLevels } from "./my-map";
 export { getGameData, getGameDataSync, getPersonalityData, type PersonalityPlace } from "./games";
 export {

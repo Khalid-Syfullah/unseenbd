@@ -8,7 +8,7 @@ import { CardGrid } from "@/components/ui/Card";
 import { RouteCard } from "@/components/ui/RouteCard";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { listDistrictsByDivision, listRoutesFromDhaka } from "@/server/data";
 
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: t("routes.metaDescription"),
     alternates: alternatesFor(lang, "/routes"),
     openGraph: {
+      images: ogImages(lang),
       title: t("routes.title"),
       description: t("routes.metaDescription"),
       url: localePath(lang, "/routes"),

@@ -18,7 +18,7 @@ import {
   localizeDigits,
   weekdayName,
 } from "@/lib/format";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { getBookingLinks, getTrain, listTrains } from "@/server/data";
 import type { TrainFare } from "@/server/data/types";
@@ -49,7 +49,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: alternatesFor(lang, `/train/${train.slug}`),
-    openGraph: { title, description, url: localePath(lang, `/train/${train.slug}`) },
+    openGraph: {
+      images: ogImages(lang),
+      title,
+      description,
+      url: localePath(lang, `/train/${train.slug}`),
+    },
   };
 }
 

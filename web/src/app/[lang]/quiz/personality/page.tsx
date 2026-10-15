@@ -6,7 +6,7 @@ import { PersonalityQuiz } from "@/components/games/PersonalityQuiz";
 import { contentLocale, isLocale, localePath } from "@/i18n/locales";
 import { getT } from "@/i18n/messages";
 import { dhakaDate } from "@/lib/games/seed";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { getPersonalityData } from "@/server/data";
 
 type PageProps = { params: Promise<{ lang: string }> };
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: t("quiz.personality.metaDescription"),
     alternates: alternatesFor(lang, "/quiz/personality"),
     openGraph: {
+      images: ogImages(lang),
       title: t("quiz.personality.title"),
       description: t("quiz.personality.metaDescription"),
       url: localePath(lang, "/quiz/personality"),

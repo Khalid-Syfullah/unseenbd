@@ -180,7 +180,6 @@ export async function getPlace(slug: string, lang: Lang = "bn"): Promise<PlaceDe
     accessibility: pick(lang, p.accessibilityBn, p.accessibilityEn),
     entryFee: pick(lang, p.entryFeeBn, p.entryFeeEn),
     openingHours: pick(lang, p.openingHoursBn, p.openingHoursEn),
-    photo: p.photo,
     fromDhaka,
     nearby: placeSummariesBySlug(db, p.nearby, lang),
   };

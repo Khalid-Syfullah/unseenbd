@@ -25,13 +25,24 @@ export type PlaceCover = {
   mood: string;
 };
 
-/** A real photo of a place (filled later from community uploads or editorial picks). */
+/**
+ * A real Wikimedia Commons photo of a place (`data/content/photos.json`, files made by
+ * `npm run photos`). Shown with its credit; places without one keep the illustrated cover.
+ */
 export type PlacePhoto = {
+  /** Public URL of the 1200 px WebP (place pages), e.g. `/photos/w1200/nilgiri-hill.webp`. */
   src: string;
+  /** Public URL of the 640 px WebP (cards). */
+  w640: string;
   width?: number;
   height?: number;
   alt_bn?: string;
   alt_en?: string;
+  author: string;
+  license: string;
+  license_url: string;
+  /** The Commons file page. */
+  source: string;
 };
 
 /** Distance and fares from Dhaka to a place's district (`places.json` → `from_dhaka`). */

@@ -22,7 +22,7 @@ import {
   formatMoneyRange,
   formatNumber,
 } from "@/lib/format";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, ogImages } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import {
   getBookingLinks,
@@ -66,7 +66,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title,
     description,
     alternates: alternatesFor(lang, `/route/${r.slug}`),
-    openGraph: { title, description, url: localePath(lang, `/route/${r.slug}`) },
+    openGraph: {
+      images: ogImages(lang),
+      title,
+      description,
+      url: localePath(lang, `/route/${r.slug}`),
+    },
   };
 }
 

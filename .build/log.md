@@ -13,3 +13,4 @@
 - 2026-10-15 phase 13 (opus) — Accounts, profile and sync
 - 2026-10-15 phase 14 (opus) — Photos, posts, suggestions and trending
 - 2026-10-15 phase 15 (sonnet) — Directory, owner listings and admin
+- 2026-10-15 phase 16 (sonnet) — Real photos, info pages, PWA and SEO
