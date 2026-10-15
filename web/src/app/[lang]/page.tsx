@@ -24,7 +24,7 @@ export default async function HomePage({ params }: PageProps) {
   const t = getT(lang);
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col justify-center gap-10 px-4 py-16 md:px-6 lg:px-8">
+    <div className="mx-auto flex w-full max-w-3xl flex-col justify-center gap-10 px-4 py-16 md:px-6 lg:px-8">
       <Logo lang={contentLocale(lang)} alt={t("logo.alt")} priority className="w-full max-w-md" />
 
       <div className="flex flex-col gap-4">
@@ -47,6 +47,6 @@ export default async function HomePage({ params }: PageProps) {
           <LanguageLinks current={lang} label={t("language.label")} />
         </div>
       </section>
-    </main>
+    </div>
   );
 }

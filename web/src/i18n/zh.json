@@ -41,7 +41,12 @@
     "register": "注册",
     "profile": "个人主页",
     "logout": "退出登录",
-    "facebook": "Unseen BD 的 Facebook"
+    "facebook": "Unseen BD 的 Facebook",
+    "myListings": "我的商家信息",
+    "listings": "本地商家",
+    "districtQuiz": "县区测验",
+    "famousQuiz": "名产测验",
+    "leaderboards": "排行榜"
   },
   "footer": {
     "explore": "探索",
@@ -50,7 +55,8 @@
     "foreignTravel": "出境旅行",
     "divisions": "专区",
     "topPlayers": "最佳玩家",
-    "credit": "为孟加拉国的旅行者而做。免费，无追踪。"
+    "credit": "为孟加拉国的旅行者而做。免费，无追踪。",
+    "boundaries": "县区边界：BBS 与 OCHA。"
   },
   "common": {
     "search": "搜索",
@@ -98,9 +104,15 @@
     "freeNoTrackers": "免费 · 无追踪",
     "skipToContent": "跳到正文",
     "noResults": "没有找到结果。试试减少筛选条件。",
-    "places": { "other": "{count} 个景点" },
-    "districtCount": { "other": "{count} 个县" },
-    "results": { "other": "{count} 条结果" }
+    "places": {
+      "other": "{count} 个景点"
+    },
+    "districtCount": {
+      "other": "{count} 个县"
+    },
+    "results": {
+      "other": "{count} 条结果"
+    }
   },
   "confidence": {
     "label": "可信度",
@@ -126,5 +138,63 @@
     "backHome": "返回首页",
     "explore": "探索景点",
     "allDistricts": "全部 64 个县"
+  },
+  "menu": {
+    "explore": "探索",
+    "plan": "规划行程",
+    "play": "游戏与分享",
+    "site": "关于 Unseen BD"
+  },
+  "header": {
+    "home": "Unseen BD 首页",
+    "darkTheme": "深色主题",
+    "account": "你的资料：{name}"
+  },
+  "ui": {
+    "clear": "清除",
+    "decrease": "减少",
+    "increase": "增加",
+    "pagination": "分页",
+    "new": "新",
+    "dismiss": "关闭提示",
+    "notifications": "通知",
+    "readMore": "阅读更多",
+    "photoSource": "图片来源",
+    "viewDetails": "查看详情",
+    "rating": "评分：{score} / 10",
+    "likes": {
+      "other": "{count} 个赞"
+    },
+    "votes": {
+      "other": "{count} 票"
+    },
+    "comments": {
+      "other": "{count} 条评论"
+    },
+    "reviews": {
+      "other": "{count} 条评价"
+    },
+    "trains": {
+      "other": "{count} 趟列车"
+    },
+    "offDay": "停运日：{day}",
+    "everyDay": "每天运行",
+    "fromFare": "{fare} 起",
+    "famousFor": "特产",
+    "rank": "第 {rank} 名"
+  },
+  "map": {
+    "bangladesh": "孟加拉国 64 个县区地图",
+    "world": "世界地图",
+    "showNames": "显示县区名称",
+    "legend": "图例",
+    "visited": "去过",
+    "notYet": "还没去",
+    "wish": "想去",
+    "selected": "已选",
+    "divisions": "专区",
+    "keyboardHint": "用方向键在区域间移动，按 Enter 或空格键选择。",
+    "credit": "边界：BBS、OCHA",
+    "worldCredit": "地图：Natural Earth"
   }
 }

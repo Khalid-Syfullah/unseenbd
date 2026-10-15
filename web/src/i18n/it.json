@@ -41,7 +41,12 @@
     "register": "Registrati",
     "profile": "Profilo",
     "logout": "Esci",
-    "facebook": "Unseen BD su Facebook"
+    "facebook": "Unseen BD su Facebook",
+    "myListings": "I miei annunci",
+    "listings": "Attività locali",
+    "districtQuiz": "Quiz dei distretti",
+    "famousQuiz": "Quiz delle specialità",
+    "leaderboards": "Classifiche"
   },
   "footer": {
     "explore": "Esplora",
@@ -50,7 +55,8 @@
     "foreignTravel": "Viaggi all’estero",
     "divisions": "Divisioni",
     "topPlayers": "Migliori giocatori",
-    "credit": "Fatto per chi viaggia in Bangladesh. Gratis, senza tracker."
+    "credit": "Fatto per chi viaggia in Bangladesh. Gratis, senza tracker.",
+    "boundaries": "Confini dei distretti: BBS e OCHA."
   },
   "common": {
     "search": "Cerca",
@@ -98,9 +104,18 @@
     "freeNoTrackers": "Gratis · senza tracker",
     "skipToContent": "Vai al contenuto",
     "noResults": "Nessun risultato. Prova con meno filtri.",
-    "places": { "one": "{count} luogo", "other": "{count} luoghi" },
-    "districtCount": { "one": "{count} distretto", "other": "{count} distretti" },
-    "results": { "one": "{count} risultato", "other": "{count} risultati" }
+    "places": {
+      "one": "{count} luogo",
+      "other": "{count} luoghi"
+    },
+    "districtCount": {
+      "one": "{count} distretto",
+      "other": "{count} distretti"
+    },
+    "results": {
+      "one": "{count} risultato",
+      "other": "{count} risultati"
+    }
   },
   "confidence": {
     "label": "Affidabilità",
@@ -126,5 +141,68 @@
     "backHome": "Torna alla home",
     "explore": "Esplora i luoghi",
     "allDistricts": "Tutti i 64 distretti"
+  },
+  "menu": {
+    "explore": "Esplora",
+    "plan": "Pianifica un viaggio",
+    "play": "Gioca e condividi",
+    "site": "Su Unseen BD"
+  },
+  "header": {
+    "home": "Home di Unseen BD",
+    "darkTheme": "Tema scuro",
+    "account": "Il tuo profilo: {name}"
+  },
+  "ui": {
+    "clear": "Cancella",
+    "decrease": "Diminuisci",
+    "increase": "Aumenta",
+    "pagination": "Pagine",
+    "new": "Nuovo",
+    "dismiss": "Chiudi",
+    "notifications": "Notifiche",
+    "readMore": "Leggi tutto",
+    "photoSource": "Fonte della foto",
+    "viewDetails": "Vedi dettagli",
+    "rating": "Voto: {score} su 10",
+    "likes": {
+      "one": "{count} mi piace",
+      "other": "{count} mi piace"
+    },
+    "votes": {
+      "one": "{count} voto",
+      "other": "{count} voti"
+    },
+    "comments": {
+      "one": "{count} commento",
+      "other": "{count} commenti"
+    },
+    "reviews": {
+      "one": "{count} recensione",
+      "other": "{count} recensioni"
+    },
+    "trains": {
+      "one": "{count} treno",
+      "other": "{count} treni"
+    },
+    "offDay": "Giorno di riposo: {day}",
+    "everyDay": "Tutti i giorni",
+    "fromFare": "da {fare}",
+    "famousFor": "Famoso per",
+    "rank": "Posizione {rank}"
+  },
+  "map": {
+    "bangladesh": "Mappa dei 64 distretti del Bangladesh",
+    "world": "Mappa del mondo",
+    "showNames": "Mostra i nomi dei distretti",
+    "legend": "Legenda",
+    "visited": "Visitato",
+    "notYet": "Non ancora",
+    "wish": "Voglio andarci",
+    "selected": "Selezionato",
+    "divisions": "Divisioni",
+    "keyboardHint": "Le frecce passano da un'area all'altra; Invio o Spazio la scelgono.",
+    "credit": "Confini: BBS, OCHA",
+    "worldCredit": "Mappa: Natural Earth"
   }
 }

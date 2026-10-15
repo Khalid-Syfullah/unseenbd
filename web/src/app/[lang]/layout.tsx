@@ -1,11 +1,16 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { AppHeader } from "@/components/ui/AppHeader";
+import { Footer } from "@/components/ui/Footer";
+import { TabBar } from "@/components/ui/TabBar";
+import { ToastProvider } from "@/components/ui/Toast";
 import { fontVariables } from "@/fonts";
 import { I18nProvider } from "@/i18n/client";
 import { DEFAULT_LOCALE, HTML_LANG, isLocale, LOCALES } from "@/i18n/locales";
 import { getMessages, getT } from "@/i18n/messages";
 import { SITE_NAME, SITE_URL, THEME_COLOR } from "@/lib/site";
 import { THEME_SCRIPT } from "@/lib/theme";
+import { listDivisions, toLang } from "@/server/data";
 import "../globals.css";
 
 type LayoutProps = {
@@ -58,6 +63,8 @@ export default async function RootLayout({ children, params }: LayoutProps) {
   // has no not-found boundary above it).
   const { lang: param } = await params;
   const lang = isLocale(param) ? param : DEFAULT_LOCALE;
+  const t = getT(lang);
+  const divisions = await listDivisions(toLang(lang));
 
   return (
     // data-theme / data-theme-pref are set by THEME_SCRIPT before React hydrates.
@@ -67,7 +74,23 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       </head>
       <body className="bg-bg text-text antialiased">
         <I18nProvider locale={lang} messages={getMessages(lang)}>
-          {children}
+          <ToastProvider>
+            <a
+              href="#main"
+              className="fixed top-2 left-2 z-[90] -translate-y-[200%] rounded-md bg-raised px-4 py-3 font-semibold text-primary shadow-3 transition-transform duration-[var(--dur-2)] ease-standard focus-visible:translate-y-0"
+            >
+              {t("common.skipToContent")}
+            </a>
+            {/* Bottom padding keeps the end of every page clear of the fixed tab bar. */}
+            <div className="flex min-h-dvh flex-col pb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom))]">
+              <AppHeader lang={lang} />
+              <main id="main" tabIndex={-1} className="flex-1 outline-none">
+                {children}
+              </main>
+              <Footer lang={lang} divisions={divisions} />
+            </div>
+            <TabBar />
+          </ToastProvider>
         </I18nProvider>
       </body>
     </html>

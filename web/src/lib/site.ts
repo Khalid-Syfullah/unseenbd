@@ -11,3 +11,9 @@ export const THEME_COLOR = {
   light: "#FBF6EC",
   dark: "#0A1024",
 } as const;
+
+/**
+ * Unseen BD's Facebook page (header and footer). Set NEXT_PUBLIC_FACEBOOK_URL to the real page;
+ * the default only points at Facebook itself.
+ */
+export const FACEBOOK_URL = process.env.NEXT_PUBLIC_FACEBOOK_URL ?? "https://www.facebook.com/";

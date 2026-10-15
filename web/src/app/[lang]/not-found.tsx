@@ -10,7 +10,7 @@ export default function NotFound() {
   const t = useT();
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col justify-center gap-4 px-4 py-16 md:px-6">
+    <div className="mx-auto flex w-full max-w-3xl flex-col justify-center gap-4 px-4 py-16 md:px-6">
       <p className="font-display text-6xl text-sun">404</p>
       <h1 className="text-2xl font-bold">{t("notFound.title")}</h1>
       <p className="text-muted">{t("notFound.body")}</p>
@@ -22,6 +22,6 @@ export default function NotFound() {
           {t("notFound.backHome")}
         </Link>
       </p>
-    </main>
+    </div>
   );
 }

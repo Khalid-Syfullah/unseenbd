@@ -41,7 +41,12 @@
     "register": "新規登録",
     "profile": "プロフィール",
     "logout": "ログアウト",
-    "facebook": "Unseen BD の Facebook"
+    "facebook": "Unseen BD の Facebook",
+    "myListings": "自分の掲載",
+    "listings": "地元のお店",
+    "districtQuiz": "県クイズ",
+    "famousQuiz": "名物クイズ",
+    "leaderboards": "ランキング"
   },
   "footer": {
     "explore": "探す",
@@ -50,7 +55,8 @@
     "foreignTravel": "海外旅行",
     "divisions": "管区",
     "topPlayers": "トッププレイヤー",
-    "credit": "バングラデシュを旅する人のために。無料、トラッカーなし。"
+    "credit": "バングラデシュを旅する人のために。無料、トラッカーなし。",
+    "boundaries": "県境：BBS、OCHA。"
   },
   "common": {
     "search": "検索",
@@ -98,9 +104,15 @@
     "freeNoTrackers": "無料 · トラッカーなし",
     "skipToContent": "本文へ移動",
     "noResults": "見つかりませんでした。絞り込みを減らしてみてください。",
-    "places": { "other": "{count} か所" },
-    "districtCount": { "other": "{count} 県" },
-    "results": { "other": "{count} 件" }
+    "places": {
+      "other": "{count} か所"
+    },
+    "districtCount": {
+      "other": "{count} 県"
+    },
+    "results": {
+      "other": "{count} 件"
+    }
   },
   "confidence": {
     "label": "信頼度",
@@ -126,5 +138,63 @@
     "backHome": "ホームに戻る",
     "explore": "スポットを探す",
     "allDistricts": "全64県"
+  },
+  "menu": {
+    "explore": "探す",
+    "plan": "旅の計画",
+    "play": "遊ぶ・シェア",
+    "site": "Unseen BD について"
+  },
+  "header": {
+    "home": "Unseen BD ホーム",
+    "darkTheme": "ダークテーマ",
+    "account": "プロフィール：{name}"
+  },
+  "ui": {
+    "clear": "クリア",
+    "decrease": "減らす",
+    "increase": "増やす",
+    "pagination": "ページ",
+    "new": "新着",
+    "dismiss": "閉じる",
+    "notifications": "お知らせ",
+    "readMore": "続きを読む",
+    "photoSource": "写真の出典",
+    "viewDetails": "詳細を見る",
+    "rating": "評価：10 点中 {score} 点",
+    "likes": {
+      "other": "いいね {count}"
+    },
+    "votes": {
+      "other": "{count} 票"
+    },
+    "comments": {
+      "other": "コメント {count} 件"
+    },
+    "reviews": {
+      "other": "レビュー {count} 件"
+    },
+    "trains": {
+      "other": "列車 {count} 本"
+    },
+    "offDay": "運休日：{day}",
+    "everyDay": "毎日運行",
+    "fromFare": "{fare} から",
+    "famousFor": "名物",
+    "rank": "{rank} 位"
+  },
+  "map": {
+    "bangladesh": "バングラデシュ 64 県の地図",
+    "world": "世界地図",
+    "showNames": "県名を表示",
+    "legend": "凡例",
+    "visited": "訪問済み",
+    "notYet": "未訪問",
+    "wish": "行きたい",
+    "selected": "選択中",
+    "divisions": "管区",
+    "keyboardHint": "矢印キーで地域を移動し、Enter かスペースで選びます。",
+    "credit": "境界：BBS、OCHA",
+    "worldCredit": "地図：Natural Earth"
   }
 }

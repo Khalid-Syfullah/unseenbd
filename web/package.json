@@ -8,6 +8,7 @@
   },
   "scripts": {
     "sync-assets": "node scripts/sync-assets.mjs",
+    "icons": "node scripts/gen-icons.mjs",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx scripts/db.ts migrate",
     "db:seed": "tsx scripts/db.ts seed",

@@ -41,7 +41,12 @@
     "register": "অ্যাকাউন্ট খুলুন",
     "profile": "প্রোফাইল",
     "logout": "লগ আউট",
-    "facebook": "ফেসবুকে Unseen BD"
+    "facebook": "ফেসবুকে Unseen BD",
+    "myListings": "আমার তালিকা",
+    "listings": "স্থানীয় ব্যবসা",
+    "districtQuiz": "জেলা কুইজ",
+    "famousQuiz": "বিখ্যাত খাবার কুইজ",
+    "leaderboards": "সেরা তালিকা"
   },
   "footer": {
     "explore": "ঘুরে দেখুন",
@@ -50,7 +55,8 @@
     "foreignTravel": "বিদেশ ভ্রমণ",
     "divisions": "বিভাগ",
     "topPlayers": "সেরা খেলোয়াড়",
-    "credit": "বাংলাদেশের ভ্রমণপ্রেমীদের জন্য। বিনামূল্যে, কোনো ট্র্যাকার ছাড়া।"
+    "credit": "বাংলাদেশের ভ্রমণপ্রেমীদের জন্য। বিনামূল্যে, কোনো ট্র্যাকার ছাড়া।",
+    "boundaries": "জেলার সীমানা: বিবিএস ও ওচা।"
   },
   "common": {
     "search": "খুঁজুন",
@@ -98,9 +104,15 @@
     "freeNoTrackers": "বিনামূল্যে · কোনো ট্র্যাকার নেই",
     "skipToContent": "মূল অংশে যান",
     "noResults": "কিছু পাওয়া যায়নি। ফিল্টার কমিয়ে দেখুন।",
-    "places": { "other": "{count}টি জায়গা" },
-    "districtCount": { "other": "{count}টি জেলা" },
-    "results": { "other": "{count}টি ফল" }
+    "places": {
+      "other": "{count}টি জায়গা"
+    },
+    "districtCount": {
+      "other": "{count}টি জেলা"
+    },
+    "results": {
+      "other": "{count}টি ফল"
+    }
   },
   "confidence": {
     "label": "নির্ভরযোগ্যতা",
@@ -126,5 +138,63 @@
     "backHome": "হোম পেজে ফিরুন",
     "explore": "জায়গা ঘুরে দেখুন",
     "allDistricts": "৬৪টি জেলা"
+  },
+  "menu": {
+    "explore": "ঘুরে দেখুন",
+    "plan": "ভ্রমণ পরিকল্পনা",
+    "play": "খেলুন ও শেয়ার করুন",
+    "site": "Unseen BD সম্পর্কে"
+  },
+  "header": {
+    "home": "Unseen BD হোম",
+    "darkTheme": "ডার্ক থিম",
+    "account": "আপনার প্রোফাইল: {name}"
+  },
+  "ui": {
+    "clear": "মুছুন",
+    "decrease": "কমান",
+    "increase": "বাড়ান",
+    "pagination": "পাতা",
+    "new": "নতুন",
+    "dismiss": "সরিয়ে দিন",
+    "notifications": "বার্তা",
+    "readMore": "আরও পড়ুন",
+    "photoSource": "ছবির উৎস",
+    "viewDetails": "বিস্তারিত দেখুন",
+    "rating": "রেটিং: ১০-এ {score}",
+    "likes": {
+      "other": "{count}টি লাইক"
+    },
+    "votes": {
+      "other": "{count}টি ভোট"
+    },
+    "comments": {
+      "other": "{count}টি মন্তব্য"
+    },
+    "reviews": {
+      "other": "{count}টি রিভিউ"
+    },
+    "trains": {
+      "other": "{count}টি ট্রেন"
+    },
+    "offDay": "সাপ্তাহিক ছুটি: {day}",
+    "everyDay": "প্রতিদিন চলে",
+    "fromFare": "{fare} থেকে",
+    "famousFor": "যে জন্য বিখ্যাত",
+    "rank": "{rank} নম্বর"
+  },
+  "map": {
+    "bangladesh": "বাংলাদেশের ৬৪ জেলার মানচিত্র",
+    "world": "বিশ্ব মানচিত্র",
+    "showNames": "জেলার নাম দেখান",
+    "legend": "মানচিত্রের সংকেত",
+    "visited": "গিয়েছি",
+    "notYet": "এখনও যাইনি",
+    "wish": "যেতে চাই",
+    "selected": "বাছাই করা",
+    "divisions": "বিভাগ",
+    "keyboardHint": "তীর-চিহ্ন দিয়ে এক এলাকা থেকে আরেকটিতে যান; Enter বা Space চাপলে বাছাই হবে।",
+    "credit": "সীমানা: বিবিএস, ওচা",
+    "worldCredit": "মানচিত্র: Natural Earth"
   }
 }

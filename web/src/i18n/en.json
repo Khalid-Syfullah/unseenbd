@@ -41,7 +41,12 @@
     "register": "Sign up",
     "profile": "Profile",
     "logout": "Log out",
-    "facebook": "Unseen BD on Facebook"
+    "facebook": "Unseen BD on Facebook",
+    "myListings": "My listings",
+    "listings": "Local businesses",
+    "districtQuiz": "District quiz",
+    "famousQuiz": "Famous foods quiz",
+    "leaderboards": "Leaderboards"
   },
   "footer": {
     "explore": "Explore",
@@ -50,7 +55,8 @@
     "foreignTravel": "Travel abroad",
     "divisions": "Divisions",
     "topPlayers": "Top players",
-    "credit": "Made for travellers in Bangladesh. Free, with no trackers."
+    "credit": "Made for travellers in Bangladesh. Free, with no trackers.",
+    "boundaries": "District boundaries: BBS and OCHA."
   },
   "common": {
     "search": "Search",
@@ -98,9 +104,18 @@
     "freeNoTrackers": "Free · no trackers",
     "skipToContent": "Skip to content",
     "noResults": "Nothing found. Try fewer filters.",
-    "places": { "one": "{count} place", "other": "{count} places" },
-    "districtCount": { "one": "{count} district", "other": "{count} districts" },
-    "results": { "one": "{count} result", "other": "{count} results" }
+    "places": {
+      "one": "{count} place",
+      "other": "{count} places"
+    },
+    "districtCount": {
+      "one": "{count} district",
+      "other": "{count} districts"
+    },
+    "results": {
+      "one": "{count} result",
+      "other": "{count} results"
+    }
   },
   "confidence": {
     "label": "Confidence",
@@ -126,5 +141,68 @@
     "backHome": "Back to home",
     "explore": "Explore places",
     "allDistricts": "All 64 districts"
+  },
+  "menu": {
+    "explore": "Explore",
+    "plan": "Plan a trip",
+    "play": "Play and share",
+    "site": "About Unseen BD"
+  },
+  "header": {
+    "home": "Unseen BD home",
+    "darkTheme": "Dark theme",
+    "account": "Your profile: {name}"
+  },
+  "ui": {
+    "clear": "Clear",
+    "decrease": "Decrease",
+    "increase": "Increase",
+    "pagination": "Pages",
+    "new": "New",
+    "dismiss": "Dismiss",
+    "notifications": "Notifications",
+    "readMore": "Read more",
+    "photoSource": "Photo source",
+    "viewDetails": "View details",
+    "rating": "Rating: {score} out of 10",
+    "likes": {
+      "one": "{count} like",
+      "other": "{count} likes"
+    },
+    "votes": {
+      "one": "{count} vote",
+      "other": "{count} votes"
+    },
+    "comments": {
+      "one": "{count} comment",
+      "other": "{count} comments"
+    },
+    "reviews": {
+      "one": "{count} review",
+      "other": "{count} reviews"
+    },
+    "trains": {
+      "one": "{count} train",
+      "other": "{count} trains"
+    },
+    "offDay": "Off day: {day}",
+    "everyDay": "Runs every day",
+    "fromFare": "from {fare}",
+    "famousFor": "Famous for",
+    "rank": "Rank {rank}"
+  },
+  "map": {
+    "bangladesh": "Map of the 64 districts of Bangladesh",
+    "world": "World map",
+    "showNames": "Show district names",
+    "legend": "Map key",
+    "visited": "Visited",
+    "notYet": "Not yet",
+    "wish": "Want to go",
+    "selected": "Selected",
+    "divisions": "Divisions",
+    "keyboardHint": "Arrow keys move between areas; Enter or Space chooses one.",
+    "credit": "Boundaries: BBS, OCHA",
+    "worldCredit": "Map: Natural Earth"
   }
 }

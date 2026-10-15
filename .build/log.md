@@ -1,2 +1,3 @@
 - 2026-10-15 phase 01 (opus) — Foundation
 - 2026-10-15 phase 02 (opus) — Data, seed, i18n and formatters
+- 2026-10-15 phase 03 (opus) — Design system components and maps

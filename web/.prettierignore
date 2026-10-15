@@ -9,3 +9,4 @@ package-lock.json
 src/fonts/*.txt
 /drizzle/meta
 /data
+src/components/ui/icons.generated.ts

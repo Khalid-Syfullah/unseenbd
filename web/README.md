@@ -161,6 +161,33 @@ District, division, kind and month names come from the data layer, never from ca
 (`Nov – Mar`), dates (`১৪ অক্টোবর, ২০২৬` / `14 October 2026`), durations (`সাড়ে ১০ ঘণ্টা` /
 `10.5 hours`), distances and the ★ score.
 
+## Design system components
+
+`src/components/ui/` holds every component from DESIGN.md §4, built only from the tokens:
+`AppHeader` (logo, Facebook, `ThemeSwitch`, `LanguageSelect`, login/avatar slot, `MenuButton` →
+right sheet on phones / dropdown from 768 px), `TabBar`, `Footer`, `Button` / `ButtonLink` /
+`IconButton` / `IconLink` / `LinkButton` / `TextLink`, `FilterChip` + `ChipRow`, `KindBadge`,
+`StatusTag`, `DistrictChip`, the cards (`PlaceCard`, `PlaceRow`, `DistrictCard`, `RouteCard`,
+`TrainRow`, `PhotoTile`, `PostCard`, `ListingCard`, `StatTile`, `FeatureCard`, `CardGrid`), form
+controls in `Form.tsx` (`TextInput`, `SearchInput`, `Select`, `DistrictSelect`, `Stepper`,
+`SegmentedControl`, `Switch`, `Checkbox`, `Radio`, `Field`), `PillTabs`, `Pagination`,
+`Accordion`, `Dialog` / `Sheet` (focus trap and Esc via `useFocusTrap`), `ToastProvider` /
+`useToast`, skeletons, `EmptyState`, `LeaderboardRow` and `Avatar`. Navigation config (tabs, menu,
+footer columns) is `src/lib/nav.ts`.
+
+- **Icons:** `<Icon name="home" | "kinds/beach" | "kinds-badge/beach" size label?>` inlines the SVGs
+  from `../assets/icons`. They are compiled into `src/components/ui/icons.generated.ts` by
+  `npm run icons`; a test fails if that file is out of date.
+- **Maps:** `src/components/maps/BangladeshMap.tsx` and `WorldMap.tsx` import the path data from
+  `../assets/maps/*.json` (alias `@assets`), render the SVG on the server and become interactive
+  with `onToggle` / `onSelect` / `onChange`: one tab stop, arrow keys between areas, Enter/Space.
+- **Gallery:** `/design` and `/en/design` (noindex, linked nowhere) show every component and state
+  in the light and the dark theme side by side. `[data-theme="light|dark"]` works on any element,
+  so a part of a page can be previewed in the other theme.
+- **Helpers in `globals.css`:** the type scale (`text-hero`, `text-display`, `text-h1` … `text-xs`,
+  with +0.1 line height in Bengali), `tap-target` (grows a small control's hit area to 44 px),
+  `scrollbar-none`, `fade-x`, `shimmer`, sheet/dialog animations and the map classes.
+
 ## Layout
 
 ```

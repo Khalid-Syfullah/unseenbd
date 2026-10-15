@@ -41,7 +41,12 @@
     "register": "Registrieren",
     "profile": "Profil",
     "logout": "Abmelden",
-    "facebook": "Unseen BD auf Facebook"
+    "facebook": "Unseen BD auf Facebook",
+    "myListings": "Meine Einträge",
+    "listings": "Lokale Betriebe",
+    "districtQuiz": "Distrikt-Quiz",
+    "famousQuiz": "Spezialitäten-Quiz",
+    "leaderboards": "Bestenlisten"
   },
   "footer": {
     "explore": "Entdecken",
@@ -50,7 +55,8 @@
     "foreignTravel": "Reisen ins Ausland",
     "divisions": "Divisionen",
     "topPlayers": "Beste Spieler",
-    "credit": "Für Reisende in Bangladesch gemacht. Kostenlos und ohne Tracker."
+    "credit": "Für Reisende in Bangladesch gemacht. Kostenlos und ohne Tracker.",
+    "boundaries": "Distriktgrenzen: BBS und OCHA."
   },
   "common": {
     "search": "Suchen",
@@ -98,9 +104,18 @@
     "freeNoTrackers": "Kostenlos · ohne Tracker",
     "skipToContent": "Zum Inhalt springen",
     "noResults": "Nichts gefunden. Versuchen Sie weniger Filter.",
-    "places": { "one": "{count} Ort", "other": "{count} Orte" },
-    "districtCount": { "one": "{count} Distrikt", "other": "{count} Distrikte" },
-    "results": { "one": "{count} Ergebnis", "other": "{count} Ergebnisse" }
+    "places": {
+      "one": "{count} Ort",
+      "other": "{count} Orte"
+    },
+    "districtCount": {
+      "one": "{count} Distrikt",
+      "other": "{count} Distrikte"
+    },
+    "results": {
+      "one": "{count} Ergebnis",
+      "other": "{count} Ergebnisse"
+    }
   },
   "confidence": {
     "label": "Verlässlichkeit",
@@ -126,5 +141,68 @@
     "backHome": "Zur Startseite",
     "explore": "Orte entdecken",
     "allDistricts": "Alle 64 Distrikte"
+  },
+  "menu": {
+    "explore": "Entdecken",
+    "plan": "Reise planen",
+    "play": "Spielen und teilen",
+    "site": "Über Unseen BD"
+  },
+  "header": {
+    "home": "Unseen BD Startseite",
+    "darkTheme": "Dunkles Design",
+    "account": "Dein Profil: {name}"
+  },
+  "ui": {
+    "clear": "Leeren",
+    "decrease": "Weniger",
+    "increase": "Mehr",
+    "pagination": "Seiten",
+    "new": "Neu",
+    "dismiss": "Schließen",
+    "notifications": "Mitteilungen",
+    "readMore": "Weiterlesen",
+    "photoSource": "Bildquelle",
+    "viewDetails": "Details ansehen",
+    "rating": "Bewertung: {score} von 10",
+    "likes": {
+      "one": "{count} Like",
+      "other": "{count} Likes"
+    },
+    "votes": {
+      "one": "{count} Stimme",
+      "other": "{count} Stimmen"
+    },
+    "comments": {
+      "one": "{count} Kommentar",
+      "other": "{count} Kommentare"
+    },
+    "reviews": {
+      "one": "{count} Bewertung",
+      "other": "{count} Bewertungen"
+    },
+    "trains": {
+      "one": "{count} Zug",
+      "other": "{count} Züge"
+    },
+    "offDay": "Ruhetag: {day}",
+    "everyDay": "Fährt täglich",
+    "fromFare": "ab {fare}",
+    "famousFor": "Bekannt für",
+    "rank": "Platz {rank}"
+  },
+  "map": {
+    "bangladesh": "Karte der 64 Distrikte von Bangladesch",
+    "world": "Weltkarte",
+    "showNames": "Distriktnamen anzeigen",
+    "legend": "Legende",
+    "visited": "Besucht",
+    "notYet": "Noch nicht",
+    "wish": "Will ich hin",
+    "selected": "Ausgewählt",
+    "divisions": "Divisionen",
+    "keyboardHint": "Mit den Pfeiltasten zwischen Gebieten wechseln, mit Enter oder Leertaste auswählen.",
+    "credit": "Grenzen: BBS, OCHA",
+    "worldCredit": "Karte: Natural Earth"
   }
 }
