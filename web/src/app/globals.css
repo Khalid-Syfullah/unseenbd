@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+/*
+ * Unseen BD design tokens. Source of truth: DESIGN.md §2 (values) and §2.5 (variables).
+ * Components use the semantic tokens only, through the Tailwind theme below
+ * (bg-bg, bg-raised, text-muted, border-border, rounded-lg, shadow-2, font-display, …)
+ * or var(--token) directly. Never hard-code a colour.
+ */
+
+/* ---------- Dark variant: explicit [data-theme="dark"], or the system when no theme is set ---------- */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme]), :root:not([data-theme]) *) {
+      @slot;
+    }
+  }
+}
+
+/* ---------- Tailwind theme mapped to the tokens ---------- */
+@theme inline {
+  /* Only token colours exist; Tailwind's default palette is removed on purpose. */
+  --color-*: initial;
+
+  --color-bg: var(--bg);
+  --color-raised: var(--bg-raised);
+  --color-sunken: var(--bg-sunken);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-subtle: var(--text-subtle);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
+  --color-primary-wash: var(--primary-wash);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-accent-wash: var(--accent-wash);
+  --color-sun: var(--sun);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-info: var(--info);
+  --color-focus: var(--focus);
+  --color-map-land: var(--map-land);
+  --color-map-border: var(--map-border);
+  --color-map-hover: var(--map-hover);
+  --color-map-visited: var(--map-visited);
+  --color-map-wish: var(--map-wish);
+  --color-overlay: var(--overlay);
+
+  --radius-xs: var(--r-xs);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --radius-pill: var(--r-pill);
+
+  --shadow-1: var(--sh-1);
+  --shadow-2: var(--sh-2);
+  --shadow-3: var(--sh-3);
+
+  --ease-standard: var(--ease);
+  --ease-emphasized: var(--ease-emph);
+}
+
+@theme {
+  /* Same values as :root below; these give the font-display / font-ui utilities. */
+  --font-display: var(--font-dm-serif-display, "DM Serif Display"), Georgia, serif;
+  --font-ui: var(--font-hind-siliguri, "Hind Siliguri"), "Noto Sans Bengali", system-ui, sans-serif;
+  --font-sans: var(--font-ui);
+
+  /* DESIGN.md §2.3 breakpoints: sm 480 · md 768 · lg 1024 · xl 1280 */
+  --breakpoint-sm: 30rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+}
+
+/* Fixed brand, division and place-type colours (same in both themes). Always emitted. */
+@theme static {
+  --color-forest: #0e6b4e;
+  --color-leaf: #1fa06c;
+  --color-moss: #7dbe8e;
+  --color-brand-sun: #e2483a;
+  --color-marigold: #f2a541;
+  --color-river: #2e86a8;
+  --color-mist: #cfe1f1;
+  --color-clay: #b9673f;
+  --color-paper: #fbf6ec;
+  --color-sand: #f1e6d0;
+  --color-ink: #10172e;
+  --color-night: #0a1024;
+
+  --color-division-rangpur: #e3b04b;
+  --color-division-rajshahi: #d9824b;
+  --color-division-mymensingh: #9a7cc0;
+  --color-division-sylhet: #3fa37f;
+  --color-division-dhaka: #d2584a;
+  --color-division-khulna: #2f8a6a;
+  --color-division-barishal: #3e98c0;
+  --color-division-chattogram: #5b7dbe;
+
+  --color-kind-beach: #e9a23b;
+  --color-kind-island: #22a39a;
+  --color-kind-hill: #3e8e5e;
+  --color-kind-waterfall: #2f86b8;
+  --color-kind-forest: #2f7a3f;
+  --color-kind-river: #2d74a6;
+  --color-kind-tea: #5ba34a;
+  --color-kind-heritage: #b5653c;
+  --color-kind-spiritual: #8c62b5;
+  --color-kind-city: #5a6aa8;
+  --color-kind-village: #c2873a;
+}
+
+/* ---------- DESIGN.md §2.5: light (default) ---------- */
+:root {
+  --bg: #fbf6ec;
+  --bg-raised: #ffffff;
+  --bg-sunken: #f4ebda;
+  --surface-2: #f1e6d0;
+  --border: #e7dcc6;
+  --border-strong: #d6c7a9;
+  --text: #10172e;
+  --text-muted: #5b6475;
+  --text-subtle: #8a8f9c;
+  --primary: #0e6b4e;
+  --primary-hover: #0b5a41;
+  --on-primary: #ffffff;
+  --primary-wash: #e3f1ea;
+  --accent: #f2a541;
+  --on-accent: #2b1d05;
+  --accent-wash: #fdf0d9;
+  --sun: #e2483a;
+  --danger: #c93a2d;
+  --success: #1fa06c;
+  --info: #2e86a8;
+  --focus: #2e86a8;
+  --map-land: #f1e6d0;
+  --map-border: #ffffff;
+  --map-hover: #7dbe8e;
+  --map-visited: #0e6b4e;
+  --map-wish: #f2a541;
+  --overlay: rgba(16, 23, 46, 0.48);
+  --font-display: var(--font-dm-serif-display, "DM Serif Display"), Georgia, serif;
+  --font-ui: var(--font-hind-siliguri, "Hind Siliguri"), "Noto Sans Bengali", system-ui, sans-serif;
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+  --sh-1: 0 1px 2px rgba(16, 23, 46, 0.06);
+  --sh-2: 0 4px 14px rgba(16, 23, 46, 0.08);
+  --sh-3: 0 12px 32px rgba(16, 23, 46, 0.14);
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-emph: cubic-bezier(0.3, 0, 0, 1);
+  --header-h: 56px;
+  --tabbar-h: 64px;
+  color-scheme: light;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 64px;
+  }
+}
+
+/* ---------- Dark: chosen explicitly ---------- */
+:root[data-theme="dark"] {
+  --bg: #0a1024;
+  --bg-raised: #121a36;
+  --bg-sunken: #070b1a;
+  --surface-2: #1c2747;
+  --border: #24305a;
+  --border-strong: #34437a;
+  --text: #f4eee2;
+  --text-muted: #aeb8cc;
+  --text-subtle: #7c87a3;
+  --primary: #2fa57a;
+  --primary-hover: #3cb98a;
+  --on-primary: #06140f;
+  --primary-wash: #12352b;
+  --accent-wash: #3a2a12;
+  --sun: #ff6f5e;
+  --danger: #ff7a6b;
+  --success: #3cc48a;
+  --info: #5fb3d3;
+  --focus: #8ccbe4;
+  --map-land: #1c2747;
+  --map-border: #0a1024;
+  --map-hover: #2c6e58;
+  --map-visited: #2fa57a;
+  --overlay: rgba(0, 0, 0, 0.6);
+  --sh-1: none;
+  --sh-2: none;
+  --sh-3: 0 12px 32px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+/* ---------- Dark: following the system (no theme chosen, or no JavaScript) ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a1024;
+    --bg-raised: #121a36;
+    --bg-sunken: #070b1a;
+    --surface-2: #1c2747;
+    --border: #24305a;
+    --border-strong: #34437a;
+    --text: #f4eee2;
+    --text-muted: #aeb8cc;
+    --text-subtle: #7c87a3;
+    --primary: #2fa57a;
+    --primary-hover: #3cb98a;
+    --on-primary: #06140f;
+    --primary-wash: #12352b;
+    --accent-wash: #3a2a12;
+    --sun: #ff6f5e;
+    --danger: #ff7a6b;
+    --success: #3cc48a;
+    --info: #5fb3d3;
+    --focus: #8ccbe4;
+    --map-land: #1c2747;
+    --map-border: #0a1024;
+    --map-hover: #2c6e58;
+    --map-visited: #2fa57a;
+    --overlay: rgba(0, 0, 0, 0.6);
+    --sh-1: none;
+    --sh-2: none;
+    --sh-3: 0 12px 32px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+
+/* ---------- Base ---------- */
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100dvh;
+}
+
+:lang(bn) {
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}

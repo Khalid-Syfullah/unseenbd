@@ -1,0 +1,39 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+/build
+*.tsbuildinfo
+
+# env files
+.env*
+!.env.example
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+
+# copied from ../assets by scripts/sync-assets.mjs (npm run sync-assets)
+/public/brand/
+/public/social/
+/public/icons/
+/public/illustrations/
+/public/maps/
+/public/places/
+/public/stamps/
+/public/badges/
+/public/card-themes/
+/public/favicon.ico
+/public/favicon.svg
+/public/favicon-16.png
+/public/favicon-32.png
+/public/favicon-48.png
+/public/apple-touch-icon.png
+/public/manifest.webmanifest
+next-env.d.ts
