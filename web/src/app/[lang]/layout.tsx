@@ -77,19 +77,23 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <ToastProvider>
             <a
               href="#main"
-              className="fixed top-2 left-2 z-[90] -translate-y-[200%] rounded-md bg-raised px-4 py-3 font-semibold text-primary shadow-3 transition-transform duration-[var(--dur-2)] ease-standard focus-visible:translate-y-0"
+              className="fixed top-2 left-2 z-[90] -translate-y-[200%] rounded-md bg-raised px-4 py-3 font-semibold text-primary shadow-3 transition-transform duration-[var(--dur-2)] ease-standard focus-visible:translate-y-0 print:hidden"
             >
               {t("common.skipToContent")}
             </a>
             {/* Bottom padding keeps the end of every page clear of the fixed tab bar. */}
-            <div className="flex min-h-dvh flex-col pb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom))]">
-              <AppHeader lang={lang} />
+            <div className="flex min-h-dvh flex-col pb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom))] print:min-h-0 print:pb-0">
+              <AppHeader lang={lang} className="print:hidden" />
               <main id="main" tabIndex={-1} className="flex-1 outline-none">
                 {children}
               </main>
-              <Footer lang={lang} divisions={divisions} />
+              <div className="print:hidden">
+                <Footer lang={lang} divisions={divisions} />
+              </div>
             </div>
-            <TabBar />
+            <div className="print:hidden">
+              <TabBar />
+            </div>
           </ToastProvider>
         </I18nProvider>
       </body>

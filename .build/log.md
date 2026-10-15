@@ -6,3 +6,4 @@
 - 2026-10-15 phase 06 (opus) — Original place and district text
 - 2026-10-15 phase 07 (sonnet) — Place and district pages
 - 2026-10-15 phase 08 (sonnet) — Routes and trains
+- 2026-10-15 phase 09 (opus) — Trip planner and trip cost calculator

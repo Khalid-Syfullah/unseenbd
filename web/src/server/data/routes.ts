@@ -1,5 +1,5 @@
 import { aliasedTable, and, asc, eq } from "drizzle-orm";
-import { estimateRoadKm } from "@/lib/geo";
+import { estimateLegKm } from "@/lib/planner/distance";
 import { getDb } from "../db/client";
 import type { RouteBus } from "../db/json-types";
 import { districts, divisions, places, reference, routes, routesFromDhaka } from "../db/schema";
@@ -208,7 +208,7 @@ export async function getComputedRoute(
     slug,
     from: toDistrictRef(from, lang),
     to: toDistrictRef(to, lang),
-    roadKm: dhaka?.roadKm ?? estimateRoadKm(from.lat, from.lng, to.lat, to.lng),
+    roadKm: dhaka?.roadKm ?? estimateLegKm(from, to),
     estimated: !dhaka,
     busHours: dhaka?.busHours ?? null,
     busFareFromBdt: dhaka?.busFareFromBdt ?? null,

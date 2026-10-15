@@ -544,3 +544,50 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------- Print (the planner's "Print / PDF") ----------
+ * Paper is light whatever the screen theme, shadows and sticky panels go, and cards are not split
+ * across pages. Interactive parts carry `print:hidden`. */
+@media print {
+  @page {
+    margin: 14mm 12mm;
+  }
+  :root,
+  [data-theme] {
+    --bg: #ffffff;
+    --bg-raised: #ffffff;
+    --bg-sunken: #f5f2ea;
+    --surface-2: #efe9dc;
+    --border: #d9d2c3;
+    --border-strong: #b9ae97;
+    --text: #10172e;
+    --text-muted: #4a5263;
+    --text-subtle: #6b7180;
+    --primary: #0e6b4e;
+    --on-primary: #ffffff;
+    --primary-wash: #e3f1ea;
+    --sun: #e2483a;
+    --map-land: #f1e6d0;
+    --map-border: #ffffff;
+    color-scheme: light;
+  }
+  html,
+  body {
+    background: #ffffff;
+  }
+  * {
+    box-shadow: none !important;
+  }
+  .sticky {
+    position: static !important;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  article,
+  table,
+  figure {
+    break-inside: avoid;
+  }
+}

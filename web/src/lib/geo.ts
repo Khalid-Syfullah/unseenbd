@@ -15,11 +15,3 @@ export function haversineKm(lat1: number, lng1: number, lat2: number, lng2: numb
 export function directionsUrl(lat: number, lng: number): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
 }
-
-/** Roads in Bangladesh wind: the median real road distance between district pairs is about 1.3x the straight line. */
-const ROAD_FACTOR = 1.3;
-
-/** Estimated road distance in whole kilometres between two points (the planner's distance function). */
-export function estimateRoadKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
-  return Math.max(1, Math.round(haversineKm(lat1, lng1, lat2, lng2) * ROAD_FACTOR));
-}
