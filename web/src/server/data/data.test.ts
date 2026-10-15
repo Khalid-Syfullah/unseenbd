@@ -218,3 +218,12 @@ describe("routes and trains", () => {
     expect(await getTrain("ghost-train")).toBeNull();
   });
 });
+
+describe("community content", () => {
+  it("is empty until visitors submit something that a moderator approves", async () => {
+    const { listApprovedSuggestions, listLatestPhotos, listLatestPosts } = await import("./index");
+    expect(await listLatestPhotos("en")).toEqual([]);
+    expect(await listLatestPosts()).toEqual([]);
+    expect(await listApprovedSuggestions("en")).toEqual([]);
+  });
+});

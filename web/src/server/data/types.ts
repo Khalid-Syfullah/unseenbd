@@ -234,3 +234,40 @@ export type TrainDetail = TrainSummary & {
   sources: string[];
   returnTrain: { slug: string; no: number; name: string } | null;
 };
+
+/* Community ---------------------------------------------------------------------------------- */
+
+export type CommunityPhoto = {
+  id: number;
+  src: string;
+  width: number;
+  height: number;
+  uploader: string;
+  caption: string | null;
+  district: { slug: string; name: string };
+  likes: number;
+  createdAt: string;
+};
+
+export type CommunityPost = {
+  id: number;
+  author: string;
+  body: string;
+  photos: string[];
+  likes: number;
+  comments: number;
+  /** 0–1000 (shown ★ x/10); null when nobody has rated the post. */
+  stars: number | null;
+  createdAt: string;
+};
+
+export type CommunitySuggestion = {
+  id: number;
+  kind: "place" | "food" | "product";
+  name: string;
+  body: string | null;
+  district: { slug: string; name: string } | null;
+  likes: number;
+  votes: number;
+  stars: number | null;
+};

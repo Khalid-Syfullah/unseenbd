@@ -5,7 +5,160 @@
   },
   "home": {
     "lead": "Una guida ai 64 distretti del Bangladesh: dove andare, quando partire e come arrivare.",
-    "comingSoon": "Il sito è in costruzione. A presto."
+    "comingSoon": "Il sito è in costruzione. A presto.",
+    "hero": {
+      "kicker": "Free travel guide · 64 districts",
+      "title": "Unseen Bangladesh",
+      "pitch": "Find places, routes and fares for every district, from Cox's Bazar to the quiet haors nobody writes about. Plan a trip, colour your map and share what you saw.",
+      "actions": "Quick actions",
+      "ctaMap": "Colour my map",
+      "ctaPlan": "Plan my next trip",
+      "ctaQuiz": "Play the quiz",
+      "ctaPost": "Write a post",
+      "ctaPhoto": "Add a travel photo",
+      "searchLabel": "Search districts, places, photos and posts",
+      "searchPlaceholder": "e.g. Sajek or Sunamganj"
+    },
+    "banner": {
+      "label": "Partner offer",
+      "visit": "Visit {name}",
+      "categories": "Categories"
+    },
+    "directory": {
+      "title": "Where to stay and eat",
+      "hotelsTitle": "Best hotels",
+      "hotelsBody": "Hotels in Dhaka, Chattogram and Khulna",
+      "resortsTitle": "Resorts and retreats",
+      "resortsBody": "Bandarban, Sreemangal, Sajek and the coast",
+      "eatTitle": "Where to eat",
+      "eatBody": "Restaurants and cafés by area"
+    },
+    "owner": {
+      "title": "Run a business or cook something special?",
+      "business": "Add a hotel, resort or restaurant",
+      "food": "Add home-made food",
+      "product": "Add your product"
+    },
+    "myMap": {
+      "title": "My map",
+      "unseen": {
+        "one": "{count} district still unseen",
+        "other": "{count} districts still unseen"
+      },
+      "progress": "{seen} of {total} districts seen",
+      "hint": "Tick the districts you have visited and watch the map fill up.",
+      "cta": "Colour them in"
+    },
+    "photos": {
+      "title": "Latest traveller photos",
+      "empty": "No traveller photos yet. Be the first to share one.",
+      "emptyAction": "Add a photo",
+      "previous": "Previous photos",
+      "next": "Next photos",
+      "alt": "Traveller photo from {district}"
+    },
+    "posts": {
+      "title": "Traveller posts",
+      "create": "Create a post",
+      "empty": "Nothing posted yet. Share what you saw on your last trip.",
+      "photoAlt": "Photo from {author}'s post"
+    },
+    "suggestions": {
+      "title": "Places and foods from visitors",
+      "addPlace": "Add a place from your area",
+      "addFood": "Add a famous food or product",
+      "empty": "No visitor suggestions yet. Know a place or a food your area is famous for? Tell us.",
+      "place": "Place",
+      "food": "Food",
+      "product": "Product"
+    },
+    "trending": {
+      "title": "Trending this season",
+      "top": "Top 10",
+      "more": "More trending",
+      "empty": "No votes yet this season. Vote for a place from its page."
+    },
+    "popular": {
+      "title": "Popular destinations",
+      "intro": "The 24 places most travellers start with.",
+      "filter": "Filter by division",
+      "empty": "No popular places in this division."
+    },
+    "seen": {
+      "title": "How much of Bangladesh have you seen?",
+      "body": "Tick your districts, earn a level and challenge a friend.",
+      "ctaMap": "Open my Bangladesh",
+      "ctaPlay": "Play the games"
+    },
+    "about": {
+      "title": "What is Unseen Bangladesh?",
+      "body1": "Unseen Bangladesh is a free guide to all 64 districts. Next to the famous beaches and hills it highlights lesser-known places, like a haor in the monsoon, an old mosque or a tea garden at dawn, with the best months, how to get there and what it costs.",
+      "body2": "It works in Bengali and English, needs no account and never tracks you.",
+      "link": "About Unseen BD"
+    },
+    "kinds": {
+      "title": "Where is your heart today?",
+      "all": "All places",
+      "label": "Choose a type of place"
+    },
+    "months": {
+      "title": "By month",
+      "label": "Choose a month",
+      "thisMonth": "Places for {month}",
+      "seeAll": "See all places for {month}",
+      "filter": "Filter by division",
+      "loadError": "Could not load places. Try again.",
+      "empty": "No places in this division this month."
+    },
+    "unseen": {
+      "title": "Off the beaten path",
+      "intro": "Lesser-known places most guides skip.",
+      "seeAll": "All lesser-known places"
+    },
+    "districts": {
+      "title": "64 districts, one by one",
+      "legend": "Solid underline: you have been there. Dotted: still to see.",
+      "visited": "visited"
+    },
+    "routes": {
+      "title": "Which way, how much?",
+      "intro": "Bus, train, launch and flight options from Dhaka, with fares.",
+      "trains": "Train timetable",
+      "all": "All routes and fares"
+    },
+    "features": {
+      "title": "Everything in one place",
+      "mapTitle": "Travel map",
+      "mapBody": "Colour the districts you have visited.",
+      "placesTitle": "Find places by district",
+      "placesBody": "Filter by place, type and month.",
+      "plannerTitle": "Trip planner",
+      "plannerBody": "Order your stops and see the cost.",
+      "galleryTitle": "Photo gallery",
+      "galleryBody": "Photos from fellow travellers.",
+      "profileTitle": "Profile and history",
+      "profileBody": "Your trips, photos and places.",
+      "safetyTitle": "Emergency numbers and packing",
+      "safetyBody": "Tap-to-call numbers and packing lists."
+    },
+    "faq": {
+      "title": "Questions people ask",
+      "q1": "Is Unseen BD really free?",
+      "a1": "Yes. There are no fees, no ads and no paywall. Everything here, including the planner, maps and games, is free to use.",
+      "q2": "Do you track me?",
+      "a2": "No. There are no ad networks or tracking scripts, and the fonts and images are hosted by us. We only count visits per day, with no personal details. The districts you tick stay in your own browser unless you choose to make an account.",
+      "q3": "How much does it cover?",
+      "a3": "All 64 districts, 257 places (130 well known and 127 lesser known), 150 route pages and 120 intercity train timetables.",
+      "q4": "How current are the fares and train times?",
+      "a4": "Each fare and timetable shows the date it was checked and how confident we are, with links to the sources. Fares change often, so confirm at the counter or on the official e-ticket site before you travel.",
+      "q5": "Do I need an account?",
+      "a5": "No. You can explore, plan trips, tick districts and send photos without one. An account only adds saved trips, your profile and syncing between devices.",
+      "q6": "Can I add my own photos, places or business?",
+      "a6": "Yes. Send a photo, suggest a place or a food from your area, or list your business. A person reads every submission before it appears on the site."
+    },
+    "jsonld": {
+      "organization": "Unseen BD"
+    }
   },
   "nav": {
     "home": "Home",

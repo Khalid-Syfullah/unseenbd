@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { formatMonthRange } from "./format";
 import { MONTHS, parseMonth } from "./months";
-import { inSeason, isYearRound, seasonLength, seasonMonths } from "./season";
+import { currentMonth, inSeason, isYearRound, seasonLength, seasonMonths } from "./season";
 
 const all = (from: number, to: number) =>
   MONTHS.filter((m) => inSeason(from, to, m.month)).map((m) => m.month);
@@ -74,5 +74,14 @@ describe("season helpers", () => {
     expect(parseMonth("0")).toBeNull();
     expect(parseMonth("smarch")).toBeNull();
     expect(parseMonth(undefined)).toBeNull();
+  });
+});
+
+describe("currentMonth", () => {
+  it("reads the month in Bangladesh time", () => {
+    expect(currentMonth(new Date("2026-10-15T08:00:00Z"))).toBe(10);
+    // 20:00 UTC on 31 October is already 1 November in Dhaka.
+    expect(currentMonth(new Date("2026-10-31T20:00:00Z"))).toBe(11);
+    expect(currentMonth(new Date("2026-12-31T19:00:00Z"))).toBe(1);
   });
 });

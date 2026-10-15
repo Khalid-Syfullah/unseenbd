@@ -40,3 +40,8 @@ export function seasonLength(from: number, to: number): number {
 export function isYearRound(from: number, to: number): boolean {
   return seasonLength(from, to) === 12;
 }
+
+/** The current month (1–12) in Bangladesh time (UTC+6, no daylight saving). */
+export function currentMonth(now: Date = new Date()): number {
+  return new Date(now.getTime() + 6 * 60 * 60 * 1000).getUTCMonth() + 1;
+}
